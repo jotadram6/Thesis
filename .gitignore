@@ -1,2 +1,6 @@
 Sources/*
 *.*~
+*.out
+*.toc
+*.aux
+*.log
