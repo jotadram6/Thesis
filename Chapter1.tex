@@ -38,7 +38,58 @@ Some recent plans for future accelerator have been theorized using the LHC main 
 \subsection{Main ring}
 \label{sec:ring}
 
+The main ring is composed of two rings that accelerate the proton bunches in opposite directions, clock-wise and counter clock-wise. An schematic view of the design of the main ring can be seen in figure~\ref{fig:schematic}. The rings crosses in different points in order to collide the protons and they are divided in eight straight sections and eight arcs. In each octant bunches are controlled by dipole magnets. These magnets, in figure~\ref{fig:dipole}, need to produce a very strong magnetic field in order to be able to bend a 7 TeV beam of protons. This intense magnetic field, 8.33 T, is produced by electrical currents that are only achievable by means of superconductivity. All the 1232 dipoles operate at a temperature of 1.9 K, under cooling by liquid helium. They also operate under ultra-high-vacuum. The beam lines with a pressure less than $10^{-9}$ mbar and the whole dipole system with $10^{-6}$ mbar, that serves also as insulating system from the surroundings. In addition, the LHC main ring has other magnets that focus and correct different characteristics of the beam: 520 quadrupoles, 2464 sextupoles, 1232 octupoles. 
 
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{figs/lhc-schematic.jpg}
+    \caption{Schematic of the LHC main ring design.}
+    \label{fig:schematic}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{figs/cryodipole.jpg}
+    \caption{Design of LHC cryodipole that bends the beam in the main ring.}
+    \label{fig:dipole}
+  \end{center}
+\end{figure}
+
+\subsubsection{Luminosity}
+\label{sec:lumi}
+
+On collider physics, such as the LHC, the figure of merit is the luminosity, given in equation~\ref{eq:lumiC}. The luminosity is proportional to the number of events per second, and in this terms is the quantity to be maximized by the design and operation of the accelerator. In terms of the collider characteristics depend on the number of bunches in the ring $k_{b}$, the number of protons per bunch $N_{b}$, the revolution frequency $f_{rev}$, the relativistic gamma factor $\gamma$, the normalized rms transverse beam emittance $\epsilon_{n}$ and the beta function at the interaction point $\beta^{*}$. The denominator on~\ref{eq:lumiC} can also be understood in terms of the horizontal and vertical width of the bunches at the crossing. In table~\ref{tab:LHCparams} can be found the LHC beam parameters at injection and collision.  
+
+\begin{equation}
+  \label{eq:lumiC}
+  L=\frac{k_{b}N_{b}^{2}f_{rev}\gamma}{4\pi\epsilon_{n}\beta^{*}}
+\end{equation}
+
+\begin{table}[htbH]
+\label{tab:LHCparams}
+\begin{center}
+%\topcaption{LHC proton beam parameters.\label{tab:LHCparams}}
+%\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c c|}
+\hline 
+Parameter/units & Injection & Collision \\
+\hline
+Energy [GeV]& 450 & 7000 \\ 
+Luminosity [$\text{cm}^{-2}\text{s}^{-1}$] & & $10^{34}$ \\
+%Number of bunches & 2080 \\ %\multirow{2}{*}{2808} \\
+\hline
+\end{tabular}
+%}
+\end{center}
+\end{table}
+
+At the crossing points, the number of events coming from collisions and produced via an specific process, is directly proportional to the luminosity provided by the collider, as in equation~\ref{eq:lumiC}.
+
+\begin{equation}
+  \label{eq:lumiN}
+  N_{events}=L\sigma_{process}
+\end{equation} where $\sigma_{process}$ is the cross section of the process. 
 
 \section{The Compact Muon Solenoid experiment}
 \label{sec:CMS}
@@ -64,3 +115,5 @@ Some recent plans for future accelerator have been theorized using the LHC main 
 \begin{equation*}
 \left\Vert 2^{\Gamma(x)} \right\Vert^{2} = \underbrace{f(a)+f(b)}_{\leq 1}+\dot{y}
 \end{equation*}
+
+%  LocalWords:  emittance
