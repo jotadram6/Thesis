@@ -190,6 +190,16 @@ The CMS detector, hosted at point 5 of the LHC main ring (see figure~\ref{fig:sc
   \end{center}
 \end{figure}
 
+CMS has been designed to be able to do very precise identification of particles originated from the collisions and their properties. For the measurement of the momentum of the charged particles, CMS counts with a very strong magnet that allows to bend very energetic particles. In addition, the calorimeters allow to measure accurately the energy from hadrons, electrons and photons. At the most external layer, the muons chambers measuring muons properties, and in the innermost the tracking system that reconstructs the collision points and the charged particles tracks. In figure~\ref{fig:cmsslice} can be found a representation of the different subsystems of CMS and how particles are reconstructed from them.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=\textwidth]{figs/PictureforPoint5_oct04_allp.jpg}
+    \caption{CMS sub-detectors and particle identification. \copyright CERN}
+    \label{fig:cmsslice}
+  \end{center}
+\end{figure}
+
 \subsection{Coordinate system}
 \label{sec:Csys}
 
@@ -224,9 +234,34 @@ We define also the radial coordinate over the x-y plane, plane that is called th
   \Delta R=\sqrt{(\Delta\eta)^{2}+(\Delta\phi)^{2}}
 \end{equation}
 
+\subsection{Magnet}
+\label{sec:magnet}
+
+In order to measure the momentum of the charged particles going inside the detector is crucial to apply the correct magnet field, sufficiently strong to bend very energetic particles. The momentum of a charged particle inside an uniform magnetic field can be written as
+
+\begin{equation}
+  \label{eq:momB}
+  p=\gamma m v=qBr
+\end{equation} where $B$ is the magnitude of the magnetic field, $\gamma$ the usual relativistic factor, $m$ the mass of the particle, $v$ its rapidity, $q$ its charge and $r$ the bending radius. The sagitta of the arc is
+
+\begin{equation}
+  \label{eq:sagitta}
+  s=\frac{L^{2}}{8r}=\frac{qBL^{2}}{8p}
+\end{equation} with $L$ the distance the particle moved inside the magnetic filed. Inside a solenoid $L$ is equal to the radius of it. 
+
+From relation~\ref{eq:sagitta} is possible to deduce that the resolution on the momentum of the particle has an inverse dependence with the magnetic field and the radius of the solenoid, as shown in equation~\ref{eq:presolution}. From there, for a better resolution is needed to increase the magnetic field and the radius of the solenoid. 
+
+\begin{equation}
+  \label{eq:presolution}
+  \frac{dp}{p}\propto \frac{p}{BL^{2}}
+\end{equation}
+
+The design of CMS magnet target both features, it utilizes a large solenoid of 6 m of diameter and 13 m long. It's made of 4 layers of windings of NbTi cable that is cooled to 4.45 K in order to achieve the superconducting state. This magnet is able to produce an uniform magnetic field inside of it of 3.8 T. Outside the magnet 5 wheels and 3 disks of iron are placed in order to return the flux of the magnetic field, inducing just a 2 T radial magnetic field outside the solenoid. This iron yoke contributes with most of the weight of the detector, 10000 tons. In between the iron yoke the muon chambers are placed.  
 
 \subsection{Tracker system}
 \label{sec:tracker}
+
+
 
 \subsection{Electromagnetic calorimeter}
 \label{sec:ecal}
