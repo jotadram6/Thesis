@@ -180,8 +180,50 @@ The ALICE experiment (A Large Ion Collider Experiment) is located at point 2 of 
 \section{The Compact Muon Solenoid experiment}
 \label{sec:CMS}
 
+The CMS detector, hosted at point 5 of the LHC main ring (see figure~\ref{fig:schematic}), is the second biggest LHC experiment. Cylindrically shaped, measures 15 m of diameter and 28.7 m long, but weights 14000 making it the heaviest LHC experiment. Its subsystems are concentrically located from the collision point in the beam line. It's main characteristic is the strong 3.8 T solenoid magnet. A representation of the detector can be found in figure~\ref{fig:cmsdet}. The CMS collaboration is formed by around 2600 scientists, of which 900 are students, from 181 institutes over 41 countries. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=\textwidth]{figs/CMS_det.pdf}
+    \caption{CMS detector internal view. \copyright CERN}
+    \label{fig:cmsdet}
+  \end{center}
+\end{figure}
+
 \subsection{Coordinate system}
 \label{sec:Csys}
+
+The origin of coordinates defined on the CMS detector is located on the nominal collision point, the ``interaction point''. From there, the z-axis is defined along the beam pipe line pointing towards the Jura mountains. The positive/negative z-axis directions define the positive/negative sides of the detector. The y-axis is defined towards the zenith and the x-axis towards the center of the LHC ring. Due to the inclination of the LHC plane, this coordinate system is slightly tilted with respect to the true vertical. A representation of the coordinate system definition can be found in figure~\ref{fig:cmscoor}. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=\textwidth]{figs/CMS_coordinates.jpg}
+    \caption{CMS coordinate system. \copyright CERN}
+    \label{fig:cmscoor}
+  \end{center}
+\end{figure}
+
+We can also define two the $\phi$ angle in the x-y plane from the x-axis towards the positive y-axis, and the $\theta$ angle in the z-y plane from z-axis towards the positive y-axis. In experimental particle physics is preferred to work with relativistic invariant quantities, reason why instead of working with $\theta$ we define the pseudorapidity $\eta$, equation~\ref{eq:pseudorapidity}. 
+
+\begin{equation}
+  \label{eq:pseudorapidity}
+  \eta = -\text{ln}\left( \text{tan}\left(\frac{\theta}{2}\right)\right)
+\end{equation} 
+
+One can define another relativistic invariant quantity, the rapidity $y$ as from equation~\ref{eq:rapidity}. With $\bm{p}$ being the momentum vector and $E$ the energy of a given particle, $p_{L}$ denotes its longitudinal component, that in our case is the same z-component. 
+
+\begin{equation}
+  \label{eq:rapidity}
+  y=\frac{1}{2}\text{ln}\left(\frac{E+p_{L}}{E-p_{L}}\right)
+\end{equation}On the limit that the mass of the particle is very small compared to its momentum, one can replace approximate the particle energy by the momentum magnitude, giving rise to the definition of the pseudorapidity in terms of the momentum of the particle $\eta = \frac{1}{2}\text{ln}\left(\frac{\bm{p}+p_{L}}{\bm{p}-p_{L}}\right)$
+
+We define also the radial coordinate over the x-y plane, plane that is called the transverse plane being orthogonal to the longitudinal direction, the z-axis. In such plane are also defined the transverse quantities of particles, as the transverse momentum $p_{T}$. Finally, for any two objects an angular distance can be defined in the $\eta-\phi$ plane, as in equation~\ref{eq:deltaR}.
+
+\begin{equation}
+  \label{eq:deltaR}
+  \Delta R=\sqrt{(\Delta\eta)^{2}+(\Delta\phi)^{2}}
+\end{equation}
+
 
 \subsection{Tracker system}
 \label{sec:tracker}
