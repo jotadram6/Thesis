@@ -261,10 +261,46 @@ The design of CMS magnet target both features, it utilizes a large solenoid of 6
 \subsection{Tracker system}
 \label{sec:tracker}
 
+The tracker system has been designed to specifically address the reconstruction of high pt leptons, with particular interest in the isolation of electrons and, as a consequence, to isolate photons. Also the tracker fulfill granularity requirements to reconstruct secondary vertexes to tag and reconstruct B-hadrons. The tracker system is able to reconstruct tracks of particles with at least 2 GeV of $p_{T}$ with $|\eta|<2.5$. Charged hadrons are reconstructed with an efficiency of at least 85\% for $p_{T}=1$ GeV and up to 95\% for $p_{T}$ above 10 GeV. Another important point that was taken into account is the fact that the tracker is the part of CMS most exposed to radiation as it is the closest subsystem to the interaction point. The tracker system was built as highly resistant to radiation damage and is expected to last for around 10 years. The pixel detector only lasts 2 years and was replaces during LS1. 
 
+The tracker has been built with three different technologies: Pixels, Silicon Strips and Micro Strip Gas Chambers (MSGCs). They are arranged concentrically in cylindrical volumes being the pixel detector the innermost and the MSGCs the outermost. The CMS tracker extends to a radius of 155 cm and a around 270 cm on each $z$ direction. The pixel system is in the region with a radius below $\approx$ 20 cm, the silicon detector between $\approx 20$ cm and $\approx 60$ cm, and the MSGCs between $\approx 70$ cm and $\approx 120$ cm. The three subsystems are fast enough to work at 25 ns scale.
+
+The pixel system is formed by three barrel layers and two end caps disks covering radii from 6 cm to 15 cm. It has an approximate active surface of one square meter with approximately $40\times10^{6}$ channels with a cell size of 150 $\mu$m by 150 $\mu$m. This pixel system allows to obtain three highly precise points that are mainly used for reconstructing vertexes.
+
+The Silicon Strip system is formed by a 5-layer barrel (TIB for Tracker Inner Barrel) and 10 disks (TID for Tracker Inner Disks) in each end cap. The strips length is 12.5 cm with a pitch from 61 $\mu$m to 122 $\mu$m for single-sided strips and for 81 $\mu$m to 244 $\mu$m for double-sided. It's able to achieve a hit resolution of about 15 $\mu$m. 
+
+The MSGCs systems is composed of 6 layers in the barrel (TOB for Tracker Outer Barrel) and 11 disks in each end cap (TEC for Tracker EndCap, with a $\pm$ sign depending on the $z$ direction). Here the strips are 10 cm length for the inner layers and 25 cm for outer layers with a pitch from 200 $\mu$m to 400 $\mu$m, which gives a hit resolution of 35 $\mu$m and 100 $\mu$m respectively. The MSGCs and Silicon systems have an overall active area of around 300 $\text{m}^{2}$ with 12 $\times10^{6}$ channels organized in more than ten thousand independent modules.
+
+In figure~\ref{fig:cmstracker} can be seen the disposition of all the tracker subsystems. From the design of the tracker system the best resolution on the $p_{T}$ measurement is achieved in the $|\eta|<1.6$ region, this due to the presence of more layers of detector in the different subsystems, as shown in figure~\ref{fig:trackerres}. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{figs/fig_cmstracker.png}
+    \caption{CMS tracker system configuration. \copyright CERN}
+    \label{fig:cmstracker}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{figs/tracker_resolution.png}
+    \caption{Tracker resolution with $\eta$. \copyright CERN}
+    \label{fig:trackerres}
+  \end{center}
+\end{figure}
 
 \subsection{Electromagnetic calorimeter}
 \label{sec:ecal}
+
+The CMS ECAL (Electromagnetic CALorimeter) is the detector subsystem designed to stop photons and electrons to measure their energy. It's an hermetic cylindrical calorimeter made of 61200 crystals in the barrel ($|\eta|<1.479$) and 7324 in each end cap ($1.48<|\eta|<3$). The crystals material is lead-tungstate that is transparent, very dense (8.28 g/$\text{cm}^{3}$), has a small Moliere radius (2.2 cm) and a short radiation depth ($X_{0}=0.89$ cm). This material has been chosen for the characteristics already described, but also because is very fast emitting the scintillation light in 25 ns, it has a very good energy resolution due and radiation resistant. The crystals are distributed in 36 super-modules, 1700 crystals each, in the barrel (EB for ECAL Barrel) and in four 'Dee's, of 3662 crystals each, in the end caps (EE for ECAL End cap). In the EB the scintillation light is collected by Avalanche Photo-Diodes, or APD, and by Vacuum Photo-Triodes, or VPT. A preshower system is installed in face of each end cap to allow a better discrimination between photons and $\pi^{0}$'s. A representation of the CMS ECAL can be found on figure~\ref{fig:ecal}.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{figs/ECAL.png}
+    \caption{CMS ECAL representation. \copyright CERN}
+    \label{fig:ecal}
+  \end{center}
+\end{figure}
 
 \subsection{Hadronic Calorimeter}
 \label{sec:hcal}
