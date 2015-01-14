@@ -15,12 +15,22 @@ From the very beginning of physics, one of the most fundamental questions has be
 
 During the 19th and 20th century new phenomena were discovered pointing to brand new interactions, electricity, magnetism, radioactivity and nuclear structure inside atoms. The very precise and complete description of electromagnetism developed by Gauss, Faraday, Amp\`{e}re and finished by Maxwell arrived to the describe electricity and magnetism under the formalism of only one interaction within the mathematical formalism of classical fields. 
 
-The definition of a classical field is an assignment of a quantity to every point in space and time. For physics the quantity that is attributed it's a physical quantity such as mass, electrical charge or probability. This quantity can be scalar or vector, giving rise to the notion of scalar or vector field. As an example, a fluid can be described in terms of fields, being the velocity of the fluid a vector field and its pressure a scalar field. Generic classical electromagnetic interactions can be described with the help of one vector field $\vec{A}(x)$, the vector potential, and one scalar field $\phi(x)$, the scalar potential. In the formalism of four-vectors from relativistic dynamics one can organize this two quantities in the four-potential $A_{\mu}=(-\phi,\vec{A})$. This can be used  
+The definition of a classical field is an assignment of a quantity to every point in space and time. For physics the quantity that is attributed it's a physical quantity such as mass, electrical charge or probability. This quantity can be scalar or vector, giving rise to the notion of scalar or vector field. As an example, a fluid can be described in terms of fields, being the velocity of the fluid a vector field and its pressure a scalar field. Generic classical electromagnetic interactions can be described with the help of one vector field $\vec{A}(x)$, the vector potential, and one scalar field $\phi(x)$, the scalar potential. In the formalism of four-vectors from relativistic dynamics one can organize this two quantities in the four-potential $A_{\mu}=(-\phi,\vec{A})$. This can be used to define the strength field tensor $F_{\mu\nu}=\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}$, where $\partial_{\mu}$ is the covariant derivative. From the tensor is possible to obtain in a very generic and elegant way the equations of motion of the free field using the Lagrangian formalism, as in equation~\ref{eq:electromotion}. With the Lagrangian density defined in equation~\ref{eq:electrolagran}.
+
+\begin{equation}
+  \label{eq:electromotion}
+  \partial_{\mu}\left( \frac{\partial \mathcal{L}}{\partial (\partial_{\mu}A_{\nu})} \right) -\frac{\partial \mathcal{L}}{\partial A_{\nu}}=0
+\end{equation}
+
+\begin{equation}
+  \label{eq:electrolagran}
+  \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}
+\end{equation}
 
 \section{Quantum fields and particles}
 \label{sec:fields}
 
-Classical fields, introduced and described in last section~\ref{sec:symm}, can be extended to a quantum theory. Such procedure is known as the quantization of fields and allow to unify special relativity and quantum mechanics in one theory, Quantum Field Theory (QFT), to describe the dynamics of systems in such regimes: rapidities close to the speed of light on the atomic or smaller scales. 
+Classical fields, introduced and described in last section~\ref{sec:symm}, can be extended to a quantum theory. Such procedure is known as the quantization of fields and allow to unify special relativity and quantum mechanics in one theory, Quantum Field Theory (QFT), to describe the dynamics of systems in such regimes: rapidity close to the speed of light on the atomic or smaller scales. 
 
 \subsection{The mass problem}
 \label{sec:mass}
