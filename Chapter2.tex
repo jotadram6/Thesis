@@ -8,14 +8,14 @@ From the mathematics side, group theory has become one of the most powerful tool
 
 In this chapter, we are going to present the basics of the SM. We describe its seminal ideas, it structure and content and it's ultimate consequences. Finally, we close with its limitations.
 
-\section{Symmetries and interactions}
+\section{Fields, symmetries and interactions}
 \label{sec:symm}
 
 From the very beginning of physics, one of the most fundamental questions has been how does bodies interact, and with it what exactly and interaction is. On the first type of interaction ever studied by physics, gravity, Newton proposed the concept of distant interaction, the idea that bodies could interact without being in direct contact. But the question on how exactly that distant action was performed remained unanswered. 
 
-During the 19th and 20th century new phenomena were discovered pointing to brand new interactions, electricity, magnetism, radioactivity and nuclear structure inside atoms. The very precise and complete description of electromagnetism developed by Gauss, Faraday, Amp\`{e}re and finished by Maxwell arrived to the describe electricity and magnetism under the formalism of only one interaction within the mathematical formalism of classical fields. 
+During the 19th and 20th century new phenomena were discovered pointing to brand new interactions, electricity, magnetism, radioactivity and nuclear structure inside atoms. The very precise and complete description of electromagnetism developed by Gauss, Faraday, Amp\`{e}re and finished by Maxwell arrived to the describe electricity and magnetism under the formalism of only one interaction within the mathematical formalism of classical fields. For the following discussion, and so on, we are going to work in natural units for simplicity. In these units the speed of light $c$ is normalized to unity, as well as electron electric charge $e$, reduced Planck constant $\hslash$ and Boltzmann constant $k_{B}$. Then, masses and temperature are measured in energy units, i.e. $eV$, and time and length in inverse energy units, $eV^{-1}$.
 
-The definition of a classical field is an assignment of a quantity to every point in space and time. For physics the quantity that is attributed it's a physical quantity such as mass, electrical charge or probability. This quantity can be scalar or vector, giving rise to the notion of scalar or vector field. As an example, a fluid can be described in terms of fields, being the velocity of the fluid a vector field and its pressure a scalar field. Generic classical electromagnetic interactions can be described with the help of one vector field $\vec{A}(x)$, the vector potential, and one scalar field $\phi(x)$, the scalar potential. In the formalism of four-vectors from relativistic dynamics one can organize this two quantities in the four-potential $A_{\mu}=(-\phi,\vec{A})$. This can be used to define the strength field tensor $F_{\mu\nu}=\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}$, where $\partial_{\mu}$ is the covariant derivative. From the tensor is possible to obtain in a very generic and elegant way the equations of motion of the free field using the Lagrangian formalism, as in equation~\ref{eq:electromotion}. With the Lagrangian density defined in equation~\ref{eq:electrolagran}.
+The definition of a classical field is an assignment of a quantity to every point in space and time. For physics the quantity that is attributed it's a physical quantity such as mass, electrical charge or probability. This quantity can be scalar or vector, giving rise to the notion of scalar or vector field. As an example, a fluid can be described in terms of fields, being the velocity of the fluid a vector field and its pressure a scalar field. Generic classical electromagnetic interactions can be described with the help of one vector field $\vec{A}(x)$, the vector potential, and one scalar field $\phi(x)$, the scalar potential. In the formalism of four-vectors from relativistic dynamics one can organize this two quantities in the four-potential $A_{\mu}=(-\phi,\vec{A})$. This can be used to define the strength field tensor $F_{\mu\nu}=\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu}$, where $\partial_{\mu}=\left( -\frac{\partial}{\partial t},\nabla\right)$ is the covariant derivative. From the tensor is possible to obtain in a very generic and elegant way the equations of motion of the free field using the Lagrangian formalism, as in equation~\ref{eq:electromotion}. With the Lagrangian density defined in equation~\ref{eq:electrolagran}.
 
 \begin{equation}
   \label{eq:electromotion}
@@ -26,6 +26,41 @@ The definition of a classical field is an assignment of a quantity to every poin
   \label{eq:electrolagran}
   \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}
 \end{equation}
+
+It's very important to notice that the equations of motion of the free field are invariant under the choice of the four-potential. More precisely, the covariant potential is not unique and we can always add the covariant derivative of a scalar field, 
+\begin{equation}
+  \label{eq:gaugeA}
+  {A'}_{\mu}=A_{\mu}+\partial_{\mu}\Lambda(x) \leftrightarrow \partial^{\mu}A_{\mu}=0
+\end{equation} and describe the same physics. This non-uniqueness corresponds to the choice of a zero-point of the potential very well known in non-Lagrangian formalism of electrodynamics. When we choose an specific value for this scalar field, $\Lambda(x)$, we say that the gauge has been fixed. 
+
+One can also define a four current vector, $J_{\mu}=\left( \rho,\vec{J} \right)$ with $\rho$ the electric charge density and $\vec{J}$ the current charge density. Then, plugging in the four current in the Lagrangian of the free field, defined in equation~\ref{eq:electrolagran}, 
+
+\begin{equation}
+  \label{eq:fulleleclagrangian}
+  \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}-A_{\mu}J^{\mu}
+\end{equation}we can obtain the complete set of equations of motion of the field with charges and currents. 
+
+The transformation stated from equation~\ref{eq:gaugeA} can be understood as a transformation of the field. These type of transformations are mathematically understood under the group $U(1)$, where the generic transformation operator can be written as $U=e^{i\theta(x)}$. It's said then that the electromagnetic vector potential is \textit{invariant} under $U(1)$ transformations. This property identifies an essential characteristic of electromagnetism, it's symmetric behavior under $U(1)$. 
+
+From this reasoning the most interesting results are drawn when the same symmetry is imposed to another fields. For example, considering a complex scalar field, the kinetic Lagrangian is $\mathcal{L}=(\partial^{\mu}\phi)^{*}\partial_{\mu}\phi$. To apply the transformation is sufficient to apply the operator as $\phi'=U\phi$ and $\phi*'=\phi U^{-1}$. But it's evident that the Lagrangian is not the same after applying such transformation. Then, in order to preserve the Lagrangian under $U(1)$ is necessary to change at the same time the derivative. Such transformation is given in equation~\ref{eq:covderivU1}, where $g$ is a constant.
+
+\begin{equation}
+  \label{eq:covderivU1}
+  \mathcal{D}^{\mu}=\partial^{\mu}-igA^{\mu}
+\end{equation}
+
+Then, the proposed Lagrangian can be rewritten, including the vector field, as
+
+\begin{equation}
+  \label{eq:FullLagU1inv}
+  \mathcal{L}=(\mathcal{D}^{\mu}\phi)^{*}\mathcal{D}_{\mu}\phi-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}
+\end{equation}that is invariant under $U(1)$. From the kinematic term with the new derivative interaction terms between the scalar and the vector field can be derived, as $igA^{\mu}\phi*\partial_{\mu}$. This shows that the requirement of the invariance under $U(1)$ of the scalar field lead to the introduction of an interaction with a vector field controlled by the constant $g$. We have also seen that electromagnetic interaction is described precisely by a vector field and that preserves $U(1)$ symmetry. What implies that this symmetry is the connection to electromagnetic interaction, practically identifying the interaction itself with the $U(1)$ symmetry. In addition, using Noether theorem one can show that $g$ is a conserved quantity, as the electric charge.
+
+But not only electromagnetism can be described via a continuous symmetry as $U(1)$. On 1896 radioactivity was discovered by the french physicist Henri Becquerel. Three years after, Marie and Pierre Curie studied in more detail the phenomenon and found Polonium and Radium elements. And later on, Ernst Rutherford was able to describe radioactivity as coming in three types, alpha ($\alpha$), beta ($\beta$) and gamma ($\gamma$). He also noticed that radioactivity was able to change matter, which allow him, with also other experiences, to propose an atomic model, describing elements as basically and external core of negative charges and a nucleus. Consequently, This findings implied the existence of interactions different to electromagnetism, acting at the atomic scale.
+
+The interaction that undergoes radioactivity, beta decay, is called the weak interaction. In 1933 Enrico Fermi made a first theoretical description of this interaction, but only in 1968 Sheldon Glashow, Abdus Salam and Steven Weinberg were able to describe weak interaction with a symmetry group: $SU(2)$. Finally, the interaction that keeps the nucleus components together, the strong interaction, was described with $SU(3)$ group mainly by Murray Gell-Mann in 1963.
+
+There have been many attempts to describe gravity with the same formalism, but up to present such attempts have been unsuccessful. Such question remains one of the most important problems for modern particle physics.  
 
 \section{Quantum fields and particles}
 \label{sec:fields}
