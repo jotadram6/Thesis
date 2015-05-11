@@ -5,7 +5,7 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{lmodern}
-\usepackage{mathtools,amssymb,amsthm}
+\usepackage{mathtools,amssymb,amsthm,dsfont}
 \usepackage{lipsum}
 \usepackage{hyperref}
 \usepackage{multirow}
@@ -17,6 +17,10 @@
 \usepackage{bm}
 \usepackage[us,24hr]{datetime}
 \usepackage{lineno}
+
+\newcommand{\ket}[1]{| #1\rangle}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\braket}[2]{\langle #1 | #2\rangle}
 
 %\bibliographystyle{alpha}
 \bibliographystyle{utphys}
