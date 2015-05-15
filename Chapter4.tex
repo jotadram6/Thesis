@@ -23,13 +23,34 @@ A similar method is used to simulate proton-proton collisions. This simulation i
 
 The parton model was initially proposed by Richard Feynman in 1969, as a method to understand collisions of non-fundamental particles. The model consider a non-fundamental particle, as a proton or a neutron, composed of a given number of point-like fundamental particles. When a collision occur the point-like particles inside have a major probability to scatter. For example, when an electron is fired against a proton the most of the interactions will between the electron and the fundamental components of the proton, $u$ and $d$ quarks. This ``hard'' components are called \textit{valence} quarks. Surrounding them there are the \textit{sea} quarks and gluons.
 
-However, as the energy of the collision increases the probability to scatter a sea component, quark or gluon, increases. In addition, even if the valence quarks of a proton are the $u$ and $d$ quarks, heavier quarks can appear in the sea, as the $b$, $c$ or $s$ quarks. The probability to interact with a component, valence or sea, is described by parton distribution function, commonly called PDF. A PDF $f\equiv f(x,Q^{2})$ represent the number density of a given quark or gluon as a function of the energy scale $Q^{2}$ and the fraction of momentum carried by the parton $x$. In figure 
+However, as the energy of the collision increases the probability to scatter a sea component, quark or gluon, increases. In addition, even if the valence quarks of a proton are the $u$ and $d$ quarks, heavier quarks can appear in the sea, as the $b$, $c$ or $s$ quarks. The probability to interact with a component, valence or sea, is described by parton distribution function, commonly called PDF. A PDF $f\equiv f(x,Q^{2})$ represent the number density of a given quark or gluon as a function of the energy scale $Q^{2}$ and the fraction of momentum carried by the parton $x$. The determination of a PDF is done via a fit of large data samples from experiments specifically designed to test the inner structure of nucleons. The DIS (Deep Inelastic Scattering) experiment at SLAC (Stanford Linear Accelerator Center), in California, United States, first probed the existence of partonic structure inside nucleons using leptons as probes scattered against nucleons. Another important experiment was the HERA accelerator at DESY in Hamburg, Germany, which used electrons to study the inner structure of protons.
+
+In figure~\ref{fig:MSTW} is shown the Martin-Stirling-Thorne-Watt~\cite{Martin:2009iq} (MSTW) PDF for two energy scales. The MSTW PDF is one of the experimental fits combining data from DIS and HERA. In this PDF can be seen that $u$ and $d$ quarks carry the most of the momentum of the proton. The rest of the momentum is spread mainly over a huge amount of gluons and some, less probable, sea quarks as $\bar{u}, \bar{d}$ or $c$ and $s$. One important feature is that the composition of the proton changes depending on the energy scale. At $Q^{2}= 10\, GeV^{2}$ there is no $b$-quark in the proton while at $Q^{2}= 10^{4}\, GeV^{2}$ there is a non-negligible probability to find it in the proton.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.6\textwidth]{figs/mc_integral.png}
-    \caption{Integration using Monte-Carlo methods}
-    \label{fig:mc_int}
+    \includegraphics[width=0.9\textwidth]{figs/mstw2008nlo68cl_allpdfs.jpg}
+    \caption{Martin-Stirling-Thorne-Watt proton PDF for $Q^{2}= 10\, \text{GeV}^{2}$ [left] and $Q^{2}= 10^{4}\, \text{GeV}^{2}$ [right]. From~\cite{Martin:2009iq}}
+    \label{fig:MSTW}
+  \end{center}
+\end{figure}
+
+Two other important PDF fits are CTEQ~\cite{Nadolsky:2008zw} and NNPDF~\cite{Ball:2010de}. Together with MSTW, they are the most used PDF sets in the CMS experiment for MC production. 
+
+For the hard process, the differential cross section can be written as,
+
+\begin{eqnarray}
+  \label{eq:DiffXS}
+  d\sigma_{ij\rightarrow lm} & = & \left( \int_{0}^{1}\int_{0}^{1}f_{i}(x_{i},Q^{2})f_{j}(x_{j},Q^{2})dx_{i}dx_{j} \right) \nonumber \\  
+ & \times & \frac{d^{3}p_{l}}{(2\pi)^{2}2E_{l}}\frac{d^{3}p_{m}}{(2\pi)^{2}2E_{m}}\delta^{4}\left( p_{i}+p_{j}-p_{l}-p_{m} \right) \nonumber \\  
+ & \times & |\mathcal{M}_{ij\rightarrow lm}|^{2}
+\end{eqnarray} where $f_{i,j}$ correspond to the PDF's of the initial partons. $\mathcal{M}_{ij\rightarrow lm}$ is the matrix element of the process which is the part of the S-matrix that contains the amplitude of the process, and modules the transition from the initial to the final state~\cite{opac-b1131978}. The matrix element could account effectively for all processes mediating the transition from the initial to the given final state, but in practice it is calculated only including a given number of processes. The calculation can achieve different levels, usually tree level or Leading Order (LO), but modern calculation could arrive, depending on the process, to one loop or Next-to-Leading-Order (NLO) or even two loops the  Next-to-Next-to-Leading-Order (NNLO). This limit depends exclusively on the feasibility of the theoretical calculations. In figure~\ref{fig:LOpNLO} is shown an example of a leading order plus its corresponding NLO diagrams for a fermion scattering.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.7\textwidth]{figs/Feynman_diagrams.jpg}
+    \caption{LO (a) and NLO (b)-(j) processes contributing to fermions scattering}
+    \label{fig:LOpNLO}
   \end{center}
 \end{figure}
 
