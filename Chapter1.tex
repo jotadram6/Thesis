@@ -299,6 +299,8 @@ In figure~\ref{fig:cmstracker} can be seen the disposition of all the tracker su
   \end{center}
 \end{figure}
 
+\begin{TOINCLUDE}Two plots: on pixel resolution and efficiency on finding hits\end{TOINCLUDE}
+
 \subsection{Electromagnetic calorimeter}
 \label{sec:ecal}
 
@@ -311,6 +313,8 @@ The CMS ECAL (Electromagnetic CALorimeter) is the detector subsystem designed to
     \label{fig:ecal}
   \end{center}
 \end{figure}
+
+\begin{TOINCLUDE}Plot on cristal response, dielectron reconstruction on the ECAL, ratio of E/p for reconstructed electrons E from the ECAL and p from the tracker\end{TOINCLUDE}
 
 \subsection{Hadronic Calorimeter}
 \label{sec:hcal}
@@ -355,6 +359,8 @@ On figure~\ref{fig:cmsmuon} can be found a representation of the muon system wit
   \end{center}
 \end{figure}
 
+\begin{TOINCLUDE}Plot of RPC efficiency during Run1 and L1 RPC efficiency as function of probe PT\end{TOINCLUDE}
+
 \subsection{Trigger}
 \label{sec:trigger}
 
@@ -387,6 +393,69 @@ The L1 cards are distributed between the detector and an adjoin cavern at 90 m d
 The HLT take as input the events accepted by the L1 and process them using farms of commercial processors. The HLT does additional operations on the selected events making it much slower than L1 processing. In particular, the HLT takes also into account the tracker information. Consequently, this system is able to take into consideration the whole information of the detector. However, the reconstruction of objects done by the HLT differs slightly from the final off-line reconstruction. The decision taking process takes around 40 ms, $10^{4}$ times more than for L1. 
 
 The events selected by HLT are finally stocked on disks under several paths depending on the selection performed. There is a constant development of HLT paths focusing on different analysis requirements in order to obtain the best possible selection efficiency for specific signal types. 
+
+\section{Object reconstruction}
+
+\subsection{Track and vertex reconstruction}
+
+\begin{TOINCLUDE}Plots: Tracker efficiency reconstruction for muons and single pions as function of pt and eta\end{TOINCLUDE}
+
+\subsubsection{Vertex reconstruction}
+
+\begin{TOINCLUDE}Two plots: Primary vertex resolutions and Primary vertex efficiency\end{TOINCLUDE}
+
+\subsection{Particle Flow (PF) algorithm}
+
+\subsubsection{Calorimeter clustering}
+
+\subsubsection{Subdetectors link}
+
+\begin{TOINCLUDE}Two plots: Link of tracks to ECAL and to HCAL\end{TOINCLUDE}
+
+\subsubsection{Particle reconstruction}
+
+\subsection{Electron reconstruction}
+
+\begin{TOINCLUDE}Plot of electron efficiency. Table with electron ID requirements\end{TOINCLUDE}
+
+\subsection{Muon reconstruction}
+
+\begin{TOINCLUDE}Plots: PF muon efficiency selection, dimuon mass spectra\end{TOINCLUDE}
+
+\subsection{Jet reconstruction}
+
+\subsubsection{Clustering algorithms}
+
+\paragraph{SISCone}
+
+\paragraph{kT}
+
+\paragraph{Cambridge-Aachen}
+
+\paragraph{Anti-kT}
+
+\paragraph{Infrared and collinear safety}
+
+\paragraph{Jet area}
+
+\begin{TOINCLUDE}Plots: Jet in y-phi-pT space for each algorithm\end{TOINCLUDE}
+
+\subsubsection{Jet energy corrections}
+
+\begin{TOINCLUDE}Plot of JEC uncertainity as pT function and eta\end{TOINCLUDE}
+
+\subsubsection{b-jets identification}
+
+\paragraph{Identification algorithms and working points}
+
+\begin{TOINCLUDE}Plots: CSV discriminator, Nb of secondary vertices, Efficiency of b-tagging for CSVM as function of PT and eta\end{TOINCLUDE}
+
+\subsection{Photon reconstruction}
+
+\begin{TOINCLUDE}Plot of photon identification efficiency\end{TOINCLUDE}
+
+\subsection{Missing energy reconstruction}
+
 
 %Add RUNII perspectives? Add section on dataset structure used by CMS?
 
