@@ -57,10 +57,21 @@ For the hard process, the differential cross section can be written as,
 \subsection{Hadron simulation}
 \label{sec:hadron}
 
-\begin{TOINCLUDE}Figure to illustrate to hadronization process\end{TOINCLUDE}
+Description of how partons can't be seen free but inside hadrons.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \caption{Graphical representation of hadronization process of partons resulting from a proton-proton collision.}
+    \label{fig:Hadr}
+  \end{center}
+\end{figure}
+%\begin{TOINCLUDE}Figure to illustrate to hadronization process\end{TOINCLUDE}
 
 \subsection{Detector simulation}
 \label{sec:detector}
+
+Description on how the detector is simulated, and how the detector response is simulated to be the closest possible to data with Geant4.
 
 \section{Tools}
 \label{sec:tools}
@@ -68,10 +79,41 @@ For the hard process, the differential cross section can be written as,
 \subsection{Matrix-element generators}
 \label{sec:ME}
 
+Description of calculations performed by the MadGraph.
+
 \subsection{Hadron generators}
 \label{sec:Had}
+
+Hadronization procedures performed by Pythia and Herwig.
 
 \section{Validation on data}
 \label{sec:val}
 
-\begin{TOINCLUDE}Plot of W+jets and Z+jets comparison between data and MC for a set of different generators. Plot on top pt to briefly introduce tpo pt reweighting\end{TOINCLUDE}
+Description of validation process of known processes against different MC predictions.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \caption{$W+$jets simulated by several MC generators compared to data}
+    \label{fig:WVal}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \caption{$Z+$jets simulated by several MC generators compared to data}
+    \label{fig:WVal}
+  \end{center}
+\end{figure}
+
+Observed differences on the measured top pt and MC predictions.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \caption{Data MC comparison of ratio of normalized diff cross section as function of the $p_{T}$ of the top.}
+    \label{fig:WVal}
+  \end{center}
+\end{figure}
+%\begin{TOINCLUDE}Plot of W+jets and Z+jets comparison between data and MC for a set of different generators. Plot on top pt to briefly introduce tpo pt reweighting\end{TOINCLUDE}
