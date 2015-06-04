@@ -70,7 +70,7 @@ In collider physics, such as the LHC, the figure of merit is the luminosity, giv
 \begin{table}[htbH]
 \label{tab:LHCparams}
 \begin{center}
-%\topcaption{LHC proton beam parameters.\label{tab:LHCparams}}
+\caption{LHC proton beam parameters.\label{tab:LHCparams}}
 %\resizebox{\textwidth}{!}{
 \begin{tabular}{|c|c c|}
 \hline 
@@ -366,6 +366,8 @@ The CMS HCAL layout is shown in figure~\ref{fig:hcal}. The system is made of two
 
 The HF design is very different from the rest of the HCAL subsystems. The most important challenge for the HF is the high resistance to radiation, while in the central rapidity region 100 GeV are deposited in average in the forward region is 760 GeV. For this reason it was chosen a Cherenkov detector made of quartz fibers with a steel absorber. The light produced in the HF is collected by photo multipliers. 
 
+Calorimeters, ECAL and HCAL, and tracker are the fundamental pieces to identify the hadronic products of collision events. We will discuss how their information is combined to reconstruct physics objects called \textit{jets} in section~\ref{sec:jets}.
+
 \subsection{Muon chambers}
 \label{sec:muons}
 
@@ -407,6 +409,8 @@ From the searches conducted at CMS, the interesting events produced on proton-pr
 
 The CMS trigger system is designed to keep only 100 kHz by the L1 and 300 Hz by the HLT. L1 is reducing the data flux by 2 orders of magnitude and the HLT another 3 orders of magnitude.
 
+During data taking or in general CMS operation the trigger system need to be constantly supervised in order to guarantee that data is being collected correctly. For this purpose someone is always looking that the whole trigger system has no failures, in particular that the data collection frequency do not overflow. From the trigger performance depend the quality of the collected data. 
+
 \subsubsection{Level 1 trigger}
 \label{sec:L1}
 
@@ -433,11 +437,21 @@ The events selected by HLT are finally stocked on disks under several paths depe
 
 \section{Object reconstruction}
 
-The different subsystems of CMS play specific roles in order to identify particles from collisions and measure their properties. In order to achieve such measurements, the information collected by the different parts of a subsystem should be combined to reconstruct particle information. Also for some particles the information between different subsystems should be connected to achieve a successful identification. The easiest example is the reconstruction of tracks in the pixel detector. In order to identify a track of a charged particle that traversed the pixel barrel the hits of such particle in each layers should be considered at the same time. A track in the pixel barrel is formed then by the three hits a particle leaves in each barrel layer.
+The different subsystems of CMS play specific roles in order to identify particles from collisions and measure their properties. In order to achieve such measurements, the information collected by the different parts of a subsystem should be combined to reconstruct particle information. Also, for some particles, the information between different subsystems should be connected to achieve a successful identification. The easiest example is the reconstruction of tracks in the pixel detector. In order to identify a track of a charged particle that traversed the pixel barrel the hits of such particle in each layers should be considered at the same time. A track in the pixel barrel is formed then by the three hits a particle leaves in each barrel layer.
+
+\subsection{Particle Flow (PF) algorithm}
+
+CMS uses a sophisticated algorithm called \textit{Particle flow}~\cite{CMS:2009nxa,CMS:2010eua,CMS:2010byl,CMS:2010aua} to reconstruct the particles detected in the subsystems: charged and some neutral hadrons, electrons, muons and photons. The algorithm uses the information from all the subsystems to ameliorate the resolution of the reconstructed objects. Is specially important for the reconstruction of jets, using the tracker information to overpass the HCAL weaknesses.  
+
+The quality of the objects reconstructed by this algorithm greatly affects the analyses, as they rely in the information of these objects. \textit{Particle flow} algorithm has been optimized to give the best performance in terms of minimal fake rate, correct energy and momenta reconstruction. 
 
 \subsection{Track and vertex reconstruction}
 
-Track and vertices reconstruction in CMS are done by the tracker system. 
+Reconstruction of vertices and tracks is one of the most important parts of the reconstruction of events. The identification of the primary vertex of an event is crucial to separate objects coming from a hard interactions from other interactions, as pile up. 
+
+Track reconstruction proceeds from the clustering of pixel and silicon strips signals into \textit{hits}. The found hits in the different layers of the tracker are used to reconstruct the trajectory of the charged particle that left the hits. In order to reconstruct trajectories at least three hits are needed or two hits and a vertex constraint. The reconstruction proceeds from the propagation of hits in different layers. This process could lead to multiple possible tracks, in order to discard fake tracks and to choose the most likely tracks the vertex compatibility and the number of hits per tracks are used. Most compatible tracks and with highest number of hits are preferred. Finally, a $\chi^{2}$ fitting is used in order discriminate between multiple tracks. 
+
+A way to estimate the goodness of the reconstruction is to measure the reconstruction efficiency of charged pions and muons, such efficiencies can be seen in figure~\ref{fig:TrackerEff}.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -445,7 +459,7 @@ Track and vertices reconstruction in CMS are done by the tracker system.
     \includegraphics[width=0.45\textwidth]{figs/eff_muon_vs_eta.png}
     \includegraphics[width=0.45\textwidth]{figs/eff_pion_vs_pt.png}
     \includegraphics[width=0.45\textwidth]{figs/eff_pion_vs_eta.png}
-    \caption{}
+    \caption{Reconstruction efficiency of charged pions and muons in the tracker system as function of $p_{T}$ and $\eta$.}
     \label{fig:TrackerEff}
   \end{center}
 \end{figure}
@@ -453,32 +467,32 @@ Track and vertices reconstruction in CMS are done by the tracker system.
 
 \subsubsection{Vertex reconstruction}
 
-Description of vertex reconstruction procedure.
+The problem of vertex finding relies on the association of a set of tracks to the beam line. A figure of merit is used in order to measure the compatibility of a set of tracks to a given vertex. For such figure of merit the $z$ position of the tracks, from trajectory extrapolation, and the vertex is used. The final assigning of vertices respond to the minimization of the figure of merit. Finally, the primary vertex associated to a set of tracks is defined as the one that minimizes the sum of the $p_{T}$ squared, $\sum_{tracks}p_{T}^{2}$, of the associated tracks. The resolution, in $x$ and $z$, and efficiency of primary vertices can be seen in figure~\ref{fig:VertexRec}.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Resolution [left] and efficiency [right] of reconstruction of primary vertices.}
+    \includegraphics[scale=0.255]{figs/PrimaryVertexResolutions.png}
+    \includegraphics[width=0.3\textwidth]{figs/PrimaryVertexTagAndProbeEfficiency.png}
+    \caption{Resolution [left, center] and efficiency [right] of reconstruction of primary vertices.}
     \label{fig:VertexRec}
   \end{center}
 \end{figure}
 %\begin{TOINCLUDE}Two plots: Primary vertex resolutions and Primary vertex efficiency\end{TOINCLUDE}
 
-\subsection{Particle Flow (PF) algorithm}
-
-Description of Particle flow algorithm. 
-
 \subsubsection{Calorimeter clustering}
 
-Description on how calorimeter deposits are clustered for particle reconstruction.
+Identification of calorimeter cluster is an important step in the reconstruction of particles in CMS. They are defined as a group of deposits in an specific part of a calorimeter. Their reconstruction proceeds from the cell energy maxima, then adjacent deposits are associated to it up to an energy threshold determined to avoid adding different source of noise. The clusters are used in the particle flow algorithm to reconstruct some objects as jets. The procedure is done both in the HCAL and ECAL. Calorimeter clusters are used to identify, for example, neutral hadrons and reconstruct the energy of charged hadrons not correctly reconstructed in the tracker.    
 
 \subsubsection{Subdetectors link}
 
-How different subdetectors information are related to reconstruct different particles. 
+A single particle traversing CMS may interact with several subdetectors. For example, a charged pion would leave a track and a cluster in the HCAL. Then, taking into account the information of different subdetectors and connecting them help to correctly identify each type of particle. Thanks to the excellent granularity of CMS allows to have a highly performing linking between different subdetectors, also meaning highly performing reconstruction algorithms. 
+
+The links are done from a extrapolation of tracks towards the calorimeters. A track and a cluster are linked if the extrapolation point is within the cluster boundaries. The extrapolation to the ECAL is performed up to a depth corresponding to the expected maximum of an electromagnetic shower. On the other hand, the extrapolation to the HCAL is performed up to a  depth of a nuclear interaction, characterizing an hadronic shower. In figure~\ref{fig:SubdetConec} can be seen the links from two tracks to ECAL and HCAL clusters in $\eta-\phi$ plane. An additional link can also be created between ECAL and HCAL clusters if the position of the electromagnetic cluster is contained in the zone of the hadronic cluster.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \includegraphics[width=0.4\textwidth]{figs/Conection_tracks_Ecalcluster.png}
+    \includegraphics[width=0.4\textwidth]{figs/Conection_tracks_Hcalcluster.png}
     \caption{Connection between tracks reconstructed in the tracker (in green) and energy clusters in the ECAL [left] and HCAL clusters [right].}
     \label{fig:SubdetConec}
   \end{center}
@@ -486,101 +500,144 @@ How different subdetectors information are related to reconstruct different part
 %\begin{TOINCLUDE}Two plots: Link of tracks to ECAL and to HCAL\end{TOINCLUDE}
 %
 %\subsubsection{Particle reconstruction}
-
-\subsection{Electron reconstruction}
-
-Description of variables used to reconstruct electrons.
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Reconstruction efficiency of electrons.}
-    \label{fig:EleEff}
-  \end{center}
-\end{figure}
-
-\begin{table}[htbH]
-\label{tab:ElectronParam}
-\begin{center}
-\begin{tabular}{|c|c|c|}
+%
+%\subsection{Electron reconstruction}
+%Description of variables used to reconstruct electrons.
+%\begin{figure}[!Hhtbp]
+%  \begin{center}
+%    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+%    \caption{Reconstruction efficiency of electrons.}
+%    \label{fig:EleEff}
+%  \end{center}
+%\end{figure}
+%\begin{table}[htbH]
+%\label{tab:ElectronParam}
+%\begin{center}
+%\begin{tabular}{|c|c|c|}
 %\hline 
-xxxxxxx & xxxxxxx & xxxxxxx
+%xxxxxxx & xxxxxxx & xxxxxxx
 %\hline
-\end{tabular}
-\caption{Identification requirements for electrons}
-\end{center}
-\end{table}
+%\end{tabular}
+%\caption{Identification requirements for electrons}
+%\end{center}
+%\end{table}
 %\begin{TOINCLUDE}Plot of electron efficiency. Table with electron ID requirements\end{TOINCLUDE}
-
-\subsection{Muon reconstruction}
-
-Muon reconstruction description and goodness of reconstruction from dimuon mass spectra showing resonances.
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Reconstruction efficiency of muons.}
-    \label{fig:MuEff}
-  \end{center}
-\end{figure}
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Dimuon mass spectra from reconstructed muons in CMS.}
-    \label{fig:DiMuonMass}
-  \end{center}
-\end{figure}
+%
+%\subsection{Muon reconstruction}
+%
+%Muon reconstruction description and goodness of reconstruction from dimuon mass spectra showing resonances.
+%
+%\begin{figure}[!Hhtbp]
+%  \begin{center}
+%    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+%    \caption{Reconstruction efficiency of muons.}
+%    \label{fig:MuEff}
+%  \end{center}
+%\end{figure}
+%
+%\begin{figure}[!Hhtbp]
+%  \begin{center}
+%    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+%    \caption{Dimuon mass spectra from reconstructed muons in CMS.}
+%    \label{fig:DiMuonMass}
+%  \end{center}
+%\end{figure}
 %\begin{TOINCLUDE}Plots: PF muon efficiency selection, dimuon mass spectra\end{TOINCLUDE}
 
 \subsection{Jet reconstruction}
+\label{sec:jets}
+
+Quarks and gluons produced from a collision can not be observed directly due to the confinement of strong interactions. After their production they follow an hadronization process (see section~\ref{sec:hadron}), making principally hadrons that are detected in CMS. The set of hadrons produced in the process is called an hadronization cascade. All the particles produced from an initial quark or gluon define a \textit{jet}. Ideally a jet should contain the energy of the initial parton that undergone the hadronization process. Requiring such jets could be connected to the partons produced in the collision.
 
 \subsubsection{Clustering algorithms}
 
-Description of basis of clustering algorithms. 
-
-\paragraph{SISCone}
-
-SISCone algorithm definition. Characteristics discussion. 
-
-\paragraph{kT}
-
-KT algorithm definition. Characteristics discussion.
-
-\paragraph{Cambridge-Aachen}
-
-CA algorithm definition. Characteristics discussion.
-
-\paragraph{Anti-kT}
-
-AK algorithm definition. Characteristics discussion.
-
-\paragraph{Infrared and collinear safety}
-
-Definition of infrared and collinear safety. Description of which algorithms are safe and why.
-
-\paragraph{Jet area}
-
-Jet are definition. Importance of jet area.
+Particle flow algorithm reconstructs individually each particle produced from a collision event. In order to associate all the different particles identified with particle flow additional algorithms are implemented: Clustering algorithms. In order to not cluster into a jet isolated leptons in an event, they are deleted from the list of particles the clustering algorithm receive as input. Within particle physics experiments different algorithms have been used. CMS and ATLAS mainly use the \textit{anti-kt} but CMS also uses Cambridge-Aachen algorithm for many analysis. In the following these algorithms are going to be described and their specific characteristics. Two types of algorithms exist: cone type clustering (SISCone) and sequential clustering (kT, Cambridge-Aachen, anti-kT). The first type use a fixed radius circle to try to identify clusters of particles while the second cluster particles relating them by a distance and grouping them until a fixed maximal distance. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Jet areas for different jet algorithms related to the reconstructed $p_{T}$.}
+    \includegraphics[width=0.43\textwidth]{figs/herwig-parton-level-ev-siscone-R1-0-f0-75-ghosted4root.png}
+    \includegraphics[width=0.43\textwidth]{figs/herwig-parton-level-ev-kt-R1-0-ghosted4root.png}
+    \includegraphics[width=0.43\textwidth]{figs/herwig-parton-level-ev-cam-R1-0-ghosted4root.png}
+    \includegraphics[width=0.43\textwidth]{figs/herwig-parton-level-ev-antikt-R1-0-ghosted4root.png}
+    \caption{Jets in a Monte-Carlo event reconstructed with four different clustering algorithms: SISCone [left-up], kT [right-up], Cambridge-Aachen [left-down] and anti-kT [right-down]. All algorithms used same radius $R=1$. Jets displayed in the $y-\phi$ plane and reconstructed $p_{T}$ in the z-axis.}
     \label{fig:JetsAlgos}
+  \end{center}
+\end{figure}
+
+\paragraph{SISCone}
+
+SISCone algorithm~\cite{Salam:2007xv} uses a circle to explore randomly the $\eta-\phi$ plane until a particle touches it. Then the circular enclosure is pivoted until a second particle touches the edge. All the matches define the stable cones. Particles in the found stable cones are removed and the procedure is repeated until no more cones are found. From all found stable cones an algorithm is used to split or merge the cones in final jets based on an overlap parameter. In figure~\ref{fig:JetsAlgos} an example of the jets reconstructed by SISCone can be seen for a circular enclosure of radius 1. 
+
+\paragraph{kT}
+
+kT-algorithm~\cite{Ellis:1993tq} relies is, historically, one of the most used jet reconstruction algorithms. It begins with the calculation of the kT distance for all pair of particles ($i$,$j$), defined as
+
+\begin{equation}
+  \label{eq:kt}
+  d_{ij}=min(p_{Ti}^{2},p_{Tj}^{2})\Delta R_{ij}^{2}/R^{2}
+\end{equation} where $\Delta R_{ij}^{2}=(y_{i}-y_{j})^{2}+(\phi_{i}-\phi_{j})^{2}$ and $R$ is the radius parameter. The distance of a particle to the beam is $d_{iB}=p_{Ti}^{2}$. 
+
+Then the minimal distance between all $d_{ij}$ and $d_{iB}$ is found, if its a $d_{ij}$ the two particles are merged, if its a $d_{iB}$ the particle is declared to be a final jet. The process is repeated until no particles are left. A result of this reconstruction can be found in figure~\ref{fig:JetsAlgos}. 
+
+\paragraph{Cambridge-Aachen}
+
+Cambridge-Aachen (CA) jet algorithm is similar to kT algorithm but changes the distance definition to $d_{ij}=\Delta R_{ij}^{2}/R^{2}$ and $d_{iB}=1$. In figure~\ref{fig:JetsAlgos} can be seen the jets produced by this algorithm.
+
+\paragraph{Anti-kT}
+
+Anti-kT (AK) algorithm proceeds equivalently to kT and CA algorithms changing the definition of distance to
+
+\begin{equation}
+  \label{eq:antikt}
+  d_{ij}=min\left(\frac{1}{p_{Ti}^{2}},\frac{1}{p_{Tj}^{2}}\right)\Delta R_{ij}^{2}/R^{2};\; d_{iB}=\frac{1}{p_{Ti}^{2}}
+\end{equation} 
+
+This algorithm produces ``perfectly'' circular conic jets. An example of the reconstruction performed by this algorithm can be seen in figure~\ref{fig:JetsAlgos}.
+
+\paragraph{Infrared and collinear safety}
+
+Two extremely important characteristics that should be achieved correctly by jet algorithms are to be collinear and infrared safe. In QCD processes, a parton can split in two collinear components or can emit soft radiation. Such processes will give rise to extra hadrons that could lead to ambiguities in the jet reconstruction, giving different jet compositions. Collinear and infrared safety correspond to the ability of an algorithm to give the same results independently if an initial parton radiated or not. In other words, the jet reconstruction should include this radiation correctly to the same jet and don't give rise to an additional jet coming only from one of this radiations. The formerly described jet algorithms are both collinear and infrared safe, well reconstructing jets to solely initial partons. 
+
+\paragraph{Jet area}
+
+Jet area, discussed on~\cite{Cacciari:2008gn}, is a concept used to estimate the sensitivity of jet algorithms to radiation like pileup and underlying event. Naively the area of the jet is expected to correspond to $\pi R^{2}$, where $R$ is the radius parameter used by the algorithm. Obviously this parameter is also related to the final shape of jets given by the algorithm. From figure~\ref{fig:JetsAlgos} one can see the in the $y-\phi$ plane the area given by SISCone, kT, CA and AK algorithms. As much the area correspond to the expected value is less sensitive to radiation, making it more stable to real experimental conditions, where pileup and underlying event contributions could be high. A more precise way to estimate the stability of an algorithm, in terms of area, is to measure the jet area and compare it to the expected area scanning it as function of the jet $p_{T}$. In figure~\ref{fig:JetsAlgosArea} can be seen such study, from it one can see that AK algorithm is the most stable one. This behavior constitutes a powerful reason to prefer AK over algorithms. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/JetArea.png}
+    \caption{Jet areas over expected geometrical jet area for different jet algorithms as function of the reconstructed $p_{T}$.}
+    \label{fig:JetsAlgosArea}
   \end{center}
 \end{figure}
 %\begin{TOINCLUDE}Plots: Jet in y-phi-pT space for each algorithm\end{TOINCLUDE}
 
+\paragraph{Reconstruction at CMS}
+
+CMS experiment uses AK algorithm with a radius of 0.5 to reconstruct jets. Alternatively CA with radius of 0.8, 1.0 or 1.5 are also used to identify substructure structures, jets inside jets. AK reconstruction relies on particles reconstructed by the particle flow algorithm, being then called particle flow jets (PFJets). In figure~\ref{fig:PFJets} can be seen the composition of PFJets.  
+
+ \begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{figs/Jet_composition_data_7TeV.png}
+    \begin{minipage}[t]{.15\textwidth}
+      \centering
+      \includegraphics[width=1.0\textwidth]{figs/Legend_jet_composition.png}
+    \end{minipage}
+    \includegraphics[width=0.4\textwidth]{figs/Jet_composition_MC_7TeV.png}
+    \caption{Jet composition of particle flow jets as function of $\eta$ for data [left] and Monte-Carlo simulation [right]}
+    \label{fig:PFJets}
+  \end{center}
+\end{figure}
+
 \subsubsection{Jet energy corrections}
 
-Why jet energy corrections. Brief how.
+Whereas jet reconstruction algorithms have been tuned to give the best performance possible, in actual experiments reconstruction is not perfect. Some times all the information in the detector, tracks or calorimeter clusters, are not available or are just partially. This impacts the properties, as $p_{T}$ of the reconstructed jets. Data-driven methods, as in~\cite{2011JInst...611002C}, have been implemented in CMS to correct such imperfections and to measure the resolution of the reconstructed jets in $p_{T}$. Several correction levels have been considered in order to take into account subdetectors response to pileup, particle types in different eta regions, among others. In general such corrections are called Jet Energy Corrections (JEC) conformed by 
 
-JES description. JER description.
+The most important information to determine from jet reconstruction, referred to the performed corrections, is the energy scale and resolution, correspondingly called Jet Energy Scale (JES) and Jet Energy Resolution (JER). Uncertainties in these quantities depend on the reconstructed $p_{T}$ of the jets and on $\eta$, it can be seen in figure~\ref{fig:JEC}. JEC uncertainties are of the order of 1\% for central jets with $p_{T}>100$ GeV/c.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \includegraphics[width=0.4\textwidth]{figs/JEC_pt.png}
+    \includegraphics[width=0.4\textwidth]{figs/JEC_eta.png}
     \caption{JEC uncertainties as function of $p_{T}$ [left] and $\eta$ [right].}
     \label{fig:JEC}
   \end{center}
@@ -589,23 +646,27 @@ JES description. JER description.
 
 \subsubsection{b-jets identification}
 
-Description of basic parameters that help to differentiate b-jets from light jets. 
+B-quarks produced in a collision hadronize forming up B-hadrons. This hadrons differentiate from the rest due to their stability, taking more time to decay in average than hadrons from $u$ or $d$ quarks. This additional time of flight is translated in the detector in a displaced vertex. This characteristic is one of the principal handles to identify jets coming from an initial b-quark. Complex algorithms have been developed in CMS to study and combine jet information to attribute a probability of coming from a b-quark to each jet.  
 
 \paragraph{Identification algorithms and working points}
 
-Description of CSV algorithm. Variables used. Efficiency of different working points.
+CMS collaboration uses for b jet identification, b-tagging, the Constrained Secondary Vertex (CSV) algorithm~\cite{Chatrchyan:2012jua, CMS:2013vea}. the main variables used by the algorithm is the existence of a displaced vertex. Also specific parameters of the displaced vertex are used, as the time of flight, its mass, the number of tracks associated to it. Also the impact of parameter is taken into account, because for jets coming from B-hadrons this variable have usually a higher value than for the rest of jets. CSV algorithm take all this variables and use an MVA (Multivariate Variable Analysis) to build up a discriminant. On the value of the discriminant three cuts are defined. They define the working points that allow to select whether with a high efficiency (loose working point: CSVL) or highly pure sample on b-tags (tight working point: CSVT). The middle working point, CSVM, allows to gain on efficiency while preserving high purity. In figure~\ref{fig:CSVVar} can be seen the number of secondary vertices and the final discriminator used for b-tagging test. In figure~\ref{fig:CSVVar} can be seen the number of secondary vertices and final discriminator for CSV algorithm.  
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Number of secondary vertices [left] and CSV final discriminator variable [right] for each jet flavor.}
+    \includegraphics[width=0.4\textwidth]{figs/sv_multi_0_Log.png}
+    \includegraphics[width=0.4\textwidth]{figs/pdf-sub.png}
+    \caption{Number of secondary vertices [left] and CSV final discriminator [right] for each jet flavor, from QCD Monte-Carlo sample.}
     \label{fig:CSVVar}
   \end{center}
 \end{figure}
 
+CSVM correspond to cut in the discriminator greater than 0.679. This working point has an average efficiency of correctly tag b-jets of $\sim$70\%, the efficiency to tag as b-jet a c-jet around 20\% and any other jet $\sim$1\%. When the algorithm is applied to Monte-Carlo, a correction have to be performed in order to match the same behavior than in data. Scale factors are derived from the comparison of data and Monte-Carlo. CSVM shows a need to correct correctly tagged b-jets by 5\% and other jets incorrectly tagged by 17\%. In figure~\ref{fig:CSVEff} can be seen b-tagging efficiencies for CSVM working point as function of $p_{T}$ and $\eta$.  
+
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \includegraphics[width=0.42\textwidth]{figs/LTdilep_csvMeffeta.png}
+    \includegraphics[width=0.42\textwidth]{figs/LTdilep_csvMeffpt.png}
     \caption{Efficiency of CSV b-tagging algorithm in the middle working point as function of jet $p_{T}$ and $\eta$.}
     \label{fig:CSVEff}
   \end{center}
