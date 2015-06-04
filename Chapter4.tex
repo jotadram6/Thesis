@@ -1,4 +1,4 @@
-\chapter[MC event generation]{Understanding theory predictions via Monte-Carlo event generation}
+\chapter[MC event generation]{Monte-Carlo event simulation}
 \label{chap:MC}
 
 Although we have nowadays a very elegant and complete theoretical description of particle physics, is not always evident how to translate this theory in actual predictions, to compare with measurements. Moreover, on the case of hadronic colliders, as the LHC, it's even more difficult due to the particularities of strong interaction. On this subject, a set of tools and approaches have been developed in order to be able to make accurate predictions from theory that could be directly researched for on the experiments, as CMS or ATLAS for example. In the present chapter, we describe such tools and formalisms and a set of studies comparing the predictions these tools to data. 
@@ -89,43 +89,64 @@ There are several tools in the market to perform the different steps of MC simul
 \subsection{Matrix-element generators}
 \label{sec:ME}
 
-Regarding parton simulation, \textit{MadGraph}~\cite{Alwall:2014hca} package is the most widely used. It calculates matrix-elements, LO cross sections and massive particle widths. With such information it generates MC events for partons. 
+Regarding parton simulation, \textit{MadGraph}~\cite{Alwall:2014hca} package is the most widely used. It calculates matrix-elements, LO cross sections and particle widths. With such information it generates MC events for parton collisions. 
 
 The latest series of releases also include an additional package to perform NLO QCD corrections to SM processes. The framework also includes the possibility to work with BSM models, making it a powerful tool for evaluating predictions from these models. 
+
+In CMS all physics groups, groups making analyses of data collected by CMS, have to do simulations of signals and backgrounds needed for their analyses. For this purpose MC simulation tools, as \textit{MadGraph}, need to be interfaced with the central CMS software \textit{CMSSW}, for CMS SoftWare. The generators group do this work preparing sets of validated code for later use by all CMS users. This group is also in charge of central MC production, the technical process of MC production of samples doing all the needed steps to obtain validated samples to compare with CMS data: Parton generation, Hadronization and Detector simulation. 
+
+Central production of samples using \textit{MadGraph} is done via the generation of stand-alone packs of code used to launch parallelized production. This utility is known as \textit{gridpack}. Gridpack generation must include all possible configurations needed for CMS central production: settings to run with CMSSW, in batch systems and additional physics requirements depending on the process to be generated. A special script has been put in place to allow users to do their own gridpack generation with small effort in terms of automatization of common tasks.
+
+In addition, the generator group also provide constant support for users to test validity of users production, MadGraph configuration, usage of interface software in CMSSW and testing implementations of BSM models.
 
 \subsection{Hadron generators}
 \label{sec:Had}
 
-Taking as input partonic events, hadron generators perform their corresponding showering. The most used hadronizers in CMS are Pythia 6~\cite{Sjostrand:2006za} and Herwig ++
+Taking as input partonic events, hadron generators perform their corresponding showering. The most used hadronizers in CMS are Pythia~\cite{Sjostrand:2006za}, in releases 6 and 8, and Herwig ++~\cite{Bahr:2008pv}. They are used for a wide range of SM processes simulation. They can be used also to simulate directly QCD processes with full hadronic final states, without the parton step. Another hadron generator is POWHEG, in it's most recent version POWHEG BOX~\cite{Nason:2004rx, Frixione:2007vw, Alioli:2010xd}, that is specially accurate to simulate events with top quarks. It is well know that this generator gives a better agreement between data and MC in top physics.
+
+Hadronization processes are QCD mediated. As strong force is a non-perturbative interaction, different hadrons simulation implement different effective models. Reason why when comparing simulations to data different hadron generators are used in order to corroborate the understanding of data independently from the hadronization model. 
 
 \section{Validation on data}
 \label{sec:val}
 
-Description of validation process of known processes against different MC predictions.
+MC simulations are theory based, in the sense that the generated events reflect the predictions of a given model. For example, simulation of the decay of the top quark depends on the theory predictions of the branching ratios of all its possible final states. Such branching ratios are used by generators as probabilities used to evaluate with random numbers if a top quark in a single event decay into a specific channel. 
+
+A considerable number of SM processes have been measured by experiments very accurately. Such processes have also been served to test theoretical predictions. Such well understood processes can be then used as reference to test the accuracy of MC simulations. All MC generators are tested against known experimental and theoretical results to prove their validity. For example, MadGraph versions used in CMS have been carefully validated internally by the collaboration before being used for central production.
+
+\subsection{RIVET}
+\label{sec:rivet}
+
+There are different tools in the market designed to validate MC generators. The Rivet project (Robust Independent Validation of Experiment and Theory)~\cite{Buckley:2010ar} is a toolkit for MC generators validation, providing a large set of experimental analyses. This tool has been extensively used by experiments and MC generators developers for MC development, tuning and validation. 
+
+With the analyses it provides the experimental data resulting from them. This data has been processed to remove detector effects from it, what is known as detector unfolding. This procedure tries to inverse detector simulation to obtain event information after hadronization. This constitutes a suitable method to compare data with MC simulations up to hadronization. CMS and ATLAS experiments contribute constantly providing unfolded results to Rivet toolkit database.
+
+In figures~\ref{fig:WVal} and~\ref{fig:ZVal} can be seen examples of MC validation using Rivet tool. For the first figure a comparison between several MC simulations have been compared to ATLAS experiment data in the measurement of $W$ boson $p_{T}$. In figure~\ref{fig:ZVal} the same MC generators have been compared to $Z$ boson $p_{T}$ measurements performed by CMS and ATLAS. In the three validations MG interfaced with Pythia 6 describe better real data than the other generators used. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{$W+$jets simulated by several MC generators compared to data}
+    \includegraphics[width=0.45\textwidth]{figs/Wpt_rivet.png}
+    \caption{$W$ boson $p_{T}$ measured by ATLAS experiment in muon final states compared to different MC simulations. \textit{py6} stands for Pythia 6, \textit{py8} for Pythia 8, \textit{MGpy6} MadGrpah interfaced with Pythia 6 and \textit{PWG} for Powheg. MG with Pythia 6 give the best description of experimental data.}
     \label{fig:WVal}
   \end{center}
 \end{figure}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{$Z+$jets simulated by several MC generators compared to data}
-    \label{fig:WVal}
+    \includegraphics[width=0.9\textwidth]{figs/Zpt_rivet.png}
+    \caption{$Z$ boson $p_{T}$ measured by ATLAS [left] and CMS [right] experiments in di-muon channel. Same legend as in~\ref{fig:WVal}. MG with Pythia 6 give the best description of experimental data in both cases.}
+    \label{fig:ZVal}
   \end{center}
 \end{figure}
 
-Observed differences on the measured top pt and MC predictions.
+In general, present MC generators describe correctly SM physics. However there are known observables that are not correctly described MC simulations. The most important issue has been seen when measuring the $p_{T}$ of top quark in top-pair production. In figure~\ref{fig:TopPTReweighting} can be seen the ratio between data and MC, produced with MG and Pythia 6, for the differential cross section of top pair production. Data is coming from four different analysis performed by CMS. A clear trend can be seen, showing that top $p_{T}$ in MC tend to be higher than in data. Due to this issue, MG with Pythia 6 simulations of top pair production should be corrected. This corrections is considerable for high $p_{T}$ tops. Moreover, the correction to apply is only known for tops with a $p_{T}$ smaller than 400 GeV/c.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Data MC comparison of ratio of normalized diff cross section as function of the $p_{T}$ of the top.}
-    \label{fig:WVal}
+    \includegraphics[width=0.6\textwidth]{figs/topPtDataOverMadgraphPythia.png}
+    \caption{Data MC ratio of normalized differential top pair production cross section as function of top $p_{T}$.}
+    \label{fig:TopPTReweighting}
   \end{center}
 \end{figure}
 %\begin{TOINCLUDE}Plot of W+jets and Z+jets comparison between data and MC for a set of different generators. Plot on top pt to briefly introduce tpo pt reweighting\end{TOINCLUDE}
+
+In conclusion, however MC simulations are useful to understand particle physics processes and to test theoretical predictions, they are not always fully valid. Furthermore, when they are used to understand physics processes that have not been precisely measured in the past. For example, high $p_{T}$ spectra of particles or high jet multiplicity. For this reason it is very important for analyses looking for new physics, that work normally with non-explored or poorly explored physics, to develop strategies to estimate backgrounds estimations from data.
