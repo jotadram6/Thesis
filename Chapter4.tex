@@ -1,12 +1,12 @@
 \chapter[MC event generation]{Monte-Carlo event simulation}
 \label{chap:MC}
 
-Although we have nowadays a very elegant and complete theoretical description of particle physics, is not always evident how to translate this theory in actual predictions, to compare with measurements. Moreover, on the case of hadronic colliders, as the LHC, it's even more difficult due to the particularities of strong interaction. On this subject, a set of tools and approaches have been developed in order to be able to make accurate predictions from theory that could be directly researched for on the experiments, as CMS or ATLAS for example. In the present chapter, we describe such tools and formalisms and a set of studies comparing the predictions these tools to data. 
+Although we have nowadays a very elegant and complete theoretical description of particle physics, is not always evident how to translate this theory in actual predictions, to compare with measurements. Moreover, on the case of hadronic colliders, as the LHC, it's even more difficult due to the particularities of the strong interaction. On this subject, a set of tools and approaches have been developed in order to be able to make accurate predictions from theory that could be directly researched for on the experiments, as CMS or ATLAS for example. In the present chapter, we describe such tools and formalisms and a set of studies comparing these tools predictions to data. 
 
 \section{Mote-Carlo simulations}
 \label{sec:MC}
 
-The Monte-Carlo simulations use random numbers and large samplings to calculate mathematical quantities in complex configurations, as integrals or probabilities. The typical example is on how to calculate the integral of a one-dimensional function. One can throw several random coordinates pair in the Cartesian plane and count how many of them are under the function. Then the integral of the function will be proportional to the fraction of points under the curve to the total thrown points. Larger the number of points, closer the estimation to the real value. An illustration of the procedure can be seen in figure~\ref{fig:mc_int}.
+The Monte-Carlo simulations use random numbers and large samplings to calculate mathematical quantities in complex configurations, as integrals or probabilities. The typical example is on how to calculate the integral of a one-dimensional function. One can throw several random points in the Cartesian plane and count how many of them are under the function. Then the integral of the function will be proportional to the fraction of points under the curve to the total used points. Larger the number of points, closer the estimation to the real value. An illustration of the procedure can be seen in figure~\ref{fig:mc_int}.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -16,7 +16,7 @@ The Monte-Carlo simulations use random numbers and large samplings to calculate 
   \end{center}
 \end{figure}
 
-A similar method is used to simulate proton-proton collisions. This simulation is used to generate ``random'' events and to calculate quantities, as the cross section, for a given physical process. Each event represent the final state of a collision, i.e. the set of particles produced from the collision and seen by a detector. Such simulations comprehend different stages: first, the partonic processes making reference to the interaction between the partons inside the proton; second, the hadronization of the particles produce from parton interactions; and third, the simulation of the interaction between the hadrons (from second step) and the detector material. Such events are used to evaluate predictions from theory in the frame of a specific experiment. Whereas the hadronization and detector simulation are well-known physical processes, new theories predictions rely basically on the partonic level, where the fundamental interaction processes take part.
+A similar method is used to simulate proton-proton collisions. This simulation is used to generate ``random'' events and to calculate quantities, as the cross section, for a given physical process. Each event represent the final state of a collision, i.e. the set of particles produced from the collision and seen by a detector. Such simulations comprehend different steps: first, the partonic processes making reference to the interaction between the partons inside the proton; second, the hadronization of the particles produced from parton interactions; and third, the simulation of the interaction between the hadrons (from second step) and the detector materials. Such events are used to evaluate predictions from theory in the frame of a specific experiment. Whereas the hadronization and detector simulation are well-known physical processes, new theories predictions rely basically on the partonic level, where the fundamental interaction processes take part.
 
 \subsection{Parton simulation}
 \label{sec:parton}
@@ -25,7 +25,7 @@ The parton model was initially proposed by Richard Feynman in 1969, as a method 
 
 However, as the energy of the collision increases the probability to scatter a sea component, quark or gluon, increases. In addition, even if the valence quarks of a proton are the $u$ and $d$ quarks, heavier quarks can appear in the sea, as the $b$, $c$ or $s$ quarks. The probability to interact with a component, valence or sea, is described by parton distribution function, commonly called PDF. A PDF $f\equiv f(x,Q^{2})$ represent the number density of a given quark or gluon as a function of the energy scale $Q^{2}$ and the fraction of momentum carried by the parton $x$. The determination of a PDF is done via a fit of large data samples from experiments specifically designed to test the inner structure of nucleons. The DIS (Deep Inelastic Scattering) experiment at SLAC (Stanford Linear Accelerator Center), in California, United States, first probed the existence of partonic structure inside nucleons using leptons as probes scattered against nucleons. Another important experiment was the HERA accelerator at DESY in Hamburg, Germany, which used electrons to study the inner structure of protons.
 
-In figure~\ref{fig:MSTW} is shown the Martin-Stirling-Thorne-Watt~\cite{Martin:2009iq} (MSTW) PDF for two energy scales. The MSTW PDF is one of the experimental fits combining data from DIS and HERA. In this PDF can be seen that $u$ and $d$ quarks carry the most of the momentum of the proton. The rest of the momentum is spread mainly over a huge amount of gluons and some, less probable, sea quarks as $\bar{u}, \bar{d}$ or $c$ and $s$. One important feature is that the composition of the proton changes depending on the energy scale. At $Q^{2}= 10\, GeV^{2}$ there is no $b$-quark in the proton while at $Q^{2}= 10^{4}\, GeV^{2}$ there is a non-negligible probability to find it in the proton.
+In figure~\ref{fig:MSTW} is shown the Martin-Stirling-Thorne-Watt~\cite{Martin:2009iq} (MSTW) PDF for two energy scales. The MSTW PDF is one of the experimental fits combining data from DIS and HERA. In this PDF can be seen that $u$ and $d$ quarks carry the most of the momentum of the proton. The rest of the momentum is spread mainly over a huge amount of gluons and some, less probable, sea quarks as $\bar{u}, \bar{d}$ or $c$ and $s$. One important feature is that the composition of the proton changes depending on the energy scale. At $Q^{2}= 10\, GeV^{2}$ there is no probability to find a $b$-quark in the proton while at $Q^{2}= 10^{4}\, GeV^{2}$ there is a non-negligible probability to find it in the proton.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -44,7 +44,7 @@ For the hard process, the differential cross section can be written as,
   d\sigma_{ij\rightarrow lm} & = & \left( \int_{0}^{1}\int_{0}^{1}f_{i}(x_{i},Q^{2})f_{j}(x_{j},Q^{2})dx_{i}dx_{j} \right) \nonumber \\  
  & \times & \frac{d^{3}p_{l}}{(2\pi)^{2}2E_{l}}\frac{d^{3}p_{m}}{(2\pi)^{2}2E_{m}}\delta^{4}\left( p_{i}+p_{j}-p_{l}-p_{m} \right) \nonumber \\  
  & \times & |\mathcal{M}_{ij\rightarrow lm}|^{2}
-\end{eqnarray} where $f_{i,j}$ correspond to the PDF's of the initial partons. $\mathcal{M}_{ij\rightarrow lm}$ is the matrix element of the process which is the part of the S-matrix that contains the amplitude of the process, and modules the transition from the initial to the final state~\cite{opac-b1131978}. The matrix element could account effectively for all processes mediating the transition from the initial to the given final state, but in practice it is calculated only including a given number of processes. The calculation can achieve different levels, usually tree level or Leading Order (LO), but modern calculation could arrive, depending on the process, to one loop or Next-to-Leading-Order (NLO) or even two loops the  Next-to-Next-to-Leading-Order (NNLO). This limit depends exclusively on the feasibility of the theoretical calculations. In figure~\ref{fig:LOpNLO} is shown an example of a leading order plus its corresponding NLO diagrams for a fermion scattering.
+\end{eqnarray} where $f_{i,j}$ correspond to the PDF's of the initial partons. $\mathcal{M}_{ij\rightarrow lm}$ is the matrix element of the process which is the part of the S-matrix that contains the amplitude of the process, and modules the transition from the initial to the final state~\cite{opac-b1131978}. The matrix element could account effectively for all processes mediating the transition from the initial to a given final state, but in practice it is calculated only including a given number of processes. The calculation can achieve different levels, usually tree level or Leading Order (LO), but modern calculation could arrive, depending on the process, to one loop or Next-to-Leading-Order (NLO) or even two loops the  Next-to-Next-to-Leading-Order (NNLO). This limit depends exclusively on the feasibility of the theoretical calculations. In figure~\ref{fig:LOpNLO} is shown an example of a leading order plus its corresponding NLO diagrams for a fermion scattering.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -59,13 +59,13 @@ Parton simulations try to simulate the interactions between partons in hadronic 
 \subsection{Hadron simulation}
 \label{sec:hadron}
 
-However, partons change while they propagate. And due to strong interaction they can't be seen freely. A quark produced from a collision will take quarks from vacua to form hadrons. What reach the detector as final state are the stable hadrons resulting from the hadronization power. From a single parton several hadrons can result, producing a \textit{shower} of particles, as seen in figure~\ref{fig:Hadr}. 
+But quarks produced in a collision are not seen freely due to strong interaction. they will take quarks from vacua to form hadrons. What reach the detector as final state are the stable hadrons resulting from the hadronization process. From a single parton several hadrons can result, producing a \textit{shower} of particles, as seen in figure~\ref{fig:Hadr}. 
 
 As QCD strong interaction imposes several theoretical restrictions to have a first principles understanding of these phenomena, the description of hadronization relies in the construction of effective models. There are basically two main models to simulate hadronization/showering of quarks and gluons, both giving comparable predictions. It is important to remark that this is a very important step in simulations as from an accurate hadron production simulation depend the correctness of MC description of jets.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.7\textwidth]{figs/parton_shower.png}
+    \includegraphics[width=\textwidth]{figs/parton_shower.png}
     \caption{Graphical representation of hadronization process of partons resulting from a proton-proton collision.}
     \label{fig:Hadr}
   \end{center}
@@ -75,16 +75,16 @@ As QCD strong interaction imposes several theoretical restrictions to have a fir
 \subsection{Detector simulation}
 \label{sec:detector}
 
-After final particles from a collision are simulated, the next step is to simulate how this particles interact with the detector. The principle is that the detector response should be simulated as close as possible to the real detector. In that sense, the objective is to have a detector response using MC simulations as with real data. However, not everything is sensible of simulation. For example, during data taking can always happen different problems, subdetector misbehaving, dead cells, electrical noise saturation, etc. that can't be adjusted in MC simulation. 
+After final particles from a collision are simulated, the next step is to simulate how these particles interact with the detector. The principle is that the detector response should be simulated as close as possible to the real detector. In that sense, the objective is to have a detector response using MC simulations as with real data. However, not everything is sensible of simulation. For example, during data taking can always happen different problems, subdetector misbehaving, dead cells, electrical noise saturation, etc. that can't be adjusted in MC simulation. What needs further correction and tuning. 
 
 CMS has used GEANT 4~\cite{Agostinelli:2002hh} software to simulate the detector. Precise implementation was done in order to correctly simulate each subdetector, their details as size, number of channels, cells, electronic cards, were taken into account. This simulation allows to get, as for data, the electric output from the detector used for the reconstruction and identification of objects. 
 
-MC simulations are always being corrected to match correctly the real experimental conditions. Moreover for complicated objects as jets, with many subdectectors information combined, or jet b-tagging that depend strongly of finding second vertices, easier to find in \textit{optimal} MC simulation0 conditions than experimental reality.
+MC simulations are always being corrected to match correctly the real experimental conditions. Moreover for complicated objects as jets, with many subdectectors information combined, or jet b-tagging that depend strongly of finding second vertices, easier to find in \textit{optimal} MC simulation conditions than experimental reality.
 
 \section{Tools}
 \label{sec:tools}
 
-There are several tools in the market to perform the different steps of MC simulations of proton-proton collisions. I'll briefly describe some of them, the ones used the most by CMS.
+There are several tools in the market to perform the different steps of MC simulations of proton-proton collisions. I'll briefly describe some of them, the ones used the most in CMS.
 
 \subsection{Matrix-element generators}
 \label{sec:ME}
@@ -93,11 +93,11 @@ Regarding parton simulation, \textit{MadGraph}~\cite{Alwall:2014hca} package is 
 
 The latest series of releases also include an additional package to perform NLO QCD corrections to SM processes. The framework also includes the possibility to work with BSM models, making it a powerful tool for evaluating predictions from these models. 
 
-In CMS all physics groups, groups making analyses of data collected by CMS, have to do simulations of signals and backgrounds needed for their analyses. For this purpose MC simulation tools, as \textit{MadGraph}, need to be interfaced with the central CMS software \textit{CMSSW}, for CMS SoftWare. The generators group do this work preparing sets of validated code for later use by all CMS users. This group is also in charge of central MC production, the technical process of MC production of samples doing all the needed steps to obtain validated samples to compare with CMS data: Parton generation, Hadronization and Detector simulation. 
+In CMS all physics groups, groups making analyses of data collected by CMS, have to do simulations of signals and backgrounds needed for their analyses. For this purpose MC simulation tools, as \textit{MadGraph}, need to be interfaced with the central CMS software \textit{CMSSW} (CMS SoftWare). The generators group do this work preparing sets of validated code for later use by CMS users. This group is also in charge of central MC production, the technical process of MC production of samples doing all the needed steps to obtain validated samples to compare with CMS data: Parton generation, Hadronization and Detector simulation. 
 
-Central production of samples using \textit{MadGraph} is done via the generation of stand-alone packs of code used to launch parallelized production. This utility is known as \textit{gridpack}. Gridpack generation must include all possible configurations needed for CMS central production: settings to run with CMSSW, in batch systems and additional physics requirements depending on the process to be generated. A special script has been put in place to allow users to do their own gridpack generation with small effort in terms of automatization of common tasks.
+Central production of samples using \textit{MadGraph} is done via the generation of stand-alone packs of code used to launch parallelized production. This utility is known as \textit{gridpack}. Gridpack generation must include all possible configurations needed for CMS central production: settings to run within CMSSW, in batch systems and additional physics requirements depending on the process to be generated. A special script has been put in place to allow users to do their own gridpack generation with small effort in terms of automatization of common tasks.
 
-In addition, the generator group also provide constant support for users to test validity of users production, MadGraph configuration, usage of interface software in CMSSW and testing implementations of BSM models.
+In addition, the generator group also provide constant support for users to test validity of users production, \textit{MadGraph} configuration, usage of interface software in CMSSW and testing implementations of BSM models.
 
 \subsection{Hadron generators}
 \label{sec:Had}
@@ -109,23 +109,23 @@ Hadronization processes are QCD mediated. As strong force is a non-perturbative 
 \section{Validation on data}
 \label{sec:val}
 
-MC simulations are theory based, in the sense that the generated events reflect the predictions of a given model. For example, simulation of the decay of the top quark depends on the theory predictions of the branching ratios of all its possible final states. Such branching ratios are used by generators as probabilities used to evaluate with random numbers if a top quark in a single event decay into a specific channel. 
+MC simulations are theory based, in the sense that the generated events reflect the predictions of a given model. For example, simulation of top quark decay depends on the theory predictions of the branching ratios of all its possible final states. Such branching ratios are used by generators as probabilities used to evaluate with random numbers if a top quark in a single event decay into a specific channel. 
 
-A considerable number of SM processes have been measured by experiments very accurately. Such processes have also been served to test theoretical predictions. Such well understood processes can be then used as reference to test the accuracy of MC simulations. All MC generators are tested against known experimental and theoretical results to prove their validity. For example, MadGraph versions used in CMS have been carefully validated internally by the collaboration before being used for central production.
+A considerable number of SM processes have been measured by experiments very accurately. Such processes have also served to test theoretical predictions. Such well understood processes can be then used as reference to test the accuracy of MC simulations. All MC generators are tested against known experimental and theoretical results to prove their validity. For example, \textit{MadGraph} versions used in CMS have been carefully validated internally by the collaboration before being used for central production.
 
 \subsection{RIVET}
 \label{sec:rivet}
 
 There are different tools in the market designed to validate MC generators. The Rivet project (Robust Independent Validation of Experiment and Theory)~\cite{Buckley:2010ar} is a toolkit for MC generators validation, providing a large set of experimental analyses. This tool has been extensively used by experiments and MC generators developers for MC development, tuning and validation. 
 
-With the analyses it provides the experimental data resulting from them. This data has been processed to remove detector effects from it, what is known as detector unfolding. This procedure tries to inverse detector simulation to obtain event information after hadronization. This constitutes a suitable method to compare data with MC simulations up to hadronization. CMS and ATLAS experiments contribute constantly providing unfolded results to Rivet toolkit database.
+With the analyses, it provides the experimental data resulting from them. This data has been processed to remove detector effects from it, what is known as detector unfolding. This procedure tries to inverse detector simulation to obtain event information after hadronization. This constitutes a suitable method to compare data with MC simulations up to hadronization. CMS and ATLAS experiments contribute constantly providing unfolded results to Rivet toolkit database.
 
-In figures~\ref{fig:WVal} and~\ref{fig:ZVal} can be seen examples of MC validation using Rivet tool. For the first figure a comparison between several MC simulations have been compared to ATLAS experiment data in the measurement of $W$ boson $p_{T}$. In figure~\ref{fig:ZVal} the same MC generators have been compared to $Z$ boson $p_{T}$ measurements performed by CMS and ATLAS. In the three validations MG interfaced with Pythia 6 describe better real data than the other generators used. 
+In figures~\ref{fig:WVal} and~\ref{fig:ZVal} can be seen examples of MC validation using Rivet tool. For the first figure a comparison between several MC simulations have been compared to ATLAS experiment data in the measurement of $W$ boson $p_{T}$. In figure~\ref{fig:ZVal} the same MC generators have been compared to $Z$ boson $p_{T}$ measurements performed by CMS and ATLAS. In the three validations \textit{MadGraph} interfaced with Pythia 6 describe better real data than the other generators used. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Wpt_rivet.png}
-    \caption{$W$ boson $p_{T}$ measured by ATLAS experiment in muon final states compared to different MC simulations. \textit{py6} stands for Pythia 6, \textit{py8} for Pythia 8, \textit{MGpy6} MadGrpah interfaced with Pythia 6 and \textit{PWG} for Powheg. MG with Pythia 6 give the best description of experimental data.}
+    \caption{$W$ boson $p_{T}$ measured by ATLAS experiment in muon final states compared to different MC simulations. \textit{py6} stands for Pythia 6, \textit{py8} for Pythia 8, \textit{MGpy6} \textit{MadGraph} interfaced with Pythia 6 and \textit{PWG} for Powheg. \textit{MadGraph} with Pythia 6 give the best description of experimental data.}
     \label{fig:WVal}
   \end{center}
 \end{figure}
@@ -133,12 +133,12 @@ In figures~\ref{fig:WVal} and~\ref{fig:ZVal} can be seen examples of MC validati
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.9\textwidth]{figs/Zpt_rivet.png}
-    \caption{$Z$ boson $p_{T}$ measured by ATLAS [left] and CMS [right] experiments in di-muon channel. Same legend as in~\ref{fig:WVal}. MG with Pythia 6 give the best description of experimental data in both cases.}
+    \caption{$Z$ boson $p_{T}$ measured by ATLAS [left] and CMS [right] experiments in di-muon channel. Same legend as in~\ref{fig:WVal}. \textit{MadGraph} with Pythia 6 give the best description of experimental data in both cases.}
     \label{fig:ZVal}
   \end{center}
 \end{figure}
 
-In general, present MC generators describe correctly SM physics. However there are known observables that are not correctly described MC simulations. The most important issue has been seen when measuring the $p_{T}$ of top quark in top-pair production. In figure~\ref{fig:TopPTReweighting} can be seen the ratio between data and MC, produced with MG and Pythia 6, for the differential cross section of top pair production. Data is coming from four different analysis performed by CMS. A clear trend can be seen, showing that top $p_{T}$ in MC tend to be higher than in data. Due to this issue, MG with Pythia 6 simulations of top pair production should be corrected. This corrections is considerable for high $p_{T}$ tops. Moreover, the correction to apply is only known for tops with a $p_{T}$ smaller than 400 GeV/c.
+In general, present MC generators describe correctly SM physics. However there are known observables that are not correctly described by MC simulations. The most important issue has been seen when measuring the $p_{T}$ of top quark in top-pair production. In figure~\ref{fig:TopPTReweighting} can be seen the ratio between data and MC, produced with \textit{MadGraph} and Pythia 6, for the differential cross section of top pair production. Data is coming from four different analysis performed by CMS. A clear trend can be seen, showing that top $p_{T}$ in MC tend to be higher than in data. Due to this issue, \textit{MadGraph} with Pythia 6 simulations of top pair production should be corrected. These corrections are considerable for high $p_{T}$ tops. Moreover, the correction to apply is only known for tops with a $p_{T}$ smaller than 400 GeV/c.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -149,4 +149,4 @@ In general, present MC generators describe correctly SM physics. However there a
 \end{figure}
 %\begin{TOINCLUDE}Plot of W+jets and Z+jets comparison between data and MC for a set of different generators. Plot on top pt to briefly introduce tpo pt reweighting\end{TOINCLUDE}
 
-In conclusion, however MC simulations are useful to understand particle physics processes and to test theoretical predictions, they are not always fully valid. Furthermore, when they are used to understand physics processes that have not been precisely measured in the past. For example, high $p_{T}$ spectra of particles or high jet multiplicity. For this reason it is very important for analyses looking for new physics, that work normally with non-explored or poorly explored physics, to develop strategies to estimate backgrounds estimations from data.
+In conclusion, however MC simulations are useful to understand particle physics processes and to test theoretical predictions, they are not always fully valid. Furthermore, when they are used to understand physics processes that have not been precisely measured in the past. For example, high $p_{T}$ spectra of particles or high jet multiplicity. For this reason it is very important for analyses looking for new physics, that work normally with non-explored or poorly explored physics, to develop strategies to estimate backgrounds from data.
