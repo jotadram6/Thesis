@@ -3,7 +3,7 @@
 
 Although we have nowadays a very elegant and complete theoretical description of particle physics, is not always evident how to translate this theory in actual predictions, to compare with measurements. Moreover, on the case of hadronic colliders, as the LHC, it's even more difficult due to the particularities of the strong interaction. On this subject, a set of tools and approaches have been developed in order to be able to make accurate predictions from theory that could be directly researched for on the experiments, as CMS or ATLAS for example. In the present chapter, we describe such tools and formalisms and a set of studies comparing these tools predictions to data. 
 
-\section{Mote-Carlo simulations}
+\section{Monte-Carlo simulations}
 \label{sec:MC}
 
 The Monte-Carlo simulations use random numbers and large samplings to calculate mathematical quantities in complex configurations, as integrals or probabilities. The typical example is on how to calculate the integral of a one-dimensional function. One can throw several random points in the Cartesian plane and count how many of them are under the function. Then the integral of the function will be proportional to the fraction of points under the curve to the total used points. Larger the number of points, closer the estimation to the real value. An illustration of the procedure can be seen in figure~\ref{fig:mc_int}.
@@ -99,12 +99,159 @@ Central production of samples using \textit{MadGraph} is done via the generation
 
 In addition, the generator group also provide constant support for users to test validity of users production, \textit{MadGraph} configuration, usage of interface software in CMSSW and testing implementations of BSM models.
 
+\subsubsection{Preparation of \textit{MadGraph} production cards}
+
+Any production of partonic MC samples with \textit{MadGraph} relies in 4 key elements:
+\begin{itemize}
+\item Model: The implementation of the theoretical model according to which the production will be done. The computational implementation of a particle physics model is not a trivial task. There are available tools to perform this. \textit{MadGraph} has incorporated as default the model implementation developed by \textit{FeynRules}~\cite{Alloul:2013bka}, the Universal FeynRules Output \textit{UFO}~\cite{Degrande:2011ua}. \textit{FeynRules} has developed a complete set of tools to facilitate the implementation of theoretical models for computational work with different packages. \textit{MadGraph} includes by default the implementation of the SM and the Minimal SuperSymmetric Model (MSSM) but in order to generate events for private models its implementation has to be provided. The facility to generate events for any model has been one of the most appealing features of \textit{MadGraph} for the particle physics community.
+\item Production cards: In order to launch any event generation in \textit{MadGraph}, a set of three cards have to be prepared. These cards are text files where the user can specify several parameters used by \textit{MadGraph} to generate a sample.
+  \begin{itemize}
+  \item Process card: In this card the user defines the model to be used and the process to be generated. In general, the process definition could use the definition of multi-particle labels that  \textit{MadGraph} utilize to loop over all the particles contained in the label. For example, in figure~\ref{fig:ProcCard} can be seen the lines contained in the process card to generate $t\bar{t}$ with 0 and 1 additional jets. In the example, the proton is defined as a multi-particle label containing all quarks (except the top) and the gluon. 
+    \begin{figure}[!Hhtbp]
+      \begin{center}
+        \begin{minipage}[c]{0.45\textwidth}
+\begin{verbatim}
+import model sm
+# Define multiparticle labels
+define p = u c s d b u~ c~ s~ d~ b~ g
+define j = p
+define l+ = e+ mu+ ta+
+define l- = e- mu- ta-
+define vl = ve vm vt
+define vl~ = ve~ vm~ vt~
+define all = j l+ l- vl vl~
+# Specify process(es) to run
+generate p p > t t~  @0
+add process p p > t t~ j @1
+# Output processes to MadEvent directory
+output -f
+\end{verbatim}
+        \end{minipage}
+          \caption{\textit{MadGraph} process card example.}
+          \label{fig:ProcCard}
+      \end{center}
+    \end{figure}
+    
+    \item Parameters card: This card is utilized to set the parameters of the model being used for the production. Following the example of top pair production, one might be interested to produce different samples varying the top mass. In figure~\ref{fig:ParamCard} can be seen the extract of the card that controls the masses of the particles in the model. The first column refers to the PDG ID of the particles, 6 for the top quark, and the second column is the value of the mass. In this case the top mass has been set to 172.5 GeV/$c^{2}$.
+    \begin{figure}[!Hhtbp]
+      \begin{center}
+        \begin{minipage}[c]{0.45\textwidth}
+\begin{verbatim}
+###################################
+## INFORMATION FOR MASS
+###################################
+Block MASS 
+    4 1.420000e+00 # MC 
+    5 4.800000e+00 # MB 
+    6 1.725000e+02 # MT 
+   11 5.110000e-04 # Me 
+   13 1.056600e-01 # MM 
+   15 1.777000e+00 # MTA 
+   23 9.118800e+01 # MZ 
+   25 1.250000e+02 # MH 
+\end{verbatim}
+        \end{minipage}
+          \caption{Extract of \textit{MadGraph} parameters card.}
+          \label{fig:ParamCard}
+      \end{center}
+    \end{figure}
+
+  \item Run card: In the run card several settings can be chosen related to the generation of the events. For example, the center of mass energy or the minimal and maximal $\Delta R$ between jets. For generation of events requiring more than one additional extra jet a parameter called \textbf{xqcut} can also be set in this card. This parameter is relevant for merging procedure, important to avoid double counting, a topic that will be discussed in section~\ref{sec:Merging}. In figure~\ref{fig:RunCard} an extract of a run card is shown, where the parameters corresponding to the $\sqrt{s}$ of the collision, the number of events to be generated, gridpack generation, the choice of PDF set and merging are displayed.
+    \begin{figure}[!Hhtbp]
+      \begin{center}
+        \begin{minipage}[c]{0.7\textwidth}
+\scriptsize
+\begin{verbatim}
+#*********************************************************************
+# Run to generate the grid pack                                      *
+#*********************************************************************
+  .true.     = gridpack  !True = setting up the grid pack
+#*********************************************************************
+# Number of events and rnd seed                                      *
+#*********************************************************************
+  1000       = nevents ! Number of unweighted events requested 
+      0       = iseed   ! rnd seed (0=assigned automatically=default))
+#*********************************************************************
+# Collider type and energy                                           *
+#*********************************************************************
+        1     = lpp1  ! beam 1 type (0=NO PDF)
+        1     = lpp2  ! beam 2 type (0=NO PDF)
+     6500     = ebeam1  ! beam 1 energy in GeV
+     6500     = ebeam2  ! beam 2 energy in GeV
+#*********************************************************************
+# PDF CHOICE: this automatically fixes also alpha_s and its evol.    *
+#*********************************************************************
+ 'cteq6l1'    = pdlabel     ! PDF set  
+#*********************************************************************
+# Matching - Warning! ickkw > 0 is still beta</div>
+#*********************************************************************
+ 1        = ickkw            ! 0 no matching, 1 MLM, 2 CKKW matching
+ 1        = highestmult      ! for ickkw=2, highest mult group
+ 1        = ktscheme         ! for ickkw=1, 1 Durham kT, 2 Pythia pTE
+ 1        = alpsfact         ! scale factor for QCD emission vx
+ F        = chcluster        ! cluster only according to channel diag
+ F        = pdfwgt           ! for ickkw=1, perform pdf reweighting
+#*********************************************************************
+# Jet measure cuts                                                   *
+#*********************************************************************
+ 20   = xqcut   ! minimum kt jet measure between partons
+#*********************************************************************
+\end{verbatim}
+\normalsize
+        \end{minipage}
+          \caption{Extract of \textit{MadGraph} run card.}
+          \label{fig:RunCard}
+      \end{center}
+    \end{figure}
+
+  \end{itemize}
+\end{itemize}
+
+
+\subsubsection{\textit{MadGraph} release validation}
+
+\textit{MadGraph} package is one of the MC tools most used in the market. It's a very dynamic tool, were the input from the users is being taken into account permanently. Are precisely the users that give reports of possible bugs or recommendations in the way the tool works. New releases of \textit{MadGraph} are constantly delivered to solve found issues or to improve weaknesses. For CMS production, not every new release is automatically incorporated. In order to begin using a new release a validation procedure is done. Basic processes of the SM are taken with the last release used by CMS and then compared to the new release. Such comparison is performed to control that the predictions from both releases are identical, off course processes where no changes have been performed between both releases. 
+
+For example, one of the control processes for this validation is SM production of a $Z$ boson that decays into neutrinos produced with extra jets. In \textit{MadGraph} extra jets has the capability to produce extra jets up to a multiplicity of 4. In figure~\ref{fig:ZRelVal1} can be seen the comparison between samples produced with \textit{MadGraph} 1.4.8 and 1.5.11. The results of both releases are equivalent for the specific considered process.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/ZjetsRelVal0.png}
+    \includegraphics[width=0.45\textwidth]{figs/ZjetsRelVal1.png}
+    \includegraphics[width=0.45\textwidth]{figs/ZjetsRelVal2.png}
+    \includegraphics[width=0.45\textwidth]{figs/ZjetsRelVal3.png}
+    \caption{Comparison between 1.4.8 (MGOldV) and 1.5.11 (MGLatestV) \textit{MadGraph} releases for SM $Z$+jets production with $Z$ decaying into neutrinos. Number of jets [left-up], $p_{T}$ of jets [right-up], $\eta$ of jets [left-down] and $\phi$ of jets [right-down].}
+    \label{fig:ZRelVal1}
+  \end{center}
+\end{figure}
+
+In addition, in figure~\ref{fig:ZRelVal2} can be seen two global variables, missing energy and total hadronic transverse energy (defined in equation~\ref{eq:METHT}), for the same process where the validation was performed.
+
+\begin{equation}
+  \label{eq:METHT}
+  \slashed{E}_{T}=|\sum_{visible\; particles}\vec{p}_{T}|, \; \; H_{T}=\sum_{hadronic\; particles}|\vec{p}_{T}|
+\end{equation}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/ZjetsRelVal8.png}
+    \includegraphics[width=0.45\textwidth]{figs/ZjetsRelVal9.png}
+    \caption{Comparison between 1.4.8 and 1.5.11 \textit{MadGraph} releases for SM $Z$+jets production with $Z$ decaying into neutrinos. Missing energy [left] and total hadronic transverse energy [right].}
+    \label{fig:ZRelVal2}
+  \end{center}
+\end{figure}
+
 \subsection{Hadron generators}
 \label{sec:Had}
 
 Taking as input partonic events, hadron generators perform their corresponding showering. The most used hadronizers in CMS are Pythia~\cite{Sjostrand:2006za}, in releases 6 and 8, and Herwig ++~\cite{Bahr:2008pv}. They are used for a wide range of SM processes simulation. They can be used also to simulate directly QCD processes with full hadronic final states, without the parton step. Another hadron generator is POWHEG, in it's most recent version POWHEG BOX~\cite{Nason:2004rx, Frixione:2007vw, Alioli:2010xd}, that is specially accurate to simulate events with top quarks. It is well know that this generator gives a better agreement between data and MC in top physics.
 
 Hadronization processes are QCD mediated. As strong force is a non-perturbative interaction, different hadrons simulation implement different effective models. Reason why when comparing simulations to data different hadron generators are used in order to corroborate the understanding of data independently from the hadronization model. 
+
+\subsubsection{Interface between partonic and hadronic generation of events}
+\label{sec:Merging}
+
+
 
 \section{Validation on data}
 \label{sec:val}

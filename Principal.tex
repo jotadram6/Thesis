@@ -10,6 +10,7 @@
 \usepackage{lipsum}
 \usepackage{hyperref}
 \usepackage{multirow}
+\usepackage{slashed}
 \hypersetup{
   unicode=true,
   urlcolor=purple
@@ -18,11 +19,14 @@
 \usepackage{bm}
 \usepackage[us,24hr]{datetime}
 \usepackage{lineno}
+%\usepackage{verbatimbox}
 
 \newcommand{\ket}[1]{| #1\rangle}
 \newcommand{\bra}[1]{\langle #1 |}
 \newcommand{\braket}[2]{\langle #1 | #2\rangle}
 \newenvironment{TOINCLUDE}{\huge \rule{1ex}{1ex}\hspace{\stretch{1}}}{\hspace{\stretch{1}}\rule{1ex}{1ex}}
+%\newcommand{\verbatimfont}[1]{\renewcommand{\verbatim@font}{\ttfamily#1}}
+\newcommand{\verbatimfont}[1]{\def\verbatim@font{#1}}%
 
 %\bibliographystyle{alpha}
 \bibliographystyle{utphys}
