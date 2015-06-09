@@ -89,7 +89,7 @@ There are several tools in the market to perform the different steps of MC simul
 \subsection{Matrix-element generators}
 \label{sec:ME}
 
-Regarding parton simulation, \textit{MadGraph}~\cite{Alwall:2014hca} package is the most widely used. It calculates matrix-elements, LO cross sections and particle widths. With such information it generates MC events for parton collisions. 
+Regarding parton simulation, \textit{MadGraph}~\cite{Alwall:2014hca, Alwall:2011uj} package is the most widely used. It calculates matrix-elements, LO cross sections and particle widths. With such information it generates MC events for parton collisions. 
 
 The latest series of releases also include an additional package to perform NLO QCD corrections to SM processes. The framework also includes the possibility to work with BSM models, making it a powerful tool for evaluating predictions from these models. 
 
@@ -238,6 +238,30 @@ In addition, in figure~\ref{fig:ZRelVal2} can be seen two global variables, miss
     \includegraphics[width=0.45\textwidth]{figs/ZjetsRelVal9.png}
     \caption{Comparison between 1.4.8 and 1.5.11 \textit{MadGraph} releases for SM $Z$+jets production with $Z$ decaying into neutrinos. Missing energy [left] and total hadronic transverse energy [right].}
     \label{fig:ZRelVal2}
+  \end{center}
+\end{figure}
+
+\subsubsection{Incorporating new releases improvements}
+
+New \textit{MadGraph} releases are interesting not only because of bugs being fixed but also because they normally include new features and improvements. For example, latest set of releases of include NLO corrections for SM processes. NLO corrections are crucial to do precise measurements that is one of the major interests in various SM sectors. Top physics has become a very important sector to perform precise measurements. Any small deviation of SM predictions related to the top quark could be related to the presence of BSM physics. To this extent, there is a growing need to have better MC simulations of top quark processes.
+
+From a technical point of view a complete simulation of top decay chain was not feasible. It was very time and CPU consuming for old \textit{MadGraph} releases. Modern releases have improved the performance of these calculations but also have included new tools that allow to simulate at parton level the entire top decay chain with high precision and small resources. One of these tools is MadSpin~\cite{Artoisenet:2012st, Frixione:2007zp}, tool developed to conserve the spin correlations between the decay products. However \textit{MadGraph} alone is able to simulate the top decay is extremely CPU and time consuming, then not usable for big central production at CMS. In the other hand decaying the top quark with Pythia erase all the spin correlations. In CMS MadSpin has been included in the gridpack generation production mainly to generate top pair production samples. MadSpin is the modern version of the old \textbf{DECAY} tool, that do not preserve spin correlations.
+
+But to consider MadSpin for CMS usage there is an interest in showing the improvement of MC samples produced with it with regards to former samples. Before MadSpin, top decay was normally simulated in \textit{MadGraph} with DECAY tool. MadSpin is expected to have the same results as \textit{MadGraph} but with a great improvement in terms of computational resources consumption. In figure~\ref{fig:MS1} can be seen the top quark mass reconstructed from its hadronic decay (a $b$, $u$ and $\bar{d}$ quarks). In it can be seen how MadSpin correctly produce the top width while DECAY gives a zero width. In figure~\ref{fig:MS2} can be seen the $\Delta R$ between the positively and negatively charged decay products of the $W$ bosons produced in top pair events. This observable is different in case there are or not spin correlations. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/TT_MadSPin_1.png}
+    \caption{Top mass reconstructed from its hadronic decay using different tools to simulate the top decay for $t\bar{t}$ events at $\sqrt{s}=8$ TeV. MadSpin and \textit{MadGraph} correctly reproduce the top width.}
+    \label{fig:MS1}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/TT_MadSPin_2.png}
+    \caption{$\Delta R$ from positively and negatively charged decay products using different tools to simulate the top decay for $t\bar{t}$ events at $\sqrt{s}=8$ TeV. MadSpin and \textit{MadGraph} preservation of spin correlations produce different results than DECAY tool.}
+    \label{fig:MS2}
   \end{center}
 \end{figure}
 
