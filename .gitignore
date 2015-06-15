@@ -5,3 +5,4 @@ Sources/*
 *.aux
 *.log
 *.pdf
+figs/*.pdf

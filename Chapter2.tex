@@ -89,210 +89,7 @@ The first QFT ever created was born from the quantization of the electromagnetic
 
 Up to present days we have found 12 fundamental fermions and 5 fundamental bosons. Fermions are organized in \textit{leptons}, that don't interact strongly, and \textit{quarks}, that do interact strongly. Leptons are as well organized in three families, the electron ($e^{-}$) and electron neutrino ($\nu_{e}$), muon ($\mu^{-}$) and muon neutrino ($\nu_{\mu}$) and tau ($\tau$) and tau neutrino ($\nu_{\tau}$). Electron, muon and tau are electrically charged while neutrinos are neutral. Their respective anti-particles are equally organized, positron ($e^{+}$) with electron anti-neutrino ($\bar{\nu}_{e}$), anti-muon ($\mu^{+}$) with muon anti-neutrino ($\bar{\nu}_{\mu}$) and anti-tau ($\tau^{+}$) with tau anti-neutrino ($\bar{\nu}_{\tau}$). Quarks also come in three families, with the respective anti-quarks: up ($u$, $\bar{u}$) and down ($d$, $\bar{d}$), charm ($c$, $\bar{c}$) and strange ($s$, $\bar{s}$), top ($t$, $\bar{t}$) and bottom ($b$, $\bar{b}$). The fundamental bosons are the photon (A), the W (positively and negatively charged) and Z that mediate the electroweak interaction, the gluon ($g$) mediating the strong interaction and the Higgs ($H$). The weak bosons were discovered at CERN in 1983 by the UA1 and UA2 collaborations at the SPS accelerator (described on section~\ref{sec:injector}), called at that time Sp$\bar{\text{p}}$S because it was a proton-antiproton collider. The Higgs boson has been discovered recently in 2012 by ATLAS and CMS experiments at the LHC. The 2013 physics Nobel prize was awarded to Francois Englert and Peter W. Higgs "for the theoretical discovery of a mechanism that contributes to our understanding of the origin of mass of subatomic particles, and which recently was confirmed through the discovery of the predicted fundamental particle, by the ATLAS and CMS experiments at CERN's Large Hadron Collider".
 
-\subsection{The mass problem}
-\label{sec:mass}
-
-Using the concepts developed on later sections about QFT and symmetries it is possible to construct a whole theory giving rise to a precise description of particles and interactions between them. But such a theory does not allow to have massive bosons, whereas masses for fermions are allowed. A mass term for a fermion $\psi$ is of the form 
-
-\begin{equation*}
-%  \label{eq:elemass}
-  m_{\psi}\bar{\psi}\psi
-\end{equation*} where $m_{\psi}$ is the mass of the field.
-
-Under $U(1)$ transformations, $\psi'=U \psi$, the mass term remains the same, which means that is invariant under $U(1)$ transformations. The same is not true for a boson. A mass term for a boson $A$, can be written as 
-
-\begin{equation}
-  \label{eq:Amass}
-  m_{A}A^{\mu}A_{\mu}
-\end{equation} where $m_{A}$ is its mass.
-
-The $U(1)$ transformation for the boson is $A'^{\mu}=A^{\mu}+\delta^{\mu}\theta(x)$. Applying such transformation on the mass term~\ref{eq:Amass} one can obtain the transformed term
-
-\begin{equation}
-  \label{eq:AmassT}
-  m_{A}\left(A^{\mu}A_{\mu}+A^{\mu}\delta_{\mu}\theta(x)+\delta^{\mu}\theta(x)A_{\mu}+\delta^{\mu}\theta(x)\delta_{\mu}\theta(x)\right)
-\end{equation}where the last three terms make equation~\ref{eq:AmassT} not invariant under $U(1)$ transformations. Consequently, one can say that a mass term for the boson destroy the invariance of the theory under $U(1)$ symmetry.
-
-Nonetheless there is no need for a theory of a massive photon, there is a need to have massive bosons for weak interactions. There is a relation between the mass of a boson and the range of the interaction mediated by it. Massless bosons transmit long range interactions, as electromagnetism, but short range interactions, as the weak interaction, must be mediated by massive bosons. More precisely the interaction range is inversely proportional to the mass of the boson, higher the mass shortest the range. Such relation can be seen from the structure of the propagator, which is a mathematical entity that describes the probability a particle has to travel a distance in a given time range. Such propagator, for a vector boson, has a generic form given in equation~\ref{eq:Propa}, where $k_{\mu}$ is the momentum carried by the boson. It's clear from this structure that a massive boson has less probability to travel a long distance than a massless boson in a given time.
-
-\begin{equation}
-  \label{eq:Propa}
-  \frac{1}{k^{2}-m^{2}+i\epsilon}
-\end{equation}
-
-Then, as massive bosons are requires for weak interaction, somehow the $SU(2)$ symmetry has to be broken. There are basically two ways to brake a symmetry: 
-\begin{itemize}
-\item Explicit symmetry breaking: By the introduction of a symmetry breaking term in the Lagrangian, as a mass term for the bosons.
-\item Spontaneous symmetry breaking: When the ground state of one field fails to be invariant under the symmetry. 
-\end{itemize}
-
-Explicit symmetry breaking is not an option, because the symmetry needs to be preserved in the Lagrangian in order to introduce the interaction.
-
-\subsection{Spontaneous Symmetry Breaking}
-\label{sec:SSB}
-
-Several physical systems exhibit a spontaneous symmetry breaking. For example, a pencil balanced on its tip is perfectly symmetric system around the vertical axis, however, because of the instability of the system the pencil will eventually fall over. The final state is stable but not symmetrical. This transition also decreased the potential energy of the system, driving the system to its ground state. This means that whereas the system had a symmetry the ground state does not show the symmetry. In general, symmetry breaking is linked to phase transitions, as liquid to gas transition or magnetization of a ferromagnet, covering a plethora of physical processes. To a greater extent, in recent studies,~\cite{2015arXiv150302776M}, the emergence of life has been understood as a phase transition of matter. 
-
-To achieve a spontaneous symmetry breaking of $SU(2)$ in QFT one should choose a field for which its ground state, vacuum, will fail the symmetry. This means, in practical terms, that such field will have a non-zero value in vacuum, leading to a presence of particles coming from the field on theory vacua. If a fermion field is chosen, the vacuum will show a preference on directionality depending on its spin orientation, which breaks Poincar\'{e} symmetry imposed by special relativity. The same is true if a spin-1 bosonic field is chosen for the task. In order to avoid this problem a spin-0 field should be used. In addition, this field should be electrically neutral to avoid having a charged vacuum.
-
-With all this properties in mind, taking a scalar doublet of $SU(2)$, defined on equation~\ref{eq:HiggsDoublet} where $\phi^{0}$ and $\phi^{+}$ are complex fields, the most general potential can be written from two auto-interaction terms, in equation~\ref{eq:HiggsPotential}.
-
-\begin{equation}
-  \label{eq:HiggsDoublet}
-  \Phi=\left(
-    \begin{array}{c}
-      \phi^{+} \\
-      \phi^{0}
-    \end{array}
-  \right)=\left(
-    \begin{array}{c}
-      \phi^{+} \\
-      \phi_{RE}-i\phi_{IM}
-    \end{array}
-  \right)
-\end{equation}
-
-\begin{equation}
-  \label{eq:HiggsPotential}
-  V(\Phi)=\mu^{2}\Phi^{\dagger}\Phi+\lambda(\Phi^{\dagger}\Phi)^{2}
-\end{equation}
-
-Such potential has a unique minimum for $\lambda>0$ and $\mu^{2}>0$, but for $\lambda>0$ and $\mu^{2}<0$ has a set of minima with the shape of ``Mexican hat'', shown in figure~\ref{fig:MexicanHat}. Under $\lambda>0,\;\mu^{2}<0$ configuration the field breaks spontaneously the symmetry reaching the ground state, acquiring an expectation value on vacuum different from zero, $v$. 
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.6\textwidth]{figs/Mexican_hat.png}
-    \caption{Higgs potential}
-    \label{fig:MexicanHat}
-  \end{center}
-\end{figure}
-
-\subsection{Englert-Brout-Higgs mechanism}
-\label{sec:higgs}
-
-After the spontaneous symmetry breaking, the scalar doublet transforms into the form given in equation~\ref{eq:TransHiggsDoublet}, where $G^{+}$ and $G^{0}$ are the Goldstone bosons from the breaking of the $SU(2)$ symmetry, and $H$ is the Englert-Brout-Higgs boson. From Goldstone's, theorem when a symmetry is spontaneously broken a massless boson appear for each broken generator. In our specific case, the three generators of $SU(2)$ are broken giving rise to three Goldstone bosons: $G^{+}$, $G^{-}$ and $G^{0}$. This massless bosons are ``eaten'' by the $W^{+}$, $W^{-}$ and $Z^{0}$ giving them an additional degree of freedom, the longitudinal polarization. 
-
-\begin{equation}
-  \label{eq:TransHiggsDoublet}
-  \Phi=\left(
-    \begin{array}{c}
-      G^{+} \\
-      \frac{1}{\sqrt(2)}(H+v-iG^{0})
-    \end{array}
-  \right)
-\end{equation}
-
-By this mechanism, the $W$ and $Z$ bosons acquire mass, being its value set by the coupling constant of $SU(2)$ group and the vacuum expectation value of Englert-Brout-Higgs boson. In addition, the fermions in the theory also acquire a mass from the interactions with the scalar doublet. Such masses are in general of the form $m_{f}=\lambda_{f}v/\sqrt(2)$, where $\lambda_{f}$ sets the interaction between the Englert-Brout-Higgs boson and the fermion. Finally, also the Englert-Brout-Higgs boson has a mass $m_{H}^{2}=-2\mu^{2}$.
-
-In summary, with this mechanism the weak interaction bosons and fermions of the theory are given a mass at the price of introducing an additional scalar field to spontaneously break the $SU(2)$ symmetry.
-
-\section{Hierarchy problem and other limitations}
-\label{sec:hier}
-
-The SM has been one of the most successful theories in the history of physics. With only 19 free parameters, it is able to make thousands of predictions that have been measured and tested over the last seventy to eighty years. However some aspects in the model are not completely understood. The most important one is the so-called hierarchy mass problem. At tree level, the Englert-Brout-Higgs boson has a mass $m_{H}^{2}=-2\mu^{2}$, but the physical mass also contains the one-loop contributions from fermions that interact with it, as the top quark. The Feynman diagram for such contribution can be seen in figure~\ref{fig:oneloophiggs}.
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.6\textwidth]{figs/HierarchyLoop.png}
-    \caption{One loop diagram for contributions to the mass of the Englert-Brout-Higgs boson from interactions with fermions}
-    \label{fig:oneloophiggs}
-  \end{center}
-\end{figure}
-
-Such contributions add up giving a mass greater than simple tree level mass. Each fermion contributes proportionally to its mass, which means that the top quark contributes the most. Moreover, if there are in nature heavier fermions that also interact with the Englert-Brout-Higgs boson they will also contribute to its mass. With such considerations one can expect the Englert-Brout-Higgs boson to be much greater than 125 GeV, and in principle not even of the order of 100 GeV but greater than 1 TeV. However the real relevance or significance of this problem at theoretical level has been discussed extensively, for example at~\cite{Jegerlehner:2013nna}, the majority of the community agrees there is something to be understood on the subject. 
-
-The most famous proposed solution to this problem is supersymmetry (SUSY)~\cite{Martin:1997ns}. It proposes the existence of an additional symmetry between fermions and bosons, at a given point of the history of universe nature didn't distinguish between fermions and bosons. However, as we know this does not happen presently this symmetry must be broken. Such symmetry implies the existence of a super-symmetric partner for each particle, a super-partner. A fermion for each boson and vice versa. This SUSY procedure doubles the particle content of the model where it's applied. Before breaking SUSY, a particle and its partner have the same mass. Being this feature responsible for solving the hierarchy problem. On figure~\ref{fig:susy} one can see the one loop diagrams for the mass of the Englert-Brout-Higgs boson from the top and its super-partner the stop. Whereas, the top contribution is positive, the stop contribution is negative but equal in value, then cancelling each other.
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.6\textwidth]{figs/SUSY.png}
-    \caption{One loop diagrams for contributions to the mass of the Englert-Brout-Higgs boson from the top and the stop}
-    \label{fig:susy}
-  \end{center}
-\end{figure}
-
-But this solution works exactly only if SUSY is not broken. As we know SUSY has to be broken, different ways have been proposed to break SUSY and still offer a solution to the hierarchy problem, leading essentially to solutions that need a fine adjustment of the parameters of the theory. This represents for some theoreticians a problem itself: Fine-tuning or Naturalness. Extensive searches for SUSY particles have been performed, accordingly to different models: MSSM~\cite{Khachatryan:2014wca,Aad:2014vgg}, CMSSM, etc.
-
-While hierarchy problem is an internal problem of the SM, there are however several questions that have not been solved. For example, how gravity is understood in the frame of QFT's? Why there is only 3 generations of leptons and quarks? Why there are only 4 fundamental forces? In addition, there have been experimental questionings to the SM. The most important one is the masses of neutrinos. In the SM neutrinos are massless, careful measurements,~\cite{Ashie:2004mr, Weinheimer:2013hya}, have shown that neutrinos can oscillate between different flavors, phenomenon only possible if neutrinos have a mass. Measurements of solar and atmospheric neutrino oscillations have been the most important proof of physics beyond the SM. 
-
-From cosmological measurements, the Wilkinson Microwave Anisotropy Probe (WMAP) has shown that the universe is not only made by visible matter, but suggests that around 24\% it is made of dark matter. A type of matter not visible by means of light. It has also shown that 71\% of the universe is composed of dark energy, which makes the universe to be in an accelerated state of expansion. These results can be seen in~\cite{2013ApJS..208...20B, 2013ApJS..208...19H}. Also the Planck probe has shown similar results, for example in~\cite{Planck:2015xua}. The SM does not have any answer to these open problems so far. 
-
-Finally, it is known that the universe presents an asymmetry between matter and antimatter, the first being much more abundant than the second. Such asymmetry can be obtained by CP-violating processes (C for charge and P for parity). However the amount of CP violation present in the SM is not compatible with the huge matter-antimatter asymmetry in nature. This problem, known as baryon asymmetry, represents an additional huge challenge for particle physics. 
-
-In conclusion, the SM has been a formidable model that has helped us to understand a huge amount of physics. It has done thousands of predictions that have been verified experimentally in the last half-century. However, this is not the end of the story, perhaps only the beginning. There are theoretical and experimental motivations that lead us think that the SM is not the ``final'' theory that could explain all subatomic phenomena in nature. Currently, there are a lot of efforts, both theoretical and experimentally, to understand and explain all the remaining pieces. The present work is one of them.
-
-In the next section, we present an extension of the SM that looks for a solution to the discussed hierarchy problem. Then, principal productions predicted by the SM at the LHC involving particles, the top and the Higgs, used for new physics searches will be described. 
-
-\section{Vector Like Quarks}
-
-\label{chap:VLQ}
-
-From chapter~\ref{chap:SM} we have seen how there are some parts in the SM that does not work very well. From such internal issues some further models/theories have been developed. All this theories are commonly grouped under the term Beyond Standard Model or simply BSM. One of the most famous BSM theory is supersymmetry (SUSY). This theory postulates a symmetry that does not distinguish between fermions and bosons. This idea have given birth to a plethora of model realizations and physics predictions. So far, nothing of the new consequences of this theory have been confirmed but the experiments have an enormous investment on their search. But not only SUSY have seen the day light, there is on the market an astonishing amount of BSM theories addressing different issues of the SM. Extra dimensions, fourth families, composite Higgs are a few of them.
-
-In this chapter we will describe a bunch of models that introduce additional heavy quarks, heavier than the top, in order to solve the hierarchy problem, described on section~\ref{sec:hier}. 
-
-\section{Motivation}
-\label{sec:motiv}
-
-Why to introduce extra quarks.
-
-Plausible solution of hierarchy problem.
-
-Reference to models with extra quarks. (?)
-
-\section{Generic Formulation}
-\label{sec:form}
-
-Formalism: Generic Langranian. Description of mixings with SM quarks.
-
-\begin{table}[htbH]
-\label{tab:VLQRepre}
-\begin{center}
-\begin{tabular}{|c|c|c|}
-%\hline 
-xxxxxxx & xxxxxxx & xxxxxxx
-%\hline
-\end{tabular}
-\caption{Possible VLQ representations and correponding $SU(2)_{L}\times U(1)$ charges.}
-\end{center}
-\end{table}
-%\begin{TOINCLUDE}Table with different possible representations and assigned charges\end{TOINCLUDE}
-
-\subsection{Production modes}
-\label{sec:prod}
-
-Description of pair and single production. Parallel to production modes of top. Comparison between cross sections for pair and single production.
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Feynman diagrams of $T$ production in pairs [left] and single [right]}
-    \label{fig:ProdDiag}
-  \end{center}
-\end{figure}
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{$T$ production cross section for pair and single case as function of $T$ mass for different center of mass energy in proton-proton collisions.}
-    \label{fig:TProdXS}
-  \end{center}
-\end{figure}
-%\begin{TOINCLUDE}Plot of production cross section at LHC for different energies as function of the mass. Feynman diagrams of the production processes.\end{TOINCLUDE}
-
-\subsection{Decay modes}
-\label{sec:decay}
-
-Description of possible decay channels of $T$. Relative importance of decay channels depending on the mass. 
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{$T$ branching ratios as function of its mass.}
-    \label{fig:TBRs}
-  \end{center}
-\end{figure}
-%\begin{TOINCLUDE}Plot of branching ratio as function of the mass for different scenarios (representations)\end{TOINCLUDE}
+In the next sections we are going to describe how some of the SM particles are produced at the LHC and their specific properties. In particular the top and the Higgs, constantly used for new physics searches will be described.
 
 \section{Top production at LHC}
 
@@ -487,6 +284,8 @@ CMS collaboration proposed a method using the golden channel to restrict Higgs w
   \end{center}
 \end{figure}
 
+In the next section one of the fundamental pieces of the SM is going to be described: How particles acquire mass. Whatsoever, being the theoretical mechanism to give mass to particles one of the most refined theoretical constructs, it leaves some unsolved puzzles in the heart of the SM. We discuss later the limitations of the SM and some theoretical insights to solve them 
+
 %\begin{figure}[!Hhtbp]
 %  \begin{center}
 %    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
@@ -495,3 +294,266 @@ CMS collaboration proposed a method using the golden channel to restrict Higgs w
 %  \end{center}
 %\end{figure}
 %\begin{TOINCLUDE}Plot on ATLAS+CMS combination of the Higgs mass; Plot on signal strength for each decay channel; Individual plots on diphoton channel and golden channel\end{TOINCLUDE}
+
+
+\section{The mass problem}
+\label{sec:mass}
+
+Using the concepts developed on later sections about QFT and symmetries it is possible to construct a whole theory giving rise to a precise description of particles and interactions between them. But such a theory does not allow to have massive bosons, whereas masses for fermions are allowed. A mass term for a fermion $\psi$ is of the form 
+
+\begin{equation*}
+%  \label{eq:elemass}
+  m_{\psi}\bar{\psi}\psi
+\end{equation*} where $m_{\psi}$ is the mass of the field.
+
+Under $U(1)$ transformations, $\psi'=U \psi$, the mass term remains the same, which means that is invariant under $U(1)$ transformations. The same is not true for a boson. A mass term for a boson $A$, can be written as 
+
+\begin{equation}
+  \label{eq:Amass}
+  m_{A}A^{\mu}A_{\mu}
+\end{equation} where $m_{A}$ is its mass.
+
+The $U(1)$ transformation for the boson is $A'^{\mu}=A^{\mu}+\delta^{\mu}\theta(x)$. Applying such transformation on the mass term~\ref{eq:Amass} one can obtain the transformed term
+
+\begin{equation}
+  \label{eq:AmassT}
+  m_{A}\left(A^{\mu}A_{\mu}+A^{\mu}\delta_{\mu}\theta(x)+\delta^{\mu}\theta(x)A_{\mu}+\delta^{\mu}\theta(x)\delta_{\mu}\theta(x)\right)
+\end{equation}where the last three terms make equation~\ref{eq:AmassT} not invariant under $U(1)$ transformations. Consequently, one can say that a mass term for the boson destroy the invariance of the theory under $U(1)$ symmetry.
+
+Nonetheless there is no need for a theory of a massive photon, there is a need to have massive bosons for weak interactions. There is a relation between the mass of a boson and the range of the interaction mediated by it. Massless bosons transmit long range interactions, as electromagnetism, but short range interactions, as the weak interaction, must be mediated by massive bosons. More precisely the interaction range is inversely proportional to the mass of the boson, higher the mass shortest the range. Such relation can be seen from the structure of the propagator, which is a mathematical entity that describes the probability a particle has to travel a distance in a given time range. Such propagator, for a vector boson, has a generic form given in equation~\ref{eq:Propa}, where $k_{\mu}$ is the momentum carried by the boson. It's clear from this structure that a massive boson has less probability to travel a long distance than a massless boson in a given time.
+
+\begin{equation}
+  \label{eq:Propa}
+  \frac{1}{k^{2}-m^{2}+i\epsilon}
+\end{equation}
+
+Then, as massive bosons are requires for weak interaction, somehow the $SU(2)$ symmetry has to be broken. There are basically two ways to brake a symmetry: 
+\begin{itemize}
+\item Explicit symmetry breaking: By the introduction of a symmetry breaking term in the Lagrangian, as a mass term for the bosons.
+\item Spontaneous symmetry breaking: When the ground state of one field fails to be invariant under the symmetry. 
+\end{itemize}
+
+Explicit symmetry breaking is not an option, because the symmetry needs to be preserved in the Lagrangian in order to introduce the interaction.
+
+\subsection{Spontaneous Symmetry Breaking}
+\label{sec:SSB}
+
+Several physical systems exhibit a spontaneous symmetry breaking. For example, a pencil balanced on its tip is perfectly symmetric system around the vertical axis, however, because of the instability of the system the pencil will eventually fall over. The final state is stable but not symmetrical. This transition also decreased the potential energy of the system, driving the system to its ground state. This means that whereas the system had a symmetry the ground state does not show the symmetry. In general, symmetry breaking is linked to phase transitions, as liquid to gas transition or magnetization of a ferromagnet, covering a plethora of physical processes. To a greater extent, in recent studies,~\cite{2015arXiv150302776M}, the emergence of life has been understood as a phase transition of matter. 
+
+To achieve a spontaneous symmetry breaking of $SU(2)$ in QFT one should choose a field for which its ground state, vacuum, will fail the symmetry. This means, in practical terms, that such field will have a non-zero value in vacuum, leading to a presence of particles coming from the field on theory vacua. If a fermion field is chosen, the vacuum will show a preference on directionality depending on its spin orientation, which breaks Poincar\'{e} symmetry imposed by special relativity. The same is true if a spin-1 bosonic field is chosen for the task. In order to avoid this problem a spin-0 field should be used. In addition, this field should be electrically neutral to avoid having a charged vacuum.
+
+With all this properties in mind, taking a scalar doublet of $SU(2)$, defined on equation~\ref{eq:HiggsDoublet} where $\phi^{0}$ and $\phi^{+}$ are complex fields, the most general potential can be written from two auto-interaction terms, in equation~\ref{eq:HiggsPotential}.
+
+\begin{equation}
+  \label{eq:HiggsDoublet}
+  \Phi=\left(
+    \begin{array}{c}
+      \phi^{+} \\
+      \phi^{0}
+    \end{array}
+  \right)=\left(
+    \begin{array}{c}
+      \phi^{+} \\
+      \phi_{RE}-i\phi_{IM}
+    \end{array}
+  \right)
+\end{equation}
+
+\begin{equation}
+  \label{eq:HiggsPotential}
+  V(\Phi)=\mu^{2}\Phi^{\dagger}\Phi+\lambda(\Phi^{\dagger}\Phi)^{2}
+\end{equation}
+
+Such potential has a unique minimum for $\lambda>0$ and $\mu^{2}>0$, but for $\lambda>0$ and $\mu^{2}<0$ has a set of minima with the shape of ``Mexican hat'', shown in figure~\ref{fig:MexicanHat}. Under $\lambda>0,\;\mu^{2}<0$ configuration the field breaks spontaneously the symmetry reaching the ground state, acquiring an expectation value on vacuum different from zero, $v$. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{figs/Mexican_hat.png}
+    \caption{Higgs potential}
+    \label{fig:MexicanHat}
+  \end{center}
+\end{figure}
+
+\subsection{Englert-Brout-Higgs mechanism}
+\label{sec:higgs}
+
+After the spontaneous symmetry breaking, the scalar doublet transforms into the form given in equation~\ref{eq:TransHiggsDoublet}, where $G^{+}$ and $G^{0}$ are the Goldstone bosons from the breaking of the $SU(2)$ symmetry, and $H$ is the Englert-Brout-Higgs boson. From Goldstone's, theorem when a symmetry is spontaneously broken a massless boson appear for each broken generator. In our specific case, the three generators of $SU(2)$ are broken giving rise to three Goldstone bosons: $G^{+}$, $G^{-}$ and $G^{0}$. This massless bosons are ``eaten'' by the $W^{+}$, $W^{-}$ and $Z^{0}$ giving them an additional degree of freedom, the longitudinal polarization. 
+
+\begin{equation}
+  \label{eq:TransHiggsDoublet}
+  \Phi=\left(
+    \begin{array}{c}
+      G^{+} \\
+      \frac{1}{\sqrt(2)}(H+v-iG^{0})
+    \end{array}
+  \right)
+\end{equation}
+
+By this mechanism, the $W$ and $Z$ bosons acquire mass, being its value set by the coupling constant of $SU(2)$ group and the vacuum expectation value of Englert-Brout-Higgs boson. In addition, the fermions in the theory also acquire a mass from the interactions with the scalar doublet. Such masses are in general of the form $m_{f}=\lambda_{f}v/\sqrt(2)$, where $\lambda_{f}$ sets the interaction between the Englert-Brout-Higgs boson and the fermion. Finally, also the Englert-Brout-Higgs boson has a mass $m_{H}^{2}=-2\mu^{2}$.
+
+In summary, with this mechanism the weak interaction bosons and fermions of the theory are given a mass at the price of introducing an additional scalar field to spontaneously break the $SU(2)$ symmetry.
+
+\section{Hierarchy problem and other SM limitations}
+\label{sec:hier}
+
+The SM has been one of the most successful theories in the history of physics. With only 19 free parameters, it is able to make thousands of predictions that have been measured and tested over the last seventy to eighty years. However some aspects in the model are not completely understood. The most important one is the so-called hierarchy mass problem. At tree level, the Englert-Brout-Higgs boson has a mass $m_{H}^{2}=-2\mu^{2}$, but the physical mass also contains the one-loop contributions from fermions that interact with it, as the top quark. The Feynman diagram for such contribution can be seen in figure~\ref{fig:oneloophiggs}.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{figs/HierarchyLoop.png}
+    \caption{One loop diagram for contributions to the mass of the Englert-Brout-Higgs boson from interactions with fermions}
+    \label{fig:oneloophiggs}
+  \end{center}
+\end{figure}
+
+Such contributions add up giving a mass greater than simple tree level mass. Each fermion contributes proportionally to its mass, which means that the top quark contributes the most. Moreover, if there are in nature heavier fermions that also interact with the Englert-Brout-Higgs boson they will also contribute to its mass. With such considerations one can expect the Englert-Brout-Higgs boson to be much greater than 125 GeV, and in principle not even of the order of 100 GeV but greater than 1 TeV. However the real relevance or significance of this problem at theoretical level has been discussed extensively, for example at~\cite{Jegerlehner:2013nna}, the majority of the community agrees there is something to be understood on the subject. 
+
+The most famous proposed solution to this problem is supersymmetry (SUSY)~\cite{Martin:1997ns}. It proposes the existence of an additional symmetry between fermions and bosons, at a given point of the history of universe nature didn't distinguish between fermions and bosons. However, as we know this does not happen presently this symmetry must be broken. Such symmetry implies the existence of a super-symmetric partner for each particle, a super-partner. A fermion for each boson and vice versa. This SUSY procedure doubles the particle content of the model where it's applied. Before breaking SUSY, a particle and its partner have the same mass. Being this feature responsible for solving the hierarchy problem. On figure~\ref{fig:susy} one can see the one loop diagrams for the mass of the Englert-Brout-Higgs boson from the top and its super-partner the stop. Whereas, the top contribution is positive, the stop contribution is negative but equal in value, then cancelling each other.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{figs/SUSY.png}
+    \caption{One loop diagrams for contributions to the mass of the Englert-Brout-Higgs boson from the top and the stop}
+    \label{fig:susy}
+  \end{center}
+\end{figure}
+
+But this solution works exactly only if SUSY is not broken. As we know SUSY has to be broken, different ways have been proposed to break SUSY and still offer a solution to the hierarchy problem, leading essentially to solutions that need a fine adjustment of the parameters of the theory. This represents for some theoreticians a problem itself: Fine-tuning or Naturalness. Extensive searches for SUSY particles have been performed, accordingly to different models: MSSM~\cite{Khachatryan:2014wca,Aad:2014vgg}, CMSSM, etc.
+
+While hierarchy problem is an internal problem of the SM, there are however several questions that have not been solved. For example, how gravity is understood in the frame of QFT's? Why there is only 3 generations of leptons and quarks? Why there are only 4 fundamental forces? In addition, there have been experimental questionings to the SM. The most important one is the masses of neutrinos. In the SM neutrinos are massless, careful measurements,~\cite{Ashie:2004mr, Weinheimer:2013hya}, have shown that neutrinos can oscillate between different flavors, phenomenon only possible if neutrinos have a mass. Measurements of solar and atmospheric neutrino oscillations have been the most important proof of physics beyond the SM. 
+
+From cosmological measurements, the Wilkinson Microwave Anisotropy Probe (WMAP) has shown that the universe is not only made by visible matter, but suggests that around 24\% it is made of dark matter. A type of matter not visible by means of light. It has also shown that 71\% of the universe is composed of dark energy, which makes the universe to be in an accelerated state of expansion. These results can be seen in~\cite{2013ApJS..208...20B, 2013ApJS..208...19H}. Also the Planck probe has shown similar results, for example in~\cite{Planck:2015xua}. The SM does not have any answer to these open problems so far. 
+
+Finally, it is known that the universe presents an asymmetry between matter and antimatter, the first being much more abundant than the second. Such asymmetry can be obtained by CP-violating processes (C for charge and P for parity). However the amount of CP violation present in the SM is not compatible with the huge matter-antimatter asymmetry in nature. This problem, known as baryon asymmetry, represents an additional huge challenge for particle physics. 
+
+In conclusion, the SM has been a formidable model that has helped us to understand a huge amount of physics. It has done thousands of predictions that have been verified experimentally in the last half-century. However, this is not the end of the story, perhaps only the beginning. There are theoretical and experimental motivations that lead us think that the SM is not the ``final'' theory that could explain all subatomic phenomena in nature. Currently, there are a lot of efforts, both theoretical and experimentally, to understand and explain all the remaining pieces. The present work is one of them.
+
+In the next section, we present an extension of the SM that looks for a solution to the discussed hierarchy problem. In chapter~\ref{chap:pheno} we show a strategy to look at LHC for some of the predictions given by this SM extension.  %Then, principal productions predicted by the SM at the LHC involving particles, the top and the Higgs, used for new physics searches will be described. 
+
+\section{Vector Like Quarks}
+
+\label{chap:VLQ}
+
+From last sections we have seen how there are some parts in the SM that need further understanding. From such internal issues some further models/theories have been developed. All this theories are commonly grouped under the term Beyond Standard Model or simply BSM. One of the most famous BSM theory is supersymmetry (SUSY). This theory postulates a symmetry that does not distinguish between fermions and bosons. This idea have given birth to a plethora of model realizations and physics predictions. So far, none of the new consequences of this theory has been confirmed but the experiments have an enormous investment on their search. But not only SUSY have seen the day light, there is on the market an astonishing amount of BSM theories addressing different issues of the SM. Extra dimensions, fourth families, composite Higgs are a few of them.
+
+In this chapter we will describe a bunch of models that introduce additional heavy quarks, heavier than the top, in order to solve the hierarchy problem, described on section~\ref{sec:hier}. 
+
+\section{Motivation}
+\label{sec:motiv}
+
+The SM has 6 different quarks organized in three families. Each family is constructed by two quarks related by their electroweak quantum numbers. The number of families in nature is not restricted by any fundamental principle. However, searches for fourth families have not found any evidence of additional families in nature~\cite{Eberhardt:2012gv}. But a fourth family formulation relies on the existence of a sequential additional family, this is for the quark sector, two additional quarks, heavier than the top with the same quantum number structure as the other 3 families. In particular the 3 SM families are formed by doublets of the \textit{left} components of quark fields. 
+
+Fermionic fields can be divided in terms of two \textit{chiral} components. \textit{Chirality} describe the relative orientation of the momentum and spin of a particle. A particle is said to have \textit{right chirality} if its momentum and spin are aligned and \textit{left chirality} if they are anti-aligned.  Accordingly to electroweak theory the only \textit{left} fermions undergo weak interactions, reason why SM quark families are left. 
+
+Notwithstanding nothing prevents to formulate a model where new quarks right and left components are subjected to weak interaction indistinctly. A fermion having identical left and right chiralities is called \textit{vector-like}. These type of models introduce only new quarks without need of a full new family.
+
+This new top-like states allow to have a suitable solution for the hierarchy problem. They arise typically in Kaluza-Klein extra dimension models~\cite{Contino:2006qr, Matsedonskyi:2012ym, Dissertori:2010ug}. In more generic modeling of vector-like quarks (VLQ) these new states are added to the SM content as an electroweak representation (singlet or doublet) coupled to SM quarks.
+
+\section{Generic Formulation}
+\label{sec:form}
+
+The generic formulation we are going to describe is based on~\cite{Buchkremer:2013bha, Cacciapaglia:2011fx}.
+
+In a very generic conception, vector-like quarks can be added to the SM content as being part of an electroweak representation. Introduced with same color charge than SM quarks they can come in 4 different forms depending of their electric charge:
+\begin{itemize}
+\item $X$ with 5/3 electric charge
+\item $T$ with 2/3 electric charge, as the top quark.
+\item $B$ with -1/3 electric charge, as the bottom quark.
+\item $Y$ with -4/3 electric charge.
+\end{itemize}
+
+$T$ it is also called in the literature a \textit{top partner}. Given VLQ electric charges they can be arranged in different representations. In table~\ref{tab:VLQRepre} can be seen the plausible different electroweak representations of VLQ. We will refer to $\binom{X}{T}$ and $\binom{T}{B}$ as the non-standard and standard doublet respectively.  
+
+\begin{table}[htbH]
+\label{tab:VLQRepre}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+ & SM & \multicolumn{2}{c|}{Singlets} & \multicolumn{3}{c|}{Doublets} \\
+ & $\binom{u}{d}$ $\binom{c}{s}$ $\binom{b}{t}$ & T & B & $\binom{X}{T}$ & $\binom{T}{B}$ & $\binom{B}{Y}$ \\ 
+\hline
+$SU(2)_{L}$ & 2 & \multicolumn{2}{c|}{1} & \multicolumn{3}{c|}{2} \\ \hline
+$U(1)_{Y}$ & $q_{L}=1/6$; $u_{R}=2/3$; $d_{R}=-1/3$ & 2/3 & -1/3 & 1/6 & 7/6 & -5/6 \\
+\hline
+\end{tabular}
+\caption{Possible VLQ representations and corresponding $SU(2)_{L}\times U(1)$ charges and SM quarks.}
+\end{center}
+\end{table}
+
+The effective Lagrangian for a general formulation of VLQ, restricting it for $T$ and $X$ type of vector-like quarks in the non-standard doublet:
+\begin{eqnarray}
+  \mathcal{L} & = & \kappa_{T}\left\{ \sqrt{\frac{\zeta_{i}\xi_{Z}^{T}}{\Gamma_{Z}^{0}}}\frac{g}{2c_{W}}\left[ \bar{T}_{R}Z_{\mu}\gamma^{\mu}u^{i}_{R}\right]\right\} 
+               -  \kappa_{T}\left\{ \sqrt{\frac{\zeta_{i}\xi_{H}^{T}}{\Gamma_{H}^{0}}}\frac{M}{v}\left[ \bar{T}_{L}Hu^{i}_{R}\right] + \sqrt{\frac{\zeta_{3}\xi_{H}^{T}}{\Gamma_{H}^{0}}}\frac{m_{t}}{v}\left[ \bar{T}_{R}Ht_{L}\right]\right\} \nonumber\\            
+              & + & \kappa_{X}\left\{ \sqrt{\frac{\zeta_{i}}{\Gamma_{W}^{0}}}\frac{g}{\sqrt{2}}\left[ \bar{X}_{R}W^{+}_{\mu}\gamma^{\mu}u^{i}_{R}\right]\right\} +h.c.
+\label{eq:VLQLag}
+\end{eqnarray} 
+neglecting terms proportional to the light quark masses. In addition, terms proportional to top mass can also be neglected as they only introduce differences of only 10\%-20\% for $T$ masses below 600 GeV. The parameters $\kappa_T$, $\kappa_X$ are the coupling strengths and determine the strength of the VLQ production. In equation~\ref{eq:VLQLag} $M$ represents the $T$ mass, $m_{t}$ the top mass, $\zeta_{i}$ the coupling between VLQ and the $i$th SM quarks generation, $\xi_{Z}^{T}$ and $\xi_{H}^{T}$  the mixing of $T$ with the $Z$ and Higgs boson respectively. 
+%\begin{TOINCLUDE}Table with different possible representations and assigned charges\end{TOINCLUDE}
+
+\subsection{Production modes}
+\label{sec:prod}
+
+VLQ can be produced singly or pairwise, as the SM top quark. Pair production is dominated by QCD production via gluons, as shown in figure~\ref{fig:ProdDiagPair}. Additional contributions are given via the a t-channel exchange of a vector boson. For example in figure~\ref{fig:ProdDiagPair} can be seen the production process via the $Z$ boson that produce two same sign VLQ.   
+
+Single production is mainly mediated by a vector boson via a t-channel in association with a SM quark. In figure~\ref{fig:ProdDiagSingle} can be seen the Feynman diagram for $T$ single production with a SM quark. In addition, the $T$ can be also produced with a $Z$ or $W$ boson or a Higgs from an initial gluon-quark fusion. 
+
+The VLQ production cross section in proton-proton collision strongly depend from their mixings to SM quarks. Historically, top partners have been modeled with exclusive mixings to third generation SM quarks. In the generic formulation we have considered VLQ can mix to the three SM quark generations. In particular we consider the case where couplings to light generations are important. In figure~\ref{fig:TProdXS} can be seen the $T$ production cross sections in pairs and singly in proton-proton collisions. For $T$ masses higher than 400 GeV the single production is dominant with regard to pair production. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{figs/Gluon_fusion_T_pair.jpg}
+    \includegraphics[width=0.3\textwidth]{figs/Quarks_schannel_T_pair.jpg}
+    \includegraphics[width=0.3\textwidth]{figs/Gluon_tchannel_T_pair.jpg}
+    \caption{Feynman diagrams of $T$ production in pairs}
+    \label{fig:ProdDiagPair}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figs/Tchannel_T_single.jpg}
+    \caption{Single $T$ production Feynman diagram}
+    \label{fig:ProdDiagSingle}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/pheno_prod_single_tp.png}
+    \includegraphics[width=0.45\textwidth]{figs/pheno_prod_pair_tp.png}
+    \caption{$T$ production cross section for single [left] and pair [right] channels as function of $T$ mass for different center of mass energy in proton-proton collisions.}
+    \label{fig:TProdXS}
+  \end{center}
+\end{figure}
+%\begin{TOINCLUDE}Plot of production cross section at LHC for different energies as function of the mass. Feynman diagrams of the production processes.\end{TOINCLUDE}
+
+\subsection{Decay modes}
+\label{sec:decay}
+
+The parameters $\zeta_{i}$ and $\xi_i$, from the Lagrangian in equation~\ref{eq:VLQLag}, are directly linked to the branching ratios:
+ \begin{eqnarray} 
+BR (T \to Z j) = \frac{\zeta_{jet} \xi^T_Z}{1+\zeta_3 \xi_H \delta_H}\,, & & BR (T \to Z t) = \frac{(1-\zeta_{jet}) \xi^T_Z}{1+\zeta_3 
+\xi_H \delta_H}\,,\\
+BR(T \to H j) = \frac{\zeta_{jet} (1-\xi^T_Z)}{1+\zeta_3 \xi_H \delta_H}\,, & &  BR(T \to H t) = \frac{(1-\zeta_{jet})
+(1-\xi^T_Z) (1+\delta_H)}{1+\zeta_3 \xi_H \delta_H}\,, \nonumber\\
+ & & \nonumber \\
+BR(X \to W^+ j) = \zeta_{jet}\,, & & BR(X \to W^+ t) = (1-\zeta_{jet})
+ \end{eqnarray} where $\zeta_{jet}$ accounts for the contributions of the two light generations.
+
+The branching fractions of the top partner $T$ only depend on the two parameters $\zeta_{jet}$ and $\xi_Z^{T}$, as $\delta_H$ is a calculable function of the heavy mass scale for the vector-like quarks $M$:
+\begin{eqnarray} 
+\delta_H  \sim 5 \frac{m^2_t}{M^2}\,, \label{eq:deltaH}
+\end{eqnarray} 
+where we only kept the leading order in $1/M^2$. Note that in these formulae we kept the decay rates into $Z$ and $H$ arbitrary (parameterised by $\xi_Z^{T}$m which is equal to 1/2 for the non-standard doublet case). These approximate but quite robust results allow to describe easily the phenomenology of the non-standard doublet. 
+
+For a $T$ coming from other representations the situation is not much different in terms of decay modes, as only the extra decay to $W$ and quarks will be present. In figure~\ref{fig:TBRs} are presented the branching ratios of $T$ as function of its mass. It is important to notice that for masses higher than 300 GeV the decay channel into top-Higgs become dominant.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{figs/pheno_br_tp.png}
+    \caption{$T$ branching ratios as function of its mass.}
+    \label{fig:TBRs}
+  \end{center}
+\end{figure}
+%\begin{TOINCLUDE}Plot of branching ratio as function of the mass for different scenarios (representations)\end{TOINCLUDE}
+
