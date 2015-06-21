@@ -52,7 +52,7 @@
 %    \label{fig:TProdXS}
 %  \end{center}
 %\end{figure}
-%\begin{TOINCLUDE}Plot of production cross section at LHC for different energies as function of the mass. Feynman diagrams of the production processes.\end{TOINCLUDE}
+%\Begin{TOINCLUDE}Plot of production cross section at LHC for different energies as function of the mass. Feynman diagrams of the production processes.\end{TOINCLUDE}
 %
 %\subsection{Decay modes}
 %\label{sec:decay}
@@ -68,96 +68,221 @@
 %\end{figure}
 %\begin{TOINCLUDE}Plot of branching ratio as function of the mass for different scenarios (representations)\end{TOINCLUDE}
 
-\chapter{Fesability study for a search of a $T$ at LHC at 8 TeV}
+\chapter{Feasibility study for a search of a $T$ at LHC at 8 TeV}
 \label{chap:pheno}
 
 In section~\ref{chap:VLQ} we have introduced a generic model of VLQ. In addition we have described some of their properties predictions. As discussed, a $T$ can be produced in proton-proton collisions at LHC in several ways. For $T$ masses higher than 500 GeV single production mode gives a higher cross section with regard to pairwise production. Consequently, if there is a $T$ in nature there is a better chance to look for it on data coming from single production process. 
 
-For example, with 20 $\text{fb}^{-1}$ at 8 TeV, around 3000 events are expected for a single produced $T$ with a mass of 700 GeV. Only 500 are expected for pair production. But, all these events split in all the possible different final states. In the case of a 700 GeV mass $T$ the dominant decay channel is to top-Higgs, that is around 50\% from~\ref{fig:TBRs}. Following the calculation, this means we expect around 1500 events where the $T$ decayed into top and Higgs. 
+For example, with 20 $\text{fb}^{-1}$ at 8 TeV, around 4000 events are expected for a single produced $T$ with a mass of 700 GeV. Only 500 are expected for pair production. But, all these events split in all the possible different final states. In the case of a 700 GeV mass $T$ the dominant decay channel is to top-Higgs, that is around 50\% from~\ref{fig:TBRs}. Following the calculation, this means we expect around 2000 events where the $T$ decayed into top and Higgs. 
 
-Finally, from Higgs branching ratios, in figure~\ref{fig:HiggsBrs}, the Higgs decays the most of the times, 57\%, to a pair of $b$-quarks. Additionally, the top quark decays in a $b$-quark and a $W$ with a branching ratio of 99\%. And the $W$ boson decays into a pair of quarks 66\% of times. Using these three branching ratios we obtian an expected number of events of $T$ into 5 quarks (or jets) of around 560 events. The full hadronic final state consitutes the channel with the highest number of expected events for LHC run 1 collected events by CMS experiment. In the following sections we describe a tentaive strategy to extract these events from backgrounds. The main challenge in the full hadronic final state is to distinguish signal from the enourmous quantity of expected background events.
+Finally, from Higgs branching ratios, in figure~\ref{fig:HiggsBrs}, the Higgs decays the most of the times, 57\%, to a pair of $b$-quarks. Additionally, the top quark decays in a $b$-quark and a $W$ with a branching ratio of 99\%. And the $W$ boson decays into a pair of quarks 66\% of times. Using these three branching ratios we obtain an expected number of events of $T$ into 5 quarks (or jets) of around 700 events. The full hadronic final state constitutes the channel with the highest number of expected events for LHC run 1 collected events by CMS experiment. In the following sections we describe a tentative strategy to extract these events from backgrounds. The main challenge in the full hadronic final state is to distinguish signal from the enormous quantity of expected background events.
 
 %Discussion on selection of full hadronic channel.
 
-\section{Stragey for the full hadronic final state}
-\label{sec:Pstra}
+\section{Samples used in the study}
+\label{sec:PhenoSam}
 
-General discussion of strategy used for selection. 
+This feasibility study relied in Monte-Carlo simulations for the signal and backgrounds. We have used MadGraph 5, version 1.5.11, for the generation of parton level samples. Signal model has been implemented with FeynRules toolkit. For the simulation of the hadronization process of parton samples we have used Pythia 6. These tools are well known to describe correctly high jet multiplicity final states, specifically an unstable particle (as the W, Z or t) with up to four additional jets. For a detailed description of Monte-Carlo techniques and tools, refer to chapter~\ref{chap:MC}. 
+
+Cross sections and expected number of events for signal and each background used in the study, at 8~TeV for 20~fb$^{-1}$, are listed in Table~\ref{tab:xsec}.
 
 \begin{table}[htbH]
-\label{tab:BKGS}
+\label{tab:xsec}
 \begin{center}
-\begin{tabular}{|c|c|c|}
-%\hline 
-xxxxxxx & xxxxxxx & xxxxxxx
-%\hline
+\begin{tabular}{||l|c|r||}
+  \hline\hline
+  Process & $\sigma_{\rm 8 TeV}$ (pb) & Ex. Events \\ \hline
+ Signal ($Tj$) & 0.2 & 700 \\
+ \hline
+  QCD (bbjjj) & 500 & 10,000,000 \\
+  $W$+jets & 37,509 & 750,180,000 \\
+  $Z$+jets & 3,503.71 & 70,074,200 \\ 
+  $t\; \bar{t}$ & 234 & 4,680,000 \\
+  single-$t$ & 114.85 & 2,297,000 \\
+  Di-boson & 96.82 & 1,936,400 \\
+  \hline\hline
 \end{tabular}
 \caption{Cross sections and expected number of events for background processes and signal.}
-\end{center}chap:VLQ
+\end{center}
 \end{table}
+
+At production some loose cuts were required to facilitate the sample generation. QCD was produced requiring all jets with a $p_{T}>30$~GeV and within a pseudo-rapidity of $|\eta|<5$. All the other background samples were produced with jets with $p_{T}>10$~GeV and no cut on the pseudo-rapidity. For samples with at least one $Z$ boson, di--boson processes ZZ, WZ and Z+jets the mass of the di--lepton pair was required to satisfy $M_{ll}>50$~GeV, in order to avoid integration troubles. After hadronization, the jets were built up with Anti-Kt algorithm with $R=0.5$ with the standard implementation provided by FastJet package \cite{Cacciari:2011ma}.
+
+The signal sample was produced with $p_{T}>10$~GeV with the same packages. We chose to set the vector-like mass around 700 GeV, and the mixing to their maximal allowed values when both mixing to third and first generation are allowed (but the coupling to the second generation is negligible). This choice corresponds to the following set of parameters used in the simulation for the signal: $\xi_Z^{T}=0.5145$, $V_{R}^{41}=0.078$, $V_{R}^{42}=0.0041$, $\kappa_{T}=0.087$ and $BR(T \to H t)=0.472$. With this choice, the physical mass of the $T$ is $M_{T}=734$~GeV. This also set the cross section around 200~fb. 
+
+The choice of the mass value for the $T$ used in this study, is based over the argument that could be accessible to run 1 8~TeV data collected by CMS. The principal objective of the study is to motivate a full data search for VLQ. However, it is clear that for higher masses, specially higher than 1 TeV, special techniques, different from the ones used in this study, will be necessary. For such energies, will be perhaps needed to use for example boosted techniques~\cite{CMS:2013vca, TheATLAScollaboration:2013qia, Usai:2015vva}. These techniques are useful when several decay products of a massive particle are merged in a single jet, due to their high $p_{T}$. They allow to recover underlying substructure of jets. 
+
+The samples used in this study were analyzed using MadAnalysis package~\cite{Conte:2012fm, Conte:2014zja}.
+
+\section{Strategy for the full hadronic final state}
+\label{sec:Pstra}
+
+The final state of our interest, the full hadronic final state, contains 3 $b$-quarks and 2 additional quarks as decay products of $T$. 2 $b$;s coming from the Higgs, a third $b$ from the top-quark decay, and 2 light jets from $W$ decay. In addition, the $T$ is produced in association with a light quark. In figure~\ref{fig:ForwJ} can be seen the $\eta$ distribution of the jet produced in association to the $T$. Consequently, we expect signal events to have at least 6 jets. Differently from leptonic channels we have all the decay products of $T$ what allow us to do a full mas reconstruction of it.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \includegraphics[width=0.45\textwidth]{figs/Pheno/SixthJet.png}
     \caption{Forward jet produced in association with T.}
     \label{fig:ForwJ}
   \end{center}
 \end{figure}
-%\begin{TOINCLUDE}Table with cross sections and expected events for each background process and signal. Plot of eta of jet produced with T\end{TOINCLUDE}
+
+The main difficulty in full hadronic final states is the large QCD background. We included in the study all the possible SM background giving a full hadronic final state. In order of contribution we have considered QCD production, vector plus jets ($V$+jets, where $V$ is a $W$ or a $Z$ boson), $t\; \bar{t}$, single top, and di--boson ($WW$, $WZ$, $ZZ$). 
+
+Our strategy relies in the correct identification of the 5 jets coming form the $T$. For this purpose we have designed a \textbf{\textit{jet association}} method to select the 5 jets from $T$ based on the characteristics of the signal. The method used to identify the jets coming from the top partner is the following:
+\begin{itemize}
+\item Identify b--jets. (We require at least two b's.)
+\item For the Higgs decay, all pairs of b-jets passing the criteria $\Delta R_{jj} <2.5$ are retained. If more than one pair is fulfilling the angular requirement, the pair with the closest mass to the Higgs mass (125~GeV) is chosen.
+\item From the remaining jets, all possible pairs are formed and the pair with closest mass to W-mass (80~GeV) is identified as the W.
+\item Finally, from the remaining jets, the previously identified W-jets are coupled with a third jet. The top b-jet is selected as the jet which, combined with W ones, gives the invariant mass closest to the top mass (172~GeV).
+\end{itemize}
+
+In addition to the jet association method, we have designed a set of cuts to extract signal. These cuts rely fundamentally in the existence of a top-quark and a Higgs boson. Moreover, the background processes do not contain a Higgs. In the following section we describe the selection applied.
+%General discussion of strategy used for selection. 
 
 \section{Event selection}
 \label{sec:Psel}
 
-Description of selection. Paragraph per variable.
+%Description of selection. Paragraph per variable.
+All cuts were applied one after the other in the order given in the following list:
+
+\begin{itemize}
+
+\item \textit{Cut 0}: In the first cut events are kept if they have at least 6 jets with $p_T > 30$~GeV, at least five jets within $|\eta|<2.5$ and at least one jet within $2<|\eta|<5$. The five jets coming from the $T$ are more central, while the sixth jet produced in association with the single $T$ tends to be forward, as shown in figure~\ref{fig:ForwJ}. This cut tries to mimic the detector.
+
+\item \textit{Cut 1}: The kinematic selection begins requiring $p_{T}>150$~GeV for the leading jet, $p_{T}>80$~GeV for the sub-leading jet and $p_{T}>60$~GeV for the 3$^{rd}$ and 4$^{th}$ leading jets in each event. Figure~\ref{fig:Var1} shows the distributions for the $p_{T}$ of the six leading jets for signal and backgrounds.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \includegraphics[width=0.95\textwidth]{figs/Pheno/JetPt.png}
     \caption{$p_{T}$  of the six leading jets for backgrounds (stacked) and signal (over--imposed)}
     \label{fig:Var1}
   \end{center}
 \end{figure}
 
+\item \textit{Cut 2}: The third cut involves the total hadronic energy ($H_{T}=\sum |p_{T}^{j}|$), which is plotted in figure~\ref{fig:Var2} for backgrounds and signal. As the $T$ is decaying into top the full hadronic final state, the total hadronic energy would reflect the presence of this very massive object. This should lead to higher hadronic energy than for QCD, $W$ + jets and $t$ $\bar{t}$ events. Events with $H_{T}>630$~GeV were selected.
+
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \includegraphics[width=0.45\textwidth]{figs/Pheno/HT.png}
     \caption{Total hadronic energy for backgrounds (stacked) and signal (over--imposed)}
     \label{fig:Var2}
   \end{center}
 \end{figure}
 
+\item \textit{Cut 3}: For the jet association method we required each event to have at least two b jets. The identification of jets coming from b-quarks has been described in section~\ref{sec:bid}. However, as this study is only up to hadronization level, we don't use the same techniques. As a substitute for we use the following method to emulate the performance b-jet identification algorithms:
+  \begin{enumerate}
+  \item Select a working point for a b-tagging algorithm. This sets the efficiency of the algorithm to tag jets coming from a b-quark ($\epsilon^{b-tag}_{b}$), from a c-quark ($\epsilon^{b-tag}_{c}$) or from a light-quark ($\epsilon^{b-tag}_{l}$). We have chosen as reference the loose working point of the CSV algorithm. We used as reference CMS results~\cite{CMS-PAS-BTV-13-001}: $\epsilon^{b-tag}_{b}=0.9$, $\epsilon^{b-tag}_{c}=0.6$ and $\epsilon^{b-tag}_{l}=0.1$. 
+  \item Throw a random number $r$ between 0 and 1 for each event.
+  \item Loop over all the jets from an event and depending on their flavor and the random number from last step, declare each jet to be or not b-tagged. A jet is b-tagged if: is coming from a b-quark and $r\leq\epsilon^{b-tag}_{b}$, or is coming from a c-quark and $r\leq\epsilon^{b-tag}_{c}$, or is coming from a light-quark and $r\leq\epsilon^{b-tag}_{l}$.
+  \end{enumerate}
+
+The number of b-tagged jets using the method described above can be seen in figure~\ref{fig:Nbs}.
+
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \includegraphics[width=0.45\textwidth]{figs/Pheno/Nb.png}
+    \caption{B-tagged jet multiplicity for backgrounds (stacked) and signal (over--imposed)}
+    \label{fig:Nbs}
+  \end{center}
+\end{figure}
+
+\item \textit{Cut 4}: Events are kept if the two jets assigned to the Higgs have a $\Delta R_{jj}<1.8$. As the Higgs comes from the decay of the massive $T$, it is produced with a momentum different from zero. This makes that the two b's from the Higgs are produced close by in $\eta-\phi$ space.
+
+\item \textit{Cut 5}: As the Higgs and top produced by the signal come from a very heavy particle, they are expected to have a greater $p_{T}$ than the reconstructed Higgs and top in backgrounds. Accordingly, only events which have a Higgs with $p_{T}>200$ and a top with $p_{T}>300$ were selected. The $p_{T}$ of the reconstructed Higgs and top quark for signal and backgrounds are shown in figure~\ref{fig:HptToppt}, in a 2D histogram.
+
+\begin{figure}[!Hhtbp]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{figs/Pheno/HPTTPT.png}
+\caption{Reconstructed Higgs $p_{T}$ in the x axis and reconstructed top $p_{T}$ in the y axis for backgrounds (left) and signal (right). 
+\label{fig:HptToppt}}
+\end{center}
+\end{figure}
+
+\item \textit{Cut 6}: The distance in $\eta-\phi$ plane between the reconstructed W and Higgs is preferentially around 3 for signal, while for backgrounds the distribution is much more spread as there no real Higgs. $\Delta R_{HW}$ is plotted in figure~\ref{fig:Var3}. Selecting only the events within $2.2<\Delta R_{HW}<3.5$ helps to reduce QCD and W + jets background events.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/Pheno/DRWH.png}
     \caption{$\Delta R$ between the reconstructed Higgs and W for backgrounds (stacked) and signal (over--imposed)}
     \label{fig:Var3}
   \end{center}
 \end{figure}
 
+\item \textit{Cut 7}: The $\Delta \phi_{jj}$ of the b jets identified as coming from the Higgs boson and the $\Delta \phi_{jW}$ between the reconstructed W and the jet which formed the top are expected to be mainly central for the signal while more evenly distributed for backgrounds. Only events with $\Delta \phi_{jj}<2.0$ and $\Delta \phi_{jW}<3.3$ were kept. This cut is specially useful for reducing QCD and W+jets background events.
+
+\item \textit{Cut 8}: The $\Delta \phi_{jj}$ between the jets of the W are also expected to be more centered around zero in the signal with respect to backgrounds. Only events with $\Delta \phi_{jj}<2.3$ were kept. This cut was required to reduce single--top background.
+
+\item \textit{Cut 9}: Events with a reconstructed Higgs mass close to the real Higgs mass were kept. Events with a Higgs candidate with a mass between $100$~GeV and $135$~GeV were selected for the analysis.
+
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \includegraphics[width=0.45\textwidth]{figs/Pheno/MH.png}
     \caption{Mass of the reconstructed Higgs for backgrounds (stacked) and signal (over--imposed)}
     \label{fig:Var4}
   \end{center}
 \end{figure}
 
+\item \textit{Cut 10}: An additional observable was constructed to differentiate the signal from $t$ $\bar{t}$ background events. The relative total hadronic energy is defined as the ratio between the $p_{T}$ of the decay products identified as the Higgs and top and the total hadronic energy of the event: $$\frac{p_{T}^{H}+p_{T}^{t}}{H_{T}}\,.$$ All events with a relative total hadronic energy bigger than $0.65$ were kept. The relative total hadronic energy is shown in figure~\ref{fig:Var5}.
+
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \includegraphics[width=0.45\textwidth]{figs/Pheno/RelHT.png}
     \caption{Relative total hadronic energy for backgrounds (stacked) and signal (over--imposed)}
     \label{fig:Var5}
   \end{center}
 \end{figure}
 
+\end{itemize}
+
+After cut 3, but before cut 4, the W, top and Higgs candidates are formed with the jet association method. In addition to Higgs mass, shown in figure~\ref{fig:Var4}, in figure~\ref{fig:MWMTop} can be seen the mass of the W and top candidates masses.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/Pheno/MW.png}
+    \includegraphics[width=0.45\textwidth]{figs/Pheno/Mtop.png}
+    \caption{Reconstructed W [left] and top [right] mass for backgrounds (stacked) and signal (over--imposed)}
+    \label{fig:MWMTop}
+  \end{center}
+\end{figure}
+
+In the selection, characteristics of the signal have been exploited in order to differentiate it from the backgrounds. In table~\ref{tab:SelEff}, we show the efficiency of each cut in the procedure described above: the first line contains the number of events after the initial Cut 0 normalized to an integrated luminosity of 20~fb$^{-1}$, while on the following lines the efficiencies of the cuts for signal and background samples are shown after each of the 10 cuts. The bottom line of the table contains the overall selection efficiency. 
+
+Due to low statistics in our samples, we do not quote any numbers for the $Z$+jets background (producing a $Z$ with a high jet multiplicity is computationally very expensive). Furthermore, the inclusive $Z$+jets cross section is one order of magnitude smaller than the $W$+jets one and, due to the similar branching ratios and kinematics, we expect similar efficiencies as on the $W$+jets background. We therefore ignore this background, and assume that it can contribute at most with an additional 10\% of the $W$+jets. In addition, from our study we checked that di--boson contribution is negligible. We don't quote di--boson background either.
+
+The selection relied in angular variables that are not greatly changed by the introduction of detector effects. Correspondingly, nonetheless this study has been performed up to hadronization level in the samples production, it should not greatly change when considering detector simulation.
+
 \begin{table}[htbH]
 \label{tab:SelEff}
 \begin{center}
-\begin{tabular}{|c|c|c|}
-%\hline 
-xxxxxxx & xxxxxxx & xxxxxxx
-%\hline
-\end{tabular}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l|c|c|c|c|c|c}
+   & Signal & QCD & $W$+jets & $t \bar{t}$ & $t$+ jet & $tW$ \\ \hline
+  Cut 0 & $554\pm 3$ & $203,930\pm 1,150$ & $1,015,294\pm 11,567$ &  $337,024\pm 1,608$ & $25,349\pm 300$ & $19,416\pm 469$ 
+  \\ \hline
+  Cut 1 & $0.91\pm 0.01$ & $0.571 \pm 0.007$ & $0.67\pm 0.02$ &  $0.439 \pm 0.005$ & $0.45 \pm 0.01$ & $0.42 \pm 0.03$ \\
+  \hline
+  Cut 2 & $0.92\pm 0.01$ &  $0.68\pm 0.01$ & $0.74 \pm 0.02$ &  $0.81 \pm 0.01$ & $0.61 \pm 0.02$ & $0.70 \pm 0.06$ \\
+   \hline
+  Cut 3 & $0.84\pm 0.01$ & $0.86 \pm 0.02$ & $0.22 \pm 0.01$ & $0.83 \pm 0.01$ & $0.82 \pm 0.04$ & $0.85 \pm 0.08$ \\
+   \hline
+  Cut 4 & $0.93\pm 0.01$ & $0.68 \pm 0.01$ & $0.74 \pm 0.06$ & $0.56 \pm 0.01$ & $0.49 \pm 0.03$ & $0.45 \pm 0.05$ \\
+ \hline
+  Cut 5 & $0.92\pm 0.01$ & $0.60 \pm 0.02$ & $0.56 \pm 0.05$ &  $0.53 \pm 0.01$ & $0.61 \pm 0.05$ & $0.56 \pm 0.09$ \\
+  \hline
+  Cut 6 & $0.92\pm 0.01$ & $0.61 \pm 0.02$ & $0.56 \pm 0.07$ &  $0.74 \pm 0.03$ & $0.66 \pm 0.07$ & $0.72 \pm 0.15$ \\
+ \hline
+  Cut 7 & $0.75\pm 0.01$ & $0.67 \pm 0.03$ & $0.67 \pm 0.11$ &  $0.71 \pm 0.03$ & $0.77 \pm 0.09$ & $0.75 \pm 0.18$ \\
+  \hline
+  Cut 8 & $0.87\pm 0.02$ & $0.76 \pm 0.04$ & $0.82 \pm 0.15$ &  $0.84 \pm 0.04$ & $0.77 \pm 0.11$ & $0.90 \pm 0.24$ \\
+\hline
+  Cut 9 & $0.91\pm 0.02$ & $0.33 \pm 0.02$ & $0.41 \pm 0.10$ &  $0.51 \pm 0.03$ & $0.52 \pm 0.09$ & $0.48 \pm 0.16$ \\
+  \hline
+  Cut 10 & $0.87\pm 0.02$ & $0.54 \pm 0.06$ & $0.55 \pm 0.19$ &  $0.49 \pm 0.04$ & $0.79 \pm 0.17$ & $0.72 \pm 0.31$ \\
+\hline
+  combined & $0.284\pm 0.005$ & $(7.5 \pm 0.5) \times 10^{-3}$ & $(3.1 \pm 0.7) \times 10^{-3}$ &  $(9.3 \pm 0.5) \times 10^{-3}$ & $(11 \pm 1) \times 10^{-3}$ & $(10.5 \pm 3) \times 10^{-3}$ \\
+ \end{tabular}
+}
 \caption{Number of events for signal and backgrounds after the first selection cut (Cut 0), and efficiencies of each stage of the cutting procedure. The errors indicated are statistical only, based on the number of events.}
 \end{center}
 \end{table}
@@ -166,13 +291,30 @@ xxxxxxx & xxxxxxx & xxxxxxx
 \section{Results}
 \label{sec:Pres}
 
+The $T$ peak reconstruction after full selection is shown in figure~\ref{fig:AfterCuts}. A clear peak is found around 730 GeV for the signal over the ensemble of backgrounds. 
+The lack of smoothness of the distribution is due to the lack of statistics in the MonteCarlo samples for the  backgrounds, especially for W+jets. These fluctuations due to statistics can change the final estimate of the number of background events entering the peak of the signal, and the error is partially accounted for in the statistical error. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/Pheno/Final.png}
+    \caption{Reconstructed T mass after all cuts for backgrounds and signal (stacked)}
+    \label{fig:M5J}
+  \end{center}
+\end{figure}
+
+From the peak reconstruction, we selected the number of events falling into a window of $20$~GeV around the $T$ mass, i.e. within $710 < M_{jjjjj} < 750$~GeV. The number of events contained in this window are listed in table~\ref{tab:events}. We therefore obtain an enhanced signal over background ratio, with:
+\begin{equation}
+\frac{S}{\sqrt{S+B}}=2.0\pm 0.3\,, \qquad \mbox{and} \quad \frac{S}{B}=0.06\pm 0.02\,. 
+\end{equation}
+To the quoted uncertainties, one should add uncertainties in the cross section calculation for the signal, on PDF's and possible loop contributions. From similar studies and in analysis done by CMS and ATLAS collaborations the uncertainties linked to these sources are not bigger than 10\% to 15\% (see for instance \cite{Aad:2011yn}), therefore their inclusion should not change significantly the conclusions of this study.
+
 \begin{table}[tb]
 \begin{center}
 \begin{tabular}{l|c|c|c|c}
  & \multicolumn{2}{c|}{unweighted events}  & \multirow{2}{*}{weight} & weighted  \\
  & after Cut 10 & in mass window & & events \\
  \hline
- Signal & $8601$ & $3780$ & $0.03$ &$113 \pm 2$ \\
+ Signal & $8601$ & $3780$ & $0.018$ &$69 \pm 1$ \\
  \hline
    $t \bar{t}$ & $409$ & $57$ & $7.7$ & $437 \pm 58$ \\
  $W$+jets & $24$ & $3$ & $132$ & $395 \pm 228$ \\
@@ -182,14 +324,12 @@ xxxxxxx & xxxxxxx & xxxxxxx
   \hline
   total background & & & & $1112 \pm 352$ \\
 \end{tabular}
-\caption{Number of signal and background events from our simulation: in the first column the simulated events that pass all kinematic cuts, in the second column the events that fall in the mass window $710 < M_{jjjjj} < 750$~GeV, finally in the fourth column the number of weighted events in the mass window normalized to the physical cross section (the applied weight is listed in the third column). All the errors are statistical only. For the total background, we conservatively consider linear sum of errors.} \label{tab:events} \end{center}
+\caption{Number of signal and background events from our simulation: in the first column the simulated events that pass all kinematic cuts, in the second column the events that fall in the mass window $710 < M_{jjjjj} < 750$~GeV, finally in the fourth column the number of weighted events in the mass window normalized to the physical cross section (the applied weight is listed in the third column). All the errors are statistical only. For the total background, we conservatively consider linear sum of errors.} \label{tab:events} 
+\end{center}
 \end{table}
 
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Reconstructed T mass after all cuts for backgrounds and signal (stacked)}
-    \label{fig:M5J}
-  \end{center}
-\end{figure}
+As final remark, the signal sample used for the study was generated with a $T$ mass of 1 GeV. However, the theoretical model predicts a width of 11 GeV for the benchmark point we have used. For the wider width, an opening up to 30 GeV on the integration window is needed to include 2-$\sigma$ of the signal. Nonetheless, with these changes the estimator $S/\sqrt{S+B}$ does not change significantly within the statistical error. Then, the conclusion of the study does not change taking into account the larger $T$ width.
+
+In conclusion, this study shows a plausible selection to perform a data analysis to test a theoretical $T$ that decays into a top and a Higgs in the full hadronic channel. And moreover, how mixed couplings of VLQ to light and heavy quark generations enhance the production and give specific signatures, respectively, to search for this beyond SM particles. 
+
 %\begin{TOINCLUDE}Expected yields table. Final M5J plot.\end{TOINCLUDE}
