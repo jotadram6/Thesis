@@ -366,16 +366,18 @@ The CMS HCAL layout is shown in figure~\ref{fig:hcal}. The system is made of two
 
 The HF design is very different from the rest of the HCAL subsystems. The most important challenge for the HF is the high resistance to radiation, while in the central rapidity region 100 GeV are deposited in average in the forward region is 760 GeV. For this reason it was chosen a Cherenkov detector made of quartz fibers with a steel absorber. The light produced in the HF is collected by photo multipliers. 
 
-In figure~\ref{fig:hcal_per} can be seen the HCAL response to a single track as function of its momentum, characterizing the energy seen by the HCAL from a single particle respect to its true energy.
+HCAL response is defined as the energy measured by it with respect to the momentum of a track, being measured by the tracker system, for a single particle. In the most central region, $|\eta|<0.52$, the HCAL response is $\sim$ 0.6 for $p_{Track}>8$ GeV. In the region $1.39<|eta|<2.01$ the response is $\sim$ 0.4 for $p_{Track}>8$ GeV.
 
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.9\textwidth]{figs/HCAL_perf.png}
-    \caption{Mean response measured in the 3 $\times$ 3 tower matrix of the HCAL as a function of track momentum
-being compared with the predictions of three sets of Monte Carlo for different $\eta$ regions}
-    \label{fig:hcal_per}
-  \end{center}
-\end{figure}
+%In figure~\ref{fig:hcal_per} can be seen the HCAL response to a single track as function of its momentum, characterizing the energy seen by the HCAL from a single particle respect to its true energy.
+%
+%\begin{figure}[!Hhtbp]
+%  \begin{center}
+%    \includegraphics[width=0.9\textwidth]{figs/HCAL_perf.png}
+%    \caption{Mean response measured in the 3 $\times$ 3 tower matrix of the HCAL as a function of track momentum
+%being compared with the predictions of three sets of Monte Carlo for different $\eta$ regions}
+%    \label{fig:hcal_per}
+%  \end{center}
+%\end{figure}
 
 Calorimeters, ECAL and HCAL, and tracker are the fundamental pieces to identify the hadronic products of collision events. Whereas HCAL is designed to measure the energy of hadrons produced from collisions, but its information alone its not sufficient to correctly reconstruct them. We will discuss how the calorimeters information is combined to reconstruct physics objects called \textit{jets} in section~\ref{sec:jets}.
 
