@@ -19,6 +19,10 @@
 \usepackage{bm}
 \usepackage[us,24hr]{datetime}
 \usepackage{lineno}
+\usepackage{draftwatermark}
+\SetWatermarkText{{\ddmmyyyydate\today}}
+\SetWatermarkScale{1.25}
+\SetWatermarkAngle{60}
 %\usepackage{verbatimbox}
 
 \newcommand{\ket}[1]{| #1\rangle}
@@ -37,14 +41,18 @@
 
 \begin{document}
 \linenumbers 
+\markboth{VersionX}{\today}
+\markright{\today}
 \maketitle
 
 %Resume
 \include{Resume}
 
+\tableofcontents
+
 %Outline-Introduction                                                                                                                                                                                     
 \include{Intro}
-\include{Outline}
+%\include{Outline}
 
 %Standard Model chapter
 \include{Chapter2}
@@ -62,6 +70,7 @@
 \include{Chapter5}
 
 \bibliography{Biblio}
-\tableofcontents
+\listoffigures
+%\listoftables
 
 \end{document}
