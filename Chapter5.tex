@@ -1,17 +1,19 @@
 \chapter[Single VLQ search]{Search for a single produced T' decaying into top and Higgs in the full hadronic final state}
 \label{chap:search}
 
-In the present chapter we describe in full detail the search performed using 2012 data collected by CMS for a T' in the full hadronic final state. The theoretical formalism for such object has been described on chapter~\ref{chap:VLQ}.
+In the present chapter we describe in full detail the search performed using 2012 data collected by CMS for a T' in the full hadronic final state. The theoretical formalism for such object has been described on section~\ref{chap:VLQ}. In addition, a feasibility study for this search has been presented in chapter~\ref{chap:pheno}. As discussed in it, we look for a resonance in the five jets invariant mass.
 
 \section{Analysis Strategy}
 \label{sec:stra}
 
-The strategy of the analysis is based on keeping large signal efficiency while keeping under control the background. Main background of all hadronic final states is multijet production. This background should not present any resonance in the 5-jets invariant mass variable but purely a continuum. In order to keep high signal efficiency while constraining background, strategy to optimize the selection is based on high signal efficiency criteria (around 80-90\%) and on multiplication of them. 
+The strategy of the analysis is based on keeping large signal efficiency while keeping under control the background. Main background of all hadronic final states is multijet production. This background should not present any resonance in the 5-jets invariant mass variable but purely a continuum. %In order to keep high signal efficiency while constraining background, strategy to optimize the selection is based on high signal efficiency criteria (around 80-90\%) and on multiplication of them.
+
+A series of variables have been identified to distinguish between SM backgrounds and our signal. In particular, the most important variable to control QCD background is the number of b-tagged jets. In the signal we expect three real jets, and consequently we expect at least three b-tagged jets. After requiring at least 3 b-tagged jets \ttbar become an important background for the analysis. The last part of the selection will be designed to diminish this background. 
 
 \section{Datasets}
 \label{sec:data}
 
-The analysis is based on the MultiJet primary dataset processed with the 22Jan2013 reconstruction.
+The analysis is based on the MultiJet primary dataset processed with the 22Jan2013 reconstruction. The processed datasets are listed in table~\ref{tab:datasets}.
 
 \begin{table*}[htbH]
 \begin{center}
@@ -21,18 +23,22 @@ The analysis is based on the MultiJet primary dataset processed with the 22Jan20
 Dataset name & Int. Luminosity ($\text{pb}^{-1}$) \\
 \hline
 /MultiJet/Run2012A-22Jan2013-v1/AOD & 889.4 \\
-/MultiJet1Parked/Run2012B-05Nov2012-v2/AOD & 4427.9 \\
+/MultiJet1Parked/Run2012B-05Nov2012-v2/AOD & 4429.0 \\
 /MultiJet1Parked/Run2012C-part1-05Nov2012-v2/AOD & 494.6 \\
-/MultiJet1Parked/Run2012C-part2-05Nov2012-v2/AOD & 6654.9 \\
-/MultiJet1Parked/Run2012D-part1-10Dec2012-v1/AOD & 5764.9 \\
-/MultiJet1Parked/Run2012D-part2-17Jan2013-v1/AOD & 924.2 \\
+/MultiJet1Parked/Run2012C-part2-05Nov2012-v2/AOD & 6654.0 \\
+/MultiJet1Parked/Run2012D-part1-10Dec2012-v1/AOD & 5955.1 \\
+/MultiJet1Parked/Run2012D-part2-17Jan2013-v1/AOD & 734.0 \\
 /MultiJet1Parked/Run2012D-part2-PixelRecover-17Jan2013-v1 & 538.4 \\
+\hline
+\multicolumn{1}{|r|}{\textit{Total}} & 19694.5 \\
 \hline
 \end{tabular}
 }
-\caption{List of Multijet Primary Dataset used in the analysis and the corresponding integrated luminosity calculating using the golden JSON\label{tab:datasets}}
+\caption{List of Multijet Primary Dataset used in the analysis and the corresponding integrated luminosity calculated using the golden JSON\label{tab:datasets}}
 \end{center}
-\end{table*}\clearpage
+\end{table*}
+
+In addition, the MC samples processed to study the different backgrounds entering the analysis are presented in table~\ref{tab:MCbkg}.
 
 \begin{table*}[htbH]
 \begin{center}
@@ -44,21 +50,21 @@ Samples & Cross-Section (pb) & Number of events\\
 QCD\_Pt-120to170\_TuneZ2star\_8TeV\_pythia6 & 16\(\times 10^4\) & 5.9M\\
 QCD\_Pt-170to300\_TuneZ2star\_8TeV\_pythia6 & 34\(\times 10^3\) & 5.8M\\
 QCD\_Pt-300to470\_TuneZ2star\_8TeV\_pythia6 & 18\(\times 10^2\) & 5.9M\\ 
-QCD\_Pt-470to600\_TuneZ2star\_8TeV\_pythia6 & 110 & 3.9M\\
+QCD\_Pt-470to600\_TuneZ2star\_8TeV\_pythia6 & 114 & 3.9M\\
 QCD\_Pt-600to800\_TuneZ2star\_8TeV\_pythia6 & 27 & 3.9M\\
 QCD\_Pt-800to1000\_TuneZ2star\_8TeV\_pythia6 & 3.5 & 3.9M\\
 QCD\_HT-500To1000\_TuneZ2star\_8TeV-madgraph-pythia6 & 84\(\times 10^2\) & 30M\\ 
 QCD\_HT-1000ToInf\_TuneZ2star\_8TeV-madgraph-pythia6 & 2\(\times 10^2\) & 14M\\ 
 DYToCC\_M\_50\_TuneZ2star\_8TeV\_pythia6 & 31\(\times 10^2\) & 2M\\
 DYToBB\_M\_50\_TuneZ2star\_8TeV\_pythia6 & 38\(\times 10^2\) & 2M\\
-TTJets\_MSDecays\_central\_TuneZ2star\_8TeV-madgraph-tauola & 245.8 [NNLO] & 60M\\
-TT\_CT10\_TuneZ2star\_8TeV-powheg-tauola & 245.8 [NNLO] & 22M\\
+TTJets\_MSDecays\_central\_TuneZ2star\_8TeV-madgraph-tauola & 247.7 [NNLO] & 62M\\
+TT\_CT10\_TuneZ2star\_8TeV-powheg-tauola & 247.7 [NNLO] & 22M\\
 T\_tW-channel-DR\_TuneZ2star\_8TeV-powheg-tauola & 11.1 [NNLO] &497k\\
-T\_s-channel\_TuneZ2star\_8TeV-powheg-tauola & 1.76 [NNLO] & 260k\\
-T\_t-channel\_TuneZ2star\_8TeV-powheg-tauola & 30.7 [NNLO] & 3.7M\\
-Tbar\_tW-channel-DR\_TuneZ2star\_8TeV-powheg-tauola & 11.1 [NNLO] & 492k\\
-Tbar\_s-channel\_TuneZ2star\_8TeV-powheg-tauola & 3.79 [NNLO] & 140k\\
-Tbar\_t-channel\_TuneZ2star\_8TeV-powheg-tauola & 56.4 [NNLO] & 1.9M\\
+T\_s-channel\_TuneZ2star\_8TeV-powheg-tauola & 3.79 [NNLO] & 260k\\
+T\_t-channel\_TuneZ2star\_8TeV-powheg-tauola & 54.9 [NNLO] & 3.7M\\
+Tbar\_tW-channel-DR\_TuneZ2star\_8TeV-powheg-tauola & 11.1 [NNLO] & 493k\\
+Tbar\_s-channel\_TuneZ2star\_8TeV-powheg-tauola & 1.76 [NNLO] & 140k\\
+Tbar\_t-channel\_TuneZ2star\_8TeV-powheg-tauola & 29.7 [NNLO] & 1.9M\\
 WZ\_TuneZ2star\_8TeV\_pythia6\_tauola & 33.6 [NLO] & 10M\\
 ZZ\_TuneZ2star\_8TeV\_pythia6\_tauola & 7.6 [NLO] & 9.8M\\
 WW\_TuneZ2star\_8TeV\_pythia6\_tauola & 56 [NLO] & 10M\\
@@ -68,31 +74,35 @@ TTH\_Inclusive\_M-125\_8TeV\_pythia6 & 0.13 [NLO] & 100K\\
 }
 \caption{List of Monte-Carlo background samples used in the analysis, their corresponding cross-section and their number of events.\label{tab:MCbkg}}
 \end{center}
-\end{table*}\clearpage
+\end{table*}
+
+Finally, for the simulation of signal we have processed several samples for different mass values of the $T$. We have utilized 9 different mass points between 600 GeV/$\text{c}^{2}$ and 1 TeV/$\text{c}^{2}$ in steps of 50 GeV/$\text{c}^{2}$. The processed signal samples are shown in table~\ref{tab:MCsig}.
 
 \begin{table*}[htbH]
 \begin{center}
 \resizebox{\textwidth}{!}{
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline 
-Sample & T' Mass & Cross-Section \\
-            & (GeV$/c^{2}$) &  (fb) \\
+Sample & T' Mass & Cross-Section & Number of events\\
+            & (GeV$/c^{2}$) &  (fb) & \\
 \hline
-TprimeJetToTH\_M-600\_TuneZ2star\_8TeV-madgraph\_tauola & 600 & 215.4\\
-TprimeJetToTH\_M-650\_TuneZ2star\_8TeV-madgraph\_tauola & 650 & 177.8\\
-TprimeJetToTH\_M-700\_TuneZ2star\_8TeV-madgraph\_tauola & 700 & 143.7\\
-TprimeJetToTH\_M-750\_TuneZ2star\_8TeV-madgraph\_tauola & 750 & 118.6\\
-TprimeJetToTH\_M-800\_TuneZ2star\_8TeV-madgraph\_tauola & 800 & 100\\
-TprimeJetToTH\_M-850\_TuneZ2star\_8TeV-madgraph\_tauola & 850 & 84.3\\
-TprimeJetToTH\_M-900\_TuneZ2star\_8TeV-madgraph\_tauola & 900 & 72.6\\
-TprimeJetToTH\_M-950\_TuneZ2star\_8TeV-madgraph\_tauola & 950 & 62.6\\
-TprimeJetToTH\_M-1000\_TuneZ2star\_8TeV-madgraph\_tauola & 1000 & 53.9\\
+TprimeJetToTH\_M-600\_TuneZ2star\_8TeV-madgraph\_tauola & 600 & 215.4 & 95K \\
+TprimeJetToTH\_M-650\_TuneZ2star\_8TeV-madgraph\_tauola & 650 & 177.8 & 99K \\
+TprimeJetToTH\_M-700\_TuneZ2star\_8TeV-madgraph\_tauola & 700 & 143.7 & 99K \\
+TprimeJetToTH\_M-750\_TuneZ2star\_8TeV-madgraph\_tauola & 750 & 118.6 & 99K \\
+TprimeJetToTH\_M-800\_TuneZ2star\_8TeV-madgraph\_tauola & 800 & 100 & 96K \\
+TprimeJetToTH\_M-850\_TuneZ2star\_8TeV-madgraph\_tauola & 850 & 84.3 & 99K \\
+TprimeJetToTH\_M-900\_TuneZ2star\_8TeV-madgraph\_tauola & 900 & 72.6 & 99K \\
+TprimeJetToTH\_M-950\_TuneZ2star\_8TeV-madgraph\_tauola & 950 & 62.6 & 96K \\
+TprimeJetToTH\_M-1000\_TuneZ2star\_8TeV-madgraph\_tauola & 1000 & 53.9 & 99K \\
 \hline
 \end{tabular}
 }
-\caption{List of Monte-Carlo background signal used in the analysis, their corresponding cross-section and mass of the T'.\label{tab:MCsig}}
+\caption{List of Monte-Carlo background signal used in the analysis, their corresponding cross-section and mass of the $T$.\label{tab:MCsig}}
 \end{center}
-\end{table*}\clearpage
+\end{table*}
+
+Signal samples have been produced with only two decay channels for the Higgs: \bbbar and $\tau^{-}\tau^{+}$ channels. Thus, in order to obtain the correct branching ratio of the Higgs to \bbbar channel a rescaling factor must be applied. From~\cite{Heinemeyer:2013tqa}, the branching ratio of this channel for SM Higgs of 125 GeV/$\text{c}^{2}$ is 0.57. However, in signal samples the effective branching ratio is 0.94. In figure, it can be seen the relative content of 700 GeV/$\text{c}^{2}$ mass point into the two produced channels. Similar contents were found for all mass points. In consequence, a weight of 0.61 was considered for all signal samples.
 %\begin{TOINCLUDE}Table with Multijet primary datasets and integrated luminosity. Tables for MC samples, backgrounds and signal mass points.\end{TOINCLUDE}
 
 \section{Event selection}
