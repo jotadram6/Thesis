@@ -137,11 +137,11 @@ In MC samples pileup distribution has to be corrected to observed pileup in data
   \end{center}
 \end{figure}
 
-To check the correctness of the procedure, one should look at the number of vertices in data and MC. This comparison can be found in figure~\ref{fig:NV_dataMC}. After pileup reweighting MC samples sum correctly describe data number of vertices.
+To check the correctness of the procedure, one should look at the number of vertices in data and MC. This comparison can be found in figure~\ref{fig:NV_dataMC}. It was performed right before cutting on number of b-tagged jets. After pileup reweighting MC samples sum correctly describe data number of vertices.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.49\textwidth]{figs/Ana/DataPU.png}
+    \includegraphics[width=0.8\textwidth]{figs/Ana/Nvtcs.png}
     \caption{Number of vertices distribution for data and and MC samples sum. The comparison has been performed after basic selection except number of b-tagged jets minimum.}
     \label{fig:NV_dataMC}
   \end{center}
@@ -153,73 +153,154 @@ The selection starts with the trigger selection. The HLT path \textit{DiJet\_80\
 
 As a second selection step, at least 5 jets with \ptg{30} and \etal{2.5} and at least one additional jet with \ptg{30} and $2.5<=|\eta|<5$ were required for all events. This cut is driven by signal properties. The T is produced in association with a light jet, that is produced in the $\eta$ forward region. In addition, the T decay products (5 jets in the full hadronic final state) are produced basically in the tracker acceptance (\etal{2.5}). The $\eta$ distribution of the accompanying jet at hadronization level can be seen in figure~\ref{fig:ForwJ}. At this stage of the selection all events have at least 6 jets with \ptg{30}, the rest of jets have a \ptg{20}. 
 
-The basic selection first cut on objects kinematics was to require that all events leading jet had a \ptg{150}. This cut helps mainly to reduce QCD background. The leading jet coming from the signal is normally hard, as it is coming from a massive T, with a mass greater than 600 \GeVcc. Reason why it is normally harder than the leading jet coming from SM backgrounds. In figure~\ref{fig:6jpt} and~\ref{fig:6jeta} it can be seen the \pt and $\eta$ of the 6 leading jets for data and MC.   
+The basic selection first cut on objects kinematics was to require that all events leading jet had a \ptg{150}. This cut helps mainly to reduce QCD background. The leading jet coming from the signal is normally hard, as it is coming from a massive T, with a mass greater than 600 \GeVcc. Reason why it is normally harder than the leading jet coming from SM backgrounds. In figure~\ref{fig:6jpt} and~\ref{fig:6jeta} it can be seen the \pt and $\eta$ of the 6 leading jets for data and MC. The comparison is performed right before cutting on number of b-tagged jets.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.4\textwidth]{figs/CMSlogo.png}
-    \includegraphics[width=0.4\textwidth]{figs/CMSlogo.png}
-    \includegraphics[width=0.4\textwidth]{figs/CMSlogo.png}
-    \includegraphics[width=0.4\textwidth]{figs/CMSlogo.png}
-    \includegraphics[width=0.4\textwidth]{figs/CMSlogo.png}
-    \includegraphics[width=0.4\textwidth]{figs/CMSlogo.png}
-    \caption{Distribution of transverse momentum of the 6
-      leading jets in the events. Data is compared to the sum of the
-      MC samples normalized to luminosity after basic selection. The gray band represents the statistical
-      uncertainties from the sum of the MC background. Reasonable agreement is observed, multijet process is the dominant process at this stage.}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/jet1pt.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/jet2pt.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/jet3pt.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/jet4pt.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/jet5pt.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/jet6pt.png}
+    \caption{Distribution of transverse momentum of the 6 leading jets. The gray band represents the statistical uncertainties from the sum of the MC background. Reasonable agreement is observed, multijet process is the dominant process at this stage.}
     \label{fig:6jpt}
   \end{center}
 \end{figure}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.4\textwidth]{figs/CMSlogo.png}
-    \includegraphics[width=0.4\textwidth]{figs/CMSlogo.png}
-    \includegraphics[width=0.4\textwidth]{figs/CMSlogo.png}
-    \includegraphics[width=0.4\textwidth]{figs/CMSlogo.png}
-    \includegraphics[width=0.4\textwidth]{figs/CMSlogo.png}
-    \includegraphics[width=0.4\textwidth]{figs/CMSlogo.png}
-    \caption{Distribution of $\eta$ of the 6 leading jets in
-      the events. Data is compared to the sum of the MC samples
-      normalized to luminosity after
-      basic selection. The gray band represents the statistical
-      uncertainties from the sum of the MC background. Reasonable agreement is observed, multijet process is the dominant process at this stage.}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/jet1eta.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/jet2eta.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/jet3eta.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/jet4eta.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/jet5eta.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/jet6eta.png}
+    \caption{Distribution of $\eta$ of the 6 leading jets. The gray band represents the statistical uncertainties from the sum of the MC background. Reasonable agreement is observed, multijet process is the dominant process at this stage.}
     \label{fig:6jeta}
   \end{center}
 \end{figure}
 
-After the cut on the leading jet \pt we require \HTg{550}. Multijet background events have smaller \HT than signal events. \HT distribution for data and MC samples can be seen in figure~\ref{fig:HT}.
+After the cut on the leading jet \pt we require \HTg{550}. Multijet background events have smaller \HT than signal events. \HT distribution for data and MC samples can be seen in figure~\ref{fig:HT}, comparison performed before cutting on number of b-tagged jets..
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Distribution of $H_{T}$ variable for data and the sum of
-      the Monte Carlo samples normalized to luminosity after basic selection. The signal sample
-      is simply overlay on top of the stack of the MC samples. It has a T mass of 700 GeV/$c^{2}$. The gray band represents the statistical uncertainties from the sum of the MC background. Reasonable agreement is observed, multijet process is the dominant process at this stage.}
+    \includegraphics[width=0.8\textwidth]{figs/Ana/HT.png}
+    \caption{Distribution of $H_{T}$ variable for data and the sum of the MC samples normalized to luminosity. The signal sample (M=700 \GeVcc) is over-imposed on top of the stack of the MC samples. The gray band represents the statistical uncertainties from the sum of the MC background. Reasonable agreement is observed, multijet process is the dominant process at this stage.}
     \label{fig:HT}
   \end{center}
 \end{figure}
 
-Finally the basic selection ends with the request of a minimum of b-tagged jets. CSV algorithm (described in section~\ref{sec:bid}) was used to identify jets coming from a b quark. The medium working point was chosen as it allows to have a high efficiency on b-jet identification with a low fake rate from c and light quarks and it allows to keep a high efficiency on signal. In the full hadronic final state, the T decays in three b-quarks, a \bbbar system coming from the Higgs and an additional b quark from the t-quark, and two light jet from the W boson produced by the top. Accordingly, one expects signal events to have at least 3 b-tagged jets, while \ttbar~events should have 2 and 0 for QCD, as mean values.
+Finally the basic selection ends with the request of a minimum of b-tagged jets. CSV algorithm (described in section~\ref{sec:bid}) was used to identify jets coming from a b quark. We define b-tagged jets as jets that were b-tagged by CSV algorithm while b-jets as jets truly coming from a b-quark. The medium working point was chosen as it allows to have a high efficiency on b-jet identification with a low fake rate from c and light quarks and it allows to keep a high efficiency on signal. In the full hadronic final state, the T decays in three b-quarks, a \bbbar system coming from the Higgs and an additional b quark from the t-quark, and two light jet from the W boson produced by the top. Accordingly, one expects signal events to have at least 3 b-tagged jets, while \ttbar~events should have 2 and 0 for QCD, as mean values.
 
-In principle we can use several working points to establish the b-tagged jets content of events. For example, one can require to have events with at least 3 b-tagged jets one with tight working point and two with medium working points. We have studied all possible combinations from the three available working points (loose (CSVL), mediuem (CSVM) and tight (CSVT)) to require at least 3 CSV b-tagged jets in order to establish which combination gave the best $S/B$ while keeping the most of signal events. For the study, we have used as signal the $M=700$ \GeVcc signal sample and as backgrounds \ttbar and  QCD\_HT-500To1000 MC samples. The study was performed up \HT cut. The results of the study are contained in table~\ref{}. Form it one can see that the most efficient cut to discriminate signal from backgrounds and to keep signal is to require at least 3 CSVM b-tagged jets. 
+In principle we can use several working points to establish the b-tagged jets content of events. For example, one can require to have events with at least 3 b-tagged jets one with tight working point and two with medium working points. We have studied all possible combinations from the three available working points (loose (CSVL), medium (CSVM) and tight (CSVT)) to require at least 3 CSV b-tagged jets in order to establish which combination gave the best $S/B$ while keeping the most of signal events. For the study, we have used as signal the $M=700$ \GeVcc signal sample and as backgrounds \ttbar, QCD\_HT-500To1000 and QCD\_HT-1000ToInf MC samples. The study was performed up to \HT cut. The results of the study are contained in table~\ref{tab:BCutStudy}. From it, one can see that the most efficient cut to discriminate signal from backgrounds and to keep signal is to require at least 3 CSVM b-tagged jets. At this stage is extremely important to keep enough signal, because the next step of the analysis is T reconstruction.
+
+\begin{table}[htbH]
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+\textit{At least} & $\epsilon(S)$ [\%] & $\epsilon(t\bar{t})$ [\%] & $\epsilon(\text{QCD\_HT-500To1000})$ [\%] & $\epsilon(\text{QCD\_HT-1000ToInf})$ [\%] & $\frac{S}{B}\times 10^{3}$ & $\frac{S}{S+B}\times 10^{2}$ \\
+\hline
+3 CSVL            & $65 \pm 1$  & $38 \pm 0.07$  & $6 \pm 0.03$ & $7 \pm 0.03$             & $0.4 \pm 5\times 10^{-3}$  & $24.8 \pm 0.3$ \\
+3 CSVM            & $31 \pm 1$  & $8 \pm 0.03$  & $1 \pm 0.01$ & $0.6 \pm 0.01$            & $1.8 \pm 5\times 10^{-2}$  & $38.2 \pm 0.8$ \\
+1 CSVL and 2 CSVM & $70 \pm 1$  & $46 \pm 0.09$  & $5 \pm 0.03$ & $5 \pm 0.02$             & $0.5 \pm 7\times 10^{-3}$  & $30.3 \pm 0.4$ \\
+2 CSVL and 1 CSVM & $89 \pm 1$  & $72 \pm 0.1$  & $14 \pm 0.05$ & $15 \pm 0.04$            & $0.2 \pm 3\times 10^{-3}$  & $23.3 \pm 0.2$  \\
+2 CSVM and 1 CSVT & $64 \pm 1$  & $41 \pm 0.08$  & $4 \pm 0.02$ & $4 \pm 0.02$             & $0.6 \pm 8\times 10^{-3}$  & $31.1 \pm 0.4$  \\
+1 CSVM and 2 CSVT & $39 \pm 1$  & $21 \pm 0.05$  & $2 \pm 0.01$ & $1 \pm 0.01$             & $0.7 \pm 1\times 10^{-2}$  & $27.5 \pm 0.4$  \\
+3 CSVT            & $9 \pm 0.3$  & $1 \pm 0.01$  & $0.1 \pm 0.03$ & $0.09 \pm 0.002$       & $3.1 \pm 2\times 10^{-1}$  & $27.3 \pm 1.1$  \\
+1 CSVL and 2 CSVT & $39 \pm 1$  & $21 \pm 0.05$  & $2 \pm 0.01$ & $1 \pm 0.01$             & $0.7 \pm 1\times 10^{-2}$  & $27.5 \pm 0.4$  \\
+2 CSVL and 1 CSVT & $76 \pm 1$  & $59 \pm 0.1$  & $7 \pm 0.03$  & $7 \pm 0.03$             & $0.4 \pm 4\times 10^{-3}$  & $26.8 \pm 0.3$  \\
+1 CSVL and 1 CSVM and 1 CSVT &  $80 \pm 1$ &  $69 \pm 0.1$ & $11 \pm 0.04$ & $11 \pm 0.04$ & $0.3 \pm 3\times 10^{-3}$  & $23.4 \pm 0.2$  \\
+\hline
+
+\hline
+\end{tabular}
+}
+\caption{Comparative study of different possible combinations to require at least 3 b-tagged jets with CSVL, CSVM and CSVT working points. Efficiencies of cuts over signal and principal MC background samples are presented, as well as $\frac{S}{B}$ and $\frac{S}{S+B}$. We chose the cut giving highest $\frac{S}{S+B}$, at least 3CSVM. High values of $\frac{S}{S+B}$ point a good discrimination while keeping signal.\label{tab:BCutStudy}}
+\end{center}
+\end{table}
+
+As described in section~\ref{sec:bid} b-tagging is performed using a complex procedure where several jet variables are taken into account. It strongly depends on the ability to find displaced vertices, reason why it has been restricted to jets in $\eta<=2.4$. As MC conditions are ideal in comparison with real data (less noise, perfect detector operation, etc.), b-tagging bring different results in data than in MC. Thus, a correction must be applied to MC to mimic b-tagging response on data. In general, CSV algorithm is slightly more efficient for b-tagging b-jets in MC than in data. Additionally, it also gives more fakes coming from light jets in data than in MC. To match MC to data a scale factor has been derived by the collaboration. It is defined for each jet depending on its flavor (b and c or light), \pt and $\eta$. In equation~\ref{eq:Sfs}, it can be found the functions defining the scale factors for CSVM working point. The functions are defined as $SF^{flavor}_{\eta}(p_{T})$.
+
+\begin{eqnarray}
+  \label{eq:Sfs}
+  SF^{b\; or\; c}_{|\eta|\le 2.4}(x) & = & 0.938887 + 0.00017124x - 2.76366 \times 10^{-7}x^{2} \nonumber \\
+  SF^{light}_{|\eta|\le 0.8}(x) & = & 1.07541 + 0.00231827x - 4.74249 \times 10^{-6}x^{2}  \nonumber \\
+  &  & +2.70862 \times 10^{-9}x^{3} \nonumber \\
+  SF^{light}_{0.8 < |\eta|\le 1.6}(x) & = & 1.05613 + 0.00114031x - 2.56066 \times 10^{-6}x^{2} \nonumber \\
+  &  & + 1.67792 \times 10^{-9}x^{3} \nonumber \\
+  SF^{light}_{1.6 < |\eta|\le 2.4}(x) & = & 1.05625 + 0.000487231x - 2.22792 \times 10^{-6}x^{2} \nonumber \\
+  &  & + 1.70262 \times 10^{-9}x^{3}
+\end{eqnarray}
+
+In order to apply b-tagging scale factors to MC samples, a recommended methods by the collaboration was used. The chosen method allows to calculate a weight per events in terms of its jet flavor content. The weight definition can be found in equation~\ref{eq:SFW}, 
+
+\begin{equation}
+  \label{eq:SFW}
+  w=\frac{P(\text{DATA})}{P(\text{MC})}
+\end{equation}where
+
+\begin{eqnarray}
+  \label{eq:DataMCSFP}
+  P(\text{MC}) & = & \prod_{i=\text{tagged}} \varepsilon_i \prod_{j=\text{not tagged}} (1-\varepsilon_j) \\
+  P(\text{DATA}) & = & \prod_{i=\text{tagged}} \text{SF}_i \varepsilon_i \prod_{j=\text{not tagged}} (1-\text{SF}_j \varepsilon_j)
+\end{eqnarray}the products are defined over all jets in the event. $\varepsilon$ represents the b-tagging efficiency. Efficiencies were calculated for each MC sample as function of flavor, \pt and $\eta$. In figure~\ref{fig:SignalBEff} it can be found CSVM b-tagging efficiencies for b, c and light jet flavors for signal MC sample. In figure~\ref{fig:ttbarBEff} and~\ref{fig:QCDBEff} can be found the same efficiencies for \ttbar and QCD MC samples. Also, the calculated weights for each MC are shown in figure~\ref{fig:SFweight}. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.2\textwidth]{figs/Ana/HT.png}
+    \caption{Distribution of weight from b-tagging scale factors for all MC samples.}
+    \label{fig:SFweight}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/Signal_beff.png}
+    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/Signal_ceff.png}
+    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/Signal_leff.png}
+    \caption{CSVM b-tagging efficiency for b-jets [left], c-jets [center] and light jets [right] as function of \pt and $\eta$ for signal.}
+    \label{fig:SignalBEff}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/ttbar_beff.png}
+    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/ttbar_ceff.png}
+    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/ttbar_leff.png}
+    \caption{CSVM b-tagging efficiency for b-jets [left], c-jets [center] and light jets [right] as function of \pt and $\eta$ for \ttbar.}
+    \label{fig:ttbarBEff}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/QCDHT500_beff.png}
+    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/QCDHT500_ceff.png}
+    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/QCDHT500_leff.png}
+    \caption{CSVM b-tagging efficiency for b-jets [left], c-jets [center] and light jets [right] as function of \pt and $\eta$ for QCD\_HT-500To1000.}
+    \label{fig:QCDBEff}
+  \end{center}
+\end{figure}
+
+Efficiencies were calculated using the following formula:
+
+\begin{equation}
+  \label{eq:btaggingeff}
+  \varepsilon_f(i,j) = \frac{N_f^\text{b-tagged}(i,j)}{N_f^\text{Total}(i,j)}
+\end{equation} where $ N_f^\text{Total}(i,j) $ and $ N_f^\text{b-tagged}(i,j) $ are the total number and the number of b-tagged jets, respectively, of flavor $ f $ in the $ (p_\text{T},\eta) $ bin $ (i,j) $. The determination of jet flavor is done via the matching of jets to quarks from parton level simulation. The matching is not always successful and some jets can have no parton matched, i.e. no associated flavor. These jets, as well as jets coming from gluons, were included in light flavor category, following official recommendations.
+
+Finally, data was compared to MC predictions in figure~\ref{fig:Nb} in the number of CSVM b-tagged jets. The different data/MC comparisons presented are used for illustration and to check that pileup and b-tagging corrections in MC are correctly applied. For final analysis results only signal MC samples are used, as backgrounds were estimated from data.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{B-tag CSVM jet multiplicity for data and Monte Carlo
-      samples after all previous criteria [left] and after requiring
-      at least 3 b-tagged jets [right]. The signal has 3 b-tag while
-      most of the background have mainly 2 b-tag. The disagreement
-      observed can be understood as no scale factors
-      are applied on the MC in left plots. In right plot, scale factor
-      of 3 b-tag jets is applied.  This criteria is the
-      last criteria definition the basic selection for the
-      analysis. The sum of MC is normalized to the integrated
-      luminosity in the data.}
+    \caption{B-tagged CSVM jet multiplicity for data and MC samples before requiring at least 3 CSVM b-tagged jets. This criteria is the last criteria definition the basic selection. The sum of MC is normalized to the integrated luminosity in the data.}
     \label{fig:Nb}
   \end{center}
-\end{figure}\clearpage
+\end{figure}
 %\begin{TOINCLUDE}Plots of pt and eta of six leading jets, number of vertices, HT and number of CSVM b-tagged jets\end{TOINCLUDE}
 
 \subsection{T' reconstruction with a $\chi^{2}$ sorting algorithm}

@@ -6,3 +6,4 @@ Sources/*
 *.log
 *.pdf
 figs/*.pdf
+figs/Ana/*
