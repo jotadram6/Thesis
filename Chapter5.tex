@@ -121,7 +121,7 @@ In the following sections the event processing and selection for the analysis ar
 
 \subsection{Event processing}
 
-In first instance, data and MC events were processed with PAT (Physics Analysis Toolkit)~\ref{Adam:2010zza}, to produce PAT-tuples. This step makes a first selection of objects with very basic cuts as a minimal jets $p_{T}$. In addition, several noise filters are applied. For example, only events with at least one good primary vertex (n.d.o.f. $\ge 4, |z|<24 \;\text{cm}, |\rho|< 2 \;\text{cm}$) are kept. In addition, Charge Hadron Subtracted (CHS) particle flow AK5 jets are reconstructed with at least a $p_{T}$ of 20 GeV/c. Only jets within $|\eta|<5$ are considered. Afterward, the PAT-tuples were dumped into a reduced Ntuple format. 
+In first instance, data and MC events were processed with PAT (Physics Analysis Toolkit)~\cite{Adam:2010zza}, to produce PAT-tuples. This step makes a first selection of objects with very basic cuts as a minimal jets $p_{T}$. In addition, several noise filters are applied. For example, only events with at least one good primary vertex (n.d.o.f. $\ge 4, |z|<24 \;\text{cm}, |\rho|< 2 \;\text{cm}$) are kept. In addition, Charge Hadron Subtracted (CHS) particle flow AK5 jets are reconstructed with at least a $p_{T}$ of 20 GeV/c. Only jets within $|\eta|<5$ are considered. Afterward, the PAT-tuples were dumped into a reduced Ntuple format. 
 
 An important setup for the processing of samples in CMS is the selection of the global tag. For data, it contains the information of the recorded events that can be used for physics analysis (no problems in the detector); and for MC, it points to different corrections that need to be applied in order to compare MC to data.
 
@@ -198,7 +198,7 @@ In principle we can use several working points to establish the b-tagged jets co
 \begin{table}[htbH]
 \begin{center}
 \resizebox{\textwidth}{!}{
-\begin{tabular}{|c|c|c|c|c|c|c|}
+\begin{tabular}{| c || c | c | c | c | c | c |}
 \hline 
 \textit{At least} & $\epsilon(S)$ [\%] & $\epsilon(t\bar{t})$ [\%] & $\epsilon(\text{QCD\_HT-500To1000})$ [\%] & $\epsilon(\text{QCD\_HT-1000ToInf})$ [\%] & $\frac{S}{B}\times 10^{3}$ & $\frac{S}{S+B}\times 10^{2}$ \\
 \hline
@@ -249,7 +249,7 @@ In order to apply b-tagging scale factors to MC samples, a recommended methods b
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.2\textwidth]{figs/Ana/HT.png}
+    \includegraphics[width=0.8\textwidth]{figs/Ana/SF_weight.png}
     \caption{Distribution of weight from b-tagging scale factors for all MC samples.}
     \label{fig:SFweight}
   \end{center}
@@ -296,19 +296,33 @@ Finally, data was compared to MC predictions in figure~\ref{fig:Nb} in the numbe
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \includegraphics[width=0.8\textwidth]{figs/Ana/NCSVM.png}
     \caption{B-tagged CSVM jet multiplicity for data and MC samples before requiring at least 3 CSVM b-tagged jets. This criteria is the last criteria definition the basic selection. The sum of MC is normalized to the integrated luminosity in the data.}
     \label{fig:Nb}
   \end{center}
 \end{figure}
 %\begin{TOINCLUDE}Plots of pt and eta of six leading jets, number of vertices, HT and number of CSVM b-tagged jets\end{TOINCLUDE}
 
-\subsection{T' reconstruction with a $\chi^{2}$ sorting algorithm}
+\subsection{T reconstruction with a $\chi^{2}$ sorting algorithm}
 \label{sec:chi2}
+
+A crucial step to reconstruct T mass is to identify correctly the five jets produced by it. Events passing basic selection have at least 6 jets, but jet multiplicity can be much greater. In consequence, the process of identifying T-jets is not trivial. 
+
+A $\chi^{2}$ sorting algorithm has been used to identify the T decay products and to reconstruct the Higgs and top. This technique is based in the definition of a variable constructed from the information of objects under consideration and the properties of the particles to be reconstructed. The variable is computed for all possible object combinations. The best the fit of the chosen objects to the required reconstruction, minimal is the value of the variable. An example of this method can be found in~\cite{Brochet:1956723}. 
+
+We define the $\chi^{2}$ variable in equation~\ref{eq:chi2def}. The values used as inputs were: $M_{H}=125$~\GeVcc, $M_{W}=84.06$~\GeVcc, $M_{t}=175.16$~\GeVcc, $\sigma_{H}=12.4$~\GeVcc (from~\cite{Chatrchyan:2013zna}), and $\sigma_{W}=10.12$~\GeVcc and $\sigma_{t}=17.35$~\GeVcc (from~\cite{Brochet:1956723}). For the Higgs reconstruction only CSVM b-tagged jets are considered. For W reconstruction all jets with a \ptg{30} were considered. And for the top reconstruction one b-tagged jet and the pair of jets used for the W. B-tagging status of jets used for the W was not used.
+
+\begin{equation}
+\chi^{2}=\frac{(M_{H}-M_{bb})^{2}}{\sigma_{H}^{2}}+\frac{(M_{W}-M_{jj})^{2}}{\sigma_{W}^{2}}+\frac{(M_{t}-M_{bjj})^{2}}{\sigma_{t}^{2}}
+\label{eq:chi2def}
+\end{equation}
+
+One can evaluate the efficiency of the reconstruction of each resonance (Higgs, W, top and T) using each MC signal sample. We define two efficiencies, the exclusive efficiency that is the ratio between the number of events where the particle was well reconstructed and the number of events where all jets where correctly matched to a parton, and the inclusive efficiency where the ratio is done with respect to the total number of events. Both efficiencies were evaluated after basic selection. The efficiency values are found, for all MC signal samples, in figure~\ref{fig:RecEff}. We found an exclusive efficiency of around 70\% for the T independently of the MC signal sample.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \includegraphics[width=0.46\textwidth]{figs/Ana/Exclusive_Efficiency_V8.png}
+    \includegraphics[width=0.46\textwidth]{figs/Ana/Inclusive_Efficiency_V8.png}
     \caption{Reconstruction efficiency taking into account only events where jets could be matched to partons [left] and to total number of events [right]}
     \label{fig:RecEff}
   \end{center}
