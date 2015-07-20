@@ -326,26 +326,28 @@ One can evaluate the efficiency of the reconstruction of each resonance (Higgs, 
     \caption{Reconstruction efficiency taking into account only events where jets could be matched to partons [left] and to total number of events [right]}
     \label{fig:RecEff}
   \end{center}
-\end{figure}\clearpage
+\end{figure}
+
+In figure~\ref{fig:WHt} it can be found the reconstructed W, Higgs and top masses by the $\chi^{2}$ sorting algorithm. Additionally, in figure~\ref{fig:RecT} are shown the reconstructed T mass for all used MC signal samples. Finally, in table~\ref{tab:SignalWidths} are presented the results from fitting with a gaussian all mass points after full selection. The found widths for T mass varies between 30 to 50 \GeVcc, what means 6\% of T mass. This fit is used to calculate the expected yields for the signal for calculation of limits.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Reconstructed top, W and H for the T mass point of 700 GeV/c}
+    \includegraphics[width=0.32\textwidth]{figs/Ana/TopMass_S700.png}
+    \includegraphics[width=0.32\textwidth]{figs/Ana/WMass_S700.png}
+    \includegraphics[width=0.32\textwidth]{figs/Ana/HiggsMass_S700.png}
+    \caption{Reconstructed top, W and H for the T mass point of 700 \GeVcc}
     \label{fig:WHt}
   \end{center}
-\end{figure}\clearpage
+\end{figure}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Reconstructed T mass for all mass points.}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/HundresdsMassChi2Tp.png}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/FiftiesMassChi2Tp.png}
+    \caption{Reconstructed T mass for all mass points from $chi^{2}$ sorting algorithm.}
     \label{fig:RecT}
   \end{center}
-\end{figure}\clearpage
+\end{figure}
 
 \begin{table*}[htbH]
 \begin{center}
@@ -354,29 +356,30 @@ One can evaluate the efficiency of the reconstruction of each resonance (Higgs, 
 \multicolumn{2}{|c}{Generated} & \multicolumn{3}{|c|}{Reconstructed} \\
 Mass (GeV/$c^{2}$) & Width (GeV/$c^{2}$) & Mass (GeV/$c^{2}$) & Width (GeV/$c^{2}$) & $\chi^{2} /$ndf\\
 \hline
-600 & 0.62 &$616.68\pm14.17$ & $30.73\pm10.52$ & 15.14/17\\
-650 & 0.80 &$649.48\pm13.55$ & $37.32\pm10.67$ & 37.82/17\\
-700 & 1.02 &$697.54\pm14.25$ & $42.98\pm12.28$ & 4.39/17\\
-750 & 1.27 &$740.23\pm15.53$ & $44.62\pm13.68$ & 14.48/17\\
-800 & 1.56 &$787.13\pm16.20$ & $49.95\pm12.18$ & 58.67/27\\
-850 & 1.89 &$835.79\pm16.30$ & $48.94\pm12.18$ & 36.35/27\\
-900 & 2.26 &$882.308\pm18.34$ & $49.91\pm13.84$ & 34.97/27\\
-950 & 2.67 &$933.30\pm23.30$ & $54.78\pm18.24$ & 16.00/27\\
-1000 & 3.13 &$976.01\pm29.76$ & $58.27\pm24.04$ & 21.17/27\\
+600 & 0.62 &$604.24\pm13.78$ & $33.04\pm10.12$ & 4.93/4\\
+650 & 0.80 &$644.79\pm12.04$ & $35.61\pm9.09$ & 6.82/4\\
+700 & 1.02 &$692.83\pm13.38$ & $42.07\pm9.59$ & 8.04/7\\
+750 & 1.27 &$735.37\pm14.75$ & $44.87\pm10.87$ & 13.72/7\\
+800 & 1.56 &$783.70\pm16.93$ & $48.72\pm12.55$ & 24.59/7\\
+850 & 1.89 &$834.17\pm16.96$ & $46.51\pm12.48$ & 19.46/7\\
+900 & 2.26 &$880.72\pm18.30$ & $45.24\pm13.61$ & 13.25/7\\
+950 & 2.67 &$929.20\pm24.38$ & $52.46\pm18.61$ & 12.27/7\\
+1000 & 3.13 &$971.35\pm30.04$ & $52.06\pm23.24$ & 10.78/7\\
 \hline
 \end{tabular}
 \caption{Reconstructed mass and width for T candidate after full analysis selection from a gaussian fit for each signal mass generated. \label{tab:SignalWidths}}
 \end{center}
 \end{table*}
 
+The $\chi^{2}$ distribution is plotted in figure~\ref{fig:chi2}. Signal events have preferentially a $\chi^{2}<50$, while multijet and \ttbar backgrounds have much longer tail for high $\chi^{2}$ values.
+
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Normalized distribution of $\chi^{2}$ variable for signal compared to multijet ($H_{T}$ [500, 1000] only) and $t\bar{t}$. The signal sample used has a T' mass of 700 GeV/$c^{2}$. Signal events are peaking at 0 with a falling distribution while background
-    have larger tails.}
+    \includegraphics[width=0.8\textwidth]{figs/Ana/chi2Nm1.png}
+    \caption{Distribution of $\chi^{2}$ variable for data and MC samples. The signal sample used has a T mass of 700 \GeVcc. Backgrounds present higher values than signal.}
     \label{fig:chi2}
   \end{center}
-\end{figure}\clearpage
+\end{figure}
 %\begin{TOINCLUDE}Table with inclusive and exclusive reconstruction efficiency. Plots of mass of reconstructed T, W, H and top right after reconstruction for all mass points. Table with gaussian fit results.\end{TOINCLUDE}
 
 \subsection{Selection based on reconstructed objects}
