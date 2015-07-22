@@ -384,18 +384,36 @@ The $\chi^{2}$ distribution is plotted in figure~\ref{fig:chi2}. Signal events h
 
 \subsection{Selection based on reconstructed objects}
 
-Description of the selection in general and detailed description of each variable used.
+After the reconstruction procedure, a final step in the selection is performed based on the properties of reconstructed objects. This last set of cuts we have optimized to obtain the highest discrimination between signal and backgrounds. The discrimination of the selection has been evaluated from the estimator $S/B$, where we have used as signal the $M(T)=700$ \GeVcc MC sample, and \ttbar and QCD\_HT-500To1000 for the backgrounds. Moreover, as we pretend to do a reconstruction of T mass we need to keep a considerable number of events at the end of the selection, we have restricted the selection to keep at least 10 signal events. 
+
+The principal limitation for the optimization of the selection is the lack of statistics in the multijet MC sample. Reason why, we preferred the selection that killed completely QCD\_HT-500To1000 MC sample, and gave us the highest $S/B$ value. MC samples for backgrounds were used only for selection optimization and illustration in the data versus MC plots. The limit setting and final results were produced with an estimation of backgrounds performed from data.  
+
+The first variable considered for selection is the $\chi^{2}$. As seen in figure~\ref{fig:chi2}, signal tends to have smaller values of $\chi^{2}$ than backgrounds. In figure~\ref{fig:chi2cut} it can be seen a scan of the efficiency of cutting on the $\chi^{2}$ for the values displayed in the x-axis. These efficiencies were evaluated for the signal ($M(T)=700$ \GeVcc), \ttbar and QCD\_HT-500To1000 MC samples. In addition, it can be seen the ratio of the efficiency of signal over the efficiency of the cut on \ttbar and QCD samples, this ratios are directly proportional to $S/B$. One can see from the figure. In agreement with the increase of $S/B$ as measure of the cut value, we have chosen to cut on $\chi^{2}<8$. One additional feature of this cut, that will be seen in section~\ref{sec:bkg}, is that this cut ensures the agreement of the control sample with the signal sample for the background estimation. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{$\Delta R$ of the 2 b-tag jets used to reconstruct the Higgs candidate after basic selection. The signal which is simply overlaid prefers low $\Delta R$ while backgrounds have larger distribution at higher value. The gray band represents the statistical uncertainties from the sum of the MC background.}
+    \includegraphics[width=0.8\textwidth]{figs/Ana/chi2_SoB.png}
+    \caption{Efficiency of cutting on $chi^{2}$ as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples. Ratios between efficiency for signal and each background are also displayed.}
+    \label{fig:chi2cut}
+  \end{center}
+\end{figure}
+
+After cutting in $\chi^{2}$, events were required to have the two b-quarks used to reconstruct the Higgs to have $\Delta R(bb)<1.2$. In figure~\ref{fig:DRbb} it can be seen the comparison between data and MC for $\Delta R(bb)$ before cutting on it. It is also shown an equivalent cut efficiency study as for $\chi^{2}$ variable. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/DRbb_SoB.png}
+    \includegraphics[width=0.45\textwidth]{figs/CMSlogo.png}
+    \caption{$\Delta R$ of the 2 b-tagged jets used to reconstruct the Higgs candidate after basic selection. The signal which is simply overlaid prefers low $\Delta R$ while backgrounds have larger distribution at higher value. The gray band represents the statistical uncertainties from the sum of the MC background.}
     \label{fig:DRbb}
   \end{center}
-\end{figure}\clearpage
+\end{figure}
+
+Afterward, events were required to have a reconstructed W and H with a $1.6<\Delta R (W_{cand} H_{cand})<4.0$. This variable presents a peak for signal at 2.8, as it can be seen in figure~\ref{fig:DRWH}. Backgrounds also have a peak around 3, but have larger tails than signal. The cut then has been chosen to keep events inside a window of 1.2 around the peak. In the same figure it can be seen the cut efficiency plot for this variable for different window values.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/DRWH_SoB.png}
     \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
     \caption{Distribution for $\Delta R (W_{cand} H_{cand})$ for data and the sum of Monte Carlo samples. All others criteria are applied up to this one.}
     \label{fig:DRWH}
@@ -415,14 +433,6 @@ Description of the selection in general and detailed description of each variabl
     \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
     \caption{Distribution of Relative $H_{T}$ for data and the sum of the Monte Carlo samples. Signal can be separated from background in this variable. All others criteria are applied up to this one. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples.}
     \label{fig:RelHtMass}
-  \end{center}
-\end{figure}\clearpage
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Distribution of Top-Higgs mass asymmetry for data and the sum of the Monte Carlo samples. Signal can be separated from background in this variable. All others criteria are applied before this one. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples.}
-    \label{fig:mthasym}
   \end{center}
 \end{figure}\clearpage
 
