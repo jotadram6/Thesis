@@ -151,7 +151,7 @@ To check the correctness of the procedure, one should look at the number of vert
 
 The selection starts with the trigger selection. The HLT path \textit{DiJet\_80\_DiJet\_\\60\_DiJet\_20} was chosen. It selects events with at least two jets with a \ptg{80}, other two with \ptg{60} and another two with \ptg{20}. From trigger selection all passing events have at least 6 jets. The HLT works with CaloJets that are in general different from PF jets from final event reconstruction. Right after trigger selection a first cut is applied, to close up selection to the trigger efficiency plateau. Only events with two jets with \ptg{90}, two jets with \ptg{70} and two jets with \ptg{30} were kept. This selection is applied over PF jets. In this first cuts no requirement on the $\eta$ of jets was applied.
 
-As a second selection step, at least 5 jets with \ptg{30} and \etal{2.5} and at least one additional jet with \ptg{30} and $2.5<=|\eta|<5$ were required for all events. This cut is driven by signal properties. The T is produced in association with a light jet, that is produced in the $\eta$ forward region. In addition, the T decay products (5 jets in the full hadronic final state) are produced basically in the tracker acceptance (\etal{2.5}). The $\eta$ distribution of the accompanying jet at hadronization level can be seen in figure~\ref{fig:ForwJ}. At this stage of the selection all events have at least 6 jets with \ptg{30}, the rest of jets have a \ptg{20}. 
+As a second selection step, at least 5 jets with \ptg{30} and \etal{2.5} and at least one additional jet with \ptg{30} and $2.5<=|\eta|<5$ were required for all events. This cut is driven by signal properties. The T is produced in association with a light jet, that is produced in the $\eta$ forward region. In addition, the T decay products (5 jets in the full hadronic final state) are produced basically in the tracker acceptance (\etal{2.5}). The $\eta$ distribution of the accompanying jet at hadronization level can be seen in figure~\ref{fig:ForwJ}. At this stage of the selection all events have at least 6 jets with \ptg{30}, the rest of jets have a \ptg{20}. %We will refer to this first part as the acceptance selection.
 
 The basic selection first cut on objects kinematics was to require that all events leading jet had a \ptg{150}. This cut helps mainly to reduce QCD background. The leading jet coming from the signal is normally hard, as it is coming from a massive T, with a mass greater than 600 \GeVcc. Reason why it is normally harder than the leading jet coming from SM backgrounds. In figure~\ref{fig:6jpt} and~\ref{fig:6jeta} it can be seen the \pt and $\eta$ of the 6 leading jets for data and MC. The comparison is performed right before cutting on number of b-tagged jets.
 
@@ -356,15 +356,15 @@ In figure~\ref{fig:WHt} it can be found the reconstructed W, Higgs and top masse
 \multicolumn{2}{|c}{Generated} & \multicolumn{3}{|c|}{Reconstructed} \\
 Mass (GeV/$c^{2}$) & Width (GeV/$c^{2}$) & Mass (GeV/$c^{2}$) & Width (GeV/$c^{2}$) & $\chi^{2} /$ndf\\
 \hline
-600 & 0.62 &$604.24\pm13.78$ & $33.04\pm10.12$ & 4.93/4\\
-650 & 0.80 &$644.79\pm12.04$ & $35.61\pm9.09$ & 6.82/4\\
-700 & 1.02 &$692.83\pm13.38$ & $42.07\pm9.59$ & 8.04/7\\
-750 & 1.27 &$735.37\pm14.75$ & $44.87\pm10.87$ & 13.72/7\\
-800 & 1.56 &$783.70\pm16.93$ & $48.72\pm12.55$ & 24.59/7\\
-850 & 1.89 &$834.17\pm16.96$ & $46.51\pm12.48$ & 19.46/7\\
-900 & 2.26 &$880.72\pm18.30$ & $45.24\pm13.61$ & 13.25/7\\
-950 & 2.67 &$929.20\pm24.38$ & $52.46\pm18.61$ & 12.27/7\\
-1000 & 3.13 &$971.35\pm30.04$ & $52.06\pm23.24$ & 10.78/7\\
+600 & 0.62 &$604.60\pm14.18$ & $32.44\pm10.37$ & 4.99/4\\
+650 & 0.80 &$644.56\pm12.64$ & $35.53\pm9.54$ & 8.03/4\\
+700 & 1.02 &$691.79\pm13.65$ & $41.16\pm9.75$ & 10.80/7\\
+750 & 1.27 &$736.26\pm15.53$ & $45.38\pm11.46$ & 10.24/7\\
+800 & 1.56 &$782.97\pm18.12$ & $49.35\pm13.49$ & 23.67/7\\
+850 & 1.89 &$832.49\pm17.92$ & $47.39\pm13.28$ & 15.71/7\\
+900 & 2.26 &$881.38\pm19.13$ & $45.58\pm14.24$ & 11.01/7\\
+950 & 2.67 &$929.02\pm25.02$ & $51.54\pm18.96$ & 14.54/7\\
+1000 & 3.13 &$970.36\pm32.18$ & $53.34\pm25.14$ & 11.51/7\\
 \hline
 \end{tabular}
 \caption{Reconstructed mass and width for T candidate after full analysis selection from a gaussian fit for each signal mass generated. \label{tab:SignalWidths}}
@@ -393,7 +393,7 @@ The first variable considered for selection is the $\chi^{2}$. As seen in figure
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.8\textwidth]{figs/Ana/chi2_SoB.png}
-    \caption{Efficiency of cutting on $chi^{2}$ as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples. Ratios between efficiency for signal and each background are also displayed.}
+    \caption{Efficiency of cutting on $chi^{2}<x$ as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples. Ratios between efficiency for signal and each background are also displayed.}
     \label{fig:chi2cut}
   \end{center}
 \end{figure}
@@ -403,8 +403,8 @@ After cutting in $\chi^{2}$, events were required to have the two b-quarks used 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/DRbb_SoB.png}
-    \includegraphics[width=0.45\textwidth]{figs/CMSlogo.png}
-    \caption{$\Delta R$ of the 2 b-tagged jets used to reconstruct the Higgs candidate after basic selection. The signal which is simply overlaid prefers low $\Delta R$ while backgrounds have larger distribution at higher value. The gray band represents the statistical uncertainties from the sum of the MC background.}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/DRbbNm1.png}
+    \caption{Efficiency of cutting on $\Delta R(bb)<x$ as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [left]. $\Delta R$ of the 2 b-tagged jets used to reconstruct the Higgs candidate after basic selection [right]. The signal which is simply overlaid prefers low $\Delta R$ while backgrounds have larger distribution at higher value. The gray band represents the statistical uncertainties from the sum of the MC background.}
     \label{fig:DRbb}
   \end{center}
 \end{figure}
@@ -414,55 +414,113 @@ Afterward, events were required to have a reconstructed W and H with a $1.6<\Del
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/DRWH_SoB.png}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Distribution for $\Delta R (W_{cand} H_{cand})$ for data and the sum of Monte Carlo samples. All others criteria are applied up to this one.}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/DRWHNm1.png}
+    \caption{Efficiency of cutting on $|\Delta R(W_{cand} H_{cand})-2.8|<x$ as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [left]. Distribution for $\Delta R (W_{cand} H_{cand})$ for data and the sum of Monte Carlo samples [right]. All others criteria are applied up to this one.}
     \label{fig:DRWH}
   \end{center}
-\end{figure}\clearpage
+\end{figure}
+
+One important difference between signal and backgrounds, is that in signal events there is a real Higgs decaying into \bbbar. Thus, a resonance peak is expected to appear for the \bbbar system for signal events, while it is not the case for backgrounds. In consequence, events were required to have a Higgs candidate mass between 105 and 145 \GeVcc. Efficiency plot of cutting on events outside a window around 125 \GeVcc in the Higgs candidate mass is shown in figure~\ref{fig:HiggsMassDMC}. In the same figure the Higgs candidate mass is shown before cutting on it, for data and MC samples.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Distributions for $ \Delta R (T' j^{6})$  for data and the sum of Monte Carlo samples. All others criteria are applied up to this one. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples.}
-    \label{fig:jet6}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/HM_SoB.png}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/HMNm1.png}
+    \caption{Efficiency of cutting on $|M(H_{cand})-125|<x$ as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [left]. Distribution for $M(H_{cand})$ for data and the sum of Monte Carlo samples [right]. All others criteria are applied up to this one.}
+    \label{fig:HiggsMassDMC}
   \end{center}
-\end{figure}\clearpage
+\end{figure}
+
+At this stage of the selection we have found a pair of variables to focus in suppress \ttbar background. However QCD is comparable to \ttbar, it is this second background the most similar to our signal due to the presence of a real top. in addition, the \ttbar system is capable to fake a Higgs with similar properties than the one in signal events. To identify how the \ttbar system was making Higgs fakes we have explored from MC truth information the quarks that were chosen by $\chi^{2}$ sorting algorithm as coming form the Higgs. In figure~\ref{fig:RecohiggsMCTruth} it can be seen the Higgs reconstruction cases, coded as follows:
+
+\begin{itemize}
+\item Bin 0: Higgs candidate reconstructed from two b-quarks coming each one from a top quark.
+\item Bin 1: Higgs candidate reconstructed from Higgs \bbbar system.
+\item Bin 2: Higgs candidate reconstructed from one quark from the Higgs and one b-quark from a top.
+\item Bin 3: Higgs candidate reconstructed from one quark from the Higgs and one quark from a W.
+\item Bin 4: Higgs candidate reconstructed from one b-quark from the top and one quark from a W.
+\item Bin 5: Higgs candidate reconstructed from two quarks coming from W bosons.
+\item Bin 6: Higgs candidate reconstructed from one jet from the Higgs and one additional quark (not from Higgs, W nor top).
+\item Bin 7: Higgs candidate reconstructed from one b-quark from a top and one additional quark (not from Higgs, W nor top).
+\item Bin 8: Higgs candidate reconstructed from one jet from a W and one additional quark (not from Higgs, W nor top).
+\item Bin 9: Higgs candidate reconstructed from two additional quarks (not from Higgs, W nor top).
+\end{itemize}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Distribution of Relative $H_{T}$ for data and the sum of the Monte Carlo samples. Signal can be separated from background in this variable. All others criteria are applied up to this one. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples.}
-    \label{fig:RelHtMass}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/HiggsRecoMCTruth_S700.png}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/HiggsRecoMCTruth_TTJets.png}
+    \caption{Higgs candidate reconstruction MC truth for signal (M=700 \GeVcc) [left] and \ttbar [right] MC samples. in signal the Higgs is reconstructed preferentially from two jets coming from the Higgs (bin 1) while for \ttbar the Higgs candidate is reconstructed preferentially from a b-quark from a top and a quark from a W boson (bin 4).}
+    \label{fig:RecohiggsMCTruth}
   \end{center}
-\end{figure}\clearpage
+\end{figure}
+
+In this figure one can sees that the Higgs candidate is preferentially reconstructed in \ttbar events from a b-quark coming from a top and one quark coming from a W boson. As one top is also reconstructed, this means that the Higgs is being reconstructed from the second top. Thus, to identify \ttbar events one can try to reconstruct the second top from the b-tagged jets used for the Higgs and one additional jet not used by $\chi^{2}$ algorithm. As this extra jet is coming from a top we expect it to be quite boosted, then we reconstruct the second top from the two Higgs jets and the leading jet not used by the $\chi^{2}$ algorithm. We also define a second top from the sub-leading Higgs jet and leading jet not used by the $\chi^{2}$ algorithm. The distribution for the second top mass can be seen in figure~\ref{fig:2ndTM} for data and MC samples. It shows a clear peak at the top mass value for \ttbar events.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Distribution of $(M(top^{2nd})+M(W^{2}))/M(H)$ 
-      for data and the sum of the Monte Carlo samples. Signal
-      can be separated from background in this variable. All
-      others criteria are applied before this one. The low statistics
-      in the multijet (QCD) MC sample is visible at this
-      stage. The gray band represents the statistical uncertainties
-      from the sum of the MC background and it is dominated by QCD
-      samples.}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/M2ndTopNm1.png}
+    \caption{Second top mass distribution for data and the sum of the Monte Carlo samples. Selection criteria applied up to Higgs mass cut.}
+    \label{fig:2ndTM}
+  \end{center}
+\end{figure}
+
+We have build a variable with the second top and second W boson to discriminate signal from background (mainly \ttbar). To increase the separation between backgrounds and signal we don't take only the second top mass, but we add the the second W boson mass and divide by the Higgs mass. The distribution for this variables is shown in figure~\ref{fig:m2thp} for data and the sum of MC samples. Events with $(M(top^{2nd})+M(W^{2nd}))/M(H)>6.8$ were selected.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/M2HP_SoB.png}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/M2HPNm1.png}
+    \caption{Efficiency of cutting on $(M(top^{2nd})+M(W^{2nd}))/M(H)>x$ as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [left]. Distribution of $(M(top^{2nd})+M(W^{2nd}))/M(H)$ for data and the sum of the Monte Carlo samples [right]. All others criteria are applied before this one. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples.}
     \label{fig:m2thp}
   \end{center}
-\end{figure}\clearpage
+\end{figure}
+
+The selection continues taking advantage of the angular relation between the T and the quark produced in association with it for signal events. We know that they are produced preferentially with high $\Delta R$ while for backgrounds the two objects have lower $\Delta R$. We identify with the leading jet not used by the reconstruction procedure with the jet produced with the T. We call this jet the 6th jet, $j^{6}$. The distribution of $\Delta R (T j^{6th})$, before cutting on it, can be found in figure~\ref{fig:jet6} for data and MC samples along with the efficiency plot of cutting on $\Delta R (T j^{6th})$ for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples. At this stage the statistics in QCD MC samples begin to be very low. We select events that have $\Delta R (T j^{6th})>4.8$. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/DRTp6thJ_SoB.png}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/DRTp6JNm1.png}
+    \caption{Efficiency of cutting on $\Delta R (T j^{6th})>x$ as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [left]. Distributions for $\Delta R (T j^{6th})$  for data and the sum of Monte Carlo samples [right]. All others criteria are applied up to this one. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples.}
+    \label{fig:jet6}
+  \end{center}
+\end{figure}
+
+For the last cut we define the \textit{Relative} $H_{T}$ as the sum of the \pt of the Higgs candidate plus the \pt of the top candidate divided by $H_{T}$ of the event. This variable measures how much \pt of the event is coming from the Higgs and top candidates. As for signal events the top and Higgs candidates are coming from a highly massive object, that is decaying into these two objects, we expect signal events to have a relative $H_{T}$ closer to 1 than backgrounds events. The relative $H_{T}$ distribution can be found in figure~\ref{fig:RelHtMass} for data and the sum of MC samples before cutting on it, with the rest of the selection applied. At this stage the QCD MC samples have very low statistics. In the same figure can be found the efficiency plot of the cut. We keep events that have a Relative $H_{T}>0.67$. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/RelHT_SoB.png}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/RelHTNm1.png}
+    \caption{Efficiency of cutting on Relative $H_{T}>x$ as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [left]. Distribution of Relative $H_{T}$ for data and the sum of the Monte Carlo samples [right]. All others criteria are applied up to this one. At this stage multijet (QCD) MC sample have very low statistics. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples.}
+    \label{fig:RelHtMass}
+  \end{center}
+\end{figure}
+
+To check the progression of the selection, in table~\ref{tab:Estimators} is shown the $S/B$ after each cut after the reconstruction of objects. In the table we can see an increase of the estimator at each step, which means that with each cut the discrimination between signal and background increments. For this calculation $M=700$ \GeVcc signal, \ttbar and QCD\_HT-500To1000 MC samples were used. %As QCD statistics decrease rapidly, and at some point they are very low, we calculate the estimator with respect to \ttbar and QCD samples separately.
 
 \begin{table}[htbH]
 \label{tab:Estimators}
 \begin{center}
+%\resizebox{\textwidth}{!}{
 \begin{tabular}{|c|c|c|}
-%\hline 
-xxxxxxx & xxxxxxx & xxxxxxx
-%\hline
+\hline 
+Cut & $S/B$ & $S/\sqrt{S+B}$ \\
+\hline
+$\chi^{2}<8$ & $3.4\ex{-2} \pm 2.85\ex{-3}$  & $ 0.96 \pm 0.05$  \\
+$\Delta R(bb)<1.2$ & $4.76\ex{-2} \pm 4.52\ex{-3}$ & $1.10 \pm 0.07$  \\
+$1.6<\Delta R (W_{cand} H_{cand})<4.0$ & $4.82\ex{-2} \pm 4.59\ex{-3}$  & $1.10 \pm 0.07$  \\
+$105$ \GeVcc $< M(H_{cand}) < 145$ \GeVcc & $6.38\ex{-2} \pm 6.81\ex{-3}$  & $1.21 \pm 0.08$  \\
+$(M(top^{2nd})+M(W^{2nd}))/M(H_{cand})>6.8$ & $0.15 \pm 0.03$  & $1.45 \pm 0.17$  \\
+$\Delta R (T j^{6th})>4.8$ & $0.42 \pm 0.19$  & $1.66 \pm 0.32$  \\
+Relative $H_{T}>0.67$ & $1.16 \pm 0.17$  & $2.13 \pm 0.17$  \\
+\hline
 \end{tabular}
-\caption{$S/B$ and $S/\sqrt{S+B}$ from MC samples for each step of the selection.}
+\caption{$S/B$ and $S/\sqrt{S+B}$ from MC samples for each step of the selection after reconstruction. Only $M=700$ \GeVcc signal, \ttbar and QCD\_HT-500To1000 MC samples were used.}
+%}
 \end{center}
-\end{table}\clearpage
-
+\end{table}
 %\begin{TOINCLUDE}$N-1$ plots for object selection variables. Table with $S/B$ and $S/\sqrt{S+B}$ from MC for each step of the selection. \end{TOINCLUDE}
 
 \subsection{Efficiencies}
@@ -471,33 +529,45 @@ xxxxxxx & xxxxxxx & xxxxxxx
 \subsubsection{Trigger}
 \label{sec:trigger_ana}
 
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Efficiency in data and the MC signal samples for events passing trigger bit HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after standard selection up to DEFINE SELECTION [included]. In the middle stage of the selection, we observe discrepancies between 10\% and 6\% at higher $p_{T}$. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$.}
-    \label{fig:TrigEff}
-  \end{center}
-\end{figure}\clearpage
+We have computed the trigger efficiency using as reference the prescaled trigger HLT\_HT400\_v*. From other analyses using $H_{T}$ triggers, as in~\cite{Khachatryan:2015axa}, around 100 GeV additional cut on top of trigger cut, are needed to reach the trigger plateau. Assuming it is the case also for HLT\_HT400\_v*, the cut on the selection requiring $H_{T}>550$ GeV should select events in the efficiency plateau. Trigger efficiency is normally evaluated after full selection. However, as HLT\_HT400 leaving very small amount of events after full selection, we have decided to compute the trigger efficiency at various earlier selection stages. Additionally, instead of calculating a scale factor to match trigger efficiency in MC samples to data we have studied the differences to assign an overall systematic effect. 
+
+We have used the \pt of the 6th leading jet to parametrize trigger efficiency. This efficiency is defined as the ratio between the number of events passing both triggers (HLT\_HT400 and HLT\_Dijet80\_Dijet60\_Dijet20) and the number of events passing only HLT\_HT400. HLT\_HT400 is used as unbiased sample with respect to HLT\_Dijet80\_Dijet60\_Dijet20. In figure~\ref{fig:TrigEff} it can be seen the trigger efficiency as function of 6th leading jet \pt after $chi^{2}$ cut for all signal MC samples. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Efficiency in data and the MC signal samples for events passing trigger bit HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after standard selection up to the Higgs-candidate mass selection (one cut before the final). This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$. The dispersion observed is mainly 6\%.}
-    \label{fig:TrigEffPostDalitz}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_hundreds_chi2.png}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_fifties_chi2.png}
+    \caption{Efficiency in data and the MC signal samples for events passing trigger bit HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after standard selection up to $chi^{2}$ cut [included]. In the middle stage of the selection, we observe discrepancies between 10\% and 6\% at higher $p_{T}$. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$.}
+    \label{fig:TrigEff}
   \end{center}
-\end{figure}\clearpage
+\end{figure}
+
+The same efficiencies were additionally computed after cutting on the Higgs mass candidate. They can be found in figure~\ref{fig:TrigEffPostMH}. From them, we can see that MC signal samples are systematically underestimated by the trigger. This means that MC simulation of HLT applied to MC signal samples is cutting harder than in data. The observed differences vary between 10\% for low \pt and 5-6\% for high \pt.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_hundreds_HM.png}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_fifties_HM.png}
+    \caption{Efficiency in data and the MC signal samples for events passing trigger bit HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after standard selection up to the Higgs-candidate mass selection. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$. The dispersion observed is mainly 6\%.}
+    \label{fig:TrigEffPostMH}
+  \end{center}
+\end{figure}
 %\begin{TOINCLUDE}Trigger efficiency plots\end{TOINCLUDE}
 
 \subsubsection{Selection}
 \label{sec:seleff}
 
+In figure~\ref{fig:MPEff} it can be seen the total efficiency of the selection for each mass point MC sample. The lowest efficiency is for 600 \GeVcc mass point, around 1\%, while the highest is for 850 \GeVcc mass point, around 2\%. This efficiency has been calculated with respect to events passing trigger selection.  
+
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Selection efficiency for all signal mass points.}
-    \label{fig:SelEff}
+    \includegraphics[width=0.6\textwidth]{figs/Ana/Selection_Efficiency_V8.png}
+    \caption{Selection efficiency for each mass point MC sample. Highest efficiency is achieved for 850 \GeVcc mass point.}
+    \label{fig:MPEff}
   \end{center}
-\end{figure}\clearpage
+\end{figure}
+
+%Additionally in table~\ref{tab:cutflow} we quote the efficiencies of each step of the selection for M=700 \GeVcc signal sample, multijet background, top background (\ttbar + single top), and diboson background MC samples. These efficiencies have calculated with respect to the number of events passing the trigger.
 
 \begin{table*}[htbH]
 \begin{center}
@@ -506,101 +576,81 @@ xxxxxxx & xxxxxxx & xxxxxxx
 \hline 
 Selection & Cut & Signal (M=700 GeV/$c^{2}$) & Multijet & $t\bar{t}$ + single top & Diboson \\
 \hline
-%Trigger & & & & \\
-\multirow{4}{*}{\rotatebox{90}{Basic}} & Trigger and $p_{T}$,$\eta$ selection & 52.66 & 27.40 & 36.54 & 16.12 \\
-&$j^{1}>150$~GeV/c & 47.65 & 24.05 & 24.50 & 11.55 \\
-&$H_{T}>630$~GeV/c & 44.29 & 20.57 & 20.57 & 8.98 \\
-&$n_{b}^{CSVM}>=3$ & 13.74 & 0.16 & 1.73 & 0.11 \\
+\multirow{4}{*}{\rotatebox{90}{Basic}} & Trigger cut and $p_{T}$,$\eta$ selection & 52.68 & 18.53 & 36.55 & 16.14 \\
+&$j^{1}>150$~GeV/c & 47.94 & 14.04 & 24.73 & 11.58 \\
+&$H_{T}>550$~GeV/c & 47.65 & 13.53 & 24.22 & 11.16 \\
+&$n_{b}^{CSVM}>=3$ & 14.57 & 0.06 & 1.98 & 0.15 \\
 \hline
-\multirow{10}{*}{\rotatebox{90}{Analysis}} & $\chi^{2}<800$ & 13.38 & 0.14 & 1.71 & 0.11  \\
-&$\Delta R(bb) <1.2$ & 11.06 & 0.06 & 0.67 & 0.06 \\
-&$1.6 < \Delta R (W_{cand} H_{cand}) < 4.0$ & 10.44 & 0.05 & 0.56 & 0.05 \\
-&$\frac{M(top^{2nd}_{cand})+M(W^{2nd}_{cand})}{M(H_{cand})}>7.5$ & 5.82 & 0.03 & 0.17 & 0.02 \\
-&$ \Delta R (T' j^{6})>4.5$ & 3.62 & $3\times 10^{-3}$ & 0.03 &  $3\times 10^{-3}$ \\
-&$105~\text{GeV}/c^{2} <M(H_{cand})<145~\text{GeV}/c^{2}$ & 2.97 & $1\times 10^{-3}$ & 0.01 &  $4\times 10^{-4}$ \\
-%&$\frac{\pt(H_{cand})+\pt(top_{cand})}{H_T} > 0.7 $ & 2.08 & $3\times 10^{-4}$ & $4\times 10^{-3}$ & $4\times 10^{-4}$ \\
-%&$-0.02 <\frac{M(H_{cand})-M(top^{1st}_{cand})}{M(H_{cand})+M(top^{1st}_{cand})}<  0.38$ & 1.97 & $3\times 10^{-4}$ & $3\times 10^{-3}$ & $4\times 10^{-4}$ \\
-%&$p_{T}(H_{cand})>180$\GeVc \&\& $p_{T}(top_{cand})>180$\GeVc  & 8.01 & 0.01 & 0.34 & 0.02 \\
-%&$2.2 < \Delta R (W_{cand} H_{cand}) < 3.5$ & 7.42 & $9\times 10^{-3}$ & 0.27 & 0.01 \\
-%&$\frac{\pt(H_{cand})+\pt(top_{cand})}{H_T} > 0.65 $ & 6.51 & $6\times 10^{-3}$ & 0.19 & 0.01 \\
-%&$0.3<\frac{M(H_{cand})+M(top_{cand})}{M(H_{cand}+top_{cand})}<0.5$ & 5.87 & $3\times 10^{-3}$ & 0.15 & $7\times 10^{-3}$ \\
-%&$|\eta(j^{6})|>1$ & 4.86 & $8\times 10^{-4}$ & 0.07 &  $3\times 10^{-3}$ \\
-%&$\frac{M(top^{2nd}_{cand})}{M(H_{cand})}<0.4\times\frac{M(W^{2nd}_{cand})}{M(H_{cand})}-0.2$ & 4.12 & $7\times 10^{-4}$ & 0.03 &  $1\times 10^{-3}$ \\
-%&$ \Delta R (T' j^{6})>4.6$ & 2.93 & $2\times 10^{-4}$ & 0.01 &  $1\times 10^{-3}$ \\
-%&$100~\GeVcc <m(H_{cand})<150~\GeVcc$ & 2.67 & $2\times 10^{-4}$ & $7\times 10^{-3}$ &  $3\times 10^{-4}$ \\
+\multirow{10}{*}{\rotatebox{90}{Analysis}} & $\chi^{2}<8$ & 7.09 & $5\ex{-3}$ & 0.64 & 0.01  \\
+&$\Delta R(bb) <1.2$ & 6.47 & $2\ex{-3}$ & 0.26 & $7\ex{-3}$ \\
+&$1.6 < \Delta R (W_{cand} H_{cand}) < 4.0$ & 6.36 & $2\ex{-3}$ & 0.23 & $5\ex{-3}$ \\
+&$105~\text{GeV}/c^{2} <M(H_{cand})<145~\text{GeV}/c^{2}$ & 5.65 & $1\ex{-3}$ & 0.17 & $2\ex{-3}$  \\
+&$\frac{M(top^{2nd}_{cand})+M(W^{2nd}_{cand})}{M(H_{cand})}>6.8$ & 3.57 & $4\ex{-4}$ & 0.05 & $4\ex{-4}$ \\
+&$ \Delta R (T' j^{6})>4.8$ & 2.01 & $2\ex{-5}$ & $6\ex{-3}$ & ---  \\
+&$\frac{p_{T}(H_{cand})+p_{T}(top_{cand})}{H_{T}} > 0.67 $ & 1.79 & $4\ex{-7}$ & $3\ex{-3}$ & --- \\
 \hline
 \end{tabular}
 }
-\caption{Cumulative efficiencies, in \%, for signal and main background as a function of cuts.\label{tab:cutflow}}
+\caption{Cumulative efficiencies, in \%, for signal and main background as a function of cuts applied. After $ \Delta R (T' j^{6})>4.8$ cut there are no longer events in the diboson MC samples. \label{tab:cutflow}}
 \end{center}
-\end{table*}\clearpage
+\end{table*}
 %\begin{TOINCLUDE}Table with efficiencies of full selection. Plot with selection efficiency for all mass points.\end{TOINCLUDE}
 
 \section{Background estimation from data}
 \label{sec:bkg}
 
-Description of difficulties related to use MC for estimation of backgrounds.
+As seen in latest sections, we don't count with enough statistics in background MC samples to estimate after full selection the expected contribution from SM backgrounds. Moreover, even in the case of having enough statistics the prediction from MC samples might not be reliable. According to this limitations, we needed to estimate our backgrounds from data.  
 
-\subsection{Known difficulties and tried methods}
-\label{sec:tried}
+The main difficulty to estimate our backgrounds is the correlation between the variables used in the selection. This made impracticable traditional data driven background estimation methods as ABCD method (See for example~\cite{Khachatryan:2015axa}). Another difficulty was to derive to have a method that let us derive both principal backgrounds after full selection: multijets and \ttbar. Despite of this difficulties we have developed a method to derive from data the shape of backgrounds after full selection, and one additional method to estimate the normalization.
 
-Brief description of tried methods. One paragraph for matrix method one paragraph for tight-loose method.
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{$p_{T}(H)$ and $p_{T}(top)$ correlation for backgrounds [left] and signal [right].}
-    \label{fig:HptTpt}
-  \end{center}
-\end{figure}\clearpage
-
+%\subsection{Known difficulties and tried methods}
+%\label{sec:tried}
+%
+%Brief description of tried methods. One paragraph for matrix method one paragraph for tight-loose method.
+%
+%\begin{figure}[!Hhtbp]
+%  \begin{center}
+%    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+%    \caption{$p_{T}(H)$ and $p_{T}(top)$ correlation for backgrounds [left] and signal [right].}
+%    \label{fig:HptTpt}
+%  \end{center}
+%\end{figure}\clearpage
+%
 %\begin{TOINCLUDE}2D plot of pT(H) and pT(top) to show correlation and table with ttbar+QCD and signal content in each region from ABCD method based on pT(H) and pT(top) \end{TOINCLUDE}
 
-\subsection{Method}
+\subsection{Method for shape estimation}
 \label{sec:bkgmet}
 
-Description of control sample.
+For the estimation of the shape of backgrounds we need to build a control region enriched by backgrounds while depleted in signal events. From the selection applied, the strongest cut to take out background events is $n_{b}^{CSVM}>=3$ (see table~\ref{tab:cutflow}). Reason why we take the number of b-tagged jets as variable to be loosen to obtain our control sample. 
 
-\subsection{Validation}
+We define the control region by events with the same selection as before but $n_{b}^{CSVL}>=3$ and vetoing events with $n_{b}^{CSVM}>=3$. With the veto on events with at least 3 CSVM b-tagged jets we prevent a high contamination from signal events in the control region. The control region then is basically formed of background events, mainly QCD and \ttbar. In figure~\ref{fig:CSSSSche} a schematic diagram for the construction of control and signal sample is presented.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{figs/Ana/SchematicControlSample.png}
+    \caption{Schematic representation of signal and control sample. The big blue circle represents the ensemble of events with at least 3 CSVL b-tagged jets. The green circle represents the signal events while the circle filled with horizontal lines represents the signal sample (events with at least 3 CSVM b-tagged jets). The control sample then is the blue circle minus the horizontal line filled circle.}
+    \label{fig:CSSSSche}
+  \end{center}
+\end{figure}
+
+From this control sample we want then to estimate the background shape in the signal sample in the five jets invariant mass. Then the hypothesis is that the $M(5j)$ is equivalent in both control and signal sample, without any possible signal contribution. In the next section we will describe the procedure to test the validity of this hypothesis. 
+
+\subsubsection{Validation}
 \label{sec:validation}
 
-Description of validation procedure.
+In order to validate that the $M(5j)$ shape in the control sample can be used to estimate the background shape in the signal sample, we perform a shape comparison between both samples at different stages of the selection. An agreement of shapes is then shown at several stages between both samples. From this validation we also estimate a source of systematic uncertainty. The comparison is only performed in the $M(5j)$ range between 550 and 1100 \GeVcc, the range of explored signal masses.
 
-Description on test to identify possible bias from chosen WP.
+The validation is performed at 4 different stages of the selection. Data in the control sample is compared to data in the signal sample. Also, even if MC statistics are poor to drive a conclusion for the validation procedure, we show the comparison for \ttbar sample (with good statistics), QCD samples (with poor statistics) and with full sum of MC samples. From the full set of comparison we can conclude if both shapes are in agreement or not. The 4 selected stages for the comparison are:
+\begin{itemize}
+\item Stage A: Selection up to $\chi^{2}<8$, included.
+\item Stage B: Selection up to $1.6<\Delta R (W_{cand} H_{cand})<4.0$, included.
+\item Stage C: Selection up to $\frac{M(top^{2nd}_{cand})+M(W^{2nd}_{cand})}{M(H_{cand})}>6.8$, included.
+\item Stage D: Full selection.
+\end{itemize}
 
-Exclusive WP additional test.
+As we don't know if there is a signal in data, the data-data comparison is performed only for stages A, B and C. In addition QCD-QCD MC comparison is only performed for A, B and C stages because statistics after full selection are very low. As we see after full selection both shape are in agreement we deduce that for the estimation also works in data. Another reason to drive this conclusion, is that data-data validation show an agreement for stages A, B and C.
 
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Left: Distribution of the agreement between control sample and analysis sample in data at early stage of the selection as a function of the $\chi^2$ selection. The y-axis represents the chi2/ndf from a shape comparison made in data between control sample and analysis sample. A clear minimum is observed at 620. Right: Corresponding p-value of the $\chi^{2}$ test, showing the compatibility with null hypothesis in the comparison between control and signal samples.}
-    \label{fig:optchi2}
-  \end{center}
-\end{figure}\clearpage
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Distribution of the 5-jets invariant mass in the control sample for $t\bar{t}$ for exclusive regions of $\chi^{2}$. Combinations with small values of $\chi^{2}$ tend to populate $M5J$ between $[600,1000]$}
-    \label{fig:Chi2Regions}
-  \end{center}
-\end{figure}\clearpage
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Number of Combinations entering the control sample for $t\bar{t}$ and QCD HT 500-1000 for $\chi^{2}<140$. The majority of events entering the control sample only enter with one combination.}
-    \label{fig:NComb}
-  \end{center}
-\end{figure}\clearpage
-
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{Signal contamination in the control region comparing 5-jets invariant mass between data and signal.}
-    \label{fig:SigContamination}
-  \end{center}
-\end{figure}\clearpage
+In addition, in order to check that the $M(5j)$ shape in the control sample is independent of the b-tagging working point, the validation procedure is redone for intermediate working points between CSVL and CSVM. As seen in section~\ref{sec:bid}, CSVM working point correspond to a cut in the b-tagging discriminator greater than 0.679. CSVL correspond to a cut in the discriminator requiring a value greater than 0.244. Two additional working points were chosen to perform the validation, corresponding to a gut greater than 0.389 and 0.534. These two points are equally separated between CSVL and CSVM. The validation for \ttbar alone can be seen in figure~\ref{fig:StageWPttbar}, for QCD alone in figure~\ref{fig:StageWPQCD}, for MC backgrounds samples sum in figure~\ref{fig:StageWPSum} and for data in figure~\ref{fig:StageWPData}. A general agreement can be seen at all stages for all working points.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -613,7 +663,7 @@ Exclusive WP additional test.
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
-    \caption{5-jets invariant mass in the control sample for different b-tagging working point for QCD Monte Carlo samples within 4 stages of selection: A [top left], B [top right], C [bottom left] and D [bottom right]. The 3 working points are given in different color. Quickly a lack of statistics is visible.}
+    \caption{5-jets invariant mass in the control sample for different b-tagging working point for QCD Monte Carlo samples within 4 stages of selection: A [top left], B [top right] and C [bottom]. The 3 working points are given in different color.}
     \label{fig:StageWPQCD}
   \end{center}
 \end{figure}\clearpage
@@ -631,6 +681,26 @@ Exclusive WP additional test.
     \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
     \caption{5-jets invariant mass in the control sample for different b-tagging working point in data within 3 stages of selection: A [top left], B [top right] and C [bottom]. The 3 working points are given in different color. Within statistical error, the 3 shapes are in agreement at all stages.}
     \label{fig:StageWPData}
+  \end{center}
+\end{figure}\clearpage
+
+The cut on $chi^{2}$ variable it is not only useful for signal discrimination but also drives the agreement in the $M(5j)$ between control ans signal samples. This cut ensures that the events in the control region have very similar characteristics to signal sample events. More precisely, this cuts grants that the reconstructed objects in both regions are very similar. In order to clearly assess this statement we evaluate via a $\chi^{2}$-test (see~\cite{2006physics...5123G}) the agreement of $M(5j)$ between control and signal sample scanning different values of the $\chi^{2}$ cut. The $\chi^{2}$-test evaluates the similarity of two histograms in terms of shape. It delivers as output the $\chi^{2}/ndf$ of the comparison. $\chi^{2}/ndf\sim 1$ means that the two histograms are compatible. 
+
+Exclusive WP additional test.
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \caption{Left: Distribution of the agreement between control sample and analysis sample in data at early stage of the selection as a function of the $\chi^2$ selection. The y-axis represents the chi2/ndf from a shape comparison made in data between control sample and analysis sample. A clear minimum is observed at 620. Right: Corresponding p-value of the $\chi^{2}$ test, showing the compatibility with null hypothesis in the comparison between control and signal samples.}
+    \label{fig:optchi2}
+  \end{center}
+\end{figure}\clearpage
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{figs/CMSlogo.png}
+    \caption{Signal contamination in the control region comparing 5-jets invariant mass between data and signal.}
+    \label{fig:SigContamination}
   \end{center}
 \end{figure}\clearpage
 
@@ -666,6 +736,14 @@ Exclusive WP additional test.
   \end{center}
 \end{figure}\clearpage
 %\begin{TOINCLUDE}Validation plots: MC, Data. Chi2 plots for minimization. Number of combinations in the control sample plot. Plot of M5J for different values of chi2. Table with signal contamination percentage in the control sample cut per cut and for all mass points.\end{TOINCLUDE}
+
+\subsection{Method for normalization estimation}
+\label{sec:bkgnormmet}
+
+\subsubsection{Validation}
+\label{sec:normval}
+
+
 
 \section{Systematics}
 \label{sec:sys}
