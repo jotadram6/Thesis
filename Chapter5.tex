@@ -221,6 +221,18 @@ In principle we can use several working points to establish the b-tagged jets co
 \end{center}
 \end{table}
 
+Additionally, in figure~\ref{fig:WPcorr} can be found 2D plots relating the number of b-tagged jets in the three working points for signal after requiring $j^{1}>150$ GeV/c and $H_{T}>550$ GeV/c. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.65\textwidth, height=0.33\textheight]{figs/Ana/CSVMCSVT.png}
+    \includegraphics[width=0.65\textwidth, height=0.33\textheight]{figs/Ana/CSVTCSVL.png}
+    \includegraphics[width=0.65\textwidth, height=0.33\textheight]{figs/Ana/CSVMCSVL.png}
+    \caption{Correlation plots between different b-tagging working points for signal MC sample (M=700 \GeVcc) with selection up to $H_{T}>550$ GeV/c. Numbers in each bin correspond to its Number of entries. CSVM with CSVT [top], CSVT with CSVL [medium] and CSVM with CSVL [bottom].}
+    \label{fig:WPcorr}
+  \end{center}
+\end{figure}
+
 As described in section~\ref{sec:bid} b-tagging is performed using a complex procedure where several jet variables are taken into account. It strongly depends on the ability to find displaced vertices, reason why it has been restricted to jets in $|\eta|<=2.4$. As MC conditions are ideal in comparison with real data (less noise, perfect detector operation, etc.), b-tagging bring different results in data than in MC. Thus, a correction must be applied to MC to mimic b-tagging response on data. In general, CSV algorithm is slightly more efficient for b-tagging b-jets in MC than in data. Additionally, it also gives more fakes coming from light jets in data than in MC. To match MC to data a scale factor has been derived by the collaboration. It is defined for each jet depending on its flavor (b and c or light), \pt and $\eta$. In equation~\ref{eq:Sfs}, it can be found the functions defining the scale factors for CSVM working point. The functions are defined as $SF^{flavor}_{\eta}(p_{T})$.
 
 \begin{eqnarray}
