@@ -97,7 +97,7 @@ The samples used in this study were analyzed using MadAnalysis package~\cite{Con
 \section{Strategy for the full hadronic final state}
 \label{sec:Pstra}
 
-The final state of our interest, the full hadronic final state, contains 3 $b$-quarks and 2 additional quarks as decay products of $T$. Two $b$'s coming from the Higgs, a third $b$ from the top-quark decay, and 2 light jets from $W$ decay. In addition, the $T$ is produced in association with a light quark. In figure~\ref{fig:ForwJ} can be seen the $\eta$ distribution of the jet produced in association to the $T$. Consequently, we expect signal events to have at least 6 jets. Differently from leptonic channels we have all the decay products of $T$ what allow us to do a full mas reconstruction of it.
+The final state of our interest, the full hadronic final state, contains 3 $b$-quarks and 2 additional quarks as decay products of $T$. Two $b$'s coming from the Higgs, a third $b$ from the top-quark decay, and 2 light jets from $W$ decay. In addition, the $T$ is produced in association with a light quark. In figure~\ref{fig:ForwJ} can be seen the $\eta$ distribution of the jet produced in association with the $T$. Consequently, we expect the signal events to have at least 6 jets. Unlike the leptonic channels we have all the decay products of $T$ that allow us to do a full mas reconstruction of it.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -129,15 +129,15 @@ The main difficulty in full hadronic final states is the large QCD background. W
 \end{center}
 \end{table}
 
-Our strategy relies in the correct identification of the 5 jets coming from the $T$. For this purpose we have designed a \textbf{\textit{jet association}} method to select the 5 jets from $T$ based on the characteristics of the signal. The method used to identify the jets coming from the top partner is the following:
+Our strategy relies in the correct identification of the 5 jets coming from the $T$. For this purpose we have designed a jet association method to select the 5 jets from $T$ based on the characteristics of the signal. The method used to identify the jets coming from $T$ is the following:
 \begin{itemize}
-\item Identify b--jets. (We require at least two b's.)
-\item For the Higgs decay, all pairs of b-jets passing the criteria $\Delta R_{jj} <2.5$ are retained. If more than one pair is fulfilling the angular requirement, the pair with the closest mass to the Higgs mass (125~GeV) is chosen.
-\item From the remaining jets, all possible pairs are formed and the pair with closest mass to W-mass (80~GeV) is identified as the W.
-\item Finally, from the remaining jets, the previously identified W-jets are coupled with a third jet. The top b-jet is selected as the jet which, combined with W ones, gives the invariant mass closest to the top mass (172~GeV).
+\item Tag b--jets and keep events with at least two.
+\item To reconstruct the Higgs, only pairs of b-jets with a $\Delta R_{jj} <2.5$ are considered. If more than one pair is found, the pair with the closest mass to the Higgs mass (125~\GeVcc) is chosen. The two jets chosen for the Higgs reconstruction are not considered in the reconstruction procedure of the $W$ and top.
+\item From the remaining jets, the pair of jets with mass closest to the W-mass (80~\GeVcc) is identified as the W. 
+\item Finally, from the remaining jets, a third jet is chosen and coupled to the previously identified W-jets. The jet giving the closest mass to the top mass (172~\GeVcc), combined with W-jets, is selected as the top b-jet.
 \end{itemize}
 
-In addition to the jet association method, we have designed a set of cuts to extract signal. These cuts rely fundamentally in the existence of a top-quark and a Higgs boson. Moreover, the background processes do not contain a Higgs. In the following section we describe the selection applied.
+From the objects reconstructed with the jet association method and other signal characteristics, we have designed a selection to discriminate signal events from backgrounds. As in the SM backgrounds there is no real Higgs, we strongly rely in the presence of a real Higgs in signal events. We also use the presence of a real top in signal events. In the following section we describe the selection applied.
 %General discussion of strategy used for selection. 
 
 \section{Event selection}
@@ -148,9 +148,9 @@ All cuts were applied one after the other in the order given in the following li
 
 \begin{itemize}
 
-\item \textit{Cut 0}: In the first cut events are kept if they have at least 6 jets with $p_T > 30$~GeV, at least five jets within $|\eta|<2.5$ and at least one jet within $2<|\eta|<5$. The five jets coming from the $T$ are more central, while the sixth jet produced in association with the single $T$ tends to be forward, as shown in figure~\ref{fig:ForwJ}. This cut tries to mimic the detector acceptance.
+\item \textit{Cut 0}: In first instance only the events with at least 6 jets with $p_T > 30$~GeV/c are kept. From them, at least five jets within $|\eta|<2.5$ and at least one jet within $2<|\eta|<5$. The $T$ decays into five central jets, but the associated jet produced with it tends to be in the forward direction, as shown in figure~\ref{fig:ForwJ}. This cut tries to mimic the detector acceptance.
 
-\item \textit{Cut 1}: The kinematic selection begins requiring $p_{T}>150$~GeV for the leading jet, $p_{T}>80$~GeV for the sub-leading jet and $p_{T}>60$~GeV for the 3$^{rd}$ and 4$^{th}$ leading jets in each event. Figure~\ref{fig:Var1} shows the distributions for the $p_{T}$ of the six leading jets for signal and backgrounds.
+\item \textit{Cut 1}: The first kinematic cut requires $p_{T}>150$~GeV/c for the leading jet, $p_{T}>80$~GeV for the sub-leading jet and $p_{T}>60$~GeV for the 3$^{rd}$ and 4$^{th}$ leading jets in each event. The \pt distribution of the six leading jets is shown in figure~\ref{fig:Var1}.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -160,17 +160,17 @@ All cuts were applied one after the other in the order given in the following li
   \end{center}
 \end{figure}
 
-\item \textit{Cut 2}: The third cut involves the total hadronic energy ($H_{T}=\sum |p_{T}^{j}|$), which is plotted in figure~\ref{fig:Var2} for backgrounds and signal. As the $T$ is decaying into the full hadronic final state, the total hadronic energy should reflect the presence of this very massive object. This should lead to higher hadronic energy than for QCD, $W$ + jets and $t$ $\bar{t}$ events. Events with $H_{T}>630$~GeV were selected.
+\item \textit{Cut 2}: The following criteria uses the total hadronic energy ($H_{T}=\sum |p_{T}^{j}|$), which is plotted in figure~\ref{fig:Var2} for each backgrounds and the signal. Signal events have higher \HT than background events, reflecting the presence of the very massive $T$. Events with $H_{T}>630$~GeV were selected.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Pheno/HT.png}
-    \caption{Total hadronic energy for backgrounds (stacked) and signal (over--imposed) normalized to 20 $fb^{-1}$ luminosity. $H_{T}$ of signal is higher than for background events.}
+    \caption{Total hadronic energy for backgrounds (stacked) and signal (over--imposed) normalized to 20 $fb^{-1}$ luminosity. $H_{T}$ is higher in signal than in background events.}
     \label{fig:Var2}
   \end{center}
 \end{figure}
 
-\item \textit{Cut 3}: For the jet association method we required each event to have at least two b jets. The identification of jets coming from b-quarks has been described in section~\ref{sec:bid}. However, as this study is only up to hadronization level, we don't use the same techniques. As a substitute, we used the following method to emulate the performance of b-jet identification algorithms:
+\item \textit{Cut 3}: We required at least two b-jets in order to perform the jet association procedure. The identification of jets coming from b-quarks has been described in section~\ref{sec:bid}. However, as this study is only up to hadronization level, we do not use the same techniques. As a substitute, we used the following method to emulate the performance of b-jet identification algorithms:
   \begin{enumerate}
   \item Select a working point for a b-tagging algorithm. This sets the efficiency of the algorithm to tag jets coming from a b-quark ($\epsilon^{b-tag}_{b}$), from a c-quark ($\epsilon^{b-tag}_{c}$) and from a light-quark ($\epsilon^{b-tag}_{l}$). We have chosen as reference the loose working point of the CSV algorithm. We used CMS results~\cite{CMS-PAS-BTV-13-001}: $\epsilon^{b-tag}_{b}=0.9$, $\epsilon^{b-tag}_{c}=0.6$ and $\epsilon^{b-tag}_{l}=0.1$. 
   \item Throw a random number $r$ between 0 and 1 for each event.
@@ -211,7 +211,7 @@ The number of b-tagged jets using the method described above can be seen in figu
 
 \item \textit{Cut 7}: The $\Delta \phi_{jj}$ of the b jets identified as coming from the Higgs boson and the $\Delta \phi_{jW}$ between the reconstructed W and the jet which formed the top are expected to be mainly central for the signal while more evenly distributed for backgrounds. Only events with $\Delta \phi_{jj}<2.0$ and $\Delta \phi_{jW}<3.3$ were kept. This cut is specially useful for reducing QCD and W+jets background events.
 
-\item \textit{Cut 8}: The $\Delta \phi_{jj}$ between the jets of the W are also expected to be more centered around zero in the signal with respect to backgrounds. Only events with $\Delta \phi_{jj}<2.3$ were kept. This cut was required to reduce single--top background.
+\item \textit{Cut 8}: As in cut 7, the $W$ produced from the $T$ is expected to have a non-zero momentum. Thus, the $\Delta \phi_{jj}$ between the jets of the $W$ are expected to be more centered around zero in the signal with respect to backgrounds. Events were required to have $\Delta \phi_{jj}<2.3$ to reduce single--top background.
 
 \item \textit{Cut 9}: Events with a reconstructed Higgs mass close to the real Higgs mass were kept. Events with a Higgs candidate with a mass between $100$~GeV and $135$~GeV were selected for the analysis. The distribution of the reconstructed Higgs mass can be seen in figure~\ref{fig:Var4}.
 
@@ -223,7 +223,7 @@ The number of b-tagged jets using the method described above can be seen in figu
   \end{center}
 \end{figure}
 
-\item \textit{Cut 10}: An additional observable was constructed to differentiate the signal from $t$ $\bar{t}$ background events. The relative total hadronic energy is defined as the ratio between the $p_{T}$ of the decay products identified as the Higgs and top and the total hadronic energy of the event: $$\frac{p_{T}^{H}+p_{T}^{t}}{H_{T}}\,.$$ All events with a relative total hadronic energy larger than $0.65$ were kept. The relative total hadronic energy is shown in figure~\ref{fig:Var5}.
+\item \textit{Cut 10}: For the final cut we define the relative total hadronic energy as the ratio between the $p_{T}$ of the decay products identified as the Higgs and top and the total hadronic energy of the event: $$\frac{p_{T}^{H}+p_{T}^{t}}{H_{T}}\,.$$ This variable is specially useful to discriminate signal from \ttbar events. Events were required to have a relative total hadronic energy larger than $0.65$. The relative total hadronic energy is shown in figure~\ref{fig:Var5}.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
