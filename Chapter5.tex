@@ -1,19 +1,19 @@
 \chapter[Single VLQ search]{Search for a single produced T decaying into top and Higgs in the full hadronic final state}
 \label{chap:search}
 
-In the present chapter we describe in full detail the search performed using 2012 data collected by CMS for a T' in the full hadronic final state. The theoretical formalism for such object has been described on section~\ref{chap:VLQ}. In addition, a feasibility study for this search has been presented in chapter~\ref{chap:pheno}. As discussed in it, we look for a resonance in the five jets invariant mass.
+In the present chapter the search performed using 2012 data collected by CMS for a \Tp in the full hadronic final state is described in full detail. The theoretical formalism for such object has been described on section~\ref{chap:VLQ}. In addition, a feasibility study for this search has been presented in chapter~\ref{chap:pheno}. As discussed in it, a resonance in the five jets invariant mass is looked for.
 
 \section{Analysis Strategy}
 \label{sec:stra}
 
-The strategy of the analysis is based on keeping large signal efficiency while keeping under control the background. Main background of all hadronic final states is multijet production. This background should not present any resonance in the 5-jets invariant mass variable but purely a continuum. %In order to keep high signal efficiency while constraining background, strategy to optimize the selection is based on high signal efficiency criteria (around 80-90\%) and on multiplication of them.
+The strategy of the analysis is based on a large signal efficiency while keeping under control the background. The main background for the hadronic final states is multijet production. This background should not present any resonance in the 5-jets invariant mass variable but purely a continuum. %In order to keep high signal efficiency while constraining background, strategy to optimize the selection is based on high signal efficiency criteria (around 80-90\%) and on multiplication of them.
 
-A series of variables have been identified to distinguish between SM backgrounds and our signal. In particular, the most important variable to control QCD background is the number of b-tagged jets. In the signal, we expect three real jets, and consequently, we expect at least three b-tagged jets. After requiring at least 3 b-tagged jets \ttbar become an important background for the analysis. The last part of the selection will be designed to diminish this background. 
+Several variables to distinguish between SM backgrounds and our signal have been identified, the most important one being the number of b-tagged jets. In the signal, at least three jets coming from b-quarks are expected, and consequently, at least three b-tagged jets are expected. After requiring such condition, \ttbar become an important background for the analysis. %The last part of the selection will be designed to diminish this background.
 
 \section{Datasets}
 \label{sec:data}
 
-The analysis use the MultiJet primary dataset processed with the \\22Jan2013 reconstruction. The processed datasets are listed in table~\ref{tab:datasets}.
+The analysis use the MultiJet primary dataset processed with the reconstruction of January 22th 2013. A primary dataset is a set of events passing trigger selections without any further selection. They are named accordingly to their high level trigger path, in our case trigger paths requiring at least 2 jets. The processed datasets are listed in table~\ref{tab:datasets}.
 
 \begin{table*}[htbH]
 \begin{center}
@@ -38,7 +38,7 @@ Dataset name & Int. Luminosity ($\text{pb}^{-1}$) \\
 \end{center}
 \end{table*}
 
-In addition, the MC samples processed to study the different backgrounds entering the analysis are presented in table~\ref{tab:MCbkg}.
+In addition, the MC samples processed to study the different backgrounds entering the analysis are presented in table~\ref{tab:MCbkg}. QCD, in \pt hat, and diboson samples have been generated using Pythia 6~\cite{Sjostrand:2006za}, while the ones in \HT bins were generated with MadGraph 5~\cite{Alwall:2014hca, Alwall:2011uj} interfaced with Pythia 6. The same generators were used to generate \ttbar MC samples with the additional usage of MadSpin~\cite{Artoisenet:2012st, Frixione:2007zp}. The single top samples were generated using Powheg~\cite{Nason:2004rx, Frixione:2007vw, Alioli:2010xd} generator. 
 
 \begin{table*}[htbH]
 \begin{center}
@@ -58,7 +58,7 @@ QCD\_HT-1000ToInf\_TuneZ2star\_8TeV-madgraph-pythia6 & 2\(\times 10^2\) & 14M\\
 DYToCC\_M\_50\_TuneZ2star\_8TeV\_pythia6 & 31\(\times 10^2\) & 2M\\
 DYToBB\_M\_50\_TuneZ2star\_8TeV\_pythia6 & 38\(\times 10^2\) & 2M\\
 TTJets\_MSDecays\_central\_TuneZ2star\_8TeV-madgraph-tauola & 247.7 [NNLO] & 62M\\
-TT\_CT10\_TuneZ2star\_8TeV-powheg-tauola & 247.7 [NNLO] & 22M\\
+%TT\_CT10\_TuneZ2star\_8TeV-powheg-tauola & 247.7 [NNLO] & 22M\\
 T\_tW-channel-DR\_TuneZ2star\_8TeV-powheg-tauola & 11.1 [NNLO] &497k\\
 T\_s-channel\_TuneZ2star\_8TeV-powheg-tauola & 3.79 [NNLO] & 260k\\
 T\_t-channel\_TuneZ2star\_8TeV-powheg-tauola & 54.9 [NNLO] & 3.7M\\
@@ -76,7 +76,7 @@ TTH\_Inclusive\_M-125\_8TeV\_pythia6 & 0.13 [NLO] & 100K\\
 \end{center}
 \end{table*}
 
-Finally, for the simulation of signal we have processed several samples for different mass values of the $T$. We have utilized 9 different mass points between 600 GeV/$\text{c}^{2}$ and 1 TeV/$\text{c}^{2}$ in steps of 50 GeV/$\text{c}^{2}$. The processed signal samples are shown in table~\ref{tab:MCsig}.
+Finally, for the simulation of signal we have processed several samples for different \Tp masses. We have utilized 9 different mass points between 600 \GeVcc and 1 TeV/$\text{c}^{2}$ in steps of 50 \GeVcc. The processed signal samples are shown in table~\ref{tab:MCsig}. These samples were generated with MadGraph 5 and Pythia 6.
 
 \begin{table*}[htbH]
 \begin{center}
@@ -102,7 +102,7 @@ TprimeJetToTH\_M-1000\_TuneZ2star\_8TeV-madgraph\_tauola & 1000 & 53.9 & 99K \\
 \end{center}
 \end{table*}
 
-Signal samples have been produced with only two decay channels for the Higgs: \bbbar and $\tau^{-}\tau^{+}$ channels. Thus, in order to obtain the correct branching ratio of the Higgs to \bbbar channel a rescaling factor must be applied. From~\cite{Heinemeyer:2013tqa}, the branching ratio of this channel for SM Higgs of 125 GeV/$\text{c}^{2}$ is 0.57. However, in signal samples the effective branching ratio is 0.94. In figure~\ref{fig:BR_Higgs_SignalSamples}, it can be seen the relative content of 700 GeV/$\text{c}^{2}$ mass point into the two produced channels. Similar contents were found for all mass points. In consequence, a weight of 0.61 was considered for all signal samples.
+The signal samples have been produced with only two decay channels for the Higgs boson: \bbbar and $\tau^{-}\tau^{+}$. Thus, in order to obtain the correct branching ratio of the Higgs to \bbbar, a rescaling factor must be applied. From~\cite{Heinemeyer:2013tqa}, the branching ratio of this channel for SM Higgs of 125 GeV/$\text{c}^{2}$ is 0.57. However, in signal samples the effective branching ratio is 0.94. The mass point signal samples have 94\% of times the Higgs boson decaying into \bbbar and 6\% to $\tau^{-}\tau^{+}$. In consequence, a weight of 0.61 has been applied to these samples to obtain the correct branching ratio. %In figure~\ref{fig:BR_Higgs_SignalSamples}, it can be seen the relative content of 700 GeV/$\text{c}^{2}$ mass point into the two produced channels. Similar contents were found for all mass points. In consequence, a weight of 0.61 was considered for all signal samples.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -117,11 +117,11 @@ Signal samples have been produced with only two decay channels for the Higgs: \b
 \section{Event selection}
 \label{sec:sel}
 
-In the following sections the event processing and selection for the analysis are presented. A former processing of events is performed, which include several stages to apply different filters and to skim datasets. From processed events the analysis selection is performed.
+In the following sections the event processing and selection for the analysis are presented. A pre-processing of events is performed, which includes several stages to filter the datasets. From these pre-processed events the analysis selection is performed.
 
 \subsection{Event processing}
 
-In first instance, data and MC events were processed with PAT (Physics Analysis Toolkit)~\cite{Adam:2010zza}, to produce PAT-tuples. This step makes a first selection of objects with very basic cuts as a minimal jets $p_{T}$. In addition, several noise filters are applied. For example, only events with at least one good primary vertex (n.d.o.f. $\ge 4, |z|<24 \;\text{cm}, |\rho|< 2 \;\text{cm}$) are kept. In addition, Charge Hadron Subtracted (CHS) particle flow AK5 jets are reconstructed with at least a $p_{T}$ of 20 GeV/c. Only jets within $|\eta|<5$ are considered. Afterward, the PAT-tuples were dumped into a reduced ntuple format. 
+As first step, data and MC events were processed with PAT (Physics Analysis Toolkit)~\cite{Adam:2010zza}, to produce PAT-tuples. This step makes a first selection of objects with very basic cuts as a minimal jets $p_{T}$. In addition, several noise filters are applied. For example, only events with at least one good primary vertex (n.d.o.f. $\ge 4, |z|<24 \;\text{cm}, |\rho|< 2 \;\text{cm}$) are kept. In addition, Charge Hadron Subtracted (CHS)~\cite{Kirschenmann:1627818} particle flow AK5 jets are reconstructed with at least a $p_{T}$ of 20 GeV/c. Only jets within $|\eta|<5$ are considered. Afterward, the PAT-tuples were dumped into a reduced ntuple format. 
 
 An important setup for the processing of samples in CMS is the selection of the global tag. For data, it contains the information of the recorded events that can be used for physics analysis (without problems in the detector); and for MC, it points to different corrections that need to be applied in order to compare MC to data.
 
@@ -710,42 +710,42 @@ The cut on $\chi^{2}$ variable it is not only useful for signal discrimination b
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.8\textwidth]{figs/Ana/Chi2_opt_at_DRbb_OneCombination_Scan2To800Step10.png}
+    \includegraphics[width=0.8\textwidth]{figs/Ana/Chi2_opt_at_DRbb_OneCombination_Scan2To800Step10_LOGSpacing.png} %Chi2_opt_at_DRbb_OneCombination_Scan2To800Step10.png}
     \caption{Distribution of the agreement between control sample and analysis sample in data at early stage of the selection as a function of the $\chi^2$ selection. The y-axis represents the chi2/ndf from a shape comparison made in data between control sample and analysis sample. The study is performed after requiring $\Delta R(bb) <1.2$ on top of basic selection and reconstruction. The control sample $M(5j)$ shape tend to agree with signal sample for lower values of $\chi^2$ cut.}
     \label{fig:optchi2}
   \end{center}
 \end{figure}
 
-It is very important to have a control sample strongly dominated by backgrounds. If there were a high contamination of signal in the control sample one would be considering signal events in the signal sample as background. It is then important to know precisely the possible signal contamination in the control sample. As the control sample definition takes out the events with signal characteristics, a small contamination is expected. To estimate this contamination we took the number of events for each signal mass point MC sample in the control sample, and compared it to the total number of events from data in the control sample after full selection. In table~\ref{tab:sigcontam} it can be found the total number of events for each MC mass point in the control sample after full selection and for data. Also in figure~\ref{fig:SigContamination} it can be found the M=600 \GeVcc signal MC sample and data after full selection in the control sample. The highest expected contamination is from the M=600 \GeVcc mass point, it is around 1\%. Consequently, any possible effect of signal contamination in the control sample was neglected. 
+It is very important to have a control sample strongly dominated by backgrounds. If there were a high contamination of signal in the control sample one would be considering signal events in the signal sample as background. It is then important to know precisely the possible signal contamination in the control sample. As the control sample definition takes out the events with signal characteristics, a small contamination is expected. To estimate this contamination we took the number of events for each signal mass point MC sample in the control sample, and compared it to the total number of events from data in the control sample after full selection. In table~\ref{tab:sigcontam} it can be found the total number of events for each MC mass point in the control sample after full selection and for data. Also in figure~\ref{fig:SigContamination} it can be found the M=800 \GeVcc signal MC sample and data after full selection in the control sample. The highest expected contamination is from the M=800 \GeVcc mass point, it is around 6\%. Consequently, any possible effect of signal contamination in the control sample was neglected. 
 
 \begin{table*}[htbH]
 \begin{center}
 \resizebox{\textwidth}{!}{
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline 
- & Events in control sample & Contamination \\
+ Events in control sample at mass point & Signal & Data & Contamination [\%] \\
 \hline
-Data & $484\pm22$ & --- \\
-Signal M=600 \GeVcc & $4.10\pm0.34$ & $(8\pm1)\ex{-3}$ \\
-Signal M=650 \GeVcc & $3.26\pm0.27$ & $(7\pm0.9)\ex{-3}$ \\
-Signal M=700 \GeVcc & $2.62\pm0.21$ & $(5\pm0.7)\ex{-3}$ \\
-Signal M=750 \GeVcc & $2.16\pm0.18$ & $(4\pm0.6)\ex{-3}$ \\
-Signal M=800 \GeVcc & $1.89\pm0.15$ & $(4\pm0.5)\ex{-3}$ \\
-Signal M=850 \GeVcc & $1.54\pm0.13$ & $(3\pm0.4)\ex{-3}$ \\
-Signal M=900 \GeVcc & $1.33\pm0.11$ & $(3\pm0.3)\ex{-3}$ \\
-Signal M=950 \GeVcc & $1.18\pm0.10$ & $(2\pm0.3)\ex{-3}$ \\
-Signal M=1000 \GeVcc & $0.99\pm0.08$ & $(2\pm0.3)\ex{-3}$ \\
+%Data & $484\pm22$ & --- \\
+Signal M=600 \GeVcc & $3.06\pm0.29$ & $104\pm10.20$ & $3\pm0.6$ \\
+Signal M=650 \GeVcc & $4.96\pm0.33$ & $149\pm12.21$ & $3\pm0.5$ \\
+Signal M=700 \GeVcc & $6.46\pm0.34$ & $127\pm11.27$ & $5\pm0.7$ \\
+Signal M=750 \GeVcc & $6.29\pm0.30$ & $117\pm10.82$ & $5\pm0.8$ \\
+Signal M=800 \GeVcc & $5.63\pm0.27$ & $94\pm9.70$ & $6\pm0.9$ \\
+Signal M=850 \GeVcc & $4.38\pm0.21$ & $91\pm9.54$ & $5\pm0.7$ \\
+Signal M=900 \GeVcc & $4.75\pm0.21$ & $93\pm9.64$ & $5\pm0.7$ \\
+Signal M=950 \GeVcc & $3.92\pm0.18$ & $79\pm8.89$ & $5\pm0.8$ \\
+Signal M=1000 \GeVcc & $2.56\pm0.13$ & $66\pm8.12$  & $4\pm0.7$ \\
 \hline
 \end{tabular}
 }
-\caption{Number of events in the control sample for MC signal samples and data after full selection. The contamination is evaluated as the ratio of the number of events in the control sample for each mass point and data. \label{tab:sigcontam}}
+\caption{Number of events in the control sample for MC signal samples and data after full selection in a window corresponding to one $\sigma$ for each mass point, as it will be explained in section~\ref{sec:sys}. The contamination is evaluated as the ratio of the number of events in the control sample for each mass point and data. \label{tab:sigcontam}}
 \end{center}
 \end{table*}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.5\textwidth]{figs/Ana/SignalContam_ConSample.png}
-    \caption{Signal contamination in the control region comparing 5-jets invariant mass between data and signal (M=600 \GeVcc).}
+    \includegraphics[width=0.5\textwidth]{figs/Ana/SignalContam_800_ConSample.png}
+    \caption{Signal contamination in the control region comparing 5-jets invariant mass between data and signal (M=800 \GeVcc).}
     \label{fig:SigContamination}
   \end{center}
 \end{figure}
