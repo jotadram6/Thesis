@@ -406,7 +406,7 @@ The first variable considered for the selection is the $\chi^{2}$ distribution. 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.8\textwidth]{figs/Ana/chi2_SoB.png}
-    \caption{Efficiency of cutting on $\chi^{2}<x$, with $x$ the cut value, as function of the cut value for \Tp~with $M=700$ \GeVcc, \ttbar and QCD\_HT-500To1000 MC samples. Ratios between efficiency for signal and each background are also displayed.}
+    \caption{Efficiency of selection criterion $\chi^{2}<x$, with $x$ the cut value, as function of the cut value for \Tp~with $M=700$ \GeVcc, \ttbar and QCD\_HT-500To1000 MC samples. Ratios between efficiency for signal and each background are also displayed.}
     \label{fig:chi2cut}
   \end{center}
 \end{figure}
@@ -417,7 +417,7 @@ After cutting in $\chi^{2}$, events were required to have the two b-quarks used 
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/DRbbNm1.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/DRbb_SoB.png}
-    \caption{$\Delta R$ of the 2 b-tagged jets used to reconstruct the Higgs candidate after $\chi^{2}$ cut. The signal which is simply overlaid prefers low $\Delta R$ while backgrounds have larger distribution at higher value. The gray band represents the statistical uncertainties from the sum of the MC background. Normalization was done to luminosity on the data [right]. Efficiency of cutting on $\Delta R(bb)<x$, with $x$ the cut value, as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [left].}
+    \caption{$\Delta R$ of the 2 b-tagged jets used to reconstruct the Higgs candidate after $\chi^{2}$ cut. The signal which is simply overlaid prefers low $\Delta R$ while backgrounds have larger distribution at higher value. The gray band represents the statistical uncertainties from the sum of the MC background. Normalization was done to luminosity on the data [right]. Efficiency of selection criterion $\Delta R(bb)<x$, with $x$ the cut value, as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [left].}
     \label{fig:DRbb}
   \end{center}
 \end{figure}
@@ -428,7 +428,7 @@ Events were then required to have a reconstructed \W and \Hb with $1.6<\Delta R 
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/DRWHNm1.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/DRWH_SoB.png}
-    \caption{Distribution for $\Delta R (W_{cand} H_{cand})$ for data and the sum of Monte Carlo samples [left]. Efficiency of cutting on $|\Delta R(W_{cand} H_{cand})-2.8|<x$, with $x$ the cut value, as function of cut value for the $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [right]. All others selection criteria are applied up to this one.}
+    \caption{Distribution for $\Delta R (W_{cand} H_{cand})$ for data and the sum of Monte Carlo samples [left]. Efficiency of selection criterion $|\Delta R(W_{cand} H_{cand})-2.8|<x$, with $x$ the cut value, as function of cut value for the $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [right]. All others selection criteria are applied up to this one.}
     \label{fig:DRWH}
   \end{center}
 \end{figure}
@@ -439,82 +439,96 @@ One important difference between signal and backgrounds is that in signal events
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/HMNm1.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/HM_SoB.png}
-    \caption{Distribution for $M(H_{cand})$ for data and the sum of Monte Carlo samples [left]. Efficiency of cutting on $|M(H_{cand})-125|<x$, with $x$ the cut value, as function of cut value for the $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [right]. All others selection criteria are applied up to this one.}
+    \caption{Distribution for $M(H_{cand})$ for data and the sum of Monte Carlo samples [left]. Efficiency of selection criterion $|M(H_{cand})-125|<x$, with $x$ the cut value, as function of cut value for the $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [right]. All others selection criteria are applied up to this one.}
     \label{fig:HiggsMassDMC}
   \end{center}
 \end{figure}
 
-Due to the presence of a real top in \ttbar~events, this background is able to mimic the signal properties more likely than QCD. To understand how the \ttbar system is mimicking a Higgs boson, the MC truth information of the jets chosen by the $\chi^{2}$ sorting algorithm as coming from the Higgs have been. In figure~\ref{fig:RecohiggsMCTruth} it can be seen the Higgs reconstruction cases, coded as follows:
+Due to the presence of a real top in \ttbar~events, this background is able to mimic the signal properties more likely than QCD. To understand how the \ttbar system is mimicking a Higgs boson, the MC truth information of the jets chosen by the $\chi^{2}$ sorting algorithm as coming from the Higgs have been. In figure~\ref{fig:RecohiggsMCTruth} the Higgs reconstruction cases can be seen. %, coded as follows:
 
-\begin{itemize}
-\item Bin 0: Higgs candidate reconstructed from two b-quarks coming each one from a top quark.
-\item Bin 1: Higgs candidate reconstructed from Higgs \bbbar system.
-\item Bin 2: Higgs candidate reconstructed from one quark from the Higgs and one b-quark from a top.
-\item Bin 3: Higgs candidate reconstructed from one quark from the Higgs and one quark from a W.
-\item Bin 4: Higgs candidate reconstructed from one b-quark from the top and one quark from a W.
-\item Bin 5: Higgs candidate reconstructed from two quarks coming from W bosons.
-\item Bin 6: Higgs candidate reconstructed from one jet from the Higgs and one additional quark (not from Higgs, W nor top).
-\item Bin 7: Higgs candidate reconstructed from one b-quark from a top and one additional quark (not from Higgs, W nor top).
-\item Bin 8: Higgs candidate reconstructed from one jet from a W and one additional quark (not from Higgs, W nor top).
-\item Bin 9: Higgs candidate reconstructed from two additional quarks (not from Higgs, W nor top).
-\end{itemize}
+%\begin{itemize}
+%\item Bin 0: Higgs candidate reconstructed from two b-quarks coming each one from a top quark.
+%\item Bin 1: Higgs candidate reconstructed from Higgs \bbbar system.
+%\item Bin 2: Higgs candidate reconstructed from one quark from the Higgs and one b-quark from a top.
+%\item Bin 3: Higgs candidate reconstructed from one quark from the Higgs and one quark from a W.
+%\item Bin 4: Higgs candidate reconstructed from one b-quark from the top and one quark from a W.
+%\item Bin 5: Higgs candidate reconstructed from two quarks coming from W bosons.
+%\item Bin 6: Higgs candidate reconstructed from one jet from the Higgs and one additional quark (not from Higgs, W nor top).
+%\item Bin 7: Higgs candidate reconstructed from one b-quark from a top and one additional quark (not from Higgs, W nor top).
+%\item Bin 8: Higgs candidate reconstructed from one jet from a W and one additional quark (not from Higgs, W nor top).
+%\item Bin 9: Higgs candidate reconstructed from two additional quarks (not from Higgs, W nor top).
+%\end{itemize}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/HiggsRecoMCTruth_S700.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/HiggsRecoMCTruth_TTJets.png}
-    \caption{Higgs candidate reconstruction MC truth for signal (M=700 \GeVcc) [left] and \ttbar [right] MC samples. in signal the Higgs is reconstructed preferentially from two jets coming from the Higgs (bin 1) while for \ttbar the Higgs candidate is reconstructed preferentially from a b-quark from a top and a quark from a W boson (bin 4).}
+    \captionsetup{singlelinecheck=off}
+    \caption[list=off]{Higgs candidate reconstruction MC truth for signal (M=700 \GeVcc) [left] and \ttbar [right] MC samples. In signal the Higgs is reconstructed preferentially from two jets coming from the Higgs (bin 1) while for \ttbar~the Higgs candidate is reconstructed preferentially from a b-quark from a top and a quark from a \W boson (bin 4). The bins are defined as follows:\\
+\scalebox{0.8}{%
+\vbox{%
+\begin{description}
+\item[Bin 0:] Higgs candidate reconstructed from two b-quarks coming each one from a top quark.
+\item[Bin 1:] Higgs candidate reconstructed from Higgs \bbbar~system.
+\item[Bin 2:] Higgs candidate reconstructed from one quark from the Higgs and one b-quark from a top.
+\item[Bin 3:] Higgs candidate reconstructed from one quark from the Higgs and one quark from a \W.
+\item[Bin 4:] Higgs candidate reconstructed from one b-quark from the top and one quark from a \W.
+\item[Bin 5:] Higgs candidate reconstructed from two quarks coming from \W~bosons.
+\item[Bin 6:] Higgs candidate reconstructed from one jet from the Higgs and one additional quark (not from Higgs, \W~nor top).
+\item[Bin 7:] Higgs candidate reconstructed from one b-quark from a top and one additional quark (not from Higgs, \W~nor top).
+\item[Bin 8:] Higgs candidate reconstructed from one jet from a \W~and one additional quark (not from Higgs, \W~nor top).
+\item[Bin 9:] Higgs candidate reconstructed from two additional quarks (not from Higgs, \W nor top).
+\end{description}}}}
     \label{fig:RecohiggsMCTruth}
   \end{center}
 \end{figure}
 
-In this figure one can see that the Higgs candidate is preferentially reconstructed in \ttbar events from a b-quark coming from a top and one quark coming from a W boson. As one top is also reconstructed, this means that the Higgs is being reconstructed from the second top. Thus, to identify \ttbar events one can try to reconstruct the second top from the b-tagged jets used for the Higgs and one additional jet not used by $\chi^{2}$ algorithm. As this extra jet is coming from a top we expect it to be quite boosted, then we reconstruct the second top from the two Higgs jets and the leading jet not used by the $\chi^{2}$ algorithm. We also define a second W from the sub-leading Higgs jet and leading jet not used by the $\chi^{2}$ algorithm. The distribution for the second top mass can be seen in figure~\ref{fig:2ndTM} for data and MC samples. It shows a clear peak at the top mass value for \ttbar events.
+In this figure one can see that the Higgs candidate is preferentially reconstructed in \ttbar~events from a b-quark coming from a top and one quark coming from a \W~boson. As one top is also reconstructed, this means that the Higgs is being reconstructed from the second top. Thus, to identify \ttbar~events the b-tagged jets used for the Higgs and one additional jet not used by the $\chi^{2}$ algorithm can be used to reconstruct the second top. As this extra jet is coming from a top is expected to be have a significant amount of \pt, then the second top is reconstructed from the two Higgs jets and the leading jet not used by the $\chi^{2}$ algorithm. A second \W~is also defined from the sub-leading Higgs jet and leading jet not used by the $\chi^{2}$ algorithm. This definition follows the expectation that the jet with highest \pt~from top decay is the b-quark coming directly from it. The distribution for the second top mass can be seen in figure~\ref{fig:2ndTM} for data and MC samples. The top mass peak is clearly reproduced by \ttbar~events.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/M2ndTopNm1.png}
-    \caption{Second top mass distribution for data and the sum of the Monte Carlo samples. Selection criteria applied up to Higgs mass cut.}
+    \caption{Second top mass distribution for data and the sum of the Monte Carlo samples. Selection criteria are applied up to Higgs mass cut. The second top is reconstructed from the two Higgs jets and the leading jet not used by the $\chi^{2}$ algorithm. The normalization was done to luminosity on the data.}
     \label{fig:2ndTM}
   \end{center}
 \end{figure}
 
-We have build a variable with the second top and second W boson to discriminate signal from background (mainly \ttbar). To increase the separation between backgrounds and signal we don not take only the second top mass, but we add the second W boson mass and divide them by the Higgs mass. The distribution for this variables is shown in figure~\ref{fig:m2thp} for data and the sum of MC samples. Events with $(M(top^{2nd})+M(W^{2nd}))/M(H)>6.8$ were selected.
+A variable with the second top and second \W~boson to discriminate signal from background (mainly \ttbar) has bee built. To increase the separation between backgrounds and signal not only the second top mass is taken, but added to the second \W~boson mass and this sum divided by the Higgs mass. The distribution for this variables is shown in figure~\ref{fig:m2thp} for data and the sum of MC samples. Events with $(M(top^{2nd})+M(W^{2nd}))/M(H)>6.8$ were selected.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.45\textwidth]{figs/Ana/M2HP_SoB.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/M2HPNm1.png}
-    \caption{Efficiency of cutting on $(M(top^{2nd})+M(W^{2nd}))/M(H)>x$, with $x$ the cut value, as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [left]. Distribution of $(M(top^{2nd})+M(W^{2nd}))/M(H)$ for data and the sum of the Monte Carlo samples [right]. All others criteria are applied before this one. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples.}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/M2HP_SoB.png}
+    \caption{Distribution of $(M(top^{2nd})+M(W^{2nd}))/M(H)$ for data and the sum of the Monte Carlo samples. Selection criteria are applied up to Higgs mass cut. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples [left]. Efficiency of selection criterion $(M(top^{2nd})+M(W^{2nd}))/M(H)>x$, with $x$ the cut value, as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [right].}
     \label{fig:m2thp}
   \end{center}
 \end{figure}
 
-The selection continues taking advantage of the angular relation between the T and the quark produced in association with it for signal events. We know that they are produced preferentially with high $\Delta R$ while for backgrounds the two objects have lower $\Delta R$. We identify the leading jet not used by the reconstruction procedure with the jet produced with the T. We call this jet the 6th jet, $j^{6}$. The distribution of $\Delta R (T j^{6th})$, before cutting on it, can be found in figure~\ref{fig:jet6} for data and MC samples along with the efficiency plot of cutting on $\Delta R (T j^{6})$ for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples. At this stage the statistics in QCD MC samples begin to be very low. We select events that have $\Delta R (T j^{6})>4.8$. 
+The selection continues taking advantage of the angular relation between the \Tp~and the quark produced in association with it for signal events. They are produced preferentially with high $\Delta R$ while for backgrounds the two objects have lower $\Delta R$. The leading jet not used by the reconstruction procedure is defined as the jet produced in association to the \Tp. This jet will be referred as the 6th jet, $j^{6}$. The distribution of $\Delta R (T j^{6th})$ can be found in figure~\ref{fig:jet6} for data and MC samples along with the efficiency plot of cutting on $\Delta R (T j^{6})$ for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples. At this stage the statistics in QCD MC samples begin to be very low. Events that have $\Delta R (T j^{6})>4.8$ were selected. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.45\textwidth]{figs/Ana/DRTp6thJ_SoB.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/DRTp6JNm1.png}
-    \caption{Efficiency of cutting on $\Delta R (T j^{6th})>x$, with $x$ the cut value, as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [left]. Distributions for $\Delta R (T j^{6th})$  for data and the sum of Monte Carlo samples [right]. All others criteria are applied up to this one. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples.}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/DRTp6thJ_SoB.png}
+    \caption{Distributions for $\Delta R (T j^{6th})$  for data and the sum of Monte Carlo samples. All others criteria are applied up to this one. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples [left]. Efficiency of selection criterion $\Delta R (T j^{6th})>x$, with $x$ the cut value, as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [right].}
     \label{fig:jet6}
   \end{center}
 \end{figure}
 
-For the last cut we define the \textit{Relative} $H_{T}$ as the sum of the \pt of the Higgs candidate plus the \pt of the top candidate divided by $H_{T}$ of the event. This variable measures how much \pt of the event is coming from the Higgs and top candidates. As for signal events the top and Higgs candidates are coming from a highly massive object, that is decaying into a top and a Higgs, we expect signal events to have a relative $H_{T}$ closer to 1 than backgrounds events. The relative $H_{T}$ distribution can be found in figure~\ref{fig:RelHtMass} for data and the sum of MC samples before cutting on it, with the rest of the selection applied. At this stage the QCD MC samples have very low statistics. In the same figure can be found the efficiency plot of the cut. We keep events that have a Relative $H_{T}>0.67$. 
+For the last criterion the Relative $H_{T}$ variable is defined as the sum of the \pt~of the Higgs candidate plus the \pt~of the top candidate divided by $H_{T}$ of the event. This variable is related to the proportion of \HT~of the event coming from the Higgs boson and top candidates \pt. As for signal events the top and Higgs boson candidates are coming from a highly massive object, that is decaying into a top and a Higgs, signal events have a relative $H_{T}$ closer to 1 than backgrounds events. The relative $H_{T}$ distribution is shown in figure~\ref{fig:RelHtMass} for data and the sum of MC samples before cutting on it, with the rest of the selection applied. At this stage the QCD MC samples have very low statistics. In the same figure can be found the efficiency plot of the cut. We keep events that have a Relative $H_{T}>0.67$. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.45\textwidth]{figs/Ana/RelHT_SoB.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/RelHTNm1.png}
-    \caption{Efficiency of cutting on Relative $H_{T}>x$, with $x$ the cut value, as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [left]. Distribution of Relative $H_{T}$ for data and the sum of the Monte Carlo samples [right]. All others criteria are applied up to this one. At this stage multijet (QCD) MC sample have very low statistics. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples.}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/RelHT_SoB.png}
+    \caption{Distribution of Relative $H_{T}$ for data and the sum of the Monte Carlo samples. All others criteria are applied up to this one. At this stage multijet (QCD) MC sample have very low statistics. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples [left]. Efficiency of selection criterion Relative $H_{T}>x$, with $x$ the cut value, as function of cut value for $M=700$ \GeVcc signal sample, \ttbar and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [right]. }
     \label{fig:RelHtMass}
   \end{center}
 \end{figure}
 
-To check the progression of the selection, in table~\ref{tab:Estimators} is shown the $S/B$ after each cut after the reconstruction of objects. In the table we can see an increase of the estimator at each step, which means that with each cut the discrimination between signal and background increments. For this calculation $M=700$ \GeVcc signal, \ttbar and QCD\_HT-500To1000 MC samples were used. %As QCD statistics decrease rapidly, and at some point they are very low, we calculate the estimator with respect to \ttbar and QCD samples separately.
+To check the evolution of the selection, in table~\ref{tab:Estimators} is shown the $S/B$ after each cut after the reconstruction of resonances with the $\chi^{2}$ algorithm. In the table an increase of the estimator is visible at each step, which means that with each cut the discrimination between signal and background increases. As a reminder, $M=700$ \GeVcc signal, \ttbar and QCD\_HT-500To1000 MC samples were used for this calculation. %As QCD statistics decrease rapidly, and at some point they are very low, we calculate the estimator with respect to \ttbar and QCD samples separately.
 
 \begin{table}[htbH]
-\label{tab:Estimators}
 \begin{center}
 %\resizebox{\textwidth}{!}{
 \begin{tabular}{|c|c|c|}
@@ -530,7 +544,7 @@ $\Delta R (T j^{6th})>4.8$ & $0.42 \pm 0.19$  & $1.66 \pm 0.32$  \\
 Relative $H_{T}>0.67$ & $1.16 \pm 0.17$  & $2.13 \pm 0.17$  \\
 \hline
 \end{tabular}
-\caption{$S/B$ and $S/\sqrt{S+B}$ from MC samples for each step of the selection after reconstruction. Only $M=700$ \GeVcc signal, \ttbar and QCD\_HT-500To1000 MC samples were used.}
+\caption{$S/B$ and $S/\sqrt{S+B}$ from MC samples for each step of the selection after reconstruction of resonances with the $\chi^{2}$ sorting algorithm. Only $M=700$ \GeVcc signal, \ttbar and QCD\_HT-500To1000 MC samples were used. \label{tab:Estimators}}
 %}
 \end{center}
 \end{table}
