@@ -852,9 +852,9 @@ $\frac{p_{T}(H_{cand})+p_{T}(top_{cand})}{H_{T}} > 0.67 $ & $484\pm22.00$ & $184
 \section{Systematics}
 \label{sec:sys}
 
-In order to compute exclusion limits, the systematic uncertainties in the analysis should be known. We identify two sets of sources, related to signal or related to backgrounds. As our signal is modeled with the help of MC samples, we have considered the usual sources of uncertainties for MC simulation: Jet Energy Scale, b-tagging, among others. As backgrounds were derived from data we consider only systematic uncertainties related to the estimation method (shape and normalization). Finally, we also consider the usual luminosity uncertainty of 2.6\%, affecting signal and background. 
+In order to compute exclusion limits, the systematic uncertainties in the analysis should be evaluated first. Two sets of sources have been identified, related either to signal or backgrounds. As our signal is modeled with the help of MC samples, sources of uncertainties for MC simulation that have been considered: Jet Energy Scale and b-tagging, among others. As backgrounds were derived from data only systematic uncertainties related to the estimation methods (shape and normalization) were considered. Finally, the luminosity uncertainty of 2.6\% was considered, affecting signal and background. 
 
-For the calculation of systematics and yields for signal MC samples we have considered the integral over 1-sigma around the mean value of each mass point. in figure~\ref{fig:LinearFitMeanSigma} it can be seen the results from the gaussian fit applied for each mass point for the mean value and standard deviation. From these results, we have done a linear fit of the mean value and the standard deviation to be less dependent on statistics fluctuations. We have extracted from the linear fit the values for the mean value and sigma of each mass point. They can be found in table~\ref{tab:LinearSignalWidths}. These values were used for the computation of systematics and yields.
+For the calculation of the effect of the systematic errors on the signal yields the integral over 1-sigma around the mean value of each mass point has been considered. In figure~\ref{fig:LinearFitMeanSigma} the results from the gaussian fit applied to each mass point for the mean value and standard deviation are shown. To be less sensitive to statistical fluctuations, linear fits of these distributions have been performed, and the parametric dependence of mean and width as a function of the mass as reference has been used. The values are presented in table~\ref{tab:LinearSignalWidths} and were used for the computation of systematics and yields.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -889,7 +889,7 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 971.53 & 54.53 \\
 \end{center}
 \end{table*}
 
-The first source of systematic uncertainty considered is related to the scale factors determination for b-tagging. For each scale factor there is an associated error, depending on the jet flavor. Following official recommendation scale factors for b and c jets were treated fully correlated while these are considered uncorrelated to light jets. In addition, the error for c-jets is considered to be the double associated to b-jets. Then scale factors for b and c-jets were varied simultaneously within their error and signal yields computed. The procedure was repeated for light jets independently. In table~\ref{tab:SFSys} it can be found the variation, in \%, of the yields from the up ($+1\sigma$) and down ($-1\sigma$) with respect to the nominal value. Variations for b and c-jets give an uncertainty of around 6\% while for light jets only 1\%. For the limits calculation in section~\ref{sec:res} we have used the results for b and c-jets and considered an overall systematic of 1\% for light flavor. In addition in figure~\ref{fig:TotalSFSys} it can bee found the full uncertainties from b-tagging.
+The first source of systematic uncertainty considered is related to the scale factors determination for b-tagging. For each scale factor there is an associated error, depending on the jet flavor. The scale factors for b and c jets were treated fully correlated while these are considered uncorrelated to light jets. In addition, the error for c-jets scale factors is considered to be the double associated to b-jets ones. The scale factors for b and c-jets were varied simultaneously within their errors and signal yields were re-computed. The procedure was repeated for light jets independently. In table~\ref{tab:SFSys} the variation is displayed, in \%, of the yields from the up ($+1\sigma$) and down ($-1\sigma$) with respect to the nominal value. Variations for b and c-jets give an uncertainty of around 6\% while for light jets only 1\%. For the limits calculation in section~\ref{sec:res} the results for b and c-jets have been used and an overall systematic of 1\% was considered for light flavor. In addition figure~\ref{fig:TotalSFSys} shows the full uncertainties from b-tagging.
 
 \begin{table*}[htbH]
 \begin{center}
@@ -924,7 +924,7 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 6.80 & 6.52 & 0.54 & 0.53 \\
   \end{center}
 \end{figure}
 
-The second source of systematic uncertainty considered are the Jet Energy Corrections (JEC). These correction were varied $\pm 1\sigma$, with sigma the error of the corrections, and the signal yields were recomputed at each time. JEC are composed of Jet Energy Scale and Jet Energy Resolution corrections. Each of them were treated as uncorrelated, thus varied independently. The systematic values found can be seen in table~\ref{tab:JECSys}. In addition in figure~\ref{fig:TotalJECSys} it can bee found the full uncertainties from JEC. The mean value of JES systematic is 6\%, while for JER is 1.6\% (used as systematic for limit calculation for all mass points).
+The second source of systematic uncertainty considered is the jet energy scale determination. In MC, this scale is corrected via the Jet Energy Corrections (JEC) to match the data. These correction were varied $\pm 1\sigma$, with sigma the error of the corrections, and the signal yields were recomputed at each time. JEC are composed of Jet Energy Scale and Jet Energy Resolution corrections. Each of them were treated as uncorrelated, thus varied independently. The systematic values found can be seen in table~\ref{tab:JECSys}. In addition, figure~\ref{fig:TotalJECSys} shows the full uncertainties from JEC. The mean value of JES systematic is 6\%, while for JER is 1.6\% (used as systematic for limit calculation for all mass points).
 
 \begin{table*}[htbH]
 \begin{center}
@@ -959,7 +959,7 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 2.33 & 2.00 & 1.05 & 5.79 \\
   \end{center}
 \end{figure}
 
-Another source of uncertainties for MC signal samples is related to the PDF and $\alpha_{S}$ used in the simulation. MC signal samples were produced with PDF set \textit{CTEQ6.6} with the best fit values among PDF members. We have considered the possible variations from all 44 members of CTEQ6.6 to obtain an overall systematic effect on signal yields. In addition we have considered two additional PDF sets: MSTW2008 and NNPDF2.0. For MSTW2008 we added in quadrature 40 eigenvectors and for NNPDF2.0 50 replicas. For the $\alpha_{s}$, 1-$\sigma$ variations were considered around the central value for each PDF set: $\alpha_{s}(M_{Z})=0.118$ for CTEQ6.6, $\alpha_{s}(M_{Z})=0.12018$ for MSTW2008 and $\alpha_{s}(M_{Z})=0.119$ for NNPDF2.0. To calculate the observable with the varied parameters of the PDF a reweighting method was used. A weight was calculated for each member/eigenvector/replica $j$, in~\ref{eq:pdfweights} where $x_{1,2}$ is the fraction of the momentum carried by the two initial partons entering the hard interaction, $f_{1,2}$ is their corresponding pdg code, and $Q$ is the scale. The weights were used to calculate the yields and then the systematics for the cases of CTEQ6.6 and MSTW1008 were given by equation~\ref{eq:quadsum} while for NNPDF2.0 were given by equation~\ref{eq:quadsumNNPDF}. In these equations $\mathcal{O}^{j}$ is the observable evaluated for the eigenvector $j$, being $j=0$ for the nominal value, and $C=1.64485$ for CTEQ6.6 to correctly obtain just 1-$\sigma$ variation, and $C=1$ for MSTW2008.
+Another source of uncertainties for MC signal samples is related to the PDF and $\alpha_{S}$ used in the simulation. MC signal samples were produced with the PDF set CTEQ6.6 with the best fit values among PDF members. The possible variations from all 44 members of CTEQ6.6 to obtain an overall systematic effect on signal yields have been considered. In addition two additional PDF sets have been considered: MSTW2008 and NNPDF2.0. For MSTW2008 40 eigenvectors and for NNPDF2.0 50 replicas were added in quadrature. For the $\alpha_{s}$, 1-$\sigma$ variations were considered around the central value for each PDF set: $\alpha_{s}(M_{Z})=0.118$ for CTEQ6.6, $\alpha_{s}(M_{Z})=0.12018$ for MSTW2008 and $\alpha_{s}(M_{Z})=0.119$ for NNPDF2.0. To calculate the observable with the varied parameters of the PDF a reweighting method was used. A weight was calculated for each member/eigenvector/replica $j$, in~\ref{eq:pdfweights} where $x_{1,2}$ is the fraction of the momentum carried by the two initial partons entering the hard interaction, $f_{1,2}$ is their corresponding pdg code, and $Q$ is the scale. The weights were used to calculate the yields and then the systematics for the cases of CTEQ6.6 and MSTW1008 were given by equation~\ref{eq:quadsum} while for NNPDF2.0 were given by equation~\ref{eq:quadsumNNPDF}. In these equations $\mathcal{O}^{j}$ is the observable evaluated for the eigenvector $j$, being $j=0$ for the nominal value, and $C=1.64485$ for CTEQ6.6 to correctly obtain just 1-$\sigma$ variation, and $C=1$ for MSTW2008.
 
 \begin{equation} \label{eq:pdfweights}
 w^{j}=\frac{PDF^{j}(x_{1},f_{1},Q)PDF^{j}(x_{2},f_{2},Q)}{PDF^{0}(x_{1},f_{1},Q)PDF^{0}(x_{2},f_{2},Q)}
@@ -974,7 +974,7 @@ w^{j}=\frac{PDF^{j}(x_{1},f_{1},Q)PDF^{j}(x_{2},f_{2},Q)}{PDF^{0}(x_{1},f_{1},Q)
 \sigma = \sqrt{\frac{1}{N_{replicas}-1}\sum_{i=1}^{N_{replicas}}(\mathcal{O}^{i}-\mathcal{O}^{0})^{2}} 
 \end{equation}
 
-The results of calculation of systematic uncertainties for PDF's can be found in table~\ref{tab:PDFsys}. We considered as full systematic for PDF+$\alpha_{s}$ the highest variation between the three considered. this overall systematic can be found in figure~\ref{fig:TotalPDFSys}. The overall systematic effect of PDF variations is around 4\%.
+The results of the calculation of systematic uncertainties for PDF's can be found in table~\ref{tab:PDFsys}. The full systematic for PDF+$\alpha_{s}$ were considered as the highest variation between the three considered. this overall systematic can be found in figure~\ref{fig:TotalPDFSys}. The overall systematic effect of PDF variations is around 4\%.
 
 \begin{table*}[htbH]
 \begin{center}
@@ -1009,7 +1009,7 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 4.43 & 2.67 & 3.60 & 2.62 & 3.79 \\
   \end{center}
 \end{figure}
 
-We finally consider the pileup reweighting MC correction procedure as a possible source of systematic uncertainty. To estimate the size of the uncertainty we vary by 5\% (up and down) the minimum bias inelastic cross section, 69.4 mb for 2012. For up and down variation the weights to correct pileup in MC simulation were recalculated, and with the varied weights the yields were the recalculated. The effect of these variations can be found in table~\ref{tab:PUsys} and in figure~\ref{fig:TotalPUSys}. For limits calculation an overall value of 2\% was considered for all MC mass points.
+Finally the pileup reweighting MC correction procedure was considered as a possible source of systematic uncertainty. To estimate the size of the uncertainty the minimum bias inelastic cross section, 69.4 mb for 2012 , was varied by 5\% (up and down) . For up and down variation the weights to correct pileup in MC simulation were recalculated, and with the varied weights the yields were re-computed. The effect of these variations can be found in table~\ref{tab:PUsys} and in figure~\ref{fig:TotalPUSys}. For limits calculation an overall value of 2\% was considered for all MC mass points.
 
 \begin{table*}[htbH]
 \begin{center}
@@ -1042,7 +1042,7 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 3.10 & 3.79 \\
   \end{center}
 \end{figure}
 
-As a summary, in table~\ref{tab:sys} it can be found the systematic uncertainties for each MC mass point. The dominant systematics are coming from JEC and b-tagging sources. B-tagging scale factors uncertainties are summed in quadrature as well as JEC systematics.
+As a summary, in table~\ref{tab:sys} shows the systematic uncertainties for each MC mass point. The dominant systematics are coming from JEC and b-tagging sources. The different sources of systematic errors are considered to be uncorrelated, and consequently summed in quadrature. %B-tagging scale factors uncertainties are summed in quadrature as well as JEC systematics.
 
 \begin{table*}[htbH]
 \begin{center}
@@ -1069,7 +1069,7 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 6.87 & 6.59 & 1.88 & 5.99 & 4.43 & 3.79 \
 \caption{Summary of uncertainties for signal samples\label{tab:sys}}
 \end{table*}
 
-For background, the systematics are associated to determination methods for shape and normalization. For the shape, the dispersion of the ratio between signal and control sample are used for determination of uncertainty. After full selection, there is no sufficient statistics to determine a systematic so we chose a stage in the selection before the end of the cut flow. The dispersion measurement is done after requiring $1.6 < \Delta R (W_{cand} H_{cand}) < 4.0$. In figure~\ref{fig:ShapeSys} it can be seen the dispersion of the ratio plot. This dispersion is fitted with a gaussian function. The total systematic uncertainty is then taken from the standard deviation of the fit. The dispersion correspond to 18\% around the nominal value.
+For background, the systematics are associated to estimation methods for shape and normalization. For the shape, the dispersion of the ratio between signal and control sample are used for determination of uncertainty. After full selection, there is no sufficient statistics to determine a systematic so a stage in the selection before the end of the cut flow is chosen. The dispersion measurement is done after requiring $1.6 < \Delta R (W_{cand} H_{cand}) < 4.0$. In figure~\ref{fig:ShapeSys} the dispersion of the ratio plot is shown. This dispersion is fitted with a gaussian function. The total systematic uncertainty is then taken from the standard deviation of the fit. The dispersion correspond to 18\% around the nominal value.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -1079,9 +1079,9 @@ For background, the systematics are associated to determination methods for shap
   \end{center}
 \end{figure}
 
-In addition for the background normalization estimation, from table~\ref{tab:NormVal} we see that after full selection the normalization is estimated to be $49.98\pm17.42$. The error represents a 35\% of the central value. This value is taken as systematic uncertainty for the background normalization method. This systematic is dominant with respect to the rest of systematics for signal and background.
+In addition for the background normalization estimation, from table~\ref{tab:NormVal}, after full selection the normalization is estimated to be $49.98\pm17.42$. The error represents 35\% of the central value. This value is taken as systematic uncertainty for the background normalization method. This systematic is dominant with respect to the rest of systematics for signal and background.
 
-Finally, in table~\ref{tab:sys700} are presented the systematics for backgrounds and signal MC sample with M=700 \GeVcc. The dominant systematic source is coming from the normalization estimation method for backgrounds.
+Finally, Table~\ref{tab:sys700} shows the systematics for backgrounds and signal MC sample with M=700 \GeVcc. The dominant systematic source is coming from the normalization estimation method for backgrounds.
 
 \begin{table*}[htbH]
 \begin{center}
@@ -1089,9 +1089,9 @@ Finally, in table~\ref{tab:sys700} are presented the systematics for backgrounds
 \hline 
 Systematics Name & Signal & Background \\
 \hline
-Theory & 5\% & --\\
+%Theory & 5\% & --\\
 PDF & +4.21\% / -3.14\% & --\\
-Luminosity & 2.6\% & --\\
+Luminosity & 2.6\% & 2.6\%\\
 Trigger & 10\% & --\\
 B-tag & +6.16\% / -5.94\% & --\\
 JEC & +1.88\% / - 6.18\% & --\\
@@ -1108,7 +1108,7 @@ Background Normalization & -- & 35\%\\
 \section{Results}
 \label{sec:res}
 
-Using the same width and mean value definition described in last section for mass points, the signal and background yields can be calculated, as well as the number of observed events in data. They can be found in table~\ref{tab:ExpEvts}. 
+Using the same width and mean value parametrization as described in the previous section, the signal and background yields can be calculated, as well as the number of observed events in data. They can be found in table~\ref{tab:ExpEvts}. 
 
 \begin{table*}[htbH]
 \begin{center}
@@ -1131,23 +1131,37 @@ T' Mass GeV/$c^{2}$ & Signal & Background & Observed Data\\
 \end{center}
 \end{table*}
 
-The yields and systematics given in last section were used to compute expected and observed exclusion limits. The limits were calculated using Theta package~\cite{theta_web} using asymptotic $CL_{S}$ limits. In figure~\ref{fig:FinalPlot} it can be seen two signal MC mass points compared to observed data with subtraction of estimated background.
+As there is no evidence of an excess, the yields and systematics given in last section were used to compute expected and observed exclusion limits. The limits were calculated using Theta package~\cite{theta_web} using asymptotic $CL_{S}$ limits. Figure~\ref{fig:FinalPlot} shows two signal MC mass points compared to observed data with subtraction of the estimated background.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.9\textwidth]{figs/Ana/Final_Plot.png}
-    \caption{$M(5j)$ after full selection for data minus estimated background and signal mass points of 650 \GeVcc and 850 \GeVcc}
+    \caption{$M(5j)$ after full selection for data minus estimated background and signal mass points at 650 \GeVcc and 850 \GeVcc}
     \label{fig:FinalPlot}
   \end{center}
 \end{figure}
 
-Finally, in figure~\ref{fig:Lim} it can be seen the expected and observed exclusion limits in terms of the cross section as function of $M(5j)$. The theoretical prediction is represented by the red line. Comparing this theoretical prediction to expected limits, there is no expectation of excluding any masses in the studied range. However, from the observed limits we exclude to 95\% CL (confidence level) masses between 813 and 862 \GeVcc.
+Finally, in figure~\ref{fig:Lim} the expected and observed exclusion limits in terms of the cross section as function of $M(5j)$ are shown. The theoretical prediction is represented by the red line. The theoretical cross sections have been calculated with MadGraph 5~\cite{Alwall:2014hca, Alwall:2011uj} utilizing the FeynRules~\cite{Alloul:2013bka} model implementation developed in~\cite{Buchkremer:2013bha, Cacciapaglia:2011fx}. Comparing this theoretical prediction to expected limits, there is no expectation of excluding any masses in the studied range. However, from the observed limits we exclude to 95\% CL (confidence level) masses between 813 and 862 \GeVcc.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.9\textwidth]{figs/Ana/Limits_from_CLs_V8_LinearFitWidths_1sigma.png}
-    \caption{Expected and observed limits in terms of T production cross section as function of $M(5j)$. The red line represents the theoretical prediction of the cross section. Masses between 813 and 862 \GeVcc are excluded at 95\% CL.}
+    \caption{Expected and observed limits in terms of T production cross section as function of $M(5j)$. The red line represents the theoretical prediction of the cross section~\cite{Buchkremer:2013bha, Cacciapaglia:2011fx}. Masses between 813 and 862 \GeVcc are excluded at 95\% CL.}
     \label{fig:Lim}
   \end{center}
 \end{figure}
 %\begin{TOINCLUDE}Expected and observed yields table. Exclusion limits plot. M5J plot for data with estimated background and signal.\end{TOINCLUDE}
+
+\section{Perspectives}
+\label{sec:pers}
+
+
+
+\section{Possible improvements}
+\label{sec:impro}
+
+
+
+\section{Other \Tp~searches}
+\label{sec:art}
+
