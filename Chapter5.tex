@@ -556,26 +556,26 @@ Relative $H_{T}>0.67$ & $1.16 \pm 0.17$  & $2.13 \pm 0.17$  \\
 \subsubsection{Trigger}
 \label{sec:trigger_ana}
 
-We have computed the trigger efficiency using as reference the prescaled trigger HLT\_HT400\_v*. From other analyses using $H_{T}$ triggers, as in~\cite{Khachatryan:2015axa}, around 100 GeV additional cut on top of trigger cut, are needed to reach the trigger plateau. Assuming it is the case also for HLT\_HT400\_v*, the cut on the selection requiring $H_{T}>550$ GeV should select events in the efficiency plateau. Trigger efficiency is normally evaluated after full selection. However, as HLT\_HT400 leaving very small amount of events after full selection, we have decided to compute the trigger efficiency at various earlier selection stages. Additionally, instead of calculating a scale factor to match trigger efficiency in MC samples to data we have studied the differences to assign an overall systematic effect. 
+The trigger efficiency has been computed using as reference the prescaled trigger requiring \HTg{400} (HLT\_HT400), where the \HT is defined as the scalar sum of the \pt~of at least 4 calojets with \etal{3.0}~and \ptg{40}. From other analyses using $H_{T}$ triggers, as in~\cite{Khachatryan:2015axa}, the trigger plateau is reached around 100 GeV after the threshold. Assuming it is the case also for HLT\_HT400, as the selection is requiring \HTg{550}, it selects events in the efficiency plateau. As the procedure is intended to measure the turn on curve of HLT\_Dijet80\_Dijet60\_Dijet20, it is important that the used events are in the plateau of HLT\_HT400 to not introduce effects from the turn on curve from this later trigger. The trigger efficiency is normally evaluated after full selection. As there are very few events passing the HLT\_HT400 trigger after the full event selection, it was decided to monitor the trigger efficiency at an earlier stage. As at earlier stages the major event composition is coming from backgrounds, not only signal MC samples have been used but also \ttbar~sample. The differences between this last sample and data will be used to compute a systematic effect on signal that will enter the calculation of limits.
 
-We have used the \pt of the 6th leading jet to parametrize trigger efficiency. This efficiency is defined as the ratio between the number of events passing both triggers (HLT\_HT400 and HLT\_Dijet80\_Dijet60\_Dijet20) and the number of events passing only HLT\_HT400. HLT\_HT400 is used as unbiased sample with respect to HLT\_Dijet80\_Dijet60\_Dijet20. In figure~\ref{fig:TrigEff} it can be seen the trigger efficiency as function of 6th leading jet \pt after $\chi^{2}$ cut for all signal MC samples. 
+The \pt of the 6th leading jet has been used to parametrize the trigger efficiency. This efficiency is defined as the ratio between the number of events passing both triggers (HLT\_HT400 and HLT\_Dijet80\_Dijet60\_Dijet20) and the number of events passing only HLT\_HT400. HLT\_HT400 is used as unbiased sample with respect to HLT\_Dijet80\_Dijet60\_Dijet20, this is as a looser and uncorrelated selection. In figure~\ref{fig:TrigEff} the trigger efficiency is presented as a function of the 6th leading jet \pt, and after the $\chi^{2}$ cut for all signal MC samples. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_hundreds_chi2.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_fifties_chi2.png}
-    \caption{Efficiency in data and the MC signal samples for events passing trigger bit HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after standard selection up to $chi^{2}$ cut [included]. In the middle stage of the selection, we observe discrepancies between 10\% and 6\% at higher $p_{T}$. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$.}
+    \caption{Efficiency in data and the MC signal samples for events passing trigger HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after standard selection up to $\chi^{2}$ cut (included). At this early stage of the selection, discrepancies between 10\% and 6\% at higher $p_{T}$ are observed between data and signal MC samples. Differences between \ttbar and data are maximum 5\%. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$. Efficiencies for signal MC samples with \Tp masses equal to 600, 700, 800, 900 and 1000 \GeVcc are shown with \ttbar~and data [left]. Efficiencies for signal MC samples with \Tp masses equal to 650, 750, 850 and 950 \GeVcc are shown with \ttbar~and data [right].}
     \label{fig:TrigEff}
   \end{center}
 \end{figure}
 
-The same efficiencies were additionally computed after cutting on the Higgs mass candidate. They can be found in figure~\ref{fig:TrigEffPostMH}. From them, we can see that MC signal samples are systematically underestimated by the trigger. This means that MC simulation of HLT applied to MC signal samples is cutting harder than in data. The observed differences vary between 10\% for low \pt and 5-6\% for high \pt.
+The same efficiencies were also computed after selecting on the Higgs mass candidate. They can be found in figure~\ref{fig:TrigEffPostMH}. From them, a systematic underestimation of the MC signal samples by the trigger can be seen. However, \ttbar~has a slightly higher efficiency than data. The ratio between \ttbar~and data is taken to correct signal MC samples as function of 6th leading jet \pt. The entire procedure of the utilization of this corrections to derive a systematic uncertainty on signal yields is described in section~\ref{sec:sys}. %This means that MC simulation of HLT applied to MC signal samples is cutting harder than in data. The observed differences vary between 10\% for low \pt and 5-6\% for high \pt.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_hundreds_HM.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_fifties_HM.png}
-    \caption{Efficiency in data and the MC signal samples for events passing trigger bit HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after standard selection up to the Higgs-candidate mass selection. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$. The dispersion observed is mainly 6\%.}
+    \caption{Efficiency in data and the MC signal samples for events passing trigger bit HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after standard selection up to the Higgs-candidate mass selection. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$. The dispersion observed is about 6\% between data and signal MC samples, while only about 3\%  for \ttbar. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$. Efficiencies for signal MC samples with \Tp masses equal to 600, 700, 800, 900 and 1000 \GeVcc are shown with \ttbar~and data [left]. Efficiencies for signal MC samples with \Tp masses equal to 650, 750, 850 and 950 \GeVcc are shown with \ttbar~and data [right].}
     \label{fig:TrigEffPostMH}
   \end{center}
 \end{figure}
@@ -584,7 +584,7 @@ The same efficiencies were additionally computed after cutting on the Higgs mass
 \subsubsection{Selection}
 \label{sec:seleff}
 
-In figure~\ref{fig:MPEff} it can be seen the total efficiency of the selection for each mass point MC sample. The lowest efficiency is for 600 \GeVcc mass point, around 1\%, while the highest is for 850 \GeVcc mass point, around 2\%. This efficiency has been calculated with respect to events passing trigger selection.  
+In figure~\ref{fig:MPEff} the total efficiency of the selection for each mass point MC sample is shown. The lowest efficiency is for 600 \GeVcc mass point, around 1\%, while the highest is for 850 \GeVcc mass point, around 2\%. This efficiency has been calculated with respect to events passing the trigger selection.  
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -618,7 +618,7 @@ Selection & Cut & Signal (M=700 GeV/$c^{2}$) & Multijet & $t\bar{t}$ + single to
 \hline
 \end{tabular}
 }
-\caption{Cumulative efficiencies, in \%, for signal and main background as a function of cuts applied. After $ \Delta R (T' j^{6})>4.8$ cut there are no longer events in the diboson MC samples. \label{tab:cutflow}}
+\caption{Cumulative efficiencies, in \%, for signal and main background as a function of cuts applied. After $ \Delta R (T' j^{6})>4.8$ cut there are no longer events in the diboson MC samples. Error bars represent the binomial error of the efficiency for each mass point.\label{tab:cutflow}}
 \end{center}
 \end{table*}
 %\begin{TOINCLUDE}Table with efficiencies of full selection. Plot with selection efficiency for all mass points.\end{TOINCLUDE}
@@ -626,9 +626,9 @@ Selection & Cut & Signal (M=700 GeV/$c^{2}$) & Multijet & $t\bar{t}$ + single to
 \section{Background estimation from data}
 \label{sec:bkg}
 
-As seen in latest sections, we do not count with enough statistics in background MC samples to estimate the expected contribution from SM backgrounds after full selection. Moreover, even in the case of having enough statistics the prediction from MC samples might not be reliable. According to this limitations, we needed to estimate our backgrounds from data.  
+As seen in last sections, there are not enough statistics in the background MC samples in order to properly estimate the expected SM contamination after full selection. Moreover, MC predictions for the QCD component are affected by large systematic uncertainties that would mine their reliability. This is why it is preferable to estimate the backgrounds making use of data.
 
-The main difficulty to estimate our backgrounds is the correlation between the variables used in the selection. This made impracticable traditional data driven background estimation methods as ABCD method (See for example~\cite{Khachatryan:2015axa}). Another difficulty was to have a method that let us derive both principal backgrounds after full selection: multijets and \ttbar. Despite of this difficulties we have developed a method to derive from data the shape of backgrounds after full selection, and one additional method to estimate the normalization.
+The main difficulty to estimate the backgrounds comes form the correlation between the variables used in the selection. This made difficult to use established data driven background estimation methods as the ABCD method (See for example~\cite{Khachatryan:2015axa}). Another difficulty comes from the need of deriving both dominant backgrounds after full selection: multijets and \ttbar. Despite of these difficulties, a method to derive from the data the shape of backgrounds contribution to $M(5j)$ after full selection and one additional method to estimate its normalization have been derived.
 
 %\subsection{Known difficulties and tried methods}
 %\label{sec:tried}
@@ -648,26 +648,26 @@ The main difficulty to estimate our backgrounds is the correlation between the v
 \subsection{Method for shape estimation}
 \label{sec:bkgmet}
 
-For the estimation of the shape of backgrounds we need to build a control region enriched by backgrounds while depleted in signal events. From the selection applied, the strongest cut to take out background events is $n_{b}^{CSVM}>=3$ (see table~\ref{tab:cutflow}). Reason why we take the number of b-tagged jets as variable to be loosen to obtain our control sample. 
+For the estimation of the shape of the backgrounds a control sample enriched by backgrounds while depleted in signal events has been built. From the selection it can be seen that the most stringent criterion against the background is $n_{b}^{CSVM}>=3$ (see table~\ref{tab:cutflow}). This is why the number of b-tagged jets was taken as variable suited to define the control sample. 
 
-We define the control region by events with the same selection as before but $n_{b}^{CSVL}>=3$ and vetoing events with $n_{b}^{CSVM}>=3$. With the veto on events with at least 3 CSVM b-tagged jets we prevent a high contamination from signal events in the control region. The control region then is basically formed of background events, mainly QCD and \ttbar. In figure~\ref{fig:CSSSSche} a schematic diagram for the construction of control and signal sample is presented.
+The control region is defined as the region in which  the selection is the same but $n_{b}^{CSVL}>=3$ and vetoing events with $n_{b}^{CSVM}>=3$. With the veto on events with at least 3 CSVM b-tagged jets a high contamination from signal events in the control region is prevented. By opposition, the set of events passing the standard selection will be referred as signal sample.  This contamination will be studied later on this section and resumed in table~\ref{tab:sigcontam}. The control region then is formed by background events, mainly QCD and \ttbar. In figure~\ref{fig:CSSSSche} a schematic diagram for the construction of control and signal sample is presented.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.5\textwidth]{figs/Ana/SchematicControlSample.png}
-    \caption{Schematic representation of signal and control sample. The big blue circle represents the ensemble of events with at least 3 CSVL b-tagged jets. The green circle represents the signal events while the circle filled with horizontal lines represents the signal sample (events with at least 3 CSVM b-tagged jets). The control sample then is the blue circle minus the horizontal line filled circle.}
+    \caption{Schematic representation of signal and control sample. The big blue circle represents the ensemble of events with at least 3 CSVL b-tagged jets. The green circle represents the signal MC events while the circle filled with horizontal lines represents the signal sample (events with at least 3 CSVM b-tagged jets). The control sample then is the blue circle minus the horizontal line filled circle.}
     \label{fig:CSSSSche}
   \end{center}
 \end{figure}
 
-From this control sample we want then to estimate the background shape in the signal sample in the five jets invariant mass. Then the hypothesis is that the $M(5j)$ is equivalent in both control and signal sample, apart from a possible signal contribution in the signal sample. In the next section we will describe the procedure to test the validity of this hypothesis. 
+From this control sample the background shape in the signal sample in the five jets invariant mass is estimated. Then the hypothesis is that the $M(5j)$ is equivalent in both control and signal sample, apart from a possible signal contribution in the signal sample. In the next section the procedure to test the validity of this hypothesis will be described. 
 
 \subsubsection{Validation}
 \label{sec:validation}
 
-In order to validate that the $M(5j)$ shape in the control sample can be used to estimate the background shape in the signal sample, we perform a shape comparison between both samples at different stages of the selection. An agreement of shapes is then shown at several stages between both samples. From this validation we also estimate a source of systematic uncertainty. The comparison is only performed in the $M(5j)$ range between 550 and 1100 \GeVcc, the range of explored signal masses.
+In order to validate that the $M(5j)$ shape in the control sample can be used to estimate the background shape in the signal sample, a shape comparison between both samples at different stages of the selection was performed (shown in figures~\ref{fig:StageWPData, fig:StageWPQCD, fig:StageWPQCD, fig:StageWPSum}). An agreement of shapes is then shown at several stages between both samples. From this validation a source of systematic uncertainty has been estimated. The comparison is only performed in the $M(5j)$ range between 550 and 1100 \GeVcc, the range of explored signal masses.
 
-The validation is performed at 4 different stages of the selection. Data in the control sample is compared to data in the signal sample. Also, even if MC statistics are poor to drive a conclusion for the validation procedure, we show the comparison for \ttbar sample (with good statistics), QCD samples (with poor statistics) and with full sum of MC samples. From the full set of comparisons we can conclude if both shapes are in agreement or not. The 4 selected stages for the comparison are:
+The validation is performed at 4 different stages of the selection. Data in the control sample are compared to data in the signal sample. Also, even if MC statistics are poor to drive a conclusion for the validation procedure, the comparisons for the \ttbar sample (with good statistics), QCD samples (with poor statistics) and with full sum of MC samples are shown. From the full set of comparisons it can be concluded if both shapes are in agreement or not. The 4 selected stages for the comparison are:
 \begin{itemize}
 \item Stage A: Selection up to $\chi^{2}<8$, included.
 \item Stage B: Selection up to $1.6<\Delta R (W_{cand} H_{cand})<4.0$, included.
@@ -675,18 +675,17 @@ The validation is performed at 4 different stages of the selection. Data in the 
 \item Stage D: Full selection.
 \end{itemize}
 
-As we do not know if there is a signal in data, the data-data comparison is performed only for stages A, B and C. In addition QCD-QCD MC comparison is only performed for A, B and C stages because statistics after full selection are very low. As we see after full selection both shape are in agreement for \ttbar and the sum of MC samples, we deduce that the estimation is also valid in data. Another reason to drive this conclusion, is that data-data validation show an agreement for stages A, B and C.
+As it is unknown if there is a signal in data, the data-data comparison is performed only for stages A, B and C where background dominates and it is shown in figure~\ref{fig:StageWPData}. In addition QCD-QCD (QCD in the signal sample against QCD in the control sample) MC comparison is only performed for A, B and C stages due to low statistics at the end of the selection (shown in figure~\ref{fig:StageWPQCD}). The comparison for \ttbar and the sum of MC samples is shown in figures~\ref{fig:StageWPttbar} and~\ref{fig:StageWPSum}, respectively. After full selection it can be seen that both shapes are in agreement for \ttbar and the sum of MC samples, thus it can be deduced that the estimation is also valid in data. Another reason to drive this conclusion, is that data-data validation show an agreement for stages A, B and C.
 
-In addition, in order to check that the $M(5j)$ shape in the control sample is independent of the b-tagging working point, the validation procedure is redone for intermediate working points between CSVL and CSVM. As seen in section~\ref{sec:bid}, CSVM working point correspond to a cut in the b-tagging discriminator greater than 0.679. CSVL correspond to a cut in the discriminator requiring a value greater than 0.244. Two additional working points were chosen to perform the validation, corresponding to a cut greater than 0.389 and 0.534. These two points are equally separated between CSVL and CSVM. The validation for \ttbar alone can be seen in figure~\ref{fig:StageWPttbar}, for QCD alone in figure~\ref{fig:StageWPQCD}, for MC backgrounds samples sum in figure~\ref{fig:StageWPSum} and for data in figure~\ref{fig:StageWPData}. A general agreement can be seen at all stages for all working points.
+In addition, in order to check that the $M(5j)$ shape in the control sample is independent of the b-tagging working point, the validation procedure is redone for intermediate working points between CSVL and CSVM. As seen in section~\ref{sec:bid}, the CSVM working point corresponds to a cut in the b-tagging discriminator greater than 0.679, while CSVL corresponds to a cut at 0.244. Two additional working points were chosen to perform the validation, corresponding to cuts at 0.389 and 0.534. These two points are equally separated between CSVL and CSVM. The validation for \ttbar alone can be seen in figure~\ref{fig:StageWPttbar}, for QCD alone in figure~\ref{fig:StageWPQCD}, for MC backgrounds samples sum in figure~\ref{fig:StageWPSum} and for data in figure~\ref{fig:StageWPData}. A general agreement can be seen at all stages for all working points.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_chi2_ttbar.png}
-    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_DRWH_ttbar.png}
-    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_M2HP_ttbar.png}
-    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_RelHT_ttbar.png}
-    \caption{5-jets invariant mass in the control sample for different b-tagging working point for $t\bar{t}$ Monte Carlo samples within 4 stages of selection: A [top left], B [top right], C [bottom left] and D [bottom right]. The 3 working points are given in different color. Within statistical error, the 3 shapes are in agreement at all stages. A deep can be noticed around 700 GeV/$c^{2}$. $t\bar{t}$ MC as all the other Monte-Carlo samples are purely used for illustration. The shape is not visible when the same exercise is made on the sum of MC background or in the data.}
-    \label{fig:StageWPttbar}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_chi2_data.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_DRWH_data.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_M2HP_data.png}
+    \caption{5-jets invariant mass in the control sample for different b-tagging working point in data within 3 stages of selection: A [top left], B [top right] and C [bottom]. The 3 working points are given in different color. Within statistical error, the 3 shapes are in agreement at all stages with the reference one. All histograms have been normalized to unity.}
+    \label{fig:StageWPData}
   \end{center}
 \end{figure}
 
@@ -695,8 +694,19 @@ In addition, in order to check that the $M(5j)$ shape in the control sample is i
     \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_chi2_QCD.png}
     \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_DRWH_QCD.png}
     \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_M2HP_QCD.png}
-    \caption{5-jets invariant mass in the control sample for different b-tagging working point for QCD Monte Carlo samples within 4 stages of selection: A [top left], B [top right] and C [bottom]. The 3 working points are given in different color.}
+    \caption{5-jets invariant mass in the control sample for different b-tagging working point for QCD Monte Carlo samples within 4 stages of selection: A [top left], B [top right] and C [bottom]. The 3 working points are given in different color. QCD MC as all the other Monte-Carlo samples are purely used for illustration. All histograms have been normalized to unity.}
     \label{fig:StageWPQCD}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_chi2_ttbar.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_DRWH_ttbar.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_M2HP_ttbar.png}
+    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_RelHT_ttbar.png}
+    \caption{5-jets invariant mass in the control sample for different b-tagging working point for $t\bar{t}$ Monte Carlo samples within 4 stages of selection: A [top left], B [top right], C [bottom left] and D [bottom right]. The 3 working points are given in different color. Within statistical error, the 3 shapes are in agreement at all stages with the reference one. \ttbar~MC as all the other Monte-Carlo samples are purely used for illustration. All histograms have been normalized to unity.}
+    \label{fig:StageWPttbar}
   \end{center}
 \end{figure}
 
@@ -706,22 +716,12 @@ In addition, in order to check that the $M(5j)$ shape in the control sample is i
     \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_DRWH_MCsum.png}
     \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_M2HP_MCsum.png}
     \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_RelHT_MCsum.png}
-    \caption{5-jets invariant mass in the control sample for different b-tagging working point for the weighted sum of background Monte Carlo samples within 4 stages of selection: A [top left], B [top right], C [bottom left] and D [bottom right]. The 3 working points are given in different color. Within statistical error, the 3 shapes are in agreement at all stages.}
+    \caption{5-jets invariant mass in the control sample for different b-tagging working point for the weighted sum of background Monte Carlo samples within 4 stages of selection: A [top left], B [top right], C [bottom left] and D [bottom right]. The 3 working points are given in different color. Within statistical error, the 3 shapes are in agreement at all stages with the reference one. Monte-Carlo samples are purely used for illustration. All histograms have been normalized to unity.}
     \label{fig:StageWPSum}
   \end{center}
 \end{figure}
 
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_chi2_data.png}
-    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_DRWH_data.png}
-    \includegraphics[width=0.4\textwidth]{figs/Ana/InclusiveVal_M2HP_data.png}
-    \caption{5-jets invariant mass in the control sample for different b-tagging working point in data within 3 stages of selection: A [top left], B [top right] and C [bottom]. The 3 working points are given in different color. Within statistical error, the 3 shapes are in agreement at all stages.}
-    \label{fig:StageWPData}
-  \end{center}
-\end{figure}
-
-The cut on $\chi^{2}$ variable it is not only useful for signal discrimination but also drives the agreement in the $M(5j)$ between control and signal samples. This cut ensures that the events in the control region have very similar characteristics to signal sample events. More precisely, this cuts grants similar reconstructed objects in both samples. In order to clearly assess this statement, we evaluate via a $\chi^{2}$-test (see~\cite{2006physics...5123G}) the agreement of $M(5j)$ between control and signal sample scanning different values of the $\chi^{2}$ cut. The $\chi^{2}$-test evaluates the similarity of two histograms in terms of shape. It delivers as output the $\chi^{2}/ndf$ of the comparison. $\chi^{2}/ndf\sim 1$ means that the two histograms are compatible. It can be seen in figure~\ref{fig:optchi2} that the agreement is achieved for cut values much smaller than 100. 
+The cut on the $\chi^{2}$ is not only useful for signal discrimination but also drives the agreement in the $M(5j)$ between control and signal samples. This cut ensures that the events in the control region have very similar characteristics to signal sample events. More precisely, this cut grants similar reconstructed objects in both samples. In order to clearly assess this statement, a $\chi^{2}$-test (see~\cite{2006physics...5123G}) has been used to evaluate the agreement of $M(5j)$ between control and signal sample scanning different values of the $\chi^{2}$ cut. This test evaluates the similarity of two histograms in terms of shape, delivering the $\chi^{2}/ndf$ of the comparison. If $\chi^{2}/ndf\sim 1$ the two histograms shape are compatible. It can be seen in figure~\ref{fig:optchi2} that the agreement is achieved for cut values much smaller than 100. The rest of the selection criteria also contribute to have a closer phase space between the signal and control region, but their contribution is less than the one performed by the cut over the $\chi^{2}$.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -731,7 +731,7 @@ The cut on $\chi^{2}$ variable it is not only useful for signal discrimination b
   \end{center}
 \end{figure}
 
-It is very important to have a control sample strongly dominated by backgrounds. If there were a high contamination of signal in the control sample one would be considering signal events in the signal sample as background. It is then important to know precisely the possible signal contamination in the control sample. As the control sample definition takes out the events with signal characteristics, a small contamination is expected. To estimate this contamination we took the number of events for each signal mass point MC sample in the control sample, and compared it to the total number of events from data in the control sample after full selection. In table~\ref{tab:sigcontam} it can be found the total number of events for each MC mass point in the control sample after full selection and for data. Also in figure~\ref{fig:SigContamination} it can be found the M=800 \GeVcc signal MC sample and data after full selection in the control sample. The highest expected contamination is from the M=800 \GeVcc mass point, it is around 6\%. Consequently, any possible effect of signal contamination in the control sample was neglected. 
+It is very important to have a control sample strongly dominated by backgrounds. A high contamination of signal in the control sample would mean considering signal events in the signal sample as background. As the control sample definition takes out the events with signal characteristics, a small contamination is expected. To estimate this contamination the number of events for each signal mass point MC sample in the control sample were taken around the \Tp mass value in a 1-sigma window, and compared to the number of events from data in the control sample in the same windows after full selection. The procedure to determine these windows, used afterward to calculate the signal and background yields for the limit calculation, is explained in section~\ref{sec:sys}. Table~\ref{tab:sigcontam} presents the total number of events for each MC mass point in the control sample after full selection and for data. In figure~\ref{fig:SigContamination} the M=800 \GeVcc signal MC sample and data after full selection in the control sample is shown. The highest expected contamination is from the M=800 \GeVcc mass point, it is around 6\%. Consequently, any possible effect of signal contamination in the control sample was neglected. 
 
 \begin{table*}[htbH]
 \begin{center}
