@@ -1,36 +1,36 @@
 \chapter[MC event generation]{Monte-Carlo event simulation}
 \label{chap:MC}
 
-Although we have nowadays a very elegant and complete theoretical description of particle physics, it is not always evident how to translate this theory in actual predictions to compare with measurements. Moreover, on the case of hadronic colliders, as the LHC, it is even more difficult due to the particularities of the strong interaction. On this subject, a set of tools and approaches have been developed in order to be able to make accurate predictions from theory that could be directly researched experimentally, for example by ATLAS or CMS experiments. In the present chapter, we describe such tools and formalisms and a set of studies comparing their predictions to data. 
+Although nowadays a very elegant and complete theoretical description of particle physics exists, it is not always evident how to translate this theory in actual predictions to compare with measurements. Moreover, on the case of hadronic colliders, as the LHC, it is even more difficult due to the particularities of the strong interaction. On this subject, a set of tools and approaches have been developed in order to be able to make accurate predictions from theory that could be directly researched experimentally, for example by ATLAS or CMS experiments. In the present chapter, such tools and formalisms and a set of studies comparing their predictions to data are described. 
 
 \section{Monte-Carlo simulations}
 \label{sec:MC}
 
-The Monte-Carlo (MC) simulations use random numbers and large samplings to calculate mathematical quantities in complex configurations, as integrals or probabilities. The typical example is on how to calculate the integral of a one-dimensional function. One can throw several random points in the Cartesian plane and count how many of them are under the function. Then the integral of the function will be proportional to the fraction of points under the curve to the total used points. Larger the number of points, closer the estimation to the real value. An illustration of the procedure can be seen in figure~\ref{fig:mc_int}.
+The Monte-Carlo (MC) simulations use random numbers and large samplings to calculate mathematical quantities in complex configurations, as integrals or probabilities. The typical example is on how to calculate the integral of a one-dimensional function. Several random points can be thrown in the Cartesian plane and count how many of them are under the function. Then the integral of the function will be proportional to the fraction of points under the curve to the total used points. Larger the number of points, closer the estimation to the real value. An illustration of the procedure is shown in figure~\ref{fig:mc_int}.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.6\textwidth]{figs/mc_integral.png}
-    \caption{Integration using Monte-Carlo methods}
+    \caption{Integration using Monte-Carlo methods. The points in the plane have been chosen randomly. The integral of the plotted function is proportional to the ratio of points under the curve to the total number of used points.}
     \label{fig:mc_int}
   \end{center}
 \end{figure}
 
-A similar method is used to simulate proton-proton collisions. This simulation is used to generate ``random'' events and to calculate quantities, as the cross section, for a given physical process. Each event represents the final state of a collision, i.e. the set of particles produced from the collision and seen by a detector. Such simulations comprehend different steps: first, the partonic processes making reference to the interaction between the partons inside the proton; second, the hadronization of the particles produced from parton interactions; and third, the simulation of the interaction between the hadrons (from second step) and the detector materials. Such events are used to evaluate predictions from theory in the frame of a specific experiment. Whereas the hadronization and detector simulation are well-known physical processes, new theoretical predictions rely basically on the partonic level, where the fundamental interaction processes take part.
+A similar method is used to simulate proton-proton collisions. This simulation is used to generate ``random'' events and to calculate quantities, as the cross section, for a given physical process. Each event represents the final state of a collision, i.e. the set of particles produced from the collision and detected by the apparatus. Such simulations comprehend different steps: first, the partonic processes making reference to the interaction between the partons inside the proton; second, the hadronization of the particles produced from parton interactions; and third, the simulation of the interaction between the hadrons (from second step) and the detector materials. Such events are used to evaluate predictions from theory in the frame of a specific experiment. Whereas the hadronization and detector simulation are well-known physical processes, new theoretical predictions rely basically on the partonic level, where the fundamental interaction processes take part.
 
 \subsection{Parton simulation}
 \label{sec:parton}
 
-The parton model was initially proposed by Richard Feynman in 1969, as a method to understand collisions of non-fundamental particles. The model considers a composed particle, as a proton or a neutron, formed by a given number of point-like fundamental particles. When a collision occur the point-like particles inside have a major probability to scatter. For example, when an electron is fired against a proton the most of the interactions will be between the electron and the fundamental charged components of the proton, $u$ and $d$ quarks. This ``hard'' components are called valence quarks. Surrounding them there are the sea of quarks and gluons.
+The parton model was initially proposed by Richard Feynman in 1969~\cite{Feynman:1969ej}, as a method to understand collisions of non-fundamental particles. The model considers a composed particle, as a proton or a neutron, formed by a given number of point-like fundamental particles. When a collision occurs the point-like particles inside have a major probability to scatter. For example, when an electron collides with a proton, most of the interactions will be between the electron and the fundamental charged components of the proton, $u$ and $d$ quarks. This ``hard'' components are called valence quarks. Surrounding them, there are the sea of quarks and gluons.
 
-However, as the energy of the collision increases the probability to scatter a sea component, quark or gluon, increases. In addition, even if the valence quarks of a proton are the $u$ and $d$ quarks, heavier quarks can appear in the sea, as the $b$, $c$ or $s$ quarks. The probability to interact with a component, valence or sea, is described by parton distribution function, commonly called PDF. A PDF $f\equiv f(x,Q^{2})$ represent the number density of a given quark or gluon as a function of the resolution scale $Q^{2}$ and the fraction of momentum carried by the parton $x$. The determination of a PDF is done via a fit of large data samples from experiments specifically designed to test the inner structure of nucleons. The DIS (Deep Inelastic Scattering) experiment at SLAC (Stanford Linear Accelerator Center), in California, United States, first probed the existence of partonic structure inside nucleons using leptons as probes scattered against nucleons. Another important experiment was the HERA accelerator at DESY in Hamburg, Germany, which used electrons to study the inner structure of protons.
+However, as the energy of the collision increases the probability to scatter a sea component, quark or gluon, increases. In addition, even if the valence quarks of a proton are the $u$ and $d$ quarks, heavier quarks can appear in the sea, as the $b$, $c$ or $s$ quarks. The probability to interact with a component, valence or sea, is described by parton distribution function, commonly called PDF. A PDF function $f\equiv f(x,Q^{2})$ represents the number density of a given quark or gluon as a function of the resolution scale $Q^{2}$ and the fraction of momentum carried by the parton $x$. This is, the number of partons of a given type inside the proton. The determination of a PDF is done via a fit of large data samples from experiments specifically designed to test the inner structure of nucleons. The SLAC experiment (Stanford Linear Accelerator Center), in California, United States, first probed the existence of partonic structure inside nucleons using leptons as probes scattered against nucleons, experiences known as deep inelastic scattering (DIS) experiments~\cite{Prescott:1996di}. Another important experiment was the HERA accelerator at DESY in Hamburg, Germany, which used electrons to study the inner structure of protons~\cite{Basu:1997ga}.
 
-In figure~\ref{fig:MSTW} is shown the Martin-Stirling-Thorne-Watt~\cite{Martin:2009iq} (MSTW) PDF for two resolution scales. The MSTW PDF is one of the experimental fits combining data from DIS and HERA. In this PDF can be seen that $u$ and $d$ quarks carry the most of the momentum of the proton. The rest of the momentum is spread mainly over a huge amount of gluons and some, less probable, sea quarks as $\bar{u}, \bar{d}$ or $c$ and $s$. One important feature is that the composition of the proton changes depending on the resolution scale. At $Q^{2}= 10\, \text{GeV}^{2}$ there is no probability to find a $b$-quark in the proton while at $Q^{2}= 10^{4}\, \text{GeV}^{2}$ there is a non-negligible probability to find it.
+In figure~\ref{fig:MSTW} is shown the Martin-Stirling-Thorne-Watt~\cite{Martin:2009iq} (MSTW) PDF for two resolution scales, taken from~\cite{Martin:2009iq}. The MSTW PDF is one of the experimental fits combining data from DIS and HERA. From this PDF is shown that $u$ and $d$ quarks carry the of the momentum of the proton. The rest of the momentum is spread mainly over a huge amount of gluons and some, less probable, sea quarks as $\bar{u}, \bar{d}$ or $c$ and $s$. One important feature is that the composition of the proton changes depending on the resolution scale. At $Q^{2}= 10\, \text{GeV}^{2}$ there is no probability to find a $b$-quark in the proton while at $Q^{2}= 10^{4}\, \text{GeV}^{2}$ there is a non-negligible probability to find it.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.9\textwidth]{figs/mstw2008nlo68cl_allpdfs.jpg}
-    \caption{Martin-Stirling-Thorne-Watt proton PDF for $Q^{2}= 10\, \text{GeV}^{2}$ [left] and $Q^{2}= 10^{4}\, \text{GeV}^{2}$ [right]. From~\cite{Martin:2009iq}.}
+    \caption{Martin-Stirling-Thorne-Watt proton PDF for $Q^{2}= 10\, \text{GeV}^{2}$ [left] and $Q^{2}= 10^{4}\, \text{GeV}^{2}$ [right]. $x$ is the fraction of momentum carried by the parton and $f(x,Q^{2})$ the PDF function.}
     \label{fig:MSTW}
   \end{center}
 \end{figure}
@@ -44,12 +44,12 @@ For a scattering process, the hard part differential cross section can be writte
   d\sigma_{ij\rightarrow lm} & = & \left( \int_{0}^{1}\int_{0}^{1}f_{i}(x_{i},Q^{2})f_{j}(x_{j},Q^{2})dx_{i}dx_{j} \right) \nonumber \\  
  & \times & \frac{d^{3}p_{l}}{(2\pi)^{2}2E_{l}}\frac{d^{3}p_{m}}{(2\pi)^{2}2E_{m}}\delta^{4}\left( p_{i}+p_{j}-p_{l}-p_{m} \right) \nonumber \\  
  & \times & |\mathcal{M}_{ij\rightarrow lm}|^{2}
-\end{eqnarray} where $f_{i,j}$ correspond to the PDF's of the initial partons. $\mathcal{M}_{ij\rightarrow lm}$ is the matrix element of the process which is the part of the S-matrix that contains the amplitude of the process, and governs the transition from the initial to the final state~\cite{opac-b1131978}. The matrix element could account effectively for all processes mediating the transition from the initial to a given final state, but in practice it is calculated only including a given number of processes. The calculation can achieve different levels, usually tree level or Leading Order (LO), but modern calculation could arrive, depending on the process, to one loop or Next-to-Leading-Order (NLO) or even two loops the  Next-to-Next-to-Leading-Order (NNLO). This limit depends exclusively on the feasibility of the theoretical calculations. In figure~\ref{fig:LOpNLO} it is shown an example of a leading order and its corresponding NLO diagrams for a fermion scattering.
+\end{eqnarray} where $f_{i,j}$ correspond to the PDF's of the initial partons. $\mathcal{M}_{ij\rightarrow lm}$ is the matrix element of the process which is the part of the S-matrix that contains the amplitude of the process, and governs the transition from the initial to the final state~\cite{opac-b1131978}. The matrix element could account effectively for all processes mediating the transition from the initial to a given final state, but in practice it is calculated only including a given number of processes. The calculation can achieve different levels, usually tree level or Leading Order (LO), but modern calculation could arrive, depending on the process, to one loop or Next-to-Leading-Order (NLO) or even two loops the  Next-to-Next-to-Leading-Order (NNLO). This limit depends exclusively on the feasibility of the theoretical calculations. Figure~\ref{fig:LOpNLO} shows an example of a leading order and its corresponding NLO diagrams for a fermion scattering.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.7\textwidth]{figs/Feynman_diagrams.jpg}
-    \caption{LO (a) and NLO (b)-(j) processes contributing to fermions scattering}
+    \caption{LO (a) and NLO (b)-(j) processes contributing to fermions scattering. Several processes have to be considered in order to have accurate predictions for experimental measurements.}
     \label{fig:LOpNLO}
   \end{center}
 \end{figure}
@@ -61,7 +61,7 @@ Parton simulations try to simulate the interactions between partons in hadronic 
 
 Quarks produced in a collision are not seen freely due to strong interaction. They will take quarks from vacuum to form hadrons. What reach the detector as final state are the stable hadrons resulting from the hadronization process. From a single parton several hadrons can result, producing a shower of particles, as seen in figure~\ref{fig:Hadr}. Two main processes are simulated, the showering that correspond to radiations emitted by quarks, from initial or final state, and hadronization the process of forming hadrons from quarks and gluons. 
 
-As QCD strong interaction imposes several theoretical restrictions to have a first principles understanding of these phenomena, the description of hadronization relies in the construction of effective models. There are basically two main models to simulate hadronization and showering of quarks and gluons, both giving comparable predictions. It is important to remark that this is a very important step in simulations as from an accurate hadron production simulation depends the correctness of MC description of jets.
+As QCD strong interaction imposes several theoretical restrictions to have a first principle understanding of these phenomena, the description of hadronization relies on the construction of effective models. There are basically two main models to simulate hadronization and showering of quarks and gluons, both giving comparable predictions. It is important to remark that this is a crucial step in simulations as from an accurate hadron production simulation depends the correctness of MC description of jets.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -75,7 +75,7 @@ As QCD strong interaction imposes several theoretical restrictions to have a fir
 \subsection{Detector simulation}
 \label{sec:detector}
 
-After final particles from a collision are simulated, the next step is to simulate the interaction of these particles with the detector. The principle is that the detector response should be simulated as close as possible to the real detector. In that sense, the objective is to have a detector response using MC simulations as with real data. However, not everything can be simulated. For example, during data taking can always happen different problems, subdetector misbehaving, dead cells, electrical noise saturation, etc. that can't be adjusted in MC simulation, what needs further correction and tuning. Moreover, in practice, MC simulations for ATLAS and CMS experiments are prepared before data taking. Then, if one wants to reproduce precisely the details of what happened with the detector during the data taking, MC simulation should be redone to reproduce the data taking particularities. 
+After final particles from a collision are simulated, the next step is to simulate the interaction of these particles with the detector. The principle is that the detector response should be simulated as close as possible to the real detector. In that sense, the objective is to have a detector response using MC simulations as with real data. However, not everything can be simulated. For example, during data taking can always happen different problems, subdetector misbehaving, dead cells, electrical noise saturation, etc. that can not be adjusted in MC simulation, what needs further correction and tuning. Moreover, in practice, MC simulations for ATLAS and CMS experiments are prepared before data taking. Then, if one wants to reproduce precisely the details of what happened with the detector during the data taking, MC simulation should be redone to reproduce the data taking particularities. 
 
 CMS has used GEANT 4~\cite{Agostinelli:2002hh} software to simulate the detector. Precise implementation of detector geometry was done in order to correctly simulate each subdetector, their details as size, number of channels, cells, electronic cards, were taken into account. This simulation allows to get, as for data, the electric signal output from the detector used for the reconstruction and identification of objects. 
 
@@ -99,12 +99,12 @@ Central production of samples using MadGraph is done via the generation of stand
 
 In addition, the generator group also provide constant support for users to test the validity of their production, MadGraph configuration, usage of interface software in CMSSW and testing implementations of BSM models.
 
-\subsubsection{Preparation of \textit{MadGraph} production}
+\subsubsection{Preparation of MadGraph production}
 
-Any production of partonic MC samples with MadGraph relies in 4 key elements, a model and three production cards. In order to launch any event generation in MadGraph, a set of three cards has to be prepared. These cards are text files where the user can specify several parameters used by MadGraph to generate a sample. In more detail, the 4 elements are:
+Any production of partonic MC samples with MadGraph relies on 4 key elements, a model and three production cards. In order to launch any event generation in MadGraph, a set of three cards has to be prepared. These cards are text files where the user can specify several parameters used by MadGraph to generate a sample. In more detail, the 4 elements are:
 \begin{itemize}
-\item Model: The implementation of the theoretical model according to which the production will be done. The computational implementation of a particle physics model is not a trivial task. There are available tools to perform this. MadGraph has incorporated as default the model implementation developed by FeynRules~\cite{Alloul:2013bka}, the Universal FeynRules Output (UFO)~\cite{Degrande:2011ua}. FeynRules has developed a complete set of tools to facilitate the implementation of theoretical models for computational work with different packages. MadGraph includes by default the implementation of the SM and the Minimal SuperSymmetric Model (MSSM), but in order to generate events for private models its implementation has to be provided. The facility to generate events for any model has been one of the most appealing features of MadGraph for the particle physics community.
-\item Process card: In this card, the user defines the model to be used and the process to be generated. In general, the process definition could use the definition of multi-particle labels that MadGraph utilizes to loop over all the particles contained in the label. Multi-particle labels are variables defined by the user to design sets of particles from the model. In figure~\ref{fig:ProcCard} it can be seen the lines contained in the process card to generate $t\bar{t}$ with 0 and 1 additional jets. In this example, the proton is defined as a multi-particle label containing all quarks (except the top) and the gluon. Afterward, positively and negatively charged leptons are grouped under multi-particle labels ``l+'' and ``l-''. Similar labels are declared for neutrinos and anti-neutrinos. After the declaration of labels, the process for the production is declared, in this case \ttbar production with 0 and 1 additional jet.
+\item Model: The implementation of the theoretical model according to which the production will be done. The implementation of a particle physics model, for computational calculations, is not a trivial task. There are available tools to perform this. MadGraph has incorporated as default the model implementation developed by FeynRules~\cite{Alloul:2013bka}, the Universal FeynRules Output (UFO)~\cite{Degrande:2011ua}. FeynRules has developed a complete set of tools to facilitate the implementation of theoretical models for computational work with different packages. MadGraph includes by default the implementation of the SM and the Minimal SuperSymmetric Model (MSSM), but in order to generate events for private models its implementation has to be provided. The facility to generate events for any model has been one of the most appealing features of MadGraph for the particle physics community.
+\item Process card: In this card, the user defines the model to be used and the process to be generated. In general, the process definition could use the definition of multi-particle labels that MadGraph utilizes to loop over all the particles contained in the label. Multi-particle labels are variables defined by the user to design sets of particles from the model. Figure~\ref{fig:ProcCard} shows the lines contained in the process card to generate $t\bar{t}$ with 0 and 1 additional jets. In this example, the proton is defined as a multi-particle label containing all quarks (except the top) and the gluon. Afterward, positively and negatively charged leptons are grouped under multi-particle labels ``l+'' and ``l-''. Similar labels are declared for neutrinos and anti-neutrinos. After the declaration of labels, the process for the production is declared, in this case \ttbar production with 0 and 1 additional jet.
   \begin{figure}[!Hhtbp]
     \begin{center}
       \begin{minipage}[c]{0.45\textwidth}
@@ -129,7 +129,7 @@ output -f
       \end{center}
     \end{figure}
     
-  \item Parameters card: This card is used to set the parameters of the model invoked for the production. Following the example of top pair production, one might be interested to produce different samples varying the top mass. In figure~\ref{fig:ParamCard} can be seen an extract of the card that controls the masses of particles in the model. The first column refers to the PDG ID of the particles, 6 for the top quark, and the second column is the value of the mass. In this case, the top mass has been set to 172.5 GeV/$c^{2}$.
+  \item Parameters card: This card is used to set the parameters of the model invoked for the production. Following the example of top pair production, it might be interesting to produce different samples varying the top mass. In figure~\ref{fig:ParamCard} an extract of the card that controls the masses of particles in the model is shown. The first column refers to the PDG ID of the particles, 6 for the top quark, and the second column is the value of the mass. In this case, the top mass has been set to 172.5 \GeVcc.
     \begin{figure}[!Hhtbp]
       \begin{center}
         \begin{minipage}[c]{0.45\textwidth}
@@ -206,9 +206,9 @@ Block MASS
 
 \subsubsection{MadGraph release validation}
 
-MadGraph is a very dynamic tool, where the input from the users is being taken into account permanently: users give reports of possible bugs or recommendations in the way tool works. New releases of MadGraph are constantly delivered to solve found issues or to improve weaknesses. For CMS production, not every new release is automatically incorporated. In order to begin using a new release a validation procedure is done, what is time and sources demanding. Basic processes of the SM are taken using the last release used by CMS and then compared to the new release. Such comparison is performed to control that predictions from both releases are identical, for processes where no changes have been performed between both releases. 
+MadGraph is a very dynamic tool, where the input from the users is being taken into account permanently: users give reports of possible bugs or recommendations in the way tool works. New releases of MadGraph are constantly delivered to solve found issues or to improve weaknesses. For CMS production, not every new release is automatically incorporated. In order to begin using a new release a validation procedure is done, which is time and sources demanding. Basic processes of the SM are considered using the last release used by CMS and then compared to the new release. Such comparison is performed to control that predictions from both releases are identical, for processes where no changes have been performed between both releases. 
 
-For example, one of the control processes for this validation is the SM production of a $Z$ boson that decays into neutrinos produced with extra jets. MadGraph is able to produce extra jets up to a multiplicity of 4. In figure~\ref{fig:ZRelVal1} it can be seen the comparison between samples produced with MadGraph 1.4.8 and 1.5.11. We see that the results of both releases are equivalent for the specific considered process.
+For example, one of the control processes for this validation is the SM production of a \Z~boson that decays into neutrinos produced with extra jets. MadGraph is able to produce extra jets up to a multiplicity of 4. In figure~\ref{fig:ZRelVal1} the comparison between samples produced with MadGraph 1.4.8 and 1.5.11 is displayed. The results of both releases are equivalent for the specific considered process.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -216,12 +216,12 @@ For example, one of the control processes for this validation is the SM producti
     \includegraphics[width=0.45\textwidth]{figs/ZjetsRelVal1.png}
     \includegraphics[width=0.45\textwidth]{figs/ZjetsRelVal2.png}
     \includegraphics[width=0.45\textwidth]{figs/ZjetsRelVal3.png}
-    \caption{Comparison between 1.4.8 (MGOldV) and 1.5.11 (MGLatestV) MadGraph releases for SM $Z$+jets production with $Z$ decaying into neutrinos. Number of jets [left-up], $p_{T}$ of jets [right-up], $\eta$ of jets [left-down] and $\phi$ of jets [right-down].}
+    \caption{Comparison between 1.4.8 (MGOldV) and 1.5.11 (MGLatestV) MadGraph releases for SM \Z+jets production with \Z~decaying into neutrinos. Number of jets [left-up], $p_{T}$ of jets [right-up], $\eta$ of jets [left-down] and $\phi$ of jets [right-down]. As expected, no deviation is observed.}
     \label{fig:ZRelVal1}
   \end{center}
 \end{figure}
 
-In addition, in figure~\ref{fig:ZRelVal2} it can be seen two global variables, missing energy and total hadronic transverse energy (defined in equation~\ref{eq:METHT}), for the same process where the validation was performed.
+In addition, figure~\ref{fig:ZRelVal2} shows two global variables, the missing energy and the total hadronic transverse energy (defined in equation~\ref{eq:METHT}), for the same process where the validation was performed.
 
 \begin{equation}
   \label{eq:METHT}
@@ -232,20 +232,20 @@ In addition, in figure~\ref{fig:ZRelVal2} it can be seen two global variables, m
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/ZjetsRelVal8.png}
     \includegraphics[width=0.45\textwidth]{figs/ZjetsRelVal9.png}
-    \caption{Comparison between 1.4.8 (MGOldV) and 1.5.11 (MGLatestV) MadGraph releases for SM $Z$+jets production with $Z$ decaying into neutrinos. Missing energy [left] and total hadronic transverse energy [right].}
+    \caption{Comparison between 1.4.8 (MGOldV) and 1.5.11 (MGLatestV) MadGraph releases for SM \Z+jets production with \Z~decaying into neutrinos. Missing energy [left] and total hadronic transverse energy [right]. No difference is seen between both versions.}
     \label{fig:ZRelVal2}
   \end{center}
 \end{figure}
 
-In the study performed shown in the mentioned figures, there is no difference between the two compared releases for the processes used.
+In the study shown in the mentioned figures, there is no difference between the two compared releases for the processes used.
 
 \subsubsection{Incorporating new releases improvements}
 
-New MadGraph releases are interesting not only because of bugs being fixed but also because they normally include new features and improvements. For example, latest set of releases include NLO corrections for SM processes, improvement not present before. NLO corrections are crucial to do precise measurements, that is one of the major interests in various SM sectors. Top physics has become a very important sector to perform precise measurements. Any small deviation of SM predictions related to the top quark could be related to the presence of BSM physics. To this extent, there is a growing need to have better MC simulations of top quark processes.
+New MadGraph releases are interesting not only because of bugs being fixed but also because they include new features and improvements. For example, latest set of releases include NLO corrections for SM processes, improvement not present before. NLO corrections are crucial to do precise measurements, that is one of the major interests in various SM sectors. Top physics has become a very important sector to perform precise measurements. Any small deviation of SM predictions related to the top quark could be related to the presence of BSM physics. To this extent, there is a growing need to have better MC simulations of top quark processes.
 
-From a technical point of view, a complete simulation of top decay chain was not feasible at MadGraph level. It was extremely time and CPU consuming for old MadGraph releases. Modern releases (from MadGraph 5) have improved the performance of these calculations but also have included new tools that allow to simulate at parton level the entire top decay chain with high precision and small resources. One of these tools is MadSpin~\cite{Artoisenet:2012st, Frixione:2007zp}, tool developed to preserve spin correlations between decay products. Even tho, MadGraph alone is able to simulate the top decay, it is still extremely CPU and time consuming, and then, not suitable for big central production at CMS. In the other hand, decaying the top quark with Pythia erases all spin correlations. In CMS, MadSpin has been included in the gridpack generation production mainly to generate top pair production samples. MadSpin is the modern version of the old DECAY tool, that does not preserve spin correlations.
+From a technical point of view, a complete simulation of top decay chain was not feasible at MadGraph level. It was extremely time and CPU consuming for old MadGraph releases. Modern releases (from MadGraph 5) have improved the performance of these calculations but also have included new tools that allow to simulate at parton level the entire top decay chain with high precision and small resources. One of these tools is MadSpin~\cite{Artoisenet:2012st, Frixione:2007zp}, tool developed to preserve spin correlations between decay products. However MadGraph alone is able to simulate the top decay, it is still extremely CPU and time consuming, and then, not suitable for big central production at CMS. In the other hand, decaying the top quark with Pythia erases all spin correlations. In CMS, MadSpin has been included in the gridpack generation production mainly to generate top pair production samples. MadSpin is the modern version of the old DECAY tool, that does not preserve spin correlations.
 
-But to consider using MadSpin in CMS, an improvement with respect to former samples should be shown. MadSpin is expected to have the same results as MadGraph, but with an improvement in terms of computational resources consumption. In figure~\ref{fig:MS1} it can be seen the top quark mass reconstructed from its hadronic decay ($b$, $u$ and $\bar{d}$ quarks). In it can be seen how MadSpin and MadGraph produce comparable results with a non-zero top width, while DECAY gives a zero width. The $\Delta R$ between the positively and negatively charged decay products of the $W$ bosons produced in top pair events can be seen in figure~\ref{fig:MS2}. This observable is different in case there are or not spin correlations. 
+But to consider using MadSpin in CMS, an improvement with respect to former samples should be shown. MadSpin is expected to have the same results as MadGraph, but with an improvement in terms of computational resources consumption. Figure~\ref{fig:MS1} shows the top quark mass reconstructed from its hadronic decay ($b$, $u$ and $\bar{d}$ quarks). This figure demonstrate that MadSpin and MadGraph produce comparable results with a non-zero top width, while DECAY gives a zero width. The $\Delta R$ between the positively and negatively charged decay products of the \W~bosons produced in top pair events is displayed in figure~\ref{fig:MS2}. This observable is different in case there are or not spin correlations. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -258,7 +258,7 @@ But to consider using MadSpin in CMS, an improvement with respect to former samp
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.65\textwidth]{figs/TT_MadSPin_2.png}
-    \caption{$\Delta R$ from positively and negatively charged decay products using different tools to simulate the top decay for $t\bar{t}$ events at $\sqrt{s}=8$ TeV. MadSpin and MadGraph preservation of spin correlations produce different results than DECAY tool.}
+    \caption{$\Delta R$ from positively and negatively charged decay products using different tools to simulate the top decay for $t\bar{t}$ events at $\sqrt{s}=8$ TeV. MadSpin and MadGraph produce different results than DECAY tool, as these first two preserve spin correlations.}
     \label{fig:MS2}
   \end{center}
 \end{figure}
@@ -273,7 +273,7 @@ Hadronization processes are QCD mediated. As the strong force is a non-perturbat
 \subsubsection{Interface between partonic and hadronic generation of events}
 \label{sec:Merging}
 
-Matrix element (ME) generation is responsible for simulation of hard processes. This is generating all the final quarks and gluons coming from the collision. Parton showering (PS) is responsible for the simulation of ``soft'' processes coming from strong interaction. For example, an initial or final quark can radiate a gluon that will lead to additional jets in the event. The generation of extra jets (coming from extra quarks or gluons) can suffer from an overlap between the ME and PS. In figure~\ref{fig:PSME} it can be seen a graphical description of the procedure followed by ME and PS to add extra jets to a process. 
+Matrix element (ME) generation is responsible for simulation of hard processes. This is generating all the final quarks and gluons coming from the collision. Parton showering (PS) is responsible for the simulation of ``soft'' processes coming from strong interaction. For example, an initial or final quark can radiate a gluon that will lead to additional jets in the event. The generation of extra jets (coming from extra quarks or gluons) can suffer from an overlap between the ME and PS. In figure~\ref{fig:PSME} a graphical description of the procedure followed by ME and PS to add extra jets to a process is shown. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -287,9 +287,9 @@ This overlap can lead to double counting events, which has as consequence an ove
 
 In general, the merging procedure follows a set of common steps:
 \begin{itemize}
-\item A jet algorithm is defined and all relevant cross sections are calculated accordingly for the process under consideration. The calculation is performed for each final jet multiplicity. For example, when generating top pair production up to 4 additional jets, the cross section is calculated for $t\bar{t}$ with 0, 1, 2, 3, and 4 jets. 
+\item A jet algorithm is defined and all relevant cross sections are calculated accordingly to the process under consideration. The calculation is performed for each final jet multiplicity. For example, when generating top pair production up to 4 additional jets, the cross section is calculated for $t\bar{t}$ with 0, 1, 2, 3, and 4 jets. 
 \item ME samples are produced with a probability corresponding to their cross section.
-\item Events or partons are rejected based on specific procedure requirement.
+\item Events or partons are rejected based on specific procedure requirement. For MLM formalism, events are rejected in not all partons are matched to jets. MLM procedure will be described in details. 
 \item Parton shower is invoked, constrained to not produce any extra jet.
 \end{itemize}
 
@@ -301,7 +301,7 @@ MadGraph utilize a MLM merging procedure with $k_{T}$ jet algorithm. The MLM pre
   \end{equation*} where \textit{min} and \textit{max} states for the minimal and maximal values required in each variable.
 \item Usage of $k_{T}$ jet algorithm to find jet configuration of the event from partons. This first reconstruction uses a cut on the minimal $k_{T}$ as defined in equation~\ref{eq:kt}. This first minimal cut is set in MadGraph by the variable xqcut (see~\ref{fig:RunCard}). $Q^{X}_{cut}$ will be used to refer to it.
 \item Run parton shower and rerun jet algorithm with a different minimal $k_{T}$. The second minimum, the $Q_{cut}$, is set in Pythia. The two minima are chosen to be $Q_{cut}>Q^{X}_{cut}$.
-\item Compare the set of jets obtained from step 2 and 3. If a jet from the parton event falls in a radius smaller than $1.5 \times R$ of a jet from the showered event, it is said to be matched to it (being $R$ the radius parameter of the jet algorithm). If a match is found for all partons the event is kept, otherwise is rejected.
+\item Compare the set of jets obtained from step 2 and 3. If a jet from the parton event falls in a radius smaller than $1.5 \times R$ of a jet from the showered event, it is said to be matched to it ($R$ being the radius parameter of the jet algorithm). If a match is found for all partons the event is kept, otherwise is rejected.
 \item All events with more jets, after showering, than partons are finally discarded.   
 \end{enumerate}
 
@@ -311,13 +311,13 @@ In general, for each process there are an optimal $Q_{cut}$ and $Q^{X}_{cut}$. B
 
 The ideal variable to check the effectiveness of the merging, is the differential jet rate (DJR) as function of the merging scale. The merging scale defines the transition between different jet multiplicities, and the DJR is examined for transition between $n$ and $n-1$ jet multiplicities. The $Q_{cut}$ controls the number of jets found in an event from parton showering. Its optimal value leads to a continuum in the transition phase between ME and PS. A non-optimal value leads to an over or underpopulation of the phase space. In both cases the sample does not represent a meaningful physics sample.
 
-For MC samples generation for run 2 of LHC, optimal values for $Q_{cut}$ and $Q^{X}_{cut}$ should be found according to the increase of the center of mass energy from 8 TeV to 13 TeV. In figure~\ref{fig:TTJetsMerging} it is shown the result of the merging study for $t\bar{t}$ production up to 3 additional jets with MadGraph and Pythia 8. For this study $Q^{X}_{cut}=20$ GeV and the optimal $Q_{cut}$ was found to be 100 GeV (left figure). The result using $Q_{cut}=60$ GeV is also shown (right figure) where a discontinuity in the DJR can be seen at the ME to PS transition point. In figure~\ref{fig:DYMerging} the same study is shown for Drell-Yan process with up to 3 additional jets at 13 TeV with MadGraph and Pythia 6. 
+For MC samples generation for run 2 of LHC, optimal values for $Q_{cut}$ and $Q^{X}_{cut}$ should be found according to the increase of the center of mass energy from 8~TeV to 13~TeV. Figure~\ref{fig:TTJetsMerging} shows the result of the merging study for $t\bar{t}$ production up to 3 additional jets with MadGraph and Pythia 8. For this study $Q^{X}_{cut}=20$ GeV and the optimal $Q_{cut}$ was found to be 100 GeV (top figure). The result using $Q_{cut}=60$ GeV is also shown (bottom figure) where a discontinuity in the DJR can be seen at the ME to PS transition point. In bottom figure, the transition from 3 to 2 jets ($DJR(3\to 2$) shows a discontinuity in the meeting point of blue-dashed and green-dashed curves, respectively 3 and 2 partons curves. In figure~\ref{fig:DYMerging} the same study is shown for Drell-Yan process with up to 3 additional jets at 13 TeV with MadGraph and Pythia 6. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.85\textwidth]{figs/DJR_q100_xq20_TTJets13TeV.png}
     \includegraphics[width=0.85\textwidth]{figs/DJR_q50_xq20_TTJets13TeV.png}
-    \caption{DJR for 13 TeV top pair production with $Q_{cut}=100$ GeV and $Q^{X}_{cut}=20$ GeV [optimal case] (top) and $Q_{cut}=60$ GeV and $Q^{X}_{cut}=20$ [non-optimal] (bottom).}
+    \caption{DJR for 13 TeV top pair production with $Q_{cut}=100$ GeV and $Q^{X}_{cut}=20$ GeV [optimal case] (top) and $Q_{cut}=60$ GeV and $Q^{X}_{cut}=20$ [non-optimal] (bottom). Bottom figure shows a discontinuity in the transition from 3 to 2 partons at the point where blue-dashed and green-dashed curves meet.}
     \label{fig:TTJetsMerging}
   \end{center}
 \end{figure}
@@ -326,7 +326,7 @@ For MC samples generation for run 2 of LHC, optimal values for $Q_{cut}$ and $Q^
   \begin{center}
     \includegraphics[width=0.85\textwidth]{figs/DJR_q25_xq10_DYJets13TeV.png}
     \includegraphics[width=0.85\textwidth]{figs/DJR_q32_xq10_DYJets13TeV.png}
-    \caption{DJR for 13 TeV Drell-Yan production with $Q_{cut}=125$ GeV and $Q^{X}_{cut}=10$ GeV [optimal case] (top) and $Q_{cut}=32$ GeV and $Q^{X}_{cut}=10$ [non-optimal] (bottom).}
+    \caption{DJR for 13 TeV Drell-Yan production with $Q_{cut}=125$ GeV and $Q^{X}_{cut}=10$ GeV [optimal case] (top) and $Q_{cut}=32$ GeV and $Q^{X}_{cut}=10$ [non-optimal] (bottom). Bottom figure shows a discontinuity in the transition from 1 to 0 partons at the point where black-dashed and red-dashed curves meet.}
     \label{fig:DYMerging}
   \end{center}
 \end{figure}
@@ -345,12 +345,12 @@ There are different tools designed to validate MC generators. The Rivet project 
 
 Rivet not only provides the analyses, it also provides the experimental data resulting from them. These data have been processed to unfold detector effects from them. This procedure tries to inverse detector simulation to obtain event information of particles before interacting with the detector. This constitutes a suitable method to compare data with MC simulations up to hadronization. ATLAS and CMS experiments contribute constantly by providing unfolded results to Rivet toolkit database.
 
-In figures~\ref{fig:WVal} and~\ref{fig:ZVal} it can be seen examples of MC validation using Rivet tool. For the first figure, a comparison between several MC simulations have been compared to ATLAS experiment data in the measurement of $W$ boson $p_{T}$. In figure~\ref{fig:ZVal} the same MC generators have been compared to $Z$ boson $p_{T}$ measurements performed by ATLAS and CMS. In the three validations MadGraph interfaced with Pythia 6 describe better real data than the other generators used. 
+Figures~\ref{fig:WVal} and~\ref{fig:ZVal} display examples of MC validation using Rivet tool. For the first figure, a comparison between several MC simulations have been compared to ATLAS experiment data in the measurement of \W~boson $p_{T}$. In figure~\ref{fig:ZVal} the same MC generators have been compared to \Z~boson $p_{T}$ measurements performed by ATLAS and CMS. In the three validations MadGraph interfaced with Pythia 6 describe better real data than the other generators used. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Wpt_rivet.png}
-    \caption{$W$ boson $p_{T}$ measured by ATLAS experiment in muon final states compared to different MC simulations. py6 stands for Pythia 6, py8 for Pythia 8, MGpy6 MadGraph interfaced with Pythia 6 and PWG for Powheg. MadGraph with Pythia 6 give the best description of experimental data.}
+    \caption{$W$ boson $p_{T}$ measured by ATLAS experiment in muon final states compared to different MC simulations. py6 stands for Pythia 6, py8 for Pythia 8, MGpy6 MadGraph interfaced with Pythia 6 and PWG for Powheg. MadGraph with Pythia 6 gives the best description of experimental data.}
     \label{fig:WVal}
   \end{center}
 \end{figure}
@@ -358,17 +358,17 @@ In figures~\ref{fig:WVal} and~\ref{fig:ZVal} it can be seen examples of MC valid
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.9\textwidth]{figs/Zpt_rivet.png}
-    \caption{$Z$ boson $p_{T}$ measured by ATLAS [left] and CMS [right] experiments in di-muon channel. py6 stands for Pythia 6, py8 for Pythia 8, MGpy6 MadGraph interfaced with Pythia 6 and PWG for Powheg. MadGraph with Pythia 6 give the best description of experimental data in both cases.}
+    \caption{\Z~boson $p_{T}$ measured by ATLAS [left] and CMS [right] experiments in di-muon channel. py6 stands for Pythia 6, py8 for Pythia 8, MGpy6 MadGraph interfaced with Pythia 6 and PWG for Powheg. MadGraph with Pythia 6 gives the best description of experimental data in both cases.}
     \label{fig:ZVal}
   \end{center}
 \end{figure}
 
-In general, present MC generators describe correctly SM physics. However, there are known observables that are not correctly described by MC simulations. The most important issue has been seen when measuring the $p_{T}$ of top quark in top-pair production. In figure~\ref{fig:TopPTReweighting} it can be seen the ratio between data and MC, produced with MadGraph and Pythia 6, for the differential cross section of top pair production. Data is coming from four different analysis performed by CMS. A clear trend can be seen, showing that top $p_{T}$ in MC tend to be higher than in data. Due to this issue, MadGraph with Pythia 6 simulations of top pair production should be corrected. These corrections are considerable for high $p_{T}$ tops. They have been studied for tops with a $p_{T}$ smaller than 400 GeV/c.
+In general, present MC generators describe correctly SM physics. However, there are known observables that are not correctly described by MC simulations. The most important issue has been seen when measuring the $p_{T}$ of top quark in top-pair production. Figure~\ref{fig:TopPTReweighting} shows the ratio between data and MC, produced with MadGraph and Pythia 6, for the differential cross section of top pair production, taken from~\cite{Chatrchyan:2012saa,Chatrchyan:2013boa,Khachatryan:2015oqa}. Data is coming from four different analysis performed by CMS. A clear trend can be seen, showing that top $p_{T}$ in MC tend to be higher than in data. Due to this issue, MadGraph with Pythia 6 simulations of top pair production should be corrected. These corrections are considerable for high $p_{T}$ tops. They have been studied for tops with a $p_{T}$ smaller than 400 GeV/c.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.6\textwidth]{figs/topPtDataOverMadgraphPythia.png}
-    \caption{Data MC ratio of normalized differential top pair production cross section as function of top $p_{T}$. From~\cite{Chatrchyan:2012saa,Chatrchyan:2013boa,Khachatryan:2015oqa}. The \pt of top quark measured in MC tend to be higher than in data for a \pt greater than 100 GeV/c.}
+    \caption{Data MC ratio of normalized differential top pair production cross section as function of top $p_{T}$. The \pt~of top quark measured in MC tend to be higher than in data for a \pt~greater than 100 GeV/c.}
     \label{fig:TopPTReweighting}
   \end{center}
 \end{figure}
