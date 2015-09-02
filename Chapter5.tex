@@ -242,7 +242,7 @@ Additionally, the 2D plots relating the number of b-tagged jets in the three wor
   \end{center}
 \end{figure}
 
-As described in section~\ref{sec:bid}, the b-tagging is performed using a procedure where several jet variables are taken into account. It strongly depends on the ability to find displaced vertices, reason why it has been restricted to jets in $|\eta|<=2.4$. As MC conditions are ideal in comparison with real data, the b-tagging performance is different in data and in MC. Thus, a correction must be applied to MC to mimic b-tagging response on data. In general, the CSV algorithm is slightly more efficient for b-tagging b-jets in MC than in data, and b-tag more light jets as b-jets in data than in MC. To match MC to data a scale factor has been derived by the collaboration. It is defined for each jet depending on its flavor (b and c or light), \pt~and $\eta$. In equation~\ref{eq:Sfs}~\cite{CMS:2013vea}, the parametrization of the scale factors for CSVM working point can be found. The functions are defined as $SF^{flavor}_{\eta}(p_{T})$.
+As described in section~\ref{sec:bid}, the b-tagging is performed using a procedure where several jet variables are taken into account. It strongly depends on the ability to find displaced vertices, reason why it has been restricted to jets in $|\eta|<=2.4$. However the MC simulations have been tuned to be as close as possible to the real detector, differences with data remain. Therefore the b-tagging performance is different in data and in MC. Thus, a correction must be applied to MC to mimic b-tagging response on data. In general, the CSV algorithm is slightly more efficient for b-tagging b-jets in MC than in data, and b-tag more light jets as b-jets in data than in MC. To match MC to data a scale factor has been derived by the collaboration. It is defined for each jet depending on its flavor (b and c or light), \pt~and $\eta$. In equation~\ref{eq:Sfs}~\cite{CMS:2013vea}, the parametrization of the scale factors for CSVM working point can be found. The functions are defined as $SF^{flavor}_{\eta}(p_{T})$.
 
 \begin{eqnarray}
   \label{eq:Sfs}
@@ -575,7 +575,7 @@ Mass (GeV/$c^{2}$) & Width (GeV/$c^{2}$) & Mass (GeV/$c^{2}$) & Width (GeV/$c^{2
 \subsubsection{Trigger}
 \label{sec:trigger_ana}
 
-The trigger efficiency has been computed using as reference the prescaled trigger requiring \HTg{400} (HLT\_HT400), where the \HT~is defined as the scalar sum of the \pt~of at least 4 calojets with \etal{3.0}~and \ptg{40}. From other analyses using $H_{T}$ triggers, as in~\cite{Khachatryan:2015axa}, the trigger plateau is reached around 100 GeV after the threshold. Assuming it is the case also for HLT\_HT400, as the selection is requiring \HTg{550}, it selects events in the efficiency plateau. As the procedure is intended to measure the turn on curve of HLT\_Dijet80\_Dijet60\_Dijet20, it is important that the used events are in the plateau of HLT\_HT400 to not introduce effects from the turn on curve from this later trigger. The trigger efficiency is normally evaluated after full selection. As there are very few events passing the HLT\_HT400 trigger after the full event selection, it was decided to monitor the trigger efficiency at an earlier stage. As at earlier stages the major event composition is coming from backgrounds, not only signal MC samples have been used but also \ttbar~sample. The differences between this last sample and data will be used to compute a systematic effect on signal that will enter the calculation of limits.
+The trigger efficiency has been computed using as reference the prescaled trigger requiring \HTg{400} (HLT\_HT400), where the \HT~is defined as the scalar sum of the \pt~of at least 4 calojets with \etal{3.0}~and \ptg{40}. From other analyses using $H_{T}$ triggers, as in~\cite{Khachatryan:2015axa}, the trigger plateau is reached around 100 GeV after the threshold. Assuming it is the case also for HLT\_HT400, as the selection is requiring \HTg{550}, it selects events in the efficiency plateau. As the procedure is intended to measure the turn on curve of HLT\_Dijet80\_Dijet60\_Dijet20, it is important that the used events are in the plateau of HLT\_HT400 to not introduce effects from the turn on curve from this later trigger. The trigger efficiency is normally evaluated after full selection. The trigger efficiency has been monitored at an earlier stage and after full selection. At the earlier stage of the selection used, the major contribution is coming from backgrounds, thus not only signal MC samples have been used but also \ttbar~MC sample. The differences between this last sample and data were used to compute a systematic effect on signal that entered the calculation of limits.
 
 The \pt~of the 6th leading jet has been used to parametrize the trigger efficiency. This efficiency is defined as the ratio between the number of events passing both triggers (HLT\_HT400 and HLT\_Dijet80\_Dijet60\_Dijet20) and the number of events passing only HLT\_HT400. HLT\_HT400 is used as unbiased sample with respect to HLT\_Dijet80\_Dijet60\_Dijet20, this is as a looser and uncorrelated selection. In figure~\ref{fig:TrigEff} the trigger efficiency is presented as a function of the 6th leading jet \pt, and after the $\chi^{2}$ cut for all signal MC samples. 
 
@@ -588,13 +588,13 @@ The \pt~of the 6th leading jet has been used to parametrize the trigger efficien
   \end{center}
 \end{figure}
 
-The same efficiencies were also computed after selecting on the Higgs mass candidate. They can be found in figure~\ref{fig:TrigEffPostMH}. From them, a systematic underestimation of the MC signal samples by the trigger can be seen. However, \ttbar~has a slightly higher efficiency than data. The ratio between \ttbar~and data is taken to correct signal MC samples as function of 6th leading jet \pt. The entire procedure of the utilization of this corrections to derive a systematic uncertainty on signal yields is described in section~\ref{sec:sys}. %This means that MC simulation of HLT applied to MC signal samples is cutting harder than in data. The observed differences vary between 10\% for low \pt~and 5-6\% for high \pt.
+The same efficiencies were also computed after full selection. They can be found in figure~\ref{fig:TrigEffPostMH}. From them, an underestimation of the MC signal samples by the trigger can be seen for a \pt~of the 6th jet between 30-50 GeV/c and 70-90 GeV/c. However, \ttbar~has a slightly higher efficiency than data. The ratio between \ttbar~and data is taken to correct signal MC samples as function of 6th leading jet \pt. The entire procedure of the utilization of this corrections to derive a possible systematic uncertainty on signal yields is described in section~\ref{sec:sys}. %This means that MC simulation of HLT applied to MC signal samples is cutting harder than in data. The observed differences vary between 10\% for low \pt~and 5-6\% for high \pt.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_hundreds_HM.png}
-    \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_fifties_HM.png}
-    \caption{Efficiency in data and the MC signal samples for events passing trigger bit HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after standard selection up to the Higgs-candidate mass selection. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$. The dispersion observed is about 6\% between data and signal MC samples, while only about 3\%  for \ttbar. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$. Efficiencies for signal MC samples with \Tp~masses equal to 600, 700, 800, 900 and 1000 \GeVcc~are shown with \ttbar~and data [left]. Efficiencies for signal MC samples with \Tp~masses equal to 650, 750, 850 and 950 \GeVcc~are shown with \ttbar~and data [right].}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_hundreds_FullSel.png}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_fifties_FullSel.png}
+    \caption{Efficiency in data and the MC signal samples for events passing trigger bit HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after full standard selection. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$. The dispersion observed is about 6\% between data and signal MC samples, while only about 3\%  for \ttbar. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$. Efficiencies for signal MC samples with \Tp~masses equal to 600, 700, 800, 900 and 1000 \GeVcc~are shown with \ttbar~and data [left]. Efficiencies for signal MC samples with \Tp~masses equal to 650, 750, 850 and 950 \GeVcc~are shown with \ttbar~and data [right].}
     \label{fig:TrigEffPostMH}
   \end{center}
 \end{figure}
@@ -613,7 +613,7 @@ In figure~\ref{fig:MPEff} the total efficiency of the selection for each mass po
   \end{center}
 \end{figure}
 
-Additionally in table~\ref{tab:cutflow} the efficiencies of each step of the selection for M=700 \GeVcc~signal sample, multijet background, top background (\ttbar~+ single top), and diboson background MC samples are quoted. These efficiencies have been calculated with respect to the number of events passing the trigger.
+Additionally in table~\ref{tab:cutflow} the efficiencies of each step of the selection for M=700 \GeVcc~signal sample, multijet background, top background (\ttbar~+ single top), and diboson background MC samples are quoted. These efficiencies have been calculated with respect to the number of events passing the trigger. Table~\ref{tab:cutflow2} presents the cut flow of the entire selection showing the number of events expected in MC samples and observed in data. Finally, for completeness, tables~\ref{tab:cutflowQCD},~\ref{tab:cutflowTop} and ~\ref{tab:cutflowDibosonSignal} show the number of unweighted events for all the MC samples used in the analysis at each step of the selection. It also presents the weights used for each MC sample. The table for QCD MC samples, table~\ref{tab:cutflowQCD}, shows how quickly the statistics for multijet background diminish and eventually go to zero, which leads to underestimation of the error associated to this samples. 
 
 \begin{table*}[htbH]
 \begin{center}
@@ -638,6 +638,112 @@ Selection & Cut & Signal (M=700 GeV/$c^{2}$) & Multijet & $t\bar{t}$ + single to
 \end{tabular}
 }
 \caption{Cumulative efficiencies, in \%, for signal and main background as a function of cuts applied. After $ \Delta R (T' j^{6})>4.8$ cut there are no longer events in the diboson MC samples.\label{tab:cutflow}}
+\end{center}
+\end{table*}
+
+\begin{table*}[htbH]
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Cut & Signal (M=700 GeV/$c^{2}$) & Multijet & $t\bar{t}$ + single top & Diboson  & Data \\
+\hline
+HLT & 560.31$\pm$3.13 & 74803879.03$\pm$190145.80 & 601988.30$\pm$512.93 & 11718.97$\pm$47.35 & 451250111$\pm$21242.65 \\
+Trigger cut and $p_{T}$,$\eta$ selection & 295.15$\pm$2.27 & 13863750.21$\pm$73389.97 & 219998.68$\pm$275.69 & 1891.41$\pm$19.02 & 12865712$\pm$3586.88 \\
+$j_{1}>150$~GeV/c & 268.60$\pm$2.17 & 10501566.69$\pm$58350.08 & 148893.06$\pm$232.38 & 1357.09$\pm$16.11 & 9303286$\pm$3050.13 \\
+$H_{T}>550$~GeV/c & 267.01$\pm$2.16 & 10123680.68$\pm$56326.87 & 145792.65$\pm$229.61 & 1307.81$\pm$15.82 & 9001871$\pm$3000.31 \\
+$n_{b}^{CSVM}>=3$ & 81.65$\pm$1.19 & 48381.01$\pm$3554.13 & 11920.15$\pm$61.87 & 17.09$\pm$1.74 & 73879$\pm$271.81 \\
+$\chi^{2}<8$ & 39.49$\pm$0.83 & 4284.06$\pm$947.99 & 3858.73$\pm$29.84 & 1.65$\pm$0.51 & 10581$\pm$102.86 \\
+$\Delta R(bb) <1.2$ & 36.00$\pm$0.79 & 1343.66$\pm$249.14 & 1552.02$\pm$18.01 & 0.78$\pm$0.29 & 3874$\pm$62.24 \\
+$105~\text{GeV}/c^{2} <M(H_{cand})<145~\text{GeV}/c^{2}$ & 32.05$\pm$0.75 & 1023.03$\pm$220.82 & 1138.84$\pm$15.37 & 0.40$\pm$0.21 & 2820$\pm$53.10 \\
+$\frac{M(top^{2nd}_{cand})+M(W^{2nd}_{cand})}{M(H_{cand})}>6.8$ & 20.19$\pm$0.59 & 400.00$\pm$102.61 & 359.50$\pm$8.78 & 0.19$\pm$0.14 & 1242$\pm$35.24 \\
+$ \Delta R (T' j^{6})>4.8$ & 11.27$\pm$0.44 & 17.90$\pm$7.34 & 36.00$\pm$2.16 & 0$\pm$0 & 112$\pm$10.58 \\
+$\frac{p_{T}(H_{cand})+p_{T}(top_{cand})}{H_{T}} > 0.67 $ & 10.01$\pm$0.42 & 3.16$\pm$3.07 & 20.95$\pm$1.28 & 0$\pm$0 & --- \\
+\hline
+\end{tabular}
+}
+\caption{Cut flow of expected events from MC samples and observed events in data as a function of cuts applied. Errors are displayed in \% with respect to the central value. After $ \Delta R (T' j^{6})>4.8$ cut there are no longer events in the diboson MC samples.\label{tab:cutflow2}}
+\end{center}
+\end{table*}
+
+\begin{table*}[htbH]
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+Cut & QCD\_HT-500To1000 & QCD\_HT-1000ToInf & QCD\_Pt-120to170 & QCD\_Pt-170to300 & QCD\_Pt-300to470 & QCD\_Pt-470to600 & QCD\_Pt-600to800 & QCD\_Pt-800to1000 \\
+\hline
+HLT & $4341732\pm2083.68$ & $3626698\pm1904.39$ & $84995\pm291.54$ & $273227\pm522.71$ & $604608\pm777.57$ & $515380\pm717.90$ & $547153\pm739.70$ & $544121\pm737.65$ \\
+Trigger cut and $p_{T}$,$\eta$ selection & 1239652$\pm$1113.40 & 1590777$\pm$1261.26 & 10695$\pm$103.42 & 66092$\pm$257.08 & 214821$\pm$463.49 & 206651$\pm$454.59 & 226714$\pm$476.14 & 227544$\pm$477.02 \\
+$j_{1}>150$~GeV/c & 1111168$\pm$1054.12 & 1590771$\pm$1261.26 & 5873$\pm$76.64 & 57578$\pm$239.95 & 213922$\pm$462.52 & 206606$\pm$454.54 & 226707$\pm$476.14 & 227542$\pm$477.01 \\
+$H_{T}>550$~GeV/c & 1097972$\pm$1047.84 & 1590771$\pm$1261.26 & 5329$\pm$73.00 & 56575$\pm$237.85 & 213880$\pm$462.47 & 206605$\pm$454.54 & 226707$\pm$476.14 & 227542$\pm$477.01 \\
+$n_{b}^{CSVM}>=3$ & 5522$\pm$74.31 & 9114$\pm$95.47 & 18$\pm$4.24 & 303$\pm$17.41 & 1325$\pm$36.40 & 1196$\pm$34.58 & 1314$\pm$36.25 & 1283$\pm$35.82 \\
+$\chi^{2}<8$ & 526$\pm$22.93 & 548$\pm$23.41 & 1$\pm$1 & 32$\pm$5.66 & 102$\pm$10.10 & 70$\pm$8.37 & 57$\pm$7.55 & 40$\pm$6.32 \\
+$\Delta R(bb) <1.2$ & 195$\pm$13.96 & 286$\pm$16.91 & 0$\pm$0 & 10$\pm$3.16 & 51$\pm$7.14 & 42$\pm$6.48 & 23$\pm$4.80 & 20$\pm$4.47 \\
+$105~\text{GeV}/c^{2} <M(H_{cand})<145~\text{GeV}/c^{2}$ & 137$\pm$11.70 & 222$\pm$14.90 & 0$\pm$0 & 8$\pm$2.83 & 42$\pm$6.48 & 34$\pm$5.83 & 16$\pm$4 & 14$\pm$3.74 \\
+$\frac{M(top^{2nd}_{cand})+M(W^{2nd}_{cand})}{M(H_{cand})}>6.8$ & 77$\pm$8.77 & 201$\pm$14.18 & 0$\pm$0 & 1$\pm$1 & 28$\pm$5.29 & 31$\pm$5.57 & 14$\pm$3.74 & 13$\pm$3.61 \\
+$ \Delta R (T' j^{6})>4.8$ & 6$\pm$2.45 & 5$\pm$2.24 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 \\
+$\frac{p_{T}(H_{cand})+p_{T}(top_{cand})}{H_{T}} > 0.67 $ & 1$\pm$1 & 2$\pm$1.41 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 \\
+\hline
+Weight & 2.86 & 0.15 & 518.02 & 58.06 & 2.92 & 0.28 & 0.07 & 0.01 \\
+\hline
+\end{tabular}
+}
+\caption{Cut flow of unweighted events from QCD MC samples as a function of cuts applied. Errors are calculated as $\sqrt{N}$ of the central value. In the last line are presented the weights corresponding to each sample from normalization to luminosity.\label{tab:cutflowQCD}}
+\end{center}
+\end{table*}
+
+\begin{table*}[htbH]
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+Cut & TTJets & T\_tW-channel & T\_t-channel & T\_s-channel & Tbar\_tW-channel & Tbar\_t-channel & Tbar\_s-channel \\
+\hline
+HLT & 6970016$\pm$2640.08 & 33485$\pm$182.99 & 49803$\pm$223.17 & 5304$\pm$72.83 & 33001$\pm$181.66 & 23459$\pm$153.16 & 2416$\pm$49.15 \\
+Trigger cut and $p_{T}$,$\eta$ selection & 2633335$\pm$1622.76 & 9080$\pm$95.29 & 9863$\pm$99.31 & 1172$\pm$34.23 & 8827$\pm$93.95 & 4477$\pm$66.91 & 494$\pm$22.23 \\
+$j_{1}>150$~GeV/c & 1772135$\pm$1331.22 & 6696$\pm$81.83 & 7384$\pm$85.93 & 954$\pm$30.89 & 6467$\pm$80.42 & 3257$\pm$57.07 & 390$\pm$19.75 \\
+$H_{T}>550$~GeV/c & 1735831$\pm$1317.51 & 6549$\pm$80.93 & 7155$\pm$84.59 & 931$\pm$30.51 & 6321$\pm$79.50 & 3140$\pm$56.04 & 377$\pm$19.42 \\
+$n_{b}^{CSVM}>=3$ & 143984$\pm$379.45 & 403$\pm$20.07 & 439$\pm$20.95 & 67$\pm$8.19 & 413$\pm$20.32 & 216$\pm$14.70 & 27$\pm$5.20 \\
+$\chi^{2}<8$ & 47840$\pm$218.72 & 66$\pm$8.12 & 47$\pm$6.86 & 10$\pm$3.16 & 81$\pm$9 & 23$\pm$4.80 & 8$\pm$2.83 \\
+$\Delta R(bb) <1.2$ & 19350$\pm$139.10 & 21$\pm$4.58 & 18$\pm$4.24 & 4$\pm$2 & 21$\pm$4.58 & 8$\pm$2.83 & 2$\pm$1.41 \\
+$105~\text{GeV}/c^{2} <M(H_{cand})<145~\text{GeV}/c^{2}$ & 14201$\pm$119.17 & 14$\pm$3.74 & 14$\pm$3.74 & 3$\pm$1.73 & 16$\pm$4 & 6$\pm$2.45 & 1$\pm$1 \\
+$\frac{M(top^{2nd}_{cand})+M(W^{2nd}_{cand})}{M(H_{cand})}>6.8$ & 4467$\pm$66.84 & 3$\pm$1.73 & 9$\pm$3 & 1$\pm$1 & 5$\pm$2.24 & 4$\pm$2 & 0$\pm$0 \\
+$ \Delta R (T' j^{6})>4.8$ & 446$\pm$21.12 & 0$\pm$0 & 3$\pm$1.73 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 \\
+$\frac{p_{T}(H_{cand})+p_{T}(top_{cand})}{H_{T}} > 0.67 $ & 266$\pm$16.31 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 & 0$\pm$0 \\
+\hline
+Weight & 0.08 & 0.44 & 0.29 & 0.29 & 0.44 & 0.30 & 0.25 \\
+\hline
+\end{tabular}
+}
+\caption{Cut flow of unweighted events from \ttbar~and single top MC samples as a function of cuts applied. Errors are calculated as $\sqrt{N}$ of the central value. In the last line are presented the weights corresponding to each sample from normalization to luminosity.\label{tab:cutflowTop}}
+\end{center}
+\end{table*}
+
+\begin{table*}[htbH]
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Cut & WZ & ZZ & WW & Signal (M=700 \GeVcc) \\
+\hline
+HLT & 66144$\pm$257.18 & 65230$\pm$255.40 & 51613$\pm$227.18 & 32081$\pm$179.11 \\
+Trigger cut and $p_{T}$,$\eta$ selection & 10744$\pm$103.65 & 9934$\pm$99.67 & 8353$\pm$91.39 & 16899$\pm$130.00 \\
+$j_{1}>150$~GeV/c & 7679$\pm$87.63 & 7197$\pm$84.84 & 6027$\pm$77.63 & 15379$\pm$124.01 \\
+$H_{T}>550$~GeV/c & 7404$\pm$86.05 & 6965$\pm$83.46 & 5795$\pm$76.12 & 15288$\pm$123.46 \\
+$n_{b}^{CSVM}>=3$ &  97$\pm$9.85 & 253$\pm$15.91 & 38$\pm$6.16 & 4675$\pm$68.37 \\
+$\chi^{2}<8$ &  9$\pm$3 & 34$\pm$5.83 & 2$\pm$1.41 & 2261$\pm$47.55 \\
+$\Delta R(bb) <1.2$ &  4$\pm$2 & 22$\pm$4.69 & 0$\pm$0 & 2061$\pm$45.40 \\
+$105~\text{GeV}/c^{2} <M(H_{cand})<145~\text{GeV}/c^{2}$ &  2$\pm$1.41 & 12$\pm$3.46 & 0$\pm$0 & 1835$\pm$42.84 \\
+$\frac{M(top^{2nd}_{cand})+M(W^{2nd}_{cand})}{M(H_{cand})}>6.8$ &  1$\pm$1 & 5$\pm$2.24 & 0$\pm$0 & 1156$\pm$34.00 \\
+$ \Delta R (T' j^{6})>4.8$ &  0$\pm$0 & 0$\pm$0 & 0$\pm$0 & 645$\pm$25.40 \\
+$\frac{p_{T}(H_{cand})+p_{T}(top_{cand})}{H_{T}} > 0.67 $ &  0$\pm$0 & 0$\pm$0 & 0$\pm$0 & 573$\pm$23.94 \\
+\hline
+Weight & 0.11 & 0.02 & 0.07 & 0.02 \\
+\hline
+\end{tabular}
+}
+\caption{Cut flow of unweighted events from diboson and signal (M=700 \GeVcc) MC samples as a function of cuts applied. Errors are calculated as $\sqrt{N}$ of the central value. In the last line are presented the weights corresponding to each sample from normalization to luminosity.\label{tab:cutflowDibosonSignal}}
 \end{center}
 \end{table*}
 %\begin{TOINCLUDE}Table with efficiencies of full selection. Plot with selection efficiency for all mass points.\end{TOINCLUDE}
@@ -856,12 +962,12 @@ For this validation procedure the Higgs candidate mass cut has been omitted from
 \hline 
  Cut & $N^{CS}_{in}$ & $N^{CS}_{out}$ & $N^{SS}_{in}$ & $N^{SS}_{out}$ & $\chi^{2}$/ndf \\ 
 \hline
-$\chi^{2}<8$ & $163589\pm404.46$ & $49112\pm221.61$ & $8071\pm89.94$ & $2510\pm50.10$ &  0.99 \\
+$\chi^{2}<8$ & $163589\pm404.46$ & $49112\pm221.61$ & $8071\pm89.84$ & $2510\pm50.10$ &  0.99 \\
 $\Delta R(bb) <1.2$ & $35266\pm187.79$ & $13247\pm115.10$ & $2820\pm53.10$ & $1054\pm32.47$ & 2.20 \\
 %$1.6 < \Delta R (W_{cand} H_{cand}) < 4.0$ & $28166\pm167.83$ & $10563\pm102.78$ & $2456\pm49.56$ & $931\pm30.51$ & $2.67\pm0.04$ & $2.64\pm0.14$ &  $2482.49\pm120.31$\\
 $\frac{M(top^{2nd}_{cand})+M(W^{2nd}_{cand})}{M(H_{cand})}>6.8$ & $19269\pm138.81$ & $8001\pm89.45$ & $1242\pm35.24$ & $528\pm22.98$ & 1.36 \\
 $ \Delta R (T' j^{6})>4.8$ & $1566\pm39.75$ & $636\pm25.22$ & $112\pm10.58$ & $40\pm6.32$ & 0.74 \\
-$\frac{p_{T}(H_{cand})+p_{T}(top_{cand})}{H_{T}} > 0.67 $ & $519\pm22.78$ & $196\pm14.00$ & --- & $40\pm6.32$ & --- \\
+$\frac{p_{T}(H_{cand})+p_{T}(top_{cand})}{H_{T}} > 0.67 $ & $519\pm22.78$ & $196\pm14.00$ & --- & $20\pm4.47$ & --- \\
 \hline
  Cut & \multicolumn{2}{c|}{$R^{CS}$} & \multicolumn{2}{c|}{$R^{SS}$} & $N^{SS_{BKG}}_{in}$ \\
 \hline
@@ -876,6 +982,36 @@ $\frac{p_{T}(H_{cand})+p_{T}(top_{cand})}{H_{T}} > 0.67 $ & \multicolumn{2}{c|}{
 \caption{Results of validation procedure of estimation of normalization. The validation is started after $\chi^{2}$ cut. All other cuts are applied progressively. The last line correspond to full selection, reason why $R^{SS}$ and $N^{SS}_{in}$ are blinded for the validation procedure. In addition, the Higgs candidate mass distribution in the control sample is compared to its distribution in the signal sample via a $\chi^{2}$ test, the results of this test are shown in the table, showing the shape agreement between both samples.\label{tab:NormVal}}
 \end{center}
 \end{table*}
+
+As an additional check on the validity of the method, table~\ref{tab:NormValSignal} shows the number of MC signal events in the control and signal samples at each stage of the selection. It is important to control that the signal contamination is not high. In this case, the contamination, for the normalization estimation, is negligible. Finally, figure~\ref{fig:HiggsMassCSSS} shows the comparison of the Higgs candidate mass from the data in the control and signal sample after the $\chi^{2}<8$ and $ \Delta R (T' j^{6})>4.8$ criteria, separately. In both figures, the shape of the distribution is in close agreement in both samples as it was checked by the $\chi^{2}$-test (in table~\ref{tab:NormVal}). 
+
+\begin{table*}[htbH]
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|}
+\hline 
+ Cut & Signal (M=700\GeVcc) control sample & Signal (M=700\GeVcc) signal sample \\ 
+\hline
+$\chi^{2}<8$ & 19.96$\pm$0.59 & 25.38$\pm$0.67  \\
+$\Delta R(bb) <1.2$ & 18.36$\pm$0.57 & 23.88$\pm$0.65 \\
+$\frac{M(top^{2nd}_{cand})+M(W^{2nd}_{cand})}{M(H_{cand})}>6.8$ & 12.07$\pm$0.46 & 15.49$\pm$0.52 \\
+$ \Delta R (T' j^{6})>4.8$ & 7.32$\pm$0.36 & 9.12$\pm$0.40 \\
+$\frac{p_{T}(H_{cand})+p_{T}(top_{cand})}{H_{T}} > 0.67 $ & 6.46$\pm$0.34 & 8.24$\pm$0.38 \\
+\hline
+\end{tabular}
+}
+\caption{Signal MC events for 700 \GeVcc~mass point in the control and signal sample at each stage of the selection used for the estimation of background normalization method. The maximal contamination in the signal sample, after $ \Delta R (T' j^{6})>4.8$ criterion, is around 6\%. The maximal contamination in the control sample is less than 1\%.\label{tab:NormValSignal}}
+\end{center}
+\end{table*}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/HM_ControlSample_SignalSample_chi2Cut.png}
+    \includegraphics[width=0.45\textwidth]{figs/Ana/HM_ControlSample_SignalSample_DRTpJ6Cut.png}
+    \caption{Higgs candidate mass distribution for the data in the signal and control sample after $\chi^{2}<8$ cut [left] and after $ \Delta R (T' j^{6})>4.8$ criterion [right].}
+    \label{fig:HiggsMassCSSS}
+  \end{center}
+\end{figure}
 
 \section{Systematics}
 \label{sec:sys}
@@ -1070,7 +1206,7 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 3.08 & 3.76 \\
   \end{center}
 \end{figure}
 
-Finally, the observed differences between \ttbar~MC samples and the data in the trigger efficiency in section~\ref{sec:trigger_ana} are considered as a source of systematic uncertainty. The ratio between \ttbar~and data has been taken to correct the signal MC samples as function of the 6th jet \pt. After applying this corrections, the yields have been recomputed and compared to the yields before the corrections. The difference between both is quoted in table~\ref{tab:Trisys} as the systematic uncertainty associated to the trigger. As for pileup uncertainties, the trigger systematics are fully contained in the statistical error and then the statistical error will be used as the trigger systematic for limits calculation.
+Finally, the observed differences between \ttbar~MC samples and the data in the trigger efficiency in section~\ref{sec:trigger_ana} are considered as a possible source of systematic uncertainty. The ratio between \ttbar~and data has been taken to correct the signal MC samples as function of the 6th jet \pt. After applying this corrections, the yields have been recomputed and compared to the yields before the corrections. The difference between both is quoted in table~\ref{tab:Trisys} as the systematic uncertainty associated to the trigger. As for pileup uncertainties, the trigger systematics are fully contained in the statistical error and then the statistical error will be used as the trigger systematic for limits calculation.
 
 \begin{table*}[htbH]
 \begin{center}
@@ -1080,15 +1216,15 @@ Sample Name & Trigger \\
 \hline
  & up/down [\%] \\
 \hline
-$Tj\rightarrow tHj$ 600 GeV/$c^{2}$ & 3.84 \\
-$Tj\rightarrow tHj$ 650 GeV/$c^{2}$ & 3.25 \\
-$Tj\rightarrow tHj$ 700 GeV/$c^{2}$ & 3.14 \\
-$Tj\rightarrow tHj$ 750 GeV/$c^{2}$ & 3.18 \\
-$Tj\rightarrow tHj$ 800 GeV/$c^{2}$ & 3.05 \\
-$Tj\rightarrow tHj$ 850 GeV/$c^{2}$ & 3.03 \\
-$Tj\rightarrow tHj$ 900 GeV/$c^{2}$ & 3.10 \\
-$Tj\rightarrow tHj$ 950 GeV/$c^{2}$ & 3.10 \\
-$Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 3.03 \\
+$Tj\rightarrow tHj$ 600 GeV/$c^{2}$ & 2.51 \\
+$Tj\rightarrow tHj$ 650 GeV/$c^{2}$ & 3.31 \\
+$Tj\rightarrow tHj$ 700 GeV/$c^{2}$ & 4.02 \\
+$Tj\rightarrow tHj$ 750 GeV/$c^{2}$ & 3.72 \\
+$Tj\rightarrow tHj$ 800 GeV/$c^{2}$ & 3.79 \\
+$Tj\rightarrow tHj$ 850 GeV/$c^{2}$ & 3.46 \\
+$Tj\rightarrow tHj$ 900 GeV/$c^{2}$ & 3.13 \\
+$Tj\rightarrow tHj$ 950 GeV/$c^{2}$ & 3.40 \\
+$Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 3.60 \\
 \hline
 \end{tabular}
 \caption{Trigger uncertainties for signal samples\label{tab:Trisys}}
@@ -1169,22 +1305,22 @@ Using the same width and mean value parametrization as described in the previous
 \hline 
 \Tp~Mass GeV/$c^{2}$ & Signal & Background & Observed Data\\
 \hline 
-600 & 4.39 & 11.31 & 15 \\
-650 & 6.64 & 11.83 & 15 \\
-700 & 7.84 & 13.06 & 22 \\
-750 & 7.24 & 12.24 & 17 \\
-800 & 6.06 & 8.54 & 6 \\
-850 & 5.65 & 9.36 & 4 \\
-900 & 4.78 & 7.30 & 8 \\
-950 & 3.80 & 8.43 & 9 \\
-1000 & 2.28 & 5.24 & 7 \\
+600 & 4.39$\pm$0.35 & 11.31 & 15 \\
+650 & 6.64$\pm$0.38 & 11.83 & 15 \\
+700 & 7.84$\pm$0.37 & 13.06 & 22 \\
+750 & 7.24$\pm$0.32 & 12.24 & 17 \\
+800 & 6.06$\pm$0.28 & 8.54 & 6 \\
+850 & 5.65$\pm$0.24 & 9.36 & 4 \\
+900 & 4.78$\pm$0.21 & 7.30 & 8 \\
+950 & 3.80$\pm$0.17 & 8.43 & 9 \\
+1000 & 2.28$\pm$0.12 & 5.24 & 7 \\
 \hline
 \end{tabular}
-\caption{Expected number of events for the signal, estimated background and observed data after full selection \label{tab:ExpEvts}}
+\caption{Expected number of events for the signal, estimated background and observed data after full selection. The errors for signal yields represent only the statistical uncertainty. \label{tab:ExpEvts}}
 \end{center}
 \end{table*}
 
-As there is no evidence of an excess, the yields and systematics given in last section were used to compute expected and observed exclusion limits. The limits were calculated using Theta package~\cite{theta_web} using asymptotic $CL_{S}$ limits. Figure~\ref{fig:FinalPlot} shows two signal MC mass points compared to observed data with subtraction of the estimated background.
+As there is no evidence of an excess, the yields and systematics given in last section were used to compute expected and observed exclusion limits. The limits were calculated using Theta package~\cite{theta_web} using asymptotic $CL_{S}$ limits. Figure~\ref{fig:FinalPlot} shows two signal MC mass points compared to observed data with subtraction of the estimated background. Additionally, figure~\ref{fig:FinalPlot2} presents separately the $M(5j)$ distribution after full selection observed in data, the estimated background, and the same signal MC samples as in previous figure.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -1194,11 +1330,19 @@ As there is no evidence of an excess, the yields and systematics given in last s
   \end{center}
 \end{figure}
 
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{figs/Ana/Final_Plot_NoSubs.png}
+    \caption{$M(5j)$ after full selection for data and the estimated background and signal mass points at 650 \GeVcc~and 850 \GeVcc}
+    \label{fig:FinalPlot2}
+  \end{center}
+\end{figure}
+
 Finally, in figure~\ref{fig:Lim} the expected and observed exclusion limits in terms of the cross section as function of $M(5j)$ are shown. The theoretical prediction is represented by the red line. The theoretical cross sections have been calculated with MadGraph 5~\cite{Alwall:2014hca, Alwall:2011uj} utilizing the FeynRules~\cite{Alloul:2013bka} model implementation developed in~\cite{Buchkremer:2013bha, Cacciapaglia:2011fx}. Comparing this theoretical prediction to expected limits, there is no expectation of excluding any masses in the studied range. However, from the observed limits masses between 813 and 862 \GeVcc~have been excluded to 95\% CL (confidence level) .
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{figs/Ana/Limits_from_CLs_V8_LinearFitWidths_Revision.png}
+    \includegraphics[width=0.9\textwidth]{figs/Ana/Limits_from_CLs_V8_LinearFitWidths_1sigma_Revision.png}
     \caption{Expected and observed limits in terms of \Tp~production cross section as function of $M(5j)$. The red line represents the theoretical prediction of the cross section~\cite{Buchkremer:2013bha, Cacciapaglia:2011fx}. Masses between 813 and 862 \GeVcc~are excluded at 95\% CL.}
     \label{fig:Lim}
   \end{center}
