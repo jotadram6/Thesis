@@ -1,5 +1,5 @@
 %\documentclass[11pt,a4paper]{book}
-\documentclass[twoside,titlepage,paper=a4,fontsize=12pt,numbers=noenddot,cleardoublepage=empty,BCOR=5mm,openright]{scrreprt}
+\documentclass[twoside,titlepage,paper=a4,fontsize=12pt,numbers=noenddot,cleardoublepage=empty,BCOR=5mm,openright,bibliography=totoc]{scrreprt}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[francais,english]{babel}
@@ -56,8 +56,15 @@
 \newcommand{\Tp}{$T'$}
 
 
-%\bibliographystyle{alpha}
-\bibliographystyle{utphys}
+\bibliographystyle{unsrt}
+%\bibliographystyle{utphys}
+%\usepackage[hyperref=true,
+%            style=numeric-comp,
+%            citereset=chapter,
+%            maxcitenames=3,
+%            maxbibnames=100,
+%            block=none]{biblatex}
+%\addbibresource{Biblio.bib}
 
 \title{}
 \author{Jos\'{e} D. Ruiz-\'{A}lvarez}
@@ -113,7 +120,8 @@
 \include{WindowStudy}
 
 \bibliography{Biblio}
-\listoffigures
+%\printbibliography
+%\listoffigures
 %\listoftables
 
 \end{document}
