@@ -1,0 +1,297 @@
+\documentclass[usenames,dvipsnames]{beamer}
+
+% French characters
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+% French display
+\usepackage[english]{babel}
+% Math package
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+% includegraphics
+\usepackage{graphicx}
+% units
+%\usepackage{hepunits}
+% links
+\usepackage{hyperref}
+% \usepackage[bookmarksopen,bookmarksopenlevel=1]{hyperref}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usepackage{rotating}
+% Theme & Color theme
+\usepackage{default}
+\usetheme{Frankfurt}
+\usecolortheme{perso}
+% My green
+\definecolor{MyColor}{RGB}{43,153,43}
+\setbeamercolor{structure}{fg=MyColor}
+% \setbeamercolor{titlelike}{fg=MyColor}
+% \setbeamercolor{palette primary}{fg=MyColor}
+% \setbeamercolor{palette secondary}{fg=MyColor}
+% \setbeamercolor{palette tertiary}{bg=MyColor}
+% \setbeamercolor{palette quaternary}{bg=MyColor}
+% Font
+\usepackage{times}
+\usefonttheme[onlymath]{serif}
+% Suppress the navigation bar
+% \beamertemplatenavigationsymbolsempty
+\setbeamertemplate{navigation symbols}{}
+
+% Outerthemes
+% \useoutertheme[footline=empty, subsection=false]{miniframes}
+% \useoutertheme[subsection=false]{miniframes}
+% \useoutertheme[subsection=false]{smoothbars}
+% gets rid of bottom navigation bars
+\setbeamertemplate{footline}[page number]{}
+% 
+% \setbeamercolor{frametitle}{parent=palette primary}
+% \setbeamercolor{subsection in head/foot}{parent=palette secondary}
+% \setbeamercolor{section in head}{parent=palette quaternary}
+% \setbeamercolor{section in sidebar}{fg=black}
+% \setbeamercolor{section in sidebar shaded}{fg= grey}
+% Appendix page numbering
+\usepackage{appendixnumberbeamer}
+% feynmp for Feynman diagrams
+%\usepackage{feynmp}
+%\DeclareGraphicsRule{*}{mps}{*}{}
+\makeatletter
+\def\endfmffile{%
+  \fmfcmd{\p@rcent\space the end.^^J%
+          end.^^J%
+          endinput;}%
+  \if@fmfio
+    \immediate\closeout\@outfmf
+  \fi
+  \ifnum\pdfshellescape=\@ne
+    \immediate\write18{mpost \thefmffile}%
+  \fi}
+\makeatother
+\usepackage[abs]{overpic}
+\def\met{\ensuremath{\not\!\!{E_{T}}}}
+
+\newcommand{\ttbar}{$t\bar{t}$}
+\newcommand{\bbbar}{$b\bar{b}$}
+\newcommand{\GeVcc}{GeV/$\text{c}^2$}
+\newcommand{\pt}{$p_{T}$}
+\newcommand{\ptg}[1]{$p_{T}>#1$~GeV/c}
+\newcommand{\etal}[1]{$|\eta|<#1$}
+\newcommand{\etag}[1]{$|\eta|>#1$}
+\newcommand{\HT}{$H_{T}$}
+\newcommand{\MET}{$\slashed{E}_{T}$}
+\newcommand{\METg}[1]{$\slashed{E}_{T}>#1$~GeV/c}
+\newcommand{\HTg}[1]{${H_{T}>#1}$~GeV/c}
+\newcommand{\jn}[1]{$j_{#1}$}
+\newcommand{\ex}[1]{\times 10^{#1}}
+\newcommand{\Z}{$Z^{0}$}
+\newcommand{\tq}{$t$}
+\newcommand{\W}{$W^{+/-}$}
+\newcommand{\Hb}{$H^{0}$}
+\newcommand{\Tp}{$T'$}
+\newcommand{\Tj}{$T'j$}
+\newcommand{\Tjj}{$T'jj$}
+
+%% Title and such
+\title{\texorpdfstring{Search for a vector-like quark \Tp~decaying \\into top+Higgs in single production mode \\in full hadronic final state using \\CMS data collected at 8 TeV\\}}
+% \subtitle{
+% }
+\author[J.~Ruiz-\'{A}lvarez]{Jos\'{e} D. Ruiz-\'{A}lvarez}
+\institute[IPN Lyon]{
+% Institut de Physique Nucléaire de Lyon / Université Claude Bernard Lyon 1\\
+\includegraphics[height=.6cm]{../Prelude/CNRS.png}\hspace{.5cm}
+\includegraphics[height=.6cm]{udl.png}\hspace{.5cm}
+\includegraphics[height=.6cm]{../Prelude/UCBL.png}\hspace{.5cm}
+\includegraphics[height=.6cm]{EDPhast.jpg}
+\\\vspace{.5cm}
+\includegraphics[height=.7cm]{../Prelude/IPNL.png}\hspace{.5cm}
+\includegraphics[height=.7cm]{../Prelude/CMS.png}
+}
+\date{21 octobre 2015}
+
+% \mode<presentation> {
+%   \usefonttheme{serif}
+%   \useoutertheme[footline=authorinstitutetitle,subsection=false]{miniframes}
+%   \usecolortheme{crane}
+%   \useinnertheme[<shadow>]{rounded}
+% }
+
+% \setbeamercolor{boum}{bg=\color{white!40}, fg=black}
+% 
+% \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.65}}{\pgfsetfillopacity{1}}
+% 
+% \newenvironment<>{varblock}[2][\textwidth]{%
+%   \setlength{\textwidth}{#1}
+%   \begin{actionenv}#3%
+%     \def\insertblocktitle{#2}%
+%     \par%
+%     \usebeamertemplate{block begin}}
+%   {\par%
+%     \usebeamertemplate{block end}%
+%   \end{actionenv}}
+% 
+
+\usepackage{fancybox}
+\usepackage{framed,xcolor}
+\colorlet{shadecolor}{white!60}
+\usepackage{rotating}
+% \usepackage[table]{xcolor} 
+
+% \includeonly{11_StandardModel}
+% \includeonly{11_StandardModel,12_LHC_CMS}
+% \includeonly{12_LHC_CMS}
+% \includeonly{11_StandardModel,12_LHC_CMS,13_Zgamma}
+% \includeonly{13_Zgamma}
+% \includeonly{14_Hgg,15_BSM}
+% \includeonly{14_Hgg,BB_Hgg}
+% \includeonly{13_Zgamma,14_Hgg,BB_Hgg}
+% \includeonly{15_BSM,BB_BSM}
+% \includeonly{BB_Zgamma}
+
+
+\begin{document}
+
+\begin{frame}[plain]
+  \tikz[remember picture,overlay]
+    \node (b) at
+      (current page.center) [inner sep=0pt,opacity=.4]
+%       (0.5\paperwidth,-0.5\paperheight) [inner sep=0pt,opacity=.4]
+      {\begin{overpic}[height=.9\paperheight]{a-1_16_1_RhoPhi.png}\end{overpic}};
+  \titlepage
+\end{frame}
+
+\setcounter{tocdepth}{1}
+\begin{frame}{Plan}
+\tableofcontents
+\end{frame}
+
+
+%\include{11_StandardModel}
+
+%\include{12_LHC_CMS}
+
+%\include{13_Zgamma}
+
+%\include{14_Hgg}
+
+%\include{15_BSM}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[Conclusion]{Conclusions, perspectives}
+\subsection{Conclusions}
+\begin{frame}{Conclusions}
+\vspace{-.5cm}
+\begin{block}{}
+\begin{itemize}\scriptsize
+  \item Étude des désintégrations radiatives $Z^0\to\mu\mu\gamma$
+  \begin{itemize}\scriptsize
+    \item Validation de la simulation des photons
+    \begin{itemize}\tiny
+      \item Outil mis à disposition de la collaboration
+    \end{itemize}
+    \item Mesure de l'échelle d'énergie dans les données 2010
+    \begin{itemize}\tiny
+      \item Document public : CMS-DP-2011-008 (Note interne : CMS-AN-2011-088)
+      \item Effet systématique pour la mesure de section efficace $V\gamma$ - PLB 701 (2011) 535-555
+    \end{itemize}
+    \item Mesure différentielle de l'échelle d'énergie dans les données 2011
+    \begin{itemize}\tiny
+      \item Document public : https://twiki.cern.ch/twiki/bin/view/CMSPublic/EcalDPGResults (Note interne : CMS-AN-2012-110)
+    \end{itemize}
+  \end{itemize}
+  \item Recherche du boson de Higgs du Modèle Standard dans le canal $H\to\gamma\gamma$
+  \begin{itemize}\scriptsize
+    \item Participation à l'identification des photons (validation des photons, efficacité de rejet des électrons)
+    \item Vérification et étude de la procédure de séparation en classes
+    \begin{itemize}\tiny
+      \item Publication : Observation of a new boson at a mass of 125 GeV with the CMS experiment at the LHC - PLB 716 (2012) 30-61
+      \item Document public : CMS-PAS-HIG-015 (Note interne : CMS-AN-2012-160)
+    \end{itemize}
+  \end{itemize}
+  \item Production associée d'un boson de Higgs dans le cadre d'un modèle de quarks vecteurs
+  \begin{itemize}\scriptsize
+    \item Géneration avec ALPGEN des bruits de fond pour le canal $h\to\gamma\gamma$
+    \item Étude du canal $h\to\gamma\gamma$
+    \begin{itemize}\tiny
+      \item Proceedings : Les Houches 2011: Physics@TeV Colliders NP WG Report% - arXiv:1203.1488v2
+      \item Publication : Physical Review D 85, 115022 (2012) - arXiv:1204.0455v1
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\subsection{Perspectives}
+\begin{frame}{Perspectives}
+\vspace{-.3cm}
+\begin{block}{}
+\begin{itemize}\scriptsize
+  \item Étude des désintégrations radiatives $Z^0\to\mu\mu\gamma$
+  \begin{itemize}\scriptsize
+    \item Échelle d'énergie pour 
+    \item Finaliser l'étude des incertitudes systématiques
+  \end{itemize}
+  \item Recherche du boson de Higgs du Modèle Standard dans le canal $H\to\gamma\gamma$
+  \begin{itemize}\scriptsize
+    \item Réoptimisation de la classification utilisée
+    \item Observation d'un excès dans le canal diphoton, excès observé dans d'autres canaux (et dans ATLAS) : découverte d'un nouveau boson, compatible avec un boson de Higgs du Modèle Standard
+    \item Propriétés de l'excès (spin, couplages, ...) ? Découverte dans le canal $H\to\gamma\gamma$ seul ?
+  \end{itemize}
+  \item Production associée d'un boson de Higgs dans le canal $h\to\gamma\gamma$ dans le cadre d'un modèle de quarks vecteurs
+  \begin{itemize}\scriptsize
+    \item Étude prospective en simulation complète
+    \item Étude sur les données récoltées à 
+  \end{itemize}
+\end{itemize}
+\end{block}
+\vspace{-.1cm}
+
+\begin{block}{}
+\begin{itemize}\scriptsize
+\item L'analyse porte sur les données 2011 et 2012 et a été rendue publique le 4 juillet dernier. La quantité de données a doublé depuis... et le LHC continue à accumuler des données !
+\item Longue période d'arrêt du LHC pour 2013-2014... avant reprise des collisions à 
+% \item Caractérisation de la nouvelle particule
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\vspace{-.5cm}
+\begin{center}
+Observation of a new boson at a mass of 125 GeV\\with the CMS experiment at the LHC
+\\\tiny
+PLB 716 (2012) 30-61 - CMS-PAS-HIG-12-020 - arXiv:1207.7235
+\end{center}
+%\begin{center}
+%\includegraphics[width=.4\textwidth]{plots/Higgs/HIG-12-028/fig16.pdf}
+%\includegraphics[width=.4\textwidth]{plots/Higgs/HIG-12-028/fig18.pdf}
+%\\
+%\includegraphics[width=.4\textwidth]{plots/Higgs/HIG-12-028/fig17.pdf}
+%\includegraphics[width=.4\textwidth]{plots/Higgs/HIG-12-028/fig19.pdf}
+%\end{center}
+\vspace{-.8cm}
+\begin{center}
+Merci de votre attention !
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% BACKUP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\section{BACKUP}
+\begin{frame}
+\begin{center}
+\LARGE
+BACKUP
+\end{center}
+\end{frame}
+
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+
+
+\end{document}
