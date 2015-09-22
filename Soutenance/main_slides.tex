@@ -26,6 +26,9 @@
 % My green
 \definecolor{MyColor}{RGB}{43,153,43}
 \setbeamercolor{structure}{fg=MyColor}
+\setbeamertemplate{title page}[default]
+\setbeamercolor{title}{bg=}
+
 % \setbeamercolor{titlelike}{fg=MyColor}
 % \setbeamercolor{palette primary}{fg=MyColor}
 % \setbeamercolor{palette secondary}{fg=MyColor}
@@ -93,6 +96,7 @@
 
 %% Title and such
 \title{\texorpdfstring{Search for a vector-like quark \Tp~decaying \\into top+Higgs in single production mode \\in full hadronic final state using \\CMS data collected at 8 TeV\\}}
+%\title{\texorpdfstring{Recherche d'un quark vectoriel \Tp~\\qui se desintegre en top+Higgs dans \\le mode de production célibataire \\dans le état final hadronique avec \\les données recollectées par l'éxperience CMS à 8 TeV\\}}
 % \subtitle{
 % }
 \author[J.~Ruiz-\'{A}lvarez]{Jos\'{e} D. Ruiz-\'{A}lvarez}
@@ -165,15 +169,15 @@
 \end{frame}
 
 
-%\include{11_StandardModel}
+\include{SM}
 
-%\include{12_LHC_CMS}
+\include{CMS}
 
-%\include{13_Zgamma}
+\include{Pheno}
 
-%\include{14_Hgg}
+\include{MC}
 
-%\include{15_BSM}
+\include{Ana}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -184,40 +188,32 @@
 \vspace{-.5cm}
 \begin{block}{}
 \begin{itemize}\scriptsize
-  \item Étude des désintégrations radiatives $Z^0\to\mu\mu\gamma$
-  \begin{itemize}\scriptsize
-    \item Validation de la simulation des photons
+  \item Feasibility study for a search of a \Tp~at LHC at 8 TeV
+  %\begin{itemize}\scriptsize
+  %  \item Design of an strategy for a search of a \Tp~in the single production mode in the full hadronic final state at 8 TeV LHC run.
     \begin{itemize}\tiny
-      \item Outil mis à disposition de la collaboration
+      \item Les Houches 2013: Physics at TeV Colliders: New Physics Working Group Report \\arXiv:1405.1617
+      \item Fully hadronic decays of a singly produced vectorlike top partner at the LHC \\Phys.Rev. D90 (2014) 11, 115008
     \end{itemize}
-    \item Mesure de l'échelle d'énergie dans les données 2010
-    \begin{itemize}\tiny
-      \item Document public : CMS-DP-2011-008 (Note interne : CMS-AN-2011-088)
-      \item Effet systématique pour la mesure de section efficace $V\gamma$ - PLB 701 (2011) 535-555
+  %\end{itemize}
+  \item MC simulations studies
+    \begin{itemize}\scriptsize
+      \item MadGraph
+        \begin{itemize}\tiny
+          \item Validation of releases to enter the CMS MC simulation central production
+          \item Several scripts written and updated for collaboration usage
+          \item Users support
+        \end{itemize}
+      \item Pythia 8
+        \begin{itemize}\tiny
+          \item Comparison of MadGraph + Pythia 8 simulation with other generators and data using RIVET
+        \end{itemize}
+      \item MadSpin        
+        \begin{itemize}\tiny
+          \item Inclusion of MadSpin for the gridpack generation of \ttbar~in CMS central production
+        \end{itemize}
     \end{itemize}
-    \item Mesure différentielle de l'échelle d'énergie dans les données 2011
-    \begin{itemize}\tiny
-      \item Document public : https://twiki.cern.ch/twiki/bin/view/CMSPublic/EcalDPGResults (Note interne : CMS-AN-2012-110)
-    \end{itemize}
-  \end{itemize}
-  \item Recherche du boson de Higgs du Modèle Standard dans le canal $H\to\gamma\gamma$
-  \begin{itemize}\scriptsize
-    \item Participation à l'identification des photons (validation des photons, efficacité de rejet des électrons)
-    \item Vérification et étude de la procédure de séparation en classes
-    \begin{itemize}\tiny
-      \item Publication : Observation of a new boson at a mass of 125 GeV with the CMS experiment at the LHC - PLB 716 (2012) 30-61
-      \item Document public : CMS-PAS-HIG-015 (Note interne : CMS-AN-2012-160)
-    \end{itemize}
-  \end{itemize}
-  \item Production associée d'un boson de Higgs dans le cadre d'un modèle de quarks vecteurs
-  \begin{itemize}\scriptsize
-    \item Géneration avec ALPGEN des bruits de fond pour le canal $h\to\gamma\gamma$
-    \item Étude du canal $h\to\gamma\gamma$
-    \begin{itemize}\tiny
-      \item Proceedings : Les Houches 2011: Physics@TeV Colliders NP WG Report% - arXiv:1203.1488v2
-      \item Publication : Physical Review D 85, 115022 (2012) - arXiv:1204.0455v1
-    \end{itemize}
-  \end{itemize}
+  \item Search for a single produced \Tp~decaying into top and Higgs in the full hadronic final state
 \end{itemize}
 \end{block}
 \end{frame}
