@@ -1,0 +1,142 @@
+Remarks/Corrections/Questions from Sabine: (Following discussion of 21 September)
+
+General form remarks:
+1. Check that between paragraphs there is a blank space in the tex file.
+2. Add full stop always at the end of caption
+3. Add reference in figure caption -> Only reference number between brackets without "Taken from" or "From" before the reference.
+4. Remove the commas before giving a reference.
+5. Replace "as function of" for "as a function of" -> Sabine asked me to check this with a native English speaker 
+
+Equation 1.3: Define lambda(x)
+
+Lines 368-369: Rephrase to clear what are the mentioned probabilities
+
+Lines 423: Rephrase "coming from vacuum"
+
+Section 1.5: More details on the VLQ theory, specifically compare the model used in later chapters with models with exclusive coupling of T' to third quark generation. Add also results from LEP about existence of a fourth family -> Restriction of only 3 neutrinos
+
+Line 681: Rephrase for clarity
+
+Line 908-909: Beginning of phrase missing -> Rephrase
+
+Line 921-922: Rephrase to correct concept of hard interaction
+
+Line 1069: Define/Clarify "both features"
+
+Line 1104: Correct "pt" notation. And clear up the concept of leptons and photon isolation.
+
+Line 1126: Explain what is a "Dee" (CMS jargon)
+
+Page 56: Usage of HT and MHT without definition.
+
+Line 1309: Moe to vertex reconstruction section
+
+Line 1405-1406: Rephrase
+
+Line 1416: Replace "expected area" by "\piR^2"
+
+Figure 2.27: Define "HF" in the caption.
+
+Line 1500: Add full effective branching ratio of T' in the full hadronic channel
+
+Section 3.1: Add generators references
+
+Line 1527: Explain what is "integration troubles"
+
+Line 1533: Explain the choice of parameters -> Include reference where the benchmark point was studied
+
+Figure 3.2: Small axis labels (resize or bold to ameliorate reading). Say a word in caption about QCD that is not very visible.
+
+Chapter 3: Add reference of pheno paper at the beginning.
+
+Section 3.3: Explain procedure for the determination of the cut values.
+
+Line 1609: Change "\Delta R_{jj}" for "\Delta R_{bb}"
+
+Line 1627: Change "central" for "close in \phi"
+
+Line 1670-1673: Rephrase/Explain
+
+Line 1684: (Not mandatory) Add efficiencies of cuts with wider T' width
+
+Chapter 3: Add paragraph at the end about the importance of studying model where the T' is mixed to the three generations.
+
+Line 1696: Missing verb
+
+Line 1747: Specify what is "this" in the phrase context -> Remove line or rephrase
+
+Line 1768: Transition between both paragraphs is missing
+
+Figure 4.4: Explain color code of the figure.
+
+Chapter 4: 
+	Add, if possible, the gain on cpu time with madspin for ttbar production
+	Explain better how Qcut and QXcut are done before generation. And clarify how the first is at pythia level and the second at madgraph.
+	Explain better/Add details about merging procedure and DJR study. (DJR is really a variable?)
+
+Line 1993-1996: Replace "minimal kt" for "minimal kt distance"
+
+Figure 4.15, 4.16: Increase size
+
+Line 2117: Define what is "pt hat" (CMS jargon)
+
+Line 2141: Add one or two lines to describe more PAT
+
+Line 2171: Explain why trigger is an or between pt>32, pt>36, pt>40 ...
+
+Figure 5.1: Definition of number of interactions for data and add a reference
+
+Line 2201: Recall that backgrounds are estimated from data.
+
+Line 2205: Precise and rephrase to day that the two sets of QCD samples are weighted to half of the luminosity instead of saying mean values
+
+Figure 5.5: Why high eta disagreement? Perhaps add pt vs eta plots for each jet.
+
+Figure 5.6: (Not mandatory) Add HT data/MC comparison with only HT binned samples
+
+Table 5.4: Missing sqrt for "S/(S+B)" -> It is really "S/sqrt(S+B)"
+
+Equation 5.5: Specify that the efficiencies where calculated from the whole samples and not event per event
+
+Line 2294: Specify conditions of the study from where the values are coming.
+
+Line 2352: Specify that the cut values were taken from an scan optimization -> Add, after all cuts, optimization range, step...
+
+Figures for variables of chapter 5 selection: (Not mandatory) Add vertical lines to show the cut value.
+
+Figure 5.19: Bin 9?
+
+Page 140: (Not mandatory) Add T' mass for all signal mass points after full selection
+
+For Chapter 5: (not mandatory, but to ease reading) Redo paging to close up tables and figure to the text where they are cited.
+
+Line 2491: Specify that number of events are unweighted wrt lumi.
+
+Page 144: Define M(5j)
+
+Title of section 5.4.1: Change to "Method for background shape estimation"
+
+Line 2511-2518: Rephrase or remove mention of chi2 cut.
+
+Line 2535: Define "both"
+
+Figure 5.29: Be more explicit about errors for samples with zero entries.
+
+Figure 5.38: Change color of control sample or increase size of figure because the control sample is hard to see.
+
+Systematics:
+	Why the error of the c-jets is taken as the double of b-jets?
+	Try to explain better that when the statistical error is bigger than the systematic, the statistical error is taken as the value for the systematic uncertainty
+	(Not mandatory) Add statistic errors to figure 5.41 (and other similar figures)
+	Line 2701-2719: Simplify vocabulary and explanation of PDF systematics
+	Line 2723: Change 4% for 3%
+	Line 2730: Justification of 5% variation of inelastic cross section variation for PU systematics calculation
+	Line 2749-2756: Add reference to figure from where fig 5.44 is coming
+	Line 2766-2770: Reverse order of the two phrases.
+
+Line 2864: Explicit that is to all 3 generation mixings.
+
+Fig 5.50: CMS figure is small -> Re-size
+
+Question for the defense: How to decrease the uncertainties of the background estimation methods?
+  
