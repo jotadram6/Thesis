@@ -218,7 +218,7 @@ TprimeJetToTH\_\textbf{M-700}\_TuneZ2star\_8TeV-madgraph\_tauola & 143.7 & 99K \
 \end{block}
 \vspace{-.2cm}
 \begin{block}{}
-\scriptsize \textbf{5th cut}: at least 3 CSVM b-tagged jets
+\scriptsize \textbf{5th cut}: at least 3 CSVM b-tagged jets. Only jets with $|\eta|<=2.4$ considered for b-tagging.
 \end{block}
 \vspace{-.2cm}
 \begin{block}{}
@@ -278,6 +278,71 @@ where $ N_f^\text{Total}(i,j) $ and $ N_f^\text{b-tagged}(i,j) $ are the total n
     %\label{fig:SFweight}
   \end{center}
 \end{figure}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}{\Tp~reconstruction with a $\chi^{2}$ sorting algorithm}
+\vspace{-.2cm}
+\scriptsize
+
+\begin{itemize}
+\item $\chi^{2}$ sorting algorithm used to identify the \Tp~decay products and to reconstruct the Higgs and top candidates
+\item $\chi^{2}$ variable defined for each jets combination in an event
+\item The combination that minimizes this variable gives the best fit of the objects under reconstruction
+\end{itemize}
+
+\begin{equation*}
+\chi^{2}=\frac{(M_{H}-M_{bb})^{2}}{\sigma_{H}^{2}}+\frac{(M_{W}-M_{jj})^{2}}{\sigma_{W}^{2}}+\frac{(M_{t}-M_{bjj})^{2}}{\sigma_{t}^{2}}
+%\label{eq:chi2def}
+\end{equation*}
+
+\begin{itemize}
+\item $M_{H}=125$~\GeVcc, $M_{W}=84.06$~\GeVcc, $M_{t}=175.16$~\GeVcc, $\sigma_{H}=12.4$~\GeVcc, and $\sigma_{W}=10.12$~\GeVcc~and $\sigma_{t}=17.35$~\GeVcc. From similar MC studies.
+\item For the Higgs reconstruction only CSVM b-tagged jets were considered
+\item For the \W~reconstruction all jets with a \ptg{30} were considered
+\item For the top reconstruction one b-tagged jet and the pair of jets used for the \W~were utilized
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{}
+\vspace{-.2cm}
+
+\begin{columns}
+\begin{column}{.50\textwidth}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/Ana/Exclusive_Efficiency_V8.png}
+    %\includegraphics[width=0.46\textwidth]{figs/Ana/Inclusive_Efficiency_V8.png}
+    %\caption{Reconstruction efficiency by the $\chi^{2}$ algorithm of the Higgs boson, \W~boson, top quark and \Tp, as the ratio of the number of events where the particle was correctly reconstructed to the number of events where jets could be matched to partons [left] and to the total number of events [right]}
+    %\label{fig:RecEff}
+  \end{center}
+\end{figure}
+
+\vspace{-.2cm}
+\begin{block}{}
+\scriptsize \textbf{Figure}: Reconstruction efficiency by the $\chi^{2}$ algorithm of the Higgs boson, \W~boson, top quark and \Tp, as the ratio of the number of events where the particle was correctly reconstructed to the number of events where jets could be matched to partons.
+\end{block}
+\end{column}
+
+\begin{column}{.50\textwidth}
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/Ana/HundresdsMassChi2Tp.png}
+    %\includegraphics[width=0.45\textwidth]{figs/Ana/FiftiesMassChi2Tp.png}
+    %\caption{Reconstructed \Tp~mass for all mass points from the $\chi^{2}$ sorting algorithm after basic selection. Each mass point is normalized to luminosity and its corresponding cross section. A gaussian fit of these distributions will be presented afterward in section~\ref{sec:finalsel}, accompanied with a discussion about the resolution on the reconstruction of the \Tp.}
+    %\label{fig:RecT}
+  \end{center}
+\end{figure}
+
+\vspace{-.2cm}
+\begin{block}{}
+\scriptsize \textbf{Figure}: Reconstructed \Tp~mass for some mass points from the $\chi^{2}$ sorting algorithm after basic selection. Each mass point is normalized to luminosity and its corresponding cross section.
+\end{block}
 \end{column}
 
 \end{columns}
