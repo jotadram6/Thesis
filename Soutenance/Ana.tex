@@ -238,3 +238,47 @@ TprimeJetToTH\_\textbf{M-700}\_TuneZ2star\_8TeV-madgraph\_tauola & 143.7 & 99K \
 
 \end{columns}
 \end{frame}
+
+
+
+\begin{frame}{Corrections to MC for b-tagging}
+\vspace{-.2cm}
+
+\begin{columns}
+\begin{column}{.50\textwidth}
+\begin{block}{}
+\scriptsize Scale factors derived from data/MC comparisons $\to$ $SF^{flavor}_{\eta}(p_{T})$\\
+As mean values: $SF^{b\; or\; c}\sim 0.94$ and $SF^{light}\sim 1.06$
+\end{block}
+\vspace{-.2cm}
+\begin{block}{}
+\scriptsize In order to apply the SF's a weight per event is calculated\\
+$w=\frac{P(\text{DATA})}{P(\text{MC})}$ with \\ \tiny{
+$P(\text{MC}) = \prod_{i=\text{tagged}} \varepsilon_i \prod_{j=\text{not tagged}} (1-\varepsilon_j)$\\
+$P(\text{DATA}) = \prod_{i=\text{tagged}} \text{SF}_i \varepsilon_i \prod_{j=\text{not tagged}} (1-\text{SF}_j \varepsilon_j)$ \\
+}
+\end{block}
+\vspace{-.2cm}
+\begin{block}{}
+\tiny B-tagging efficiencies defined as\\
+$\varepsilon_f(i,j) = \frac{N_f^\text{b-tagged}(i,j)}{N_f^\text{Total}(i,j)}$ where \\
+where $ N_f^\text{Total}(i,j) $ and $ N_f^\text{b-tagged}(i,j) $ are the total number and the number of b-tagged jets, respectively, of flavor $ f $ in the $ (p_\text{T},\eta) $ bin $ (i,j) $ for a given MC sample.
+\end{block}
+\vspace{-.2cm}
+\begin{block}{}
+\scriptsize \textbf{Figure}: Distribution of the weights from b-tagging scale factors for all MC samples.
+\end{block}
+\end{column}
+
+\begin{column}{.50\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/Ana/SF_weight.png}
+    %\caption{Distribution of the weights from b-tagging scale factors for all MC samples.}
+    %\label{fig:SFweight}
+  \end{center}
+\end{figure}
+\end{column}
+
+\end{columns}
+\end{frame}
