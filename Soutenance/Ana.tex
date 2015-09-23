@@ -98,3 +98,80 @@ TprimeJetToTH\_\textbf{M-700}\_TuneZ2star\_8TeV-madgraph\_tauola & 143.7 & 99K \
 \tiny{Signal samples were done with $T'\to tH$ with $H\to\tau^{+}\tau^{-}$ (6\%) and $H\to b\bar{b}$ (94\%). Correction with weight of 0.61 to obtain correct $Br(H\to b\bar{b})=0.57$. }
 
 \end{frame}
+
+\begin{frame}{Event selection}
+\vspace{-.2cm}
+
+\begin{columns}
+
+\begin{column}{.55\textwidth}
+\begin{block}{Event processing}
+\begin{itemize}\scriptsize
+  \item Data processed using ``golden'' JSON file: Consider only validated lumi sections
+  \item PAT processing
+    \begin{itemize}\tiny
+    \item Jets reconstructed with PF algorithm and CHS
+    \item Jets: \ptg{20} and $|\eta|<5$
+    \item At least one good primary vertex: $\text{n.d.o.f.} \ge 4,\; |z|<24 \;\text{cm},\; |\rho|< 2 \;\text{cm}$
+    \item Global tag: Calibration and alignment info for data, MC corrected to get close to data conditions
+    \end{itemize}
+  \item Pile-up corrections: Simulated PU in MC was corrected to observed PU in Data
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{.45\textwidth}
+\vspace{-.9cm}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/Ana/Nvtcs.png}
+  \end{center}
+\end{figure}
+\vspace{-.75cm}
+\begin{block}{}
+\tiny Number of vertices distribution for data and MC samples. The comparison has been performed after basic selection except number of b-tagged jets (the basic selection is described in the next slides). The gray band correspond to the statistical error of MC samples sum. Normalization of MC samples was done to the 19.7~fb$^{-1}$.
+\end{block}
+\end{column}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}{Basic selection}
+\vspace{-.2cm}
+
+\begin{block}{}
+  \begin{itemize}\scriptsize
+  \item Trigger L1: at least 4 central jets (\etal{3}) with \ptg{32}~or \ptg{36}~or \ptg{40} \\
+                    or at least 2 central jets with \ptg{52}~or \ptg{56}~or \ptg{64} \\
+                    or events with \HTg{125}~or \HTg{150}~or \HTg{175}
+  \item HLT: 6 central jets with a \ptg{20}, 4 with a \ptg{60} and 2 with a \ptg{80}
+  \item \textbf{First offline cut}: 2 jets with \ptg{90}, 2 jets with \ptg{70} and 2 jets with \ptg{30}
+  \end{itemize}
+\end{block}
+
+\begin{columns}
+\begin{column}{.50\textwidth}
+\vspace{-.2cm}
+\begin{block}{}
+  \scriptsize \textbf{Second cut}: At least 5 jets with \ptg{30} and \etal{2.5} and at least one additional jet with \ptg{30} and \etal{5} were required
+\end{block}
+
+\vspace{-.2cm}
+\begin{block}{}
+\scriptsize \textbf{Figure}: Distribution of pseudorapidity of the accompanying jet produced with the \Tp. The distribution is taken from the signal MC sample with M=700 \GeVcc~and it is normalized to unity.
+\end{block}
+\end{column}
+
+\begin{column}{.50\textwidth}
+\vspace{-.2cm}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/Ana/SixthJetMCTruth.png}
+    %\caption{Distribution of pseudorapidity of the accompanying jet produced with the \Tp. The distribution is taken from the signal MC sample with M=700 \GeVcc~and it is normalized to unity.}
+    %\label{fig:SixthJetTp}
+  \end{center}
+\end{figure}
+\end{column}
+\end{columns}
+
+\end{frame}
