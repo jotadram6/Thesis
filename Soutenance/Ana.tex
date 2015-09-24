@@ -347,3 +347,154 @@ where $ N_f^\text{Total}(i,j) $ and $ N_f^\text{b-tagged}(i,j) $ are the total n
 
 \end{columns}
 \end{frame}
+
+\begin{frame}{Selection based on reconstructed objects}
+\vspace{-.2cm}
+\scriptsize
+
+\begin{columns}
+\begin{column}{.50\textwidth}
+\vspace{-.2cm}
+\begin{block}{}
+\tiny
+\begin{itemize}
+\item Selection optimized via a multidimensional scan of variables 
+\item Signal discrimination evaluated by $S/B$, using as signal the $M=700$\GeVcc~mass point, and as background the \ttbar~and QCD\_HT-500To1000
+\item Selection has been adjusted to keep at least 10 signal events, for the 700~\GeVcc~mass point, after the full selection
+\item \textbf{Data/MC plots are shown for illustration, but final background estimation is derived from data}
+\end{itemize}
+\end{block}
+\vspace{-.2cm}
+\begin{block}{}
+\scriptsize \textbf{1st criterion}: $\chi^{2}<8$
+\end{block}
+\vspace{-.2cm}
+\begin{block}{}
+\scriptsize \textbf{Figure}: Distribution of the $\chi^{2}$ variable for data and MC samples. The signal sample used has a \Tp~mass of 700 \GeVcc. Backgrounds present higher values than the signal. The sum of MC is normalized to the integrated luminosity.
+\end{block}
+\end{column}
+
+\begin{column}{.50\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/Ana/chi2Nm1.png}
+    %\caption{Distribution of the $\chi^{2}$ variable for data and MC samples. The signal sample used has a \Tp~mass of 700 \GeVcc. Backgrounds present higher values than the signal. The sum of MC is normalized to the integrated luminosity. }
+    %\label{fig:chi2}
+  \end{center}
+\end{figure}
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{}
+\vspace{-.2cm}
+    \begin{block}{}\scriptsize
+      \textbf{2nd criterion}: $\Delta R(bb)<1.2$\\
+      \textbf{3rd criterion}: Higgs candidate mass between 105 and 145 \GeVcc
+    \end{block}
+
+\vspace{-.5cm}
+\begin{columns}
+\begin{column}{.50\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{../figs/Ana/DRbbNm1.png}
+  \end{center}
+\end{figure}
+
+\vspace{-.7cm}
+    \begin{block}{}\tiny
+      $\Delta R$ of the 2 b-tagged jets used to reconstruct the Higgs candidate after $\chi^{2}$ cut.
+    \end{block}
+\end{column}
+
+\begin{column}{.50\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{../figs/Ana/HMNm1.png}
+  \end{center}
+\end{figure}
+
+\vspace{-.7cm}
+    \begin{block}{}\tiny
+      Distribution for $M(H_{cand})$ for data and the sum of Monte Carlo samples. All others selection criteria are applied up to this one.
+    \end{block}
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+
+\begin{frame}{}
+\vspace{-.2cm}
+    \begin{block}{}\scriptsize
+      \textbf{4th criterion}: $(M(top^{2nd})+M(W^{2nd}))/M(H)>6.8$\\
+      \textbf{5th criterion}: $\Delta R (T' j^{6})>4.8$\\
+      \textbf{6th criterion}: $H_{T}>0.67$
+    \end{block}
+
+\vspace{-.5cm}
+\begin{columns}
+\begin{column}{.50\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{../figs/Ana/M2HPNm1.png}
+  \end{center}
+\end{figure}
+
+\vspace{-.7cm}
+    \begin{block}{}\tiny
+      Distribution of $(M(top^{2nd})+M(W^{2nd}))/M(H)$ for data and the sum of the Monte Carlo samples. Selection criteria are applied up to Higgs mass cut. The low statistics in the multijet (QCD) MC sample is visible at this stage.
+    \end{block}
+\end{column}
+
+\begin{column}{.50\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{../figs/Ana/DRTp6JNm1.png}
+  \end{center}
+\end{figure}
+
+\vspace{-.7cm}
+    \begin{block}{}\tiny
+      Distributions for $\Delta R (T' j^{6})$  for data and the sum of Monte Carlo samples. All others criteria are applied up to this one. The low statistics in the multijet (QCD) MC sample is visible at this stage.
+    \end{block}
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Selection optimization}
+\vspace{-.2cm}
+
+\begin{table}[htbH]
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|}
+\hline 
+Cut & $S/B$ & $S/\sqrt{S+B}$ \\
+\hline
+$\chi^{2}<8$ & $3.4\ex{-2} \pm 2.85\ex{-3}$  & $ 0.96 \pm 0.05$  \\
+$\Delta R(bb)<1.2$ & $4.76\ex{-2} \pm 4.52\ex{-3}$ & $1.10 \pm 0.07$  \\
+%$1.6<\Delta R (W_{cand} H_{cand})<4.0$ & $4.82\ex{-2} \pm 4.59\ex{-3}$  & $1.10 \pm 0.07$  \\
+$105$ \GeVcc~$< M(H_{cand}) < 145$ \GeVcc~& $6.37\ex{-2} \pm 6.74\ex{-3}$  & $1.22 \pm 0.08$  \\
+$(M(top^{2nd})+M(W^{2nd}))/M(H_{cand})>6.8$ & $0.15 \pm 0.03$  & $1.45 \pm 0.16$  \\
+$\Delta R (T j^{6})>4.8$ & $0.42 \pm 0.19$  & $1.67 \pm 0.32$  \\
+Relative $H_{T}>0.67$ & $1.16 \pm 0.17$  & $2.13 \pm 0.17$  \\
+\hline
+\end{tabular}
+%\caption{$S/B$ and $S/\sqrt{S+B}$ from MC samples for each step of the selection after reconstruction of resonances with the $\chi^{2}$ sorting algorithm. Only $M=700$ \GeVcc~signal, \ttbar~and QCD\_HT-500To1000 MC samples were used. \label{tab:Estimators}}
+}
+\end{center}
+\end{table}
+
+\vspace{-.2cm}
+    \begin{block}{}\scriptsize
+      $S/B$ and $S/\sqrt{S+B}$ from MC samples for each step of the selection after reconstruction of resonances with the $\chi^{2}$ sorting algorithm. Only $M=700$ \GeVcc~signal, \ttbar~and QCD\_HT-500To1000 MC samples were used.
+    \end{block}
+
+\end{frame}
