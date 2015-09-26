@@ -1,1 +1,3 @@
 Why not considering SM Higgs production as background?
+
+What means HF EM particles in figure 2.27?

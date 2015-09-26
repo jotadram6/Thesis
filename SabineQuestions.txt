@@ -1,41 +1,78 @@
 Remarks/Corrections/Questions from Sabine: (Following discussion of 21 September)
 
 General form remarks:
-1. Check that between paragraphs there is a blank space in the tex file.
-2. Add full stop always at the end of caption
-3. Add reference in figure caption -> Only reference number between brackets without "Taken from" or "From" before the reference.
-4. Remove the commas before giving a reference.
-5. Replace "as function of" for "as a function of" -> Sabine asked me to check this with a native English speaker 
+1. Check that between paragraphs there is a blank space in the tex file. (Chapter 1 done, Chapter 2 done)
+2. Add full stop always at the end of caption (Chapter 1 done, Chapter 2 done)
+3. Add reference in figure caption -> Only reference number between brackets without "Taken from" or "From" before the reference (Chapter 1 done, Chapter 2 done)
+4. Remove the commas before giving a reference. (Chapter 1 done, Chapter 2 done)
+5. Replace "as function of" for "as a function of" -> Sabine asked me to check this with a native English speaker (Chapter 1 done, Chapter 2 done)
 
-Equation 1.3: Define lambda(x)
+############
+#Chapter 1:#
+############
 
-Lines 368-369: Rephrase to clear what are the mentioned probabilities
+Equation 1.3: Define lambda(x) (Done) -> More precisely, the covariant potential is not unique and the covariant derivative of a scalar field, $\partial_{\mu}\Lambda(x)$, can always been added
 
-Lines 423: Rephrase "coming from vacuum"
+Lines 368-369: Rephrase to clear what are the mentioned probabilities 
+
+Several functions or fields can be related to a given state. These functions, wave functions, can be used as the states to calculate probabilities. -> Several functions or fields can be related to a system. These functions, wave functions, can be used to calculate the probability of a system to be in a given state or the transition probability between states.
+
+Lines 423: Rephrase 
+
+Whatsoever being the theoretical mechanism to give mass to particles one of the most refined theoretical constructs, it leaves some unsolved puzzles in the heart of the SM. -> Whatsoever, even if the mechanism to give mass to particles is one of the most refined theoretical constructs, it leaves some unsolved puzzles in the heart of the SM.
+
+Lines 484: Rephrase "coming from vacuum"
+
+This means, in practical terms, that such field will have a non-zero value in vacuum, leading to a presence of particles coming from the field on vacuum. -> This means, in practical terms, that such field will have a non-zero value in vacuum, i.e. there are particles from the field in vacuum.
 
 Section 1.5: More details on the VLQ theory, specifically compare the model used in later chapters with models with exclusive coupling of T' to third quark generation. Add also results from LEP about existence of a fourth family -> Restriction of only 3 neutrinos
 
+
+
 Line 681: Rephrase for clarity
+
+
+############
+#Chapter 2:#
+############
 
 Line 908-909: Beginning of phrase missing -> Rephrase
 
+where $\sigma_{process}$ is the cross section of the process. -> The constant of proportionality is the cross section of the process, noted as $\sigma_{process}$.
+
 Line 921-922: Rephrase to correct concept of hard interaction
+
+Only in the hard interactions, inelastic scattering, color is exchanged, being the reason to fill up the central rapidity region. -> Only in the hard interactions, inelastic scattering, the central rapidity region is filled up. In proton-proton collisions additionally color is exchanged.
 
 Line 1069: Define/Clarify "both features"
 
-Line 1104: Correct "pt" notation. And clear up the concept of leptons and photon isolation.
+The design of CMS magnet targets both features, it utilizes a large solenoid of 6 m of diameter and 13 m long. -> The design of CMS magnet targets both features, a large solenoid and a strong magnetic field, utilizing a solenoid of 6 m of diameter and 13 m long.
+
+Line 1104: Correct "pt" notation (Done). And clear up the concept of leptons and photon isolation.
+
+
 
 Line 1126: Explain what is a "Dee" (CMS jargon)
 
+Each endcap is divided in two equal semicircles, called 'Dee's.
+
 Page 56: Usage of HT and MHT without definition.
 
-Line 1309: Moe to vertex reconstruction section
+Changed phrase to be more explicit: Therefore, it relies on very fast reconstruction of objects coming from this subsystems: muons, electrons, photons, jets, total energy and total hadronic energy (with their corresponding total missing energy and hadronic missing energy). The total energy is calculated as the sum of all the objects in the event, while for the hadronic energy only calojets are considered in the sum.
+
+Line 1309: Move to vertex reconstruction section (Done)
 
 Line 1405-1406: Rephrase
 
-Line 1416: Replace "expected area" by "\piR^2"
+The formerly described jet algorithms are both collinear and infrared safe, well reconstructing jets to solely initial partons. -> The jet algorithms described in previous sections are collinear and infrared safe. 
 
-Figure 2.27: Define "HF" in the caption.
+Line 1416: Replace "expected area" by "\piR^2" (Done)
+
+Figure 2.27: Define "HF" in the caption. -> Text added to the caption: In the legend, HF stands for the Hadron Forward Calorimeter.
+
+############
+#Chapter 3:#
+############
 
 Line 1500: Add full effective branching ratio of T' in the full hadronic channel
 
@@ -146,7 +183,9 @@ Question for the defense: How to decrease the uncertainties of the background es
 
 Grouped by categroies:
 
-Corrections:
+%%%%%%%%%%%%%%%%%
+Corrections:%%%%%
+%%%%%%%%%%%%%%%%%
 
 1. Check that between paragraphs there is a blank space in the tex file.
 2. Add full stop always at the end of caption
@@ -175,8 +214,9 @@ Systematics:
         Line 2766-2770: Reverse order of the two phrases.
 
 
-
-Rephrasings:
+%%%%%%%%%%%%%%%%
+Rephrasings:%%%%
+%%%%%%%%%%%%%%%%
 
 Lines 368-369: Rephrase to clear what are the mentioned probabilities
 
@@ -271,8 +311,9 @@ Line 2864: Explicit that is to all 3 generation mixings.
 Fig 5.50: CMS figure is small -> Re-size
 
 
-
-Questions:
+%%%%%%%%%%%%%%%
+Questions:%%%%%
+%%%%%%%%%%%%%%%
 
 Section 3.3: Explain procedure for the determination of the cut values.
 

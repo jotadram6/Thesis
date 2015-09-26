@@ -29,7 +29,7 @@ A classical field is an assignment of a quantity to every point in space and tim
   \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}
 \end{equation}
 
-It is very important to notice that the equations of motion of the free field are invariant under the choice of the four-potential. More precisely, the covariant potential is not unique and the covariant derivative of a scalar field can always been added, 
+It is very important to notice that the equations of motion of the free field are invariant under the choice of the four-potential. More precisely, the covariant potential is not unique and the covariant derivative of a scalar field, $\partial_{\mu}\Lambda(x)$, can always been added, 
 \begin{equation}
   \label{eq:gaugeA}
   {A'}_{\mu}=A_{\mu}+\partial_{\mu}\Lambda(x) \leftrightarrow \partial^{\mu}A_{\mu}=0
@@ -83,7 +83,7 @@ Physical observables like position, energy or momentum are described by complex 
   \hat{\mathcal{H}}\ket{\alpha}=i\frac{d}{dt}\ket{\alpha}
 \end{equation}with $\mathcal{H}$ the Hamiltonian of the system. The whole formalism is able to explain quantized systems, where the quantum numbers are discrete, such as hydrogen atom or black body.
 
-Several functions or fields can be related to a given state. These functions, wave functions, can be used as the states to calculate probabilities. In second quantization, wave functions are upgraded into field operators. This procedure gives rise to the quantization of the state of the field, which is described by the quantum number $n$ which is definite positive: $n=0$ for the fundamental state and $n>0$ for the excited states. Such excitations of the field are understood as physical particles, or quanta, that propagate in space-time, which means that $n=0$ is vacuum. 
+Several functions or fields can be related to a system. These functions, wave functions, can be used to calculate the probability of a system to be in a given state or the transition probability between states. In second quantization, wave functions are upgraded into field operators. This procedure gives rise to the quantization of the state of the field, which is described by the quantum number $n$ which is definite positive: $n=0$ for the fundamental state and $n>0$ for the excited states. Such excitations of the field are understood as physical particles, or quanta, that propagate in space-time, which means that $n=0$ is vacuum. 
 
 The first QFT ever created was born from the quantization of the electromagnetic field. Quantum Electro Dynamics (QED) is the quantized version of classical electrodynamics, that was developed by Tomonaga, Schwinger and Feynman around 1940~\cite{Tomonaga:1948zz, Schwinger:1948yk, Feynman:1948ur}. This theory describes electromagnetic interactions of a charged field and the electromagnetic vector field. The charged field excitations correspond to electrons and the excitations of the vector fields are photons, responsible of light. Electrons are particles with negative electric charge that orbits around the nucleus in atoms. Discovered in 1897 by J. J. Thomson~\cite{Thomson:1897cm}, it was fully described by P. A. Dirac in 1927~\cite{Dirac:1927dy} with the Dirac equation that is the Schr\"{o}dinger equation for a relativistic particle of spin 1/2. Spin, the intrinsic angular momentum carried by a particle, can be integer (0,1,2,...) or semi-integer ($\frac{1}{2}$,$\frac{3}{2}$,...). The particles with semi-integer spin, as electrons, are called fermions and particles with integer spin, as photons, are called bosons. Dirac equation predicted the existence of a particle identical to the electron but with positive charge, the positron. It was discovered in 1931 by Carl David Anderson~\cite{Anderson:1933mb}.
 
@@ -99,7 +99,7 @@ Up to present days 12 fundamental fermions and 5 fundamental bosons have been fo
   \end{center}
 \end{figure}
 
-In the next section one of the fundamental pieces of the SM is going to be described: how particles acquire mass. Whatsoever being the theoretical mechanism to give mass to particles one of the most refined theoretical constructs, it leaves some unsolved puzzles in the heart of the SM. Later, the limitations of the SM and some theoretical insights to solve them are discussed.
+In the next section one of the fundamental pieces of the SM is going to be described: how particles acquire mass. Whatsoever, even if the mechanism to give mass to particles is one of the most refined theoretical constructs, it leaves some unsolved puzzles in the heart of the SM. Later, the limitations of the SM and some theoretical insights to solve them are discussed.
 
 \section{The mass problem}
 \label{sec:mass}
@@ -147,7 +147,7 @@ Explicit symmetry breaking is not an option, because the symmetry needs to be pr
 
 Several physical systems exhibit a spontaneous symmetry breaking. For example, a pencil balanced on its tip is a perfectly symmetric system around the vertical axis, however, because of the instability of the system the pencil will eventually fall over. The final state is stable but not symmetrical. This transition also decreased the potential energy of the system, driving the system to its ground state. This means that whereas the system had a symmetry the ground state does not show the symmetry. In general, symmetry breaking is linked to phase transitions, as liquid to gas transition or magnetization of a ferromagnet, covering a plethora of physical processes. %To a greater extent, in recent studies,~\cite{2015arXiv150302776M}, the emergence of life has been understood as a phase transition of matter. 
 
-To achieve a spontaneous symmetry breaking of $SU(2)$ in QFT a field should be chosen for which its ground state, vacuum, will fail the symmetry. This means, in practical terms, that such field will have a non-zero value in vacuum, leading to a presence of particles coming from the field on vacuum. If a fermion field is chosen, the vacuum will show a preference on directionality depending on its spin orientation, which breaks Poincar\'{e} symmetry imposed by special relativity. The same is true if a spin-1 bosonic field is chosen for the task. In order to avoid this problem a spin-0 field should be used. In addition, this field should be electrically neutral to avoid having a charged vacuum.
+To achieve a spontaneous symmetry breaking of $SU(2)$ in QFT a field should be chosen for which its ground state, vacuum, will fail the symmetry. This means, in practical terms, that such field will have a non-zero value in vacuum, i.e. there are particles from the field in vacuum. If a fermion field is chosen, the vacuum will show a preference on directionality depending on its spin orientation, which breaks Poincar\'{e} symmetry imposed by special relativity. The same is true if a spin-1 bosonic field is chosen for the task. In order to avoid this problem a spin-0 field should be used. In addition, this field should be electrically neutral to avoid having a charged vacuum.
 
 With all this properties in mind, taking a scalar doublet of $SU(2)$, defined in equation~\ref{eq:HiggsDoublet} where $\phi^{0}$ and $\phi^{+}$ are complex fields, the most general potential can be written from two auto-interaction terms, in equation~\ref{eq:HiggsPotential}.
 
@@ -208,7 +208,7 @@ The SM is certainly one of the most successful theories in the history of physic
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.6\textwidth]{figs/HierarchyLoop.png}
-    \caption{One loop diagram for contributions to the mass of the Brout-Englert-Higgs boson from interactions with fermions}
+    \caption{One loop diagram for contributions to the mass of the Brout-Englert-Higgs boson from interactions with fermions.}
     \label{fig:oneloophiggs}
   \end{center}
 \end{figure}
@@ -220,14 +220,14 @@ The most famous proposed solution to this problem is supersymmetry (SUSY)~\cite{
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.6\textwidth]{figs/SUSY.png}
-    \caption{One loop diagrams for contributions to the mass of the Brout-Englert-Higgs boson from the top and the stop}
+    \caption{One loop diagrams for contributions to the mass of the Brout-Englert-Higgs boson from the top and the stop.}
     \label{fig:susy}
   \end{center}
 \end{figure}
 
 But this solution works exactly only if SUSY is not broken. As SUSY has to be broken, different ways have been proposed to break SUSY and still offer a solution to the hierarchy problem, leading essentially to solutions that need a fine adjustment of the parameters of the theory. This represents for some theoreticians a problem itself: fine-tuning or naturalness. Extensive searches for SUSY particles have been performed, accordingly to different models: MSSM~\cite{Khachatryan:2014wca,Aad:2014vgg}, CMSSM~\cite{Agashe:2014kda}, etc.
 
-While hierarchy problem is an internal problem of the SM, there are however several questions that have not been solved. For example, how gravity is understood in the frame of QFT's? Why there are only 3 generations of leptons and quarks? Why there are 4 fundamental forces? In addition, there have been experimental questionings to the SM. The most important one is the masses of neutrinos. In the SM neutrinos are massless, careful measurements,~\cite{Ashie:2004mr, Weinheimer:2013hya}, have shown that neutrinos can oscillate between different flavors, phenomenon only possible if neutrinos have a mass. Measurements of solar and atmospheric neutrino oscillations have been the most important proofs of physics beyond the SM. 
+While hierarchy problem is an internal problem of the SM, there are however several questions that have not been solved. For example, how gravity is understood in the frame of QFT's? Why there are only 3 generations of leptons and quarks? Why there are 4 fundamental forces? In addition, there have been experimental questionings to the SM. The most important one is the masses of neutrinos. In the SM neutrinos are massless, careful measurements~\cite{Ashie:2004mr, Weinheimer:2013hya} have shown that neutrinos can oscillate between different flavors, phenomenon only possible if neutrinos have a mass. Measurements of solar and atmospheric neutrino oscillations have been the most important proofs of physics beyond the SM. 
 
 From cosmological measurements, the Wilkinson Microwave Anisotropy Probe (WMAP) has shown that the universe is not only made by visible matter, but suggests that around 24\% it is made of dark matter, a type of matter not visible by means of light. It has also shown that 71\% of the universe is composed of dark energy, which makes the universe to be in an accelerated state of expansion. These results are shown in~\cite{2013ApJS..208...20B, 2013ApJS..208...19H}. Also the Planck probe has shown similar results, for example in~\cite{Planck:2015xua}. The SM does not have any answer to these open problems so far. 
 
@@ -310,7 +310,7 @@ The VLQ production cross section in proton-proton collision strongly depends of 
     \includegraphics[width=0.3\textwidth]{figs/Gluon_fusion_T_pair.jpg}
     \includegraphics[width=0.3\textwidth]{figs/Quarks_schannel_T_pair.jpg}
     \includegraphics[width=0.3\textwidth]{figs/Gluon_tchannel_T_pair.jpg}
-    \caption{Feynman diagrams of \Tp~production in pairs}
+    \caption{Feynman diagrams of \Tp~production in pairs.}
     \label{fig:ProdDiagPair}
   \end{center}
 \end{figure}
@@ -319,7 +319,7 @@ The VLQ production cross section in proton-proton collision strongly depends of 
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Tchannel_T_single.jpg}
     \includegraphics[width=0.45\textwidth]{figs/QuarkGluonFusion_SingleT.jpg}
-    \caption{Single \Tp~production Feynman diagrams}
+    \caption{Single \Tp~production Feynman diagrams.}
     \label{fig:ProdDiagSingle}
   \end{center}
 \end{figure}
@@ -328,11 +328,11 @@ The VLQ production cross section in proton-proton collision strongly depends of 
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/pheno_prod_single_tp.png}
     \includegraphics[width=0.45\textwidth]{figs/pheno_prod_pair_tp.png}
-    \caption{$T$ production cross section for single [left] and pair [right] channels as function of \Tp~mass for different center of mass energy in proton-proton collisions.}
+    \caption{\Tp~production cross section for single [left] and pair [right] channels as a function of \Tp~mass for different center of mass energy in proton-proton collisions~\cite{Cacciapaglia:2011fx}.}
     \label{fig:TProdXS}
   \end{center}
 \end{figure}
-%\begin{TOINCLUDE}Plot of production cross section at LHC for different energies as function of the mass. Feynman diagrams of the production processes.\end{TOINCLUDE}
+%\begin{TOINCLUDE}Plot of production cross section at LHC for different energies as a function of the mass. Feynman diagrams of the production processes.\end{TOINCLUDE}
 
 \subsubsection{Decay modes}
 \label{sec:decay}
@@ -353,12 +353,12 @@ The branching fractions of the top partner \Tp~only depend on the two parameters
 \end{eqnarray} 
 where only the leading order in $1/M^2$ has been kept. Note that in these formulae the decay rates into \Z~and \Hb~are kept arbitrary (parameterised by $\xi_Z^{T}$ which is equal to 1/2 for the non-standard doublet case). These approximate but quite robust results allow to describe easily the phenomenology of the non-standard doublet. 
 
-For a \Tp~coming from other representations the situation is not much different in terms of decay modes, as only the extra decay to \W~boson and quarks will be present. In figure~\ref{fig:TBRs} are presented the branching ratios of \Tp~as function of its mass,~\cite{Cacciapaglia:2011fx}. It is important to notice that for masses higher than 300~\GeVcc~the decay channel into top-Higgs becomes dominant.
+For a \Tp~coming from other representations the situation is not much different in terms of decay modes, as only the extra decay to \W~boson and quarks will be present. In figure~\ref{fig:TBRs} are presented the branching ratios of \Tp~as a function of its mass~\cite{Cacciapaglia:2011fx}. It is important to notice that for masses higher than 300~\GeVcc~the decay channel into top-Higgs becomes dominant.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.8\textwidth]{figs/pheno_br_tp.png}
-    \caption{\Tp~branching ratios as function of its mass.}
+    \caption{\Tp~branching ratios as a function of its mass~\cite{Cacciapaglia:2011fx}.}
     \label{fig:TBRs}
   \end{center}
 \end{figure}
@@ -375,14 +375,14 @@ The LHC can be seen as a top-factory, being the accelerator where the most of to
 \subsubsection{Pair production}
 \label{subsec:toppair}
 
-Top pair production constitutes the dominant production channel in proton-proton collisions at LHC. Its high cross section makes this process one of the most important background for searches of new physics at LHC. Latest theoretical calculations at Next-to-Next-to-Leading-Order (NNLO)~\cite{Czakon:2013goa}, see section~\ref{sec:parton}, of top pair production from proton-proton collisions at $\sqrt{s}=8$ TeV give a cross section $\sigma_{t\bar{t}}=247.47$ pb with around 5\% total uncertainty. The tree level diagrams that contribute to this production are summarized in figure~\ref{fig:PairProductionFD}, where gluon fusion dominates the pair production. At $\sqrt{s}=13$ TeV, as for LHC Run 2, this cross section will scale about 3.3 times. Comparison between theoretical predictions and experimental measurements of top pair production is shown in figure~\ref{fig:PairProduction}, taken from~\cite{TOPLHCWG}.
+Top pair production constitutes the dominant production channel in proton-proton collisions at LHC. Its high cross section makes this process one of the most important background for searches of new physics at LHC. Latest theoretical calculations at Next-to-Next-to-Leading-Order (NNLO)~\cite{Czakon:2013goa}, see section~\ref{sec:parton}, of top pair production from proton-proton collisions at $\sqrt{s}=8$ TeV give a cross section $\sigma_{t\bar{t}}=247.47$ pb with around 5\% total uncertainty. The tree level diagrams that contribute to this production are summarized in figure~\ref{fig:PairProductionFD}, where gluon fusion dominates the pair production. At $\sqrt{s}=13$ TeV, as for LHC Run 2, this cross section will scale about 3.3 times. Comparison between theoretical predictions and experimental measurements of top pair production is shown in figure~\ref{fig:PairProduction}~\cite{TOPLHCWG}.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.32\textwidth]{figs/Gluon_fusion_top_pair.jpg}
     \includegraphics[width=0.32\textwidth]{figs/Gluon_tchannel_top_pair.jpg}
     \includegraphics[width=0.32\textwidth]{figs/Quarks_schannel_top_pair.jpg}
-    \caption{Top pair production processes Feynman diagrams for proton-proton collisions, via gluon fusion [left], gluon t-channel [middle] and quark-antiquark annihilation [right]}
+    \caption{Top pair production processes Feynman diagrams for proton-proton collisions, via gluon fusion [left], gluon t-channel [middle] and quark-antiquark annihilation [right].}
     \label{fig:PairProductionFD}
   \end{center}
 \end{figure}
@@ -390,17 +390,17 @@ Top pair production constitutes the dominant production channel in proton-proton
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.9\textwidth]{figs/toplhcwg_ttxsec_sqrts_may2015.png}
-    \caption{$t\bar{t}$ production cross section as function of the center of mass energy in $p\bar{p}$ and $pp$ collisions compared to theoretical predictions.}
+    \caption{$t\bar{t}$ production cross section as a function of the center of mass energy in $p\bar{p}$ and $pp$ collisions compared to theoretical predictions~\cite{TOPLHCWG}.}
     \label{fig:PairProduction}
   \end{center}
 \end{figure}
 
-%\begin{TOINCLUDE}Plots of cross section of ttbar production as function of center of mass energy; Feynman diagrams for pair production\end{TOINCLUDE}
+%\begin{TOINCLUDE}Plots of cross section of ttbar production as a function of center of mass energy; Feynman diagrams for pair production\end{TOINCLUDE}
 
 \subsubsection{Single $t$ production}
 \label{subsec:topsing}
 
-A subdominant production process of top quark is the single production channel, where the top quark is produced in association with another quark, mediated by a $W$ boson, or with a $W$ boson. The Feynman diagrams for tree level single top production can be seen in figure~\ref{fig:SingleProductionFD}. NNLO predictions have been also done for these three single production modes, at $\sqrt{s}=8$ TeV. The cross sections are respectively: $\sigma_{t,\; \text{s-channel}}=5.56\pm0.22$ pb, $\sigma_{t,\; \text{t-channel}}=84.34\pm1.69$ pb and $\sigma_{tW}=22.2\pm0.67$ pb. Due to the high cross section of pair production compared to single production channels, the cross section measurement of each production mode has been difficult. The Tevatron was able to confirm the $s$ and $t$-channels~\cite{Abazov:2009ii, Aaltonen:2009jj}, while at LHC the $tW$ channel was confirmed~\cite{Aad:2012xca, Chatrchyan:1642680}. The comparison of theoretical predicted cross section and experimental measurements, by ATLAS and CMS, at different center of mass energies is p[resented in figure~\ref{fig:SingleProduction},~\cite{TOPLHCWG}.
+A subdominant production process of top quark is the single production channel, where the top quark is produced in association with another quark, mediated by a $W$ boson, or with a $W$ boson. The Feynman diagrams for tree level single top production can be seen in figure~\ref{fig:SingleProductionFD}. NNLO predictions have been also done for these three single production modes, at $\sqrt{s}=8$ TeV. The cross sections are respectively: $\sigma_{t,\; \text{s-channel}}=5.56\pm0.22$ pb, $\sigma_{t,\; \text{t-channel}}=84.34\pm1.69$ pb and $\sigma_{tW}=22.2\pm0.67$ pb. Due to the high cross section of pair production compared to single production channels, the cross section measurement of each production mode has been difficult. The Tevatron was able to confirm the $s$ and $t$-channels~\cite{Abazov:2009ii, Aaltonen:2009jj}, while at LHC the $tW$ channel was confirmed~\cite{Aad:2012xca, Chatrchyan:1642680}. The comparison of theoretical predicted cross section and experimental measurements, by ATLAS and CMS, at different center of mass energies is p[resented in figure~\ref{fig:SingleProduction}~\cite{TOPLHCWG}.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -415,12 +415,12 @@ A subdominant production process of top quark is the single production channel, 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.9\textwidth]{figs/singletop_allchanvsroots.png}
-    \caption{Single top production cross section as function of the center of mass energy in proton-proton collisions compared to theoretical predictions for each production channel by ATLAS and CMS collaborations.}
+    \caption{Single top production cross section as a function of the center of mass energy in proton-proton collisions compared to theoretical predictions for each production channel by ATLAS and CMS collaborations~\cite{TOPLHCWG}.}
     \label{fig:SingleProduction}
   \end{center}
 \end{figure}
 
-%\begin{TOINCLUDE}Plots of cross section of single-top production as function of center of mass energy; Feynman diagrams for single production\end{TOINCLUDE}
+%\begin{TOINCLUDE}Plots of cross section of single-top production as a function of center of mass energy; Feynman diagrams for single production\end{TOINCLUDE}
 
 \subsection{Top decay channels}
 
@@ -457,12 +457,12 @@ One of the most important quests in top physics is the measurement of top mass a
 
 At Next-to-Leading-Order (NLO)~\cite{Jezabek19891}, the SM expected value of top width is $\Gamma_{t}=1.27$ GeV. It depends of the top mass, the strong force coupling $\alpha_{S}$, the mass of the \W~boson and the strength of the interaction between the top and b-quark. Present measurements have found $\Gamma_{t}=2.00^{+0.47}_{-0.43}$ GeV~\cite{Abazov:2012vd}, value in agreement with SM predictions. 
 
-Top mass has been measured by ATLAS and CMS collaborations at LHC and by CDF and D\O~at Tevatron for each decay channel of top both in single and pair production. Current world combination is $m_{t}=173.34\pm 0.76$. Results from current searches and their combinations are presented in figure~\ref{fig:TopMass}, taken from~\cite{TOPLHCWG}. 
+Top mass has been measured by ATLAS and CMS collaborations at LHC and by CDF and D\O~at Tevatron for each decay channel of top both in single and pair production. Current world combination is $m_{t}=173.34\pm 0.76$. Results from current searches and their combinations are presented in figure~\ref{fig:TopMass}~\cite{TOPLHCWG}. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.9\textwidth]{figs/LHC_topmass_May2015.png}
-    \caption{Top mass measurements from ATLAS and CMS collaborations and world combination including Tevatron results.}
+    \caption{Top mass measurements from ATLAS and CMS collaborations and world combination including Tevatron results~\cite{TOPLHCWG}.}
     \label{fig:TopMass}
   \end{center}
 \end{figure}
@@ -484,18 +484,18 @@ The SM Higgs boson is expected to be produced in proton-proton collisions at LHC
     \includegraphics[width=0.42\textwidth, height=4cm]{figs/Higgstrahlung.png}
     \includegraphics[scale=0.45]{figs/VBF_H.png}
     \includegraphics[scale=0.45]{figs/QuarkF_H.png}
-    \caption{Higgs boson production Feynman diagrams for proton-proton collisions: gluon fusion [left-up], Higgsstrahlung [right-up], vector boson fusion [left-down] and quark fusion [right-down]}
+    \caption{Higgs boson production Feynman diagrams for proton-proton collisions: gluon fusion [left-up], Higgsstrahlung [right-up], vector boson fusion [left-down] and quark fusion [right-down].}
     \label{fig:HiggsProd}
   \end{center}
 \end{figure}
 
 %\cite{Dittmaier:2011ti, Dittmaier:2012vm, Heinemeyer:2013tqa, HIGGSXSWG}
-All these processes have different contributions to the Higgs boson production cross section. In figure~\ref{fig:HiggsProdXS}, the cross section of Higgs boson production for a Higgs mass of 125 GeV/$c^{2}$ for different center of mass energies at LHC is shown, \cite{HIGGSXSWG}. The dominant production is the gluon fusion, all the other processes cross sections are at least one order of magnitude smaller. The total Higgs boson production cross section at LHC is shown in figure~\ref{fig:TotalHiggsXS},~\cite{Dittmaier:2011ti, Dittmaier:2012vm, Heinemeyer:2013tqa, HIGGSXSWG}, as function of its mass and for different center of mass energies. At run 1 energies, 7-8 TeV, the total production cross section is about 20 pb, while at 13 TeV it will be 2.3 times higher, reaching $\sim$50 pb. 
+All these processes have different contributions to the Higgs boson production cross section. In figure~\ref{fig:HiggsProdXS}, the cross section of Higgs boson production for a Higgs mass of 125 GeV/$c^{2}$ for different center of mass energies at LHC is shown~\cite{HIGGSXSWG}. The dominant production is the gluon fusion, all the other processes cross sections are at least one order of magnitude smaller. The total Higgs boson production cross section at LHC is shown in figure~\ref{fig:TotalHiggsXS},~\cite{Dittmaier:2011ti, Dittmaier:2012vm, Heinemeyer:2013tqa, HIGGSXSWG}, as a function of its mass and for different center of mass energies. At run 1 energies, 7-8 TeV, the total production cross section is about 20 pb, while at 13 TeV it will be 2.3 times higher, reaching $\sim$50 pb. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.6\textwidth]{figs/7-14_Higgs_xsec.jpg}
-    \caption{Higgs boson theoretical production cross section as function of center of mass energy, for a Higgs boson mass of 125 GeV/$c^{2}$.}
+    \caption{Higgs boson theoretical production cross section as a function of center of mass energy, for a Higgs boson mass of 125 GeV/$c^{2}$~\cite{HIGGSXSWG}.}
     \label{fig:HiggsProdXS}
   \end{center}
 \end{figure}
@@ -503,21 +503,21 @@ All these processes have different contributions to the Higgs boson production c
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.6\textwidth]{figs/totalXS_LM.png}
-    \caption{Total Higgs boson production cross section as function of Higgs mass for different center of mass of proton-proton collisions.}
+    \caption{Total Higgs boson production cross section as a function of Higgs mass for different center of mass of proton-proton collisions~\cite{Dittmaier:2011ti, Dittmaier:2012vm, Heinemeyer:2013tqa, HIGGSXSWG}.}
     \label{fig:TotalHiggsXS}
   \end{center}
 \end{figure}
 
-%\begin{TOINCLUDE}Plots of cross section of Higgs production as function of center of mass energy; Feynman diagrams for Higgs production\end{TOINCLUDE}
+%\begin{TOINCLUDE}Plots of cross section of Higgs production as a function of center of mass energy; Feynman diagrams for Higgs production\end{TOINCLUDE}
 
 \subsection{Higgs decay channels}
 
-As the Higgs boson couples to all particles in the SM it can decay of several ways. Figure~\ref{fig:HiggsBrs}, taken from~\cite{Dittmaier:2011ti, Dittmaier:2012vm, Heinemeyer:2013tqa, HIGGSXSWG}, shows the branching ratios of the decay channels of the Higgs boson as function of the its mass. The highest branching ratio corresponds to its decay to two b-quarks. This channels is difficult to observe due to the high QCD and \ttbar~backgrounds, however it gives the highest expected number of events as more than the half of Higgs bosons produced at LHC decay into \bbbar~final state. The Higgs boson decay to $Z^{0}Z^{0}$ is an important channel because it has a high branching ratio and one of its final states is 4 leptons, a very clean final state (low background rate), called the golden channel. Finally, even if the diphoton channel has specially low branching ratio it is very clean in terms of photon identification and resolution. In the search that is going to be presented in chapter~\ref{chap:search}, the Higgs boson is going to be looked for in the \bbbar~decay. In figure~\ref{fig:HiggsDecays} the Feynman diagrams of the discussed decay channels are presented.
+As the Higgs boson couples to all particles in the SM it can decay of several ways. Figure~\ref{fig:HiggsBrs}, taken from~\cite{Dittmaier:2011ti, Dittmaier:2012vm, Heinemeyer:2013tqa, HIGGSXSWG}, shows the branching ratios of the decay channels of the Higgs boson as a function of the its mass. The highest branching ratio corresponds to its decay to two b-quarks. This channels is difficult to observe due to the high QCD and \ttbar~backgrounds, however it gives the highest expected number of events as more than the half of Higgs bosons produced at LHC decay into \bbbar~final state. The Higgs boson decay to $Z^{0}Z^{0}$ is an important channel because it has a high branching ratio and one of its final states is 4 leptons, a very clean final state (low background rate), called the golden channel. Finally, even if the diphoton channel has specially low branching ratio it is very clean in terms of photon identification and resolution. In the search that is going to be presented in chapter~\ref{chap:search}, the Higgs boson is going to be looked for in the \bbbar~decay. In figure~\ref{fig:HiggsDecays} the Feynman diagrams of the discussed decay channels are presented.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.8\textwidth]{figs/Higgs_BR_120-130.jpg}
-    \caption{Higgs boson decay branching ratios as function of its mass.}
+    \caption{Higgs boson decay branching ratios as a function of its mass~\cite{Dittmaier:2011ti, Dittmaier:2012vm, Heinemeyer:2013tqa, HIGGSXSWG}.}
     \label{fig:HiggsBrs}
   \end{center}
 \end{figure}
@@ -527,7 +527,7 @@ As the Higgs boson couples to all particles in the SM it can decay of several wa
     \includegraphics[width=0.3\textwidth]{figs/BB_H.png}
     \includegraphics[width=0.3\textwidth]{figs/Diphoton_H.png}
     \includegraphics[width=0.3\textwidth]{figs/Golden_H.png}
-    \caption{Feynman diagrams of Higgs boson decay: $b\bar{b}$ [left], diphoton [center] and golden channels [right]}
+    \caption{Feynman diagrams of Higgs boson decay: $b\bar{b}$ [left], diphoton [center] and golden channels [right].}
     \label{fig:HiggsDecays}
   \end{center}
 \end{figure}
@@ -537,14 +537,14 @@ As the Higgs boson couples to all particles in the SM it can decay of several wa
 
 The 4th of July of 2012 was announced the discovery of a Higgs boson like particle at LHC by ATLAS and CMS collaborations. It was discovered in several decay modes, but the most significant result was coming from the combination of results in all analyzed channels. Such searches have been refined during last years, consolidating the discovery. 
 
-To measure the mass of the Higgs boson, diphoton and golden channel analyses have been combined between ATLAS and CMS~\cite{Aad:2015zhl}. The found value by the combination is $m_{H}=125.09\pm 0.24$. Combination and separated ATLAS and CMS results are shown in figure~\ref{fig:HiggsMass},~\cite{Aad:2015zhl,CMS:2014ega,ATLAS-CONF-2015-007}. In the same figure are shown the results, in terms of measured cross section, of all analyses done by CMS looking for a Higgs boson in different final states. The results are compatible with SM expectations.
+To measure the mass of the Higgs boson, diphoton and golden channel analyses have been combined between ATLAS and CMS~\cite{Aad:2015zhl}. The found value by the combination is $m_{H}=125.09\pm 0.24$. Combination and separated ATLAS and CMS results are shown in figure~\ref{fig:HiggsMass}~\cite{Aad:2015zhl,CMS:2014ega,ATLAS-CONF-2015-007}. In the same figure are shown the results, in terms of measured cross section, of all analyses done by CMS looking for a Higgs boson in different final states. The results are compatible with SM expectations.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[trim=10cm 7cm 1cm 1cm, clip=true, width=0.8\textwidth]{figs/LHC_combined_obs_unblind_summary_a1_final.png}
     \includegraphics[width=0.55\textwidth]{figs/sqr_mlz_ccc_mH125.png}
     \includegraphics[width=0.4\textwidth]{figs/ATLAS_HIGGS_mu_Summary.png}
-    \caption{ATLAS and CMS combination of Higgs boson mass measurement [top] and $\sigma/\sigma_{SM}$ (measured cross section over theoretical SM cross section) for searches performed by ATLAS and CMS in different Higgs boson decay channels [bottom].}
+    \caption{ATLAS and CMS combination of Higgs boson mass measurement [top] and $\sigma/\sigma_{SM}$ (measured cross section over theoretical SM cross section) for searches performed by ATLAS and CMS in different Higgs boson decay channels [bottom]~\cite{Aad:2015zhl,CMS:2014ega,ATLAS-CONF-2015-007}.}
     \label{fig:HiggsMass}
   \end{center}
 \end{figure}
@@ -555,7 +555,7 @@ Whereas nowadays there are plenty of experimental results for the measurement of
   \begin{center}
     \includegraphics[width=0.42\textwidth]{figs/u0g5o.png}
     \includegraphics[width=0.42\textwidth]{figs/AllFitPaper_30_04_14_MeV.png}
-    \caption{Higgs boson width as function of its mass [left] and current limits from CMS measurement [right].}
+    \caption{Higgs boson width as a function of its mass~\cite{Dittmaier:2011ti, Dittmaier:2012vm, Heinemeyer:2013tqa, HIGGSXSWG} [left] and current limits from CMS measurement~\cite{Khachatryan:2014iha} [right].}
     \label{fig:WidthHiggs}
   \end{center}
 \end{figure}
@@ -570,5 +570,5 @@ Whereas nowadays there are plenty of experimental results for the measurement of
 %\begin{TOINCLUDE}Plot on ATLAS+CMS combination of the Higgs mass; Plot on signal strength for each decay channel; Individual plots on diphoton channel and golden channel\end{TOINCLUDE}
 
 
-%\begin{TOINCLUDE}Plot of branching ratio as function of the mass for different scenarios (representations)\end{TOINCLUDE}
+%\begin{TOINCLUDE}Plot of branching ratio as a function of the mass for different scenarios (representations)\end{TOINCLUDE}
 
