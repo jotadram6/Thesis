@@ -1,11 +1,11 @@
 Remarks/Corrections/Questions from Sabine: (Following discussion of 21 September)
 
 General form remarks:
-1. Check that between paragraphs there is a blank space in the tex file. (Chapter 1 done, Chapter 2 done)
-2. Add full stop always at the end of caption (Chapter 1 done, Chapter 2 done)
-3. Add reference in figure caption -> Only reference number between brackets without "Taken from" or "From" before the reference (Chapter 1 done, Chapter 2 done)
-4. Remove the commas before giving a reference. (Chapter 1 done, Chapter 2 done)
-5. Replace "as function of" for "as a function of" -> Sabine asked me to check this with a native English speaker (Chapter 1 done, Chapter 2 done)
+1. Check that between paragraphs there is a blank space in the tex file. (Chapter 1 done, Chapter 2 done, Chapter 3 done)
+2. Add full stop always at the end of caption (Chapter 1 done, Chapter 2 done, Chapter 3 done)
+3. Add reference in figure caption -> Only reference number between brackets without "Taken from" or "From" before the reference (Chapter 1 done, Chapter 2 done, Chapter 3 done)
+4. Remove the commas before giving a reference. (Chapter 1 done, Chapter 2 done, Chapter 3 done)
+5. Replace "as function of" for "as a function of" -> Sabine asked me to check this with a native English speaker (Chapter 1 done, Chapter 2 done, Chapter 3 done)
 
 ############
 #Chapter 1:#
@@ -76,29 +76,51 @@ Figure 2.27: Define "HF" in the caption. -> Text added to the caption: In the le
 
 Line 1500: Add full effective branching ratio of T' in the full hadronic channel
 
-Section 3.1: Add generators references
+Using these three branching ratios an expected number of events of \Tp~into 5 quarks (or jets) of around 700 events is obtained. -> Using these three branching ratios, the $Br(T'\to 3b, 2j)=37$\%. Thus the expected number of events of \Tp~into 5 quarks (or jets) is of around 700 events.
+
+Section 3.1: Add generators references (Done)
 
 Line 1527: Explain what is "integration troubles"
 
+the mass of the di--lepton pair was required to satisfy $M_{ll}>50$~\GeVcc~in order to avoid integration troubles. -> the mass of the di--lepton pair was required to satisfy $M_{ll}>50$~\GeVcc~in order to avoid integration troubles (when the di--lepton invariant mass approaches zero the cross-section diverges).
+
 Line 1533: Explain the choice of parameters -> Include reference where the benchmark point was studied
 
-Figure 3.2: Small axis labels (resize or bold to ameliorate reading). Say a word in caption about QCD that is not very visible.
+These parameters correspond to a benchmark point similar to the one defined in~\cite{Cacciapaglia:2011fx}, it was set to obtain a VLQ mixed with light and heavy SM quark generations and a \Tp~mass close to 700~\GeVcc.
 
-Chapter 3: Add reference of pheno paper at the beginning.
+Figure 3.2: Small axis labels (resize or bold to ameliorate reading). Say a word in caption about QCD that is not very visible. -> Bold added to labels. Phrase added to caption: QCD background is on top of the stack of backgrounds.
+
+Chapter 3: Add reference of pheno paper at the beginning. (Done)
 
 Section 3.3: Explain procedure for the determination of the cut values.
 
+The different criteria have been chosen in order to increase the discrimination of signal from background. The objective of the study is not to obtain the best possible discrimination but moreover to illustrate a possible selection to extract the signal and to give a qualitative understanding of signal characteristics.
+
 Line 1609: Change "\Delta R_{jj}" for "\Delta R_{bb}"
+
+
 
 Line 1627: Change "central" for "close in \phi"
 
+
+
 Line 1670-1673: Rephrase/Explain
+
+
 
 Line 1684: (Not mandatory) Add efficiencies of cuts with wider T' width
 
 Chapter 3: Add paragraph at the end about the importance of studying model where the T' is mixed to the three generations.
 
+
+
 Line 1696: Missing verb
+
+
+
+############
+#Chapter 4:#
+############
 
 Line 1747: Specify what is "this" in the phrase context -> Remove line or rephrase
 
@@ -122,6 +144,10 @@ Line 2141: Add one or two lines to describe more PAT
 Line 2171: Explain why trigger is an or between pt>32, pt>36, pt>40 ...
 
 Figure 5.1: Definition of number of interactions for data and add a reference
+
+############
+#Chapter 5:#
+############
 
 Line 2201: Recall that backgrounds are estimated from data.
 
