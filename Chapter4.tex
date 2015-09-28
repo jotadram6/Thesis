@@ -23,7 +23,7 @@ A similar method is utilized to simulate proton-proton collisions. This simulati
 
 The parton model was initially proposed by Richard Feynman in 1969~\cite{Feynman:1969ej}, as a method to understand collisions of non-fundamental particles. The model considers a composed particle, as a proton or a neutron, formed by a given number of point-like fundamental particles. When a collision occurs the point-like particles inside have a major probability to scatter. For example, when an electron collides with a proton, most of the interactions will be between the electron and the fundamental charged components of the proton, $u$ and $d$ quarks. This ``hard'' components are called valence quarks. Surrounding them, there are the sea of quarks and gluons.
 
-However, as the energy of the collision increases the probability to scatter a sea component, quark or gluon, increases. In addition, even if the valence quarks of a proton are the $u$ and $d$ quarks, heavier quarks can appear in the sea, as the $b$, $c$ or $s$ quarks. The probability to interact with a component, valence or sea, is described by parton distribution function, commonly called PDF. A PDF function $f\equiv f(x,Q^{2})$ represents the number density of a given quark or gluon as a function of the resolution scale $Q^{2}$ and the fraction of momentum carried by the parton $x$. This is, the number of partons of a given type inside the proton. The determination of a PDF is done via a fit of large data samples from experiments specifically designed to test the inner structure of nucleons. The SLAC experiment (Stanford Linear Accelerator Center)~\cite{SLACTDR}, in California, United States, first probed the existence of partonic structure inside nucleons using leptons as probes scattered against nucleons, experiences known as deep inelastic scattering (DIS) experiments~\cite{Whitlow:227258}. Another important experiment was the HERA~\cite{DESY-HERA-81-10} accelerator at DESY in Hamburg, Germany, which used electrons to study the inner structure of protons~\cite{Chekanov:2009na}.
+However, as the energy of the collision increases the probability to scatter a sea component, quark or gluon, increases. In addition, even if the valence quarks of a proton are the $u$ and $d$ quarks, heavier quarks can appear in the sea, as the $b$, $c$ or $s$ quarks. The probability to interact with a component, valence or sea, is described by parton distribution function, commonly called PDF. A PDF function $f\equiv f(x,Q^{2})$ represents the number density of a given quark or gluon as a function of the resolution scale $Q^{2}$ and the fraction of momentum carried by the parton $x$. The determination of a PDF is done via a fit of large data samples from experiments specifically designed to test the inner structure of nucleons. The SLAC experiment (Stanford Linear Accelerator Center)~\cite{SLACTDR}, in California, United States, first probed the existence of partonic structure inside nucleons using leptons as probes scattered against nucleons, experiences known as deep inelastic scattering (DIS) experiments~\cite{Whitlow:227258}. Another important experiment was the HERA~\cite{DESY-HERA-81-10} accelerator at DESY in Hamburg, Germany, which used electrons to study the inner structure of protons~\cite{Chekanov:2009na}.
 
 In figure~\ref{fig:MSTW} is shown the Martin-Stirling-Thorne-Watt~\cite{Martin:2009iq} (MSTW) PDF for two resolution scales, taken from~\cite{Martin:2009iq}. The MSTW PDF is one of the experimental fits combining data from DIS and HERA. From this PDF is shown that $u$ and $d$ quarks carry the most of the momentum of the proton. The rest of the momentum is spread mainly over a huge amount of gluons and some, less probable, sea quarks as $\bar{u}, \bar{d}$ or $c$ and $s$. One important feature is that the composition of the proton changes depending on the resolution scale. At $Q^{2}= 10\, \text{GeV}^{2}$ there is no probability to find a $b$-quark in the proton while at $Q^{2}= 10^{4}\, \text{GeV}^{2}$ there is a non-negligible probability to find it.
 
@@ -36,6 +36,8 @@ In figure~\ref{fig:MSTW} is shown the Martin-Stirling-Thorne-Watt~\cite{Martin:2
 \end{figure}
 
 Two other important PDF fits are CTEQ~\cite{Nadolsky:2008zw} and NNPDF~\cite{Ball:2010de}. Together with MSTW, they are the most used PDF sets in the CMS experiment for MC production. 
+
+The knowledge of the proton content allows to compute the cross section of processes proton-proton collisions. This cross section depends of the momentum carried by each parton inside the parton, and are modulated by the probability of the interaction between different quarks during the collision.
 
 For a scattering process, the hard part differential cross section can be written as,
 
@@ -66,7 +68,7 @@ As QCD strong interaction imposes several theoretical restrictions to have a fir
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=\textwidth]{figs/parton_shower.png}
-    \caption{Graphical representation of hadronization process of partons resulting from a proton-proton collision.}
+    \caption{Graphical representation of hadronization process of partons resulting from a proton-proton collision. The biggest green ellipses, preceded by three green arrows, represent the initial protons. The small green circles inside them represent the partons inside the protons. The big red circle, with small red circles inside, represent the hard interaction from partons (in blue lines). The hard interaction produces three particles, red full small circles, that decay afterward. The red lines represent the decay products from the particles produced in the hard interaction, and the additional particles produced from showering. Final hadrons are drawn in the most exterior part of the graph. These final hadrons are represented by the small full green circles.}
     \label{fig:Hadr}
   \end{center}
 \end{figure}
@@ -299,8 +301,8 @@ MadGraph utilize a MLM merging procedure with $k_{T}$ jet algorithm. The MLM pre
   \begin{equation*}
     p_{T}^{parton}>p_{T}^{min}, \; |\eta^{parton}|<\eta^{max}, \; \Delta R_{partons}>R_{min}
   \end{equation*} where \textit{min} and \textit{max} states for the minimal and maximal values required in each variable.
-\item Usage of $k_{T}$ jet algorithm to find jet configuration of the event from partons. This first reconstruction uses a cut on the minimal $k_{T}$ as defined in equation~\ref{eq:kt}. This first minimal cut is set in MadGraph by the variable xqcut (see~\ref{fig:RunCard}). $Q^{X}_{cut}$ will be used to refer to it.
-\item Run parton shower and rerun jet algorithm with a different minimal $k_{T}$. The second minimum, the $Q_{cut}$, is set in Pythia. The two minima are chosen to be $Q_{cut}>Q^{X}_{cut}$.
+\item Usage of $k_{T}$ jet algorithm to find jet configuration of the event from partons. This first reconstruction uses a cut on the minimal $k_{T}$ distance as defined in equation~\ref{eq:kt}. This first minimal cut is set in MadGraph by the variable xqcut (see~\ref{fig:RunCard}). $Q^{X}_{cut}$ will be used to refer to it. This cut is applied at generator level, what means that MadGraph will only deliver events where every pair of partons satisfy this requirement.
+\item Run parton shower and rerun jet algorithm with a different minimal $k_{T}$ distance. The second minimum, the $Q_{cut}$, is set in Pythia. The two minima are chosen to be $Q_{cut}>Q^{X}_{cut}$. $Q_{cut}$ is also a generator cut at Pythia level. Pythia will give then only events where every pair of hadrons passing this criterion.
 \item Compare the set of jets obtained from step 2 and 3. If a jet from the parton event falls in a radius smaller than $1.5 \times R$ of a jet from the showered event, it is said to be matched to it ($R$ being the radius parameter of the jet algorithm). If a match is found for all partons the event is kept, otherwise is rejected.
 \item All events with more jets, after showering, than partons are finally discarded.   
 \end{enumerate}
@@ -349,7 +351,7 @@ Figures~\ref{fig:WVal} and~\ref{fig:ZVal} display examples of MC validation usin
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.45\textwidth]{figs/Wpt_rivet.png}
+    \includegraphics[width=0.55\textwidth]{figs/Wpt_rivet.png}
     \caption{\W~boson $p_{T}$ measured by ATLAS experiment in muon final states compared to different MC simulations. py6 stands for Pythia 6, py8 for Pythia 8, MGpy6 MadGraph interfaced with Pythia 6 and PWG for Powheg. MadGraph with Pythia 6 gives the best description of experimental data.}
     \label{fig:WVal}
   \end{center}
@@ -357,7 +359,7 @@ Figures~\ref{fig:WVal} and~\ref{fig:ZVal} display examples of MC validation usin
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{figs/Zpt_rivet.png}
+    \includegraphics[width=1.0\textwidth]{figs/Zpt_rivet.png}
     \caption{\Z~boson $p_{T}$ measured by ATLAS [left] and CMS [right] experiments in di-muon channel. py6 stands for Pythia 6, py8 for Pythia 8, MGpy6 MadGraph interfaced with Pythia 6 and PWG for Powheg. MadGraph with Pythia 6 gives the best description of experimental data in both cases.}
     \label{fig:ZVal}
   \end{center}

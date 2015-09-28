@@ -126,24 +126,43 @@ In chapter~\ref{chap:search}, a data analysis using data collected by CMS experi
 
 Line 1747: Specify what is "this" in the phrase context -> Remove line or rephrase
 
+Phrase removed.
+
 Line 1768: Transition between both paragraphs is missing
+
+Small paragraph added: The knowledge of the proton content allows to compute the cross section of processes proton-proton collisions. This cross section depends of the momentum carried by each parton inside the parton, and are modulated by the probability of the interaction between different quarks during the collision.
 
 Figure 4.4: Explain color code of the figure.
 
+Description added to the caption of the figure: The biggest green ellipses, preceded by three green arrows, represent the initial protons. The small green circles inside them represent the partons inside the protons. The big red circle, with small red circles inside, represent the hard interaction from partons (in blue lines). The hard interaction produces three particles, red full small circles, that decay afterward. The red lines represent the decay products from the particles produced in the hard interaction, and the additional particles produced from showering. Final hadrons are drawn in the most exterior part of the graph. These final hadrons are represented by the small full green circles.
+
 Chapter 4: 
 	Add, if possible, the gain on cpu time with madspin for ttbar production
+
+
+
 	Explain better how Qcut and QXcut are done before generation. And clarify how the first is at pythia level and the second at madgraph.
+
+Two phrases added: 
+$Q^{X}_{cut}$ will be used to refer to it. This cut is applied at generator level, what means that MadGraph will only deliver events where every pair of partons satisfy this requirement.
+
+$Q_{cut}$ is also a generator cut at Pythia level. Pythia will give then only events where every pair of hadrons pass this criterion.
+
 	Explain better/Add details about merging procedure and DJR study. (DJR is really a variable?)
 
 Line 1993-1996: Replace "minimal kt" for "minimal kt distance"
 
-Figure 4.15, 4.16: Increase size
+Replaced.
+
+Figure 4.15, 4.16: Increase size -> Done
 
 ############
 #Chapter 5:#
 ############
 
 Line 2117: Define what is "pt hat" (CMS jargon)
+
+
 
 Line 2141: Add one or two lines to describe more PAT
 
