@@ -92,31 +92,33 @@ Figure 3.2: Small axis labels (resize or bold to ameliorate reading). Say a word
 
 Chapter 3: Add reference of pheno paper at the beginning. (Done)
 
+Line added: A majority of the results exposed in this chapter are part of the reference~\cite{Beauceron:2014ila}.
+
 Section 3.3: Explain procedure for the determination of the cut values.
 
 The different criteria have been chosen in order to increase the discrimination of signal from background. The objective of the study is not to obtain the best possible discrimination but moreover to illustrate a possible selection to extract the signal and to give a qualitative understanding of signal characteristics.
 
 Line 1609: Change "\Delta R_{jj}" for "\Delta R_{bb}"
 
-
+Changed
 
 Line 1627: Change "central" for "close in \phi"
 
-
+Changed
 
 Line 1670-1673: Rephrase/Explain
 
-
+These fluctuations due to the poor statistics can change the final estimate of the number of background events entering the peak of the signal, and the error is partially accounted for in the statistical error. -> These fluctuations due to the poor statistics can change the final estimate of the number of background events entering the peak of the signal.
 
 Line 1684: (Not mandatory) Add efficiencies of cuts with wider T' width
 
 Chapter 3: Add paragraph at the end about the importance of studying model where the T' is mixed to the three generations.
 
-
+It is important to stress that the present study, as the CMS analysis that will be presented afterward, rely in a VLQ model that has been poorly explored in experiments. This model allows the VLQ to be mixed to the three generations of SM quarks, enhancing the production cross section in proton-proton collisions. The most common VLQ models assume that the top-partner mixes preferentially to third SM-quark generation. The model used in this work represents then a generalization with respect to the most widely used models in the literature.
 
 Line 1696: Missing verb
 
-
+In chapter~\ref{chap:search}, a data analysis using data collected by CMS experiment during run 1. -> In chapter~\ref{chap:search}, a data analysis using data collected by CMS experiment during run 1 is presented.
 
 ############
 #Chapter 4:#
@@ -137,23 +139,29 @@ Line 1993-1996: Replace "minimal kt" for "minimal kt distance"
 
 Figure 4.15, 4.16: Increase size
 
+############
+#Chapter 5:#
+############
+
 Line 2117: Define what is "pt hat" (CMS jargon)
 
 Line 2141: Add one or two lines to describe more PAT
 
 Line 2171: Explain why trigger is an or between pt>32, pt>36, pt>40 ...
 
+
+
 Figure 5.1: Definition of number of interactions for data and add a reference
 
-############
-#Chapter 5:#
-############
+For data, the true number of interactions represents the expected number of interactions per crossing for a given lumi section from the average bunch instantaneous luminosity with respect to the total inelastic cross section.
 
 Line 2201: Recall that backgrounds are estimated from data.
 
 Line 2205: Precise and rephrase to day that the two sets of QCD samples are weighted to half of the luminosity instead of saying mean values
 
 Figure 5.5: Why high eta disagreement? Perhaps add pt vs eta plots for each jet.
+
+
 
 Figure 5.6: (Not mandatory) Add HT data/MC comparison with only HT binned samples
 
@@ -163,11 +171,13 @@ Equation 5.5: Specify that the efficiencies where calculated from the whole samp
 
 Line 2294: Specify conditions of the study from where the values are coming.
 
-Line 2352: Specify that the cut values were taken from an scan optimization -> Add, after all cuts, optimization range, step...
+Line 2352: Specify that the cut values were taken from a scan optimization -> Add, after all cuts, optimization range, step...
 
 Figures for variables of chapter 5 selection: (Not mandatory) Add vertical lines to show the cut value.
 
 Figure 5.19: Bin 9?
+
+Bin 9 missing, now added to the plot.
 
 Page 140: (Not mandatory) Add T' mass for all signal mass points after full selection
 
@@ -194,6 +204,9 @@ Systematics:
 	Line 2701-2719: Simplify vocabulary and explanation of PDF systematics
 	Line 2723: Change 4% for 3%
 	Line 2730: Justification of 5% variation of inelastic cross section variation for PU systematics calculation
+
+Using different measurements of the total inelastic cross section, as in~\cite{Chatrchyan:2013gfi, CMS:2012sua, Antchev:2011vs}, the best fit value of the inelastic cross section for 2012 is 69.4 mb, with an approximate error of 3\%. Combining this error with the uncertainty on the luminosity (2.6\%), the total uncertainty on the estimated number of interactions is 3.9\%. However, as some details in the MC simulations used for the cross section measurement are difficult to interpret, a conservative error of 5\% was taken.
+
 	Line 2749-2756: Add reference to figure from where fig 5.44 is coming
 	Line 2766-2770: Reverse order of the two phrases.
 
@@ -341,27 +354,52 @@ Fig 5.50: CMS figure is small -> Re-size
 Questions:%%%%%
 %%%%%%%%%%%%%%%
 
-Section 3.3: Explain procedure for the determination of the cut values.
+Section 3.3: Explain procedure for the determination of the cut values. -> Lines added:
+
+I propose to add the following information: The different criteria have been chosen in order to increase the discrimination of signal from background. The objective of the study was not to obtain the best possible discrimination but moreover to illustrate a possible selection to extract the signal and to give a qualitative understanding of signal characteristics.
 
 Line 1684: (Not mandatory) Add efficiencies of cuts with wider T' width
+
+I'm currently retrieving this information.
 
 Chapter 4: 
         Add, if possible, the gain on cpu time with madspin for ttbar production
 
+I have already retrieved the time taken to generate 100 events with MadSpin. I'm recalculating the time needed to generate the same amount of events with MadGraph without MadSpin.
+
 Line 2171: Explain why trigger is an or between pt>32, pt>36, pt>40 ...
+
+The lowest trigger requirement is prescaled, then I propose to add the following phrase: To obtain a fully unprescaled trigger selection, on top of the loosest trigger requirement that is prescaled, tighter trigger requirements were added.
 
 Figure 5.1: Definition of number of interactions for data and add a reference
 
+I propose to add the following phrase: For data, the true number of interactions represents the expected number of interactions per crossing for a given lumi section from the average bunch instantaneous luminosity with respect to the total inelastic cross section.
+
 Figure 5.5: Why high eta disagreement? Perhaps add pt vs eta plots for each jet.
+
+These differences are due to the trigger simulation that does not correspond exactly to the behavior of trigger on data.
 
 Figure 5.6: (Not mandatory) Add HT data/MC comparison with only HT binned samples
 
+I'm currently working on the preparation of this plot. I'll send it to you during the week.
+
 Figures for variables of chapter 5 selection: (Not mandatory) Add vertical lines to show the cut value.
+
+I'll prefer to leave the plots in their current state. However I'll add the lines for the presentation of the defense.
 
 Figure 5.19: Bin 9?
 
+Bin 9 was missing, now I added it to the plot.
+
 Page 140: (Not mandatory) Add T' mass for all signal mass points after full selection
+
+I did not add the plots after full selection because I have already shown the plots right after reconstruction of the T' (figure 5.14) and a table with the results from a gaussian fit of each mass point after full selection (table 5.6). I think, with this in mind, that introducing the same plots after full selection could be doubling the information. However, I can send you the plots privately.
 
 Systematics:
         Why the error of the c-jets is taken as the double of b-jets?
+
+The b-tagging working group in CMS has not put in place an accurate method to measure the charm mistag rate. I propose to add the following information: The b-tagging working group has put in place an accurate method to measure the b-jet tag rate. However, a method to measure the c-jet mistag rate has not been developed. As the c-jet b-tagging efficiency is quite high (~20\%) for the medium working point using the CSV algorithm, the b-tagging working group has recommended to use the same scale factors for b and c-jets, but doubling the uncertainty for c-jets to account the lack of a proper method to determine them.
+
         Line 2730: Justification of 5% variation of inelastic cross section variation for PU systematics calculation
+
+Using different measurements of the total inelastic cross section, as in~\cite{Chatrchyan:2013gfi, CMS:2012sua, Antchev:2011vs}, the best fit value of the inelastic cross section for 2012 is 69.4 mb, with an approximate error of 3\%. Combining this error with the uncertainty on the luminosity (2.6\%), the total uncertainty on the estimated number of interactions is 3.9\%. However, as some details in the MC simulations used for the cross section measurement are difficult to interpret, a conservative error of 5\% was taken.

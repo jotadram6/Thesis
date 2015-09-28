@@ -1,3 +1,46 @@
 Why not considering SM Higgs production as background?
 
 What means HF EM particles in figure 2.27?
+
+Hadronic forward calorimeter
+
+Line 2730: Justification of 5% variation of inelastic cross section variation for PU systematics calculation
+
+My answer: Using different measurements of the total inelastic cross section, as in , the best fit value of the inelastic cross section for 2012 is 69.4 mb, with an approximate error of 3\%. Combining this error with the uncertainty on the luminosity (2.6\%), the total uncertainty on the estimated number of interactions is 3.9\%. However, as some details in the MC simulations used for the cross section measurement are difficult to interpret, a conservative error of 5\% was taken.
+
+The number of interactions in the data is estimated from the measured luminosity in each bunch crossing times an average total inelastic cross section. Thus, there are two sources of error here, and these are the dominant sources of error for the pileup simulation. The luminosity uncertainty, and the uncertainty in the total inelastic cross section. CMS produced a measurement of the total inelastic cross section in 2011 using the forward calorimetry (CMS FWD-11-02). The measured value quoted is 68 +/- 4.5 mb when the uncertainty due to the luminosity is subtracted from the total error. This corresponds to an error of 6.5%. A second measurement, based on the 2010 data (CMS QCD-11-002), gives a value of 64.5 +/- 1.9 mb without the luminosity error. This is a 2.9% error on the total inelastic cross section. A third measurement, from the TOTEM collaboration (arXiv:1110.1395), gives a central value of 73.5 mb with a roughly 1.6 mb total error. Clearly, there is some tension among these results. (ATLAS has also produced measurement(s) similar to CMS, with slightly larger errors.) The interpretation of this value for the total inelastic cross section is complicated by the fact that the value for this quantity in PYTHIA, which is used to simulate the pileup events, does not necessarily correspond to all of the physics found in "Nature". From a "best fit" analysis comparing the distribution of the number of reconstructed vertices in data and MC for Z->mumu events, a central value of 68mb (for 2011) and 69.4mb (for 2012) for the PYTHIA samples has been determined, and agrees with the data for the entire 2011 dataset once the new luminosity values have been used.
+The luminosity uncertainty for 2011 is 2.2% (according to CMS SMP-12-008). The reported error for 2012 is 2.6% .
+Combining the luminosity and cross section errors, the estimated number of interactions has a total uncertainty of approximately 3.6% for 2011, and 3.9% in 2012. This corresponds to an overall uncertainty in "scale" of the pileup distribution.
+
+Figure 5.1: Definition of number of interactions for data and add a reference
+
+The only required option is "--calcMode" which tells the script which distribution you are making. The two choices are "true" and "observed". Some have found this nomenclature confusing, so here is another attempt at an explanation. Given a total inelastic cross section, the average bunch instantaneous luminosity can be directly converted into the expected number of interactions per crossing for this LumiSection. Selecting the "true" mode puts this value, and only this value, into the pileup histogram. Hence, in this case the pileup histogram contains the distribution of the mean number of interactions per crossing, which would correspond exactly to the value returned by PileupSummaryInfo::getTrueNumInteractions() in the Monte Carlo. Since this is the mean value of the poisson distribution from which the number of interactions in- and out-of-time are generated, no additional information should be required for reweighting if these values are matched in data and Monte Carlo. On the other hand, selecting the "observed" mode causes the script to enter in the histogram a properly-normalized poisson distribution with a mean corresponding to the expected number of interactions per crossing for each LumiSection. Given an expected mean number of interactions, the pileup histogram contains the distribution of the number of interactions one would actually observe given a poisson of that mean. So, this distribution is what one would see if one counted the number of events seen in a given beam crossing (by looking at the number of vertices in data, for example), or using something like PileupSummaryInfo::getPU_NumInteractions() in the Monte Carlo. This would be appropriate for pileup reweighting based on in-time-only distributions. Plots of these distributions are shown later in this page.
+
+Why the error of the c-jets is taken as the double of b-jets?
+
+SFb as a function of jet pt, from muon-jet and ttbar data: 
+Results documented in Luca'talk at the BTV Object Review, PPD meeting, May 29th￼ 
+2 sets of payloads are provided, without ttbar measurements and with ttbar measurements, the later having slightly smaller uncertainty 
+SFb is provided for each tagger/op in the pt range 20-800 GeV and abs(eta) range 0-2.4 
+for pt > 800 GeV: use the SFb value at 800 GeV with twice the quoted uncertainty (upper limit is 400 GeV for CSVSLV1, with the same rule for pt > 400 GeV) 
+for pt < 20 GeV: use the SFb value at 20 GeV with twice the quoted uncertainty 
+(the provided uncertainty SFb_error is absolute so the relative error is SFb_error/SFb)
+
+SFc = SFb with twice the quoted uncertainty
+
+SFlight as a function of jet pt for several eta bins: payload 
+with the mean, minimum and maximum SFlight values 
+Results documented in AN-2013/150 
+SFlight is provided for each tagger/op in the pt range 20-1000 GeV in several abs(eta) bins: 
+0-0.5, 0.5-1, 1-1.5, 1.5-2.4 for Loose; 0-0.8, 0.8-1.6, 1.6-2.4 for Medium; 0-2.4 for Tight operating points (in the eta bin 1.5-2.4 for Loose and 1.6-2.4 for Medium, the pt range is 20-850 GeV) 
+for pt > ptmax: use the SFlight value at ptmax with twice the quoted uncertainty 
+SFlight is provided for the full 2012 year (ABCD), as the sub-period variations are small and included in the quoted uncertainties.
+
+Correlations between the SF measurements 
+SFlight is mostly uncorrelated to SFc and SFb 
+SFc is conservatively taken as correlated to SFb 
+so when varying SFb by +_1 sigma, one has to vary SFc by +_ 1 sigma simultaneously. 
+SFlight can be independently varied by +_1 sigma and the resulting uncertainty added in quadrature to that of SFc and SFb.
+
+
+
