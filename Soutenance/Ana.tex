@@ -531,5 +531,53 @@ Relative $H_{T}>0.67$ & $1.16 \pm 0.17$  & $2.13 \pm 0.17$  \\
 
 \end{columns}
 
+\end{frame}
+
+\begin{frame}{Background shape estimation from data}
+\vspace{-.2cm}
+
+\begin{columns}
+\begin{column}{.50\textwidth}
+   \begin{block}{}\scriptsize
+     \begin{itemize}
+     \item Signal sample: signal enriched \\$\to$ Standard selection
+     \item Control sample: background enriched $\to$ Standard selection but $n_{b}^{CSVL}>=3$ and vetoing events with $n_{b}^{CSVM}>=3$
+     \item $M(5j)$ from control sample used to estimate shape of $M(5j)$ in the signal sample
+     \item Validation: Compare $M(5j)$ in control and signal sample at various selection stages\\
+     \textbf{Stage A}: Selection up to $\chi^{2}<8$, included.\\
+     \textbf{Stage B}: Selection up to $\Delta R(bb) <1.2$, included.\\
+     \textbf{Stage C}: Selection up to $\frac{M(top^{2nd}_{cand})+M(W^{2nd}_{cand})}{M(H_{cand})}>6.8$, included.\\
+     \textbf{Stage D}: Full selection.
+       %\begin{itemize}\scriptsize
+         %\item Stage A: Selection up to $\chi^{2}<8$, included.
+         %\item Stage B: Selection up to $\Delta R(bb) <1.2$, included.
+         %\item Stage C: Selection up to $\frac{M(top^{2nd}_{cand})+M(W^{2nd}_{cand})}{M(H_{cand})}>6.8$, included.
+         %\item Stage D: Full selection.
+       %\end{itemize}
+     \end{itemize}
+    \end{block}
+
+%\vspace{-.2cm}
+%    \begin{block}{}\tiny
+%      \textbf{Figure}: Schematic representation of signal and control sample. The big blue circle represents the ensemble of events with at least 3 CSVL b-tagged jets. The green circle represents the signal MC events while the circle filled with horizontal lines represents the signal sample (events with at least 3 CSVM b-tagged jets). The control sample then is the blue circle minus the horizontal line filled circle.
+%    \end{block}
+\end{column}
+
+\begin{column}{.50\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/Ana/SchematicControlSample.png}
+    %\caption{Schematic representation of signal and control sample. The big blue circle represents the ensemble of events with at least 3 CSVL b-tagged jets. The green circle represents the signal MC events while the circle filled with horizontal lines represents the signal sample (events with at least 3 CSVM b-tagged jets). The control sample then is the blue circle minus the horizontal line filled circle.}
+    %\label{fig:CSSSSche}
+  \end{center}
+\end{figure}
+
+\vspace{-.2cm}
+    \begin{block}{}\tiny
+      \textbf{Figure}: Schematic representation of signal and control sample. The big blue circle represents the ensemble of events with at least 3 CSVL b-tagged jets. The green circle represents the signal MC events while the circle filled with horizontal lines represents the signal sample (events with at least 3 CSVM b-tagged jets). The control sample then is the blue circle minus the horizontal line filled circle.
+    \end{block}
+\end{column}
+
+\end{columns}
 
 \end{frame}
