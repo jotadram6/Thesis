@@ -632,6 +632,88 @@ Weight & $11.04\ex{-2}$ & $15.29\ex{-3}$ & $66.24\ex{-3}$ & $17.47\ex{-3}$ \\
 
 \end{frame}
 
+\begin{frame}{Reconstructed \Tp~after full selection}
+\vspace{-.2cm}
+\begin{table}[htbH]
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+\multicolumn{2}{|c}{Generated} & \multicolumn{3}{|c|}{Reconstructed} \\
+Mass (GeV/$c^{2}$) & Width (GeV/$c^{2}$) & Mass (GeV/$c^{2}$) & Width (GeV/$c^{2}$) & $\chi^{2} /$ndf\\
+\hline
+600 & 0.62 &$604.60\pm14.18$ & $32.44\pm10.37$ & 4.99/4\\
+650 & 0.80 &$644.56\pm12.64$ & $35.53\pm9.54$ & 8.03/4\\
+700 & 1.02 &$691.79\pm13.65$ & $41.16\pm9.75$ & 10.80/7\\
+750 & 1.27 &$736.26\pm15.53$ & $45.38\pm11.46$ & 10.24/7\\
+800 & 1.56 &$782.77\pm18.17$ & $49.52\pm13.54$ & 24.10/7\\
+850 & 1.89 &$832.86\pm18.09$ & $47.89\pm13.44$ & 16.06/7\\
+900 & 2.26 &$881.53\pm19.12$ & $45.69\pm14.23$ & 11.50/7\\
+950 & 2.67 &$929.02\pm24.97$ & $51.48\pm18.91$ & 14.11/7\\
+1000 & 3.13 &$970.48\pm32.15$ & $53.45\pm25.13$ & 10.42/7\\
+\hline
+\end{tabular}
+}
+%\caption{Reconstructed mass and width for \Tp~candidate after full analysis selection from a gaussian fit for each signal mass generated. \label{tab:SignalWidths}}
+\end{center}
+\end{table}
+
+\vspace{-.2cm}
+    \begin{block}{}
+      \tiny \centering Reconstructed mass and width for \Tp~candidate after full analysis selection from a gaussian fit for each signal mass generated. 
+    \end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{Selection efficiency}
+\vspace{-.2cm}
+\begin{table}[htbH]
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Selection & Cut & Signal (M=700 GeV/$c^{2}$) & Multijet & $t\bar{t}$ + single top & Diboson \\
+\hline
+\multirow{4}{*}{\rotatebox{90}{Basic}} & Trigger cut and $p_{T}$,$\eta$ selection & $52.68\pm2.11$ & $18.53\pm5\ex{-3}$ & $36.55\pm0.06$ & $16.14\pm0.34$ \\
+&$j_{1}>150$~GeV/c & $47.94\pm2.11$ & $14.04\pm4\ex{-3}$ & $24.73\pm0.06$ & $11.58\pm0.30$ \\
+&$H_{T}>550$~GeV/c & $47.65\pm2.11$ & $13.53\pm4\ex{-3}$ & $24.22\pm0.06$ & $11.16\pm0.29$ \\
+&$n_{b}^{CSVM}>=3$ & $14.57\pm1.49$ & $0.06\pm3\ex{-4}$ & $1.98\pm0.02$ & $0.15\pm0.04$ \\
+\hline
+\multirow{6}{*}{\rotatebox{90}{Analysis}} & $\chi^{2}<8$ & $7.09\pm1.09$ & $5\ex{-3}\pm8\ex{-5}$ & $0.64\pm0.01$ & $0.01\pm0.01$  \\
+&$\Delta R(bb) <1.2$ & $6.47\pm1.04$ & $2\ex{-3}\pm5\ex{-5}$ & $0.26\pm7\ex{-3}$ & $7\ex{-3}\pm7\ex{-3}$ \\
+%&$1.6 < \Delta R (W_{cand} H_{cand}) < 4.0$ & 6.36 & $2\ex{-3}$ & 0.23 & $5\ex{-3}$ \\
+&$105~\text{GeV}/c^{2} <M(H_{cand})<145~\text{GeV}/c^{2}$ & $5.76\pm0.99$ & $1\ex{-3}\pm4\ex{-5}$ & $0.19\pm6\ex{-3}$ & $3\ex{-3}\pm5\ex{-3}$  \\
+&$\frac{M(top^{2nd}_{cand})+M(W^{2nd}_{cand})}{M(H_{cand})}>6.8$ & $3.63\pm0.79$ & $5\ex{-4}\pm3\ex{-5}$ & $0.06\pm3\ex{-3}$ & $2\ex{-3}\pm4\ex{-3}$ \\
+&$ \Delta R (T' j^{6})>4.8$ & $2.02\pm0.60$ & $2\ex{-5}\pm6\ex{-6}$ & $6\ex{-3}\pm1\ex{-3}$ & ---  \\
+&$\frac{p_{T}(H_{cand})+p_{T}(top_{cand})}{H_{T}} > 0.67 $ & $1.80\pm0.56$ & $4\ex{-6}\pm2\ex{-6}$ & $3\ex{-3}\pm8\ex{-4}$ & --- \\
+\hline
+\end{tabular}
+}
+%\caption{Cumulative efficiencies, in \%, for signal and main background as a function of cuts applied. After $ \Delta R (T' j^{6})>4.8$ cut there are no longer events in the diboson MC samples. These efficiencies have been calculated with respect to the number of events that passed the trigger selection.\label{tab:cutflow}}
+\end{center}
+\end{table}
+
+\vspace{-.2cm}
+    \begin{block}{}
+      \tiny \centering Cumulative efficiencies, in \%, for signal and main background as a function of cuts applied. After $ \Delta R (T' j^{6})>4.8$ cut there are no longer events in the diboson MC samples. These efficiencies have been calculated with respect to the number of events that passed the trigger selection.
+    \end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{}
+\vspace{-.2cm}
+
+\vspace{-.2cm}
+    \begin{block}{}
+      \tiny \centering 
+    \end{block}
+
+\end{frame}
+
 \begin{frame}{}
 \vspace{-.2cm}
 

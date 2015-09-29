@@ -162,37 +162,53 @@ Figure 4.15, 4.16: Increase size -> Done
 
 Line 2117: Define what is "pt hat" (CMS jargon)
 
-
+Added explanation: (for initial partons \pt~ranges)
 
 Line 2141: Add one or two lines to describe more PAT
 
+Tow lines added: PAT simplifies access to reconstructed objects and tools developed for analyses. It constitutes a common work-ground where analysts can find a simplified access to event content and to the full set of CMS tools. 
+
 Line 2171: Explain why trigger is an or between pt>32, pt>36, pt>40 ...
 
-
+Line added: To obtain a fully unprescaled trigger selection, on top of the loosest trigger requirement that is prescaled, tighter unprescaled trigger requirements were added.
 
 Figure 5.1: Definition of number of interactions for data and add a reference
 
-For data, the true number of interactions represents the expected number of interactions per crossing for a given lumi section from the average bunch instantaneous luminosity with respect to the total inelastic cross section.
+Line added: For data, the true number of interactions represents the expected number of interactions per crossing for a given lumi section from the average bunch instantaneous luminosity with respect to the total inelastic cross section.
 
 Line 2201: Recall that backgrounds are estimated from data.
 
-Line 2205: Precise and rephrase to day that the two sets of QCD samples are weighted to half of the luminosity instead of saying mean values
+Line added: The MC samples are used in this analysis only for illustration purposes, as final background estimation has been derived directly from data.
+
+Line 2205: Precise and rephrase to say that the two sets of QCD samples are weighted to half of the luminosity instead of saying mean values
+
+The QCD \HT~binned and \pt~hat samples were normalized to their mean value with respect to the luminosity observed in the data. -> The QCD \HT~binned and \pt~hat samples were normalized to half the luminosity observed in the data.
 
 Figure 5.5: Why high eta disagreement? Perhaps add pt vs eta plots for each jet.
 
-
+These differences are due to the trigger simulation that does not correspond exactly to the behavior of trigger on data. I propose to add the following text: Additionally, in the $\eta$ distributions of jets a disagreement between data and MC is visible for \etag{3}. This disagreement is caused by the simulation of the trigger on MC, that do not correspond exactly with the behavior of real trigger in data. This mismatch of the trigger in MC is a motivations to estimate backgrounds from data instead of using MC.
 
 Figure 5.6: (Not mandatory) Add HT data/MC comparison with only HT binned samples
 
 Table 5.4: Missing sqrt for "S/(S+B)" -> It is really "S/sqrt(S+B)"
 
+Corrected
+
 Equation 5.5: Specify that the efficiencies where calculated from the whole samples and not event per event
+
+Phrase added: The b-tagging efficiencies are not calculated in an event per event basis but from the whole MC sample being considered. 
 
 Line 2294: Specify conditions of the study from where the values are coming.
 
+Phrase added: The Higgs boson width and mass were extracted from an analysis looking for the associated production of a \Z~and Higgs boson, with the \Z~decaying into leptons and the Higgs boson in \bbbar. The top quark and \W~boson width and mass were taken from an analysis looking for \ttbar~resonances with one top quark decaying in the leptonic channel and the second top quark going into the hadronic channel.
+
 Line 2352: Specify that the cut values were taken from a scan optimization -> Add, after all cuts, optimization range, step...
 
+
+
 Figures for variables of chapter 5 selection: (Not mandatory) Add vertical lines to show the cut value.
+
+I'll prefer to leave the plots in their current state. However I'll add the lines for the presentation of the defense.
 
 Figure 5.19: Bin 9?
 
@@ -200,38 +216,85 @@ Bin 9 missing, now added to the plot.
 
 Page 140: (Not mandatory) Add T' mass for all signal mass points after full selection
 
+
+
 For Chapter 5: (not mandatory, but to ease reading) Redo paging to close up tables and figure to the text where they are cited.
+
+
+
 
 Line 2491: Specify that number of events are unweighted wrt lumi.
 
+Finally, for completeness, tables~\ref{tab:cutflowQCD},~\ref{tab:cutflowTop} and~\ref{tab:cutflowDibosonSignal} show the number of unweighted events for all the MC samples used in the analysis at each step of the selection. -> Finally, for completeness, tables~\ref{tab:cutflowQCD},~\ref{tab:cutflowTop} and~\ref{tab:cutflowDibosonSignal} show the number of unweighted events, with respect to lumi, for all the MC samples used in the analysis at each step of the selection.
+
 Page 144: Define M(5j)
+
+Despite of these difficulties, a method to derive from the data the shape of backgrounds contribution to $M(5j)$ after full selection and one additional method to estimate its normalization have been derived. -> Despite of these difficulties, a method to derive from the data the shape of backgrounds contribution to $M(5j)$, the invariant mass of the 5-jets chosen to reconstruct the \Tp, after full selection and one additional method to estimate its normalization have been derived.
 
 Title of section 5.4.1: Change to "Method for background shape estimation"
 
+Changed
+
 Line 2511-2518: Rephrase or remove mention of chi2 cut.
+
+The second most stringent cut is the $\chi^{2}$ selection criterion, it selects 8\% of multijet events and 32\% of \ttbar~events that passed the b-tagged jets multiplicity selection. This is why the number of b-tagged jets was taken as variable suited to define the control sample. -> Reason why the number of b-tagged jets was taken as variable suited to define the control sample.
 
 Line 2535: Define "both"
 
+Phrase changed: both samples -> signal and control samples 
+
 Figure 5.29: Be more explicit about errors for samples with zero entries.
+
+Added to caption: To correctly estimate the associated errors, for each MC sample an error of 1.8 events (times the corresponding weight) should be added to each bin with zero entries.
 
 Figure 5.38: Change color of control sample or increase size of figure because the control sample is hard to see.
 
+I changed the color for a darker gray and increased the size of the plots.
+
 Systematics:
 	Why the error of the c-jets is taken as the double of b-jets?
+
+The b-tagging working group in CMS has not put in place an accurate method to measure the charm mistag rate. I propose to add the following information: The b-tagging working group has put in place an accurate method to measure the b-jet tag rate. However, a method to measure the c-jet mistag rate has not been developed. As the c-jet b-tagging efficiency is quite high (~20\%) for the medium working point using the CSV algorithm, the b-tagging working group has recommended to use the same scale factors for b and c-jets, but doubling the uncertainty for c-jets to account the lack of a proper method to determine them.
+
 	Try to explain better that when the statistical error is bigger than the systematic, the statistical error is taken as the value for the systematic uncertainty
+
+In the same table are shown the statistical uncertainties of signal yields in percentage. In the calculation of systematics for signal a conservative approach will be followed. If a source of systematic uncertainty is found to be smaller than the statistical uncertainties of the yield, the latter will be taken as the value of the systematic uncertainty.
+
 	(Not mandatory) Add statistic errors to figure 5.41 (and other similar figures)
+
+Done
+
 	Line 2701-2719: Simplify vocabulary and explanation of PDF systematics
+
+Replace:
+Another source of uncertainties for MC signal samples is related to the PDF and $\alpha_{S}$ used in the simulation. MC signal samples were produced with the PDF set CTEQ6.6 with the best fit values among PDF members. The possible variations from all 44 members of CTEQ6.6 to obtain an overall systematic effect on signal yields have been considered. In addition two additional PDF sets have been considered: MSTW2008 and NNPDF2.0. For MSTW2008 40 eigenvectors and for NNPDF2.0 50 replicas were added in quadrature. For the $\alpha_{s}$, 1-$\sigma$ variations were considered around the central value for each PDF set: $\alpha_{s}(M_{Z})=0.118$ for CTEQ6.6, $\alpha_{s}(M_{Z})=0.12018$ for MSTW2008 and $\alpha_{s}(M_{Z})=0.119$ for NNPDF2.0. To calculate the observable with the varied parameters of the PDF a reweighting method was used. A weight was calculated for each member/eigenvector/replica $j$, in equation~\ref{eq:pdfweights} where $x_{1,2}$ is the fraction of the momentum carried by the two initial partons entering the hard interaction, $f_{1,2}$ is their corresponding pdg code, and $Q$ is the scale. The weights were used to calculate the yields and then the systematics for the cases of CTEQ6.6 and MSTW2008 were given by equation~\ref{eq:quadsum} while for NNPDF2.0 were given by equation~\ref{eq:quadsumNNPDF}. In these equations $\mathcal{O}^{j}$ is the observable evaluated for the eigenvector $j$, being $j=0$ for the nominal value, and $C=1.64485$ for CTEQ6.6 to correctly obtain just 1-$\sigma$ variation, and $C=1$ for MSTW2008.
+
+for:
+Another source of uncertainties for MC signal samples is related to the PDF and $\alpha_{S}$ used in the simulation. MC signal samples were produced with the PDF set CTEQ6.6 with the best fit values among PDF members. The possible variations from all 44 members of CTEQ6.6 to obtain an overall systematic effect on signal yields have been considered. In addition two additional PDF sets have been considered: MSTW2008 and NNPDF2.0. For MSTW2008 40 members and for NNPDF2.0 50 members were added in quadrature. For the $\alpha_{s}$, 1-$\sigma$ variations were considered around the central value for each PDF set: $\alpha_{s}(M_{Z})=0.118$ for CTEQ6.6, $\alpha_{s}(M_{Z})=0.12018$ for MSTW2008 and $\alpha_{s}(M_{Z})=0.119$ for NNPDF2.0. 
+
+In principle, to calculate the systematic variations when changing the PDF set used in the MC simulation, it should be required to regenerate the MC simulation with each PDF member. Such a procedure is inefficient and requires a high availability of computing resources and time. Therefore, to calculate the observable with the varied members of the PDF a reweighting method was used. A weight was calculated for each member $j$, in equation~\ref{eq:pdfweights} where $x_{1,2}$ is the fraction of the momentum carried by the two initial partons entering the hard interaction, $f_{1,2}$ is their corresponding pdg code, and $Q$ is the scale. The weights were used to calculate the yields and then the systematics for the cases of CTEQ6.6 and MSTW2008 were given by equation~\ref{eq:quadsum} while for NNPDF2.0 were given by equation~\ref{eq:quadsumNNPDF}. In these equations $\mathcal{O}^{j}$ is the observable evaluated for the member $j$, being $j=0$ for the nominal value, and $C=1.64485$ for CTEQ6.6 to correctly obtain 1-$\sigma$ variation, and $C=1$ for MSTW2008.
+
 	Line 2723: Change 4% for 3%
+
+Changed
+
 	Line 2730: Justification of 5% variation of inelastic cross section variation for PU systematics calculation
 
 Using different measurements of the total inelastic cross section, as in~\cite{Chatrchyan:2013gfi, CMS:2012sua, Antchev:2011vs}, the best fit value of the inelastic cross section for 2012 is 69.4 mb, with an approximate error of 3\%. Combining this error with the uncertainty on the luminosity (2.6\%), the total uncertainty on the estimated number of interactions is 3.9\%. However, as some details in the MC simulations used for the cross section measurement are difficult to interpret, a conservative error of 5\% was taken.
 
 	Line 2749-2756: Add reference to figure from where fig 5.44 is coming
+
+Phrase added to caption: This figure corresponds to the projection on the y-axis of the ratio between signal and control samples shown in top right plot of figure~\ref{fig:StageWPData}.
+
 	Line 2766-2770: Reverse order of the two phrases.
+
+Also, it was shown in the last section that the highest signal contamination expected is of 7\% for 750~\GeVcc~and 800~\GeVcc mass points. Summing in quadrature the different sources of systematic uncertainties for the background from the estimation methods, the total uncertainty on background is 39\%. -> Summing in quadrature the different sources of systematic uncertainties for the background from the estimation methods, the total uncertainty on background is 39\%. Also, it was shown in the last section that the highest signal contamination expected is of 7\% for 750~\GeVcc~and 800~\GeVcc mass points.
 
 Line 2864: Explicit that is to all 3 generation mixings.
 
-Fig 5.50: CMS figure is small -> Re-size
+Done -> In particular, the model used for the generation of the signal MC samples have been constructed with a \Tp~that mixes with all generations of SM quarks.
+
+Fig 5.50: CMS figure is small -> Re-size (Done)
 
 Question for the defense: How to decrease the uncertainties of the background estimation methods?
   
