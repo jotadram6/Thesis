@@ -202,7 +202,7 @@ After the cut on the leading jet \pt, \HTg{550} was required. Multijet backgroun
 
 The final cut of the basic selection concerns the request of a minimum number of b-tagged jets. The CSV algorithm (described in section~\ref{sec:bid}) was used to identify jets coming from a b quark. In the following, b-tagged jets are defined as jets that were b-tagged by the CSV algorithm and b-jets as jets matched at generator level as coming from a b-quark (from matrix element). The medium working point was chosen as it allows to have a high efficiency on b-jet identification (70\%) with a low rate from c-quark (20\%) and light quarks (1\%)~\cite{Chatrchyan:2012jua, CMS-PAS-BTV-13-001}. In the full hadronic final state, the \Tp~decays in three b-quarks, a \bbbar~system coming from the Higgs boson and an additional b-quark from the t-quark, and two light jets from the \W~boson produced by the top. Accordingly, signal events are expected to have at least 3 b-tagged jets, while \ttbar~and QCD events should have mainly 2. QCD events can have also 4 b-tagged jets but in smaller proportion.
 
-In principle several working points can be used to establish the b-tagged jets content of events. For the CSV algorithm three working points have been defined as function of the cut made on the discriminator value, 0.244 for the loose working point (CSVL), 0.679 for the medium (CSVM) and 0.898 for the tight working point (CSVT). For example, events can be required to have at least 3 b-tagged jets one with tight working point and two with medium working point. All possible combinations have been studied from the three available working points (loose (CSVL), medium (CSVM) and tight (CSVT)) to require at least 3 CSV b-tagged jets in order to establish which combination gave the best $S/B$ while keeping the most of signal events. For the study, the $M=700$ \GeVcc~signal sample has been used as signal and as backgrounds the \ttbar, QCD\_HT-500To1000 and QCD\_HT-1000ToInf MC samples have been utilized. The study was performed applying the basic selection, after \HT~cut. The results of the study are contained in table~\ref{tab:BCutStudy}. This table shows that the most efficient cuts to discriminate signal from backgrounds and to keep signal are to require at least 3 CSVM b-tagged jets or to require at least 2 CSVM and 1 CSVT b-tagged jets. Selecting at least 3 CSVM b-tagged jets has the same $S/B$ and $S/\sqrt{S+B}$ than requiring at least 2 CSVM and 1 CSVT b-tagged jets. However, the 3 CSVM criterion has a higher efficiency on signal. Thus, the 3 CSVM requirement is preferred over the other combinations. %For simplicity of the reconstruction procedure and the background estimation, at least 3 CSVM b-tagged jets are required. At this stage it is extremely important to keep enough signal, because the next step of the analysis involves the reconstruction of the \Tp.
+In principle several working points can be used to establish the b-tagged jets content of events. For the CSV algorithm three working points have been defined as a function of the cut made on the discriminator value, 0.244 for the loose working point (CSVL), 0.679 for the medium (CSVM) and 0.898 for the tight working point (CSVT). For example, events can be required to have at least 3 b-tagged jets one with tight working point and two with medium working point. All possible combinations have been studied from the three available working points (loose (CSVL), medium (CSVM) and tight (CSVT)) to require at least 3 CSV b-tagged jets in order to establish which combination gave the best $S/B$ while keeping the most of signal events. For the study, the $M=700$ \GeVcc~signal sample has been used as signal and as backgrounds the \ttbar, QCD\_HT-500To1000 and QCD\_HT-1000ToInf MC samples have been utilized. The study was performed applying the basic selection, after \HT~cut. The results of the study are contained in table~\ref{tab:BCutStudy}. This table shows that the most efficient cuts to discriminate signal from backgrounds and to keep signal are to require at least 3 CSVM b-tagged jets or to require at least 2 CSVM and 1 CSVT b-tagged jets. Selecting at least 3 CSVM b-tagged jets has the same $S/B$ and $S/\sqrt{S+B}$ than requiring at least 2 CSVM and 1 CSVT b-tagged jets. However, the 3 CSVM criterion has a higher efficiency on signal. Thus, the 3 CSVM requirement is preferred over the other combinations. %For simplicity of the reconstruction procedure and the background estimation, at least 3 CSVM b-tagged jets are required. At this stage it is extremely important to keep enough signal, because the next step of the analysis involves the reconstruction of the \Tp.
 
 \begin{table}[htbH]
 \begin{center}
@@ -266,14 +266,14 @@ In order to apply the b-tagging scale factors to MC samples, a method approved b
   \label{eq:DataMCSFP}
   P(\text{MC}) & = & \prod_{i=\text{tagged}} \varepsilon_i \prod_{j=\text{not tagged}} (1-\varepsilon_j) \\
   P(\text{DATA}) & = & \prod_{i=\text{tagged}} \text{SF}_i \varepsilon_i \prod_{j=\text{not tagged}} (1-\text{SF}_j \varepsilon_j)
-\end{eqnarray}the products are defined over all jets in the event. $\varepsilon$ represents the b-tagging efficiency. Efficiencies were calculated for each MC sample as function of flavor, \pt~and $\eta$. In figure~\ref{fig:ttbarBEff} the CSVM b-tagging efficiencies for b, c and light jet flavors for \ttbar~MC sample are displayed. Also, the calculated weights for each MC sample are shown in figure~\ref{fig:SFweight}. 
+\end{eqnarray}the products are defined over all jets in the event. $\varepsilon$ represents the b-tagging efficiency. Efficiencies were calculated for each MC sample as a function of flavor, \pt~and $\eta$. In figure~\ref{fig:ttbarBEff} the CSVM b-tagging efficiencies for b, c and light jet flavors for \ttbar~MC sample are displayed. Also, the calculated weights for each MC sample are shown in figure~\ref{fig:SFweight}. 
 
 %\begin{figure}[!Hhtbp]
 %  \begin{center}
 %    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/Signal_beff.png}
 %    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/Signal_ceff.png}
 %    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/Signal_leff.png}
-%    \caption{CSVM b-tagging efficiency for b-jets [left], c-jets [center] and light jets [right] as function of \pt~and $\eta$ for signal M=700 \GeVcc.}
+%    \caption{CSVM b-tagging efficiency for b-jets [left], c-jets [center] and light jets [right] as a function of \pt~and $\eta$ for signal M=700 \GeVcc.}
 %    \label{fig:SignalBEff}
 %  \end{center}
 %\end{figure}
@@ -283,7 +283,7 @@ In order to apply the b-tagging scale factors to MC samples, a method approved b
     \includegraphics[width=0.8\textwidth, height=0.3\textheight]{figs/Ana/ttbar_beff.png}
     \includegraphics[width=0.8\textwidth, height=0.3\textheight]{figs/Ana/ttbar_ceff.png}
     \includegraphics[width=0.8\textwidth, height=0.3\textheight]{figs/Ana/ttbar_leff.png}
-    \caption{CSVM b-tagging efficiency for b-jets [left], c-jets [center] and light jets [right] as function of \pt~and $\eta$ for \ttbar.}
+    \caption{CSVM b-tagging efficiency for b-jets [left], c-jets [center] and light jets [right] as a function of \pt~and $\eta$ for \ttbar.}
     \label{fig:ttbarBEff}
   \end{center}
 \end{figure}
@@ -293,7 +293,7 @@ In order to apply the b-tagging scale factors to MC samples, a method approved b
 %    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/QCDHT500_beff.png}
 %    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/QCDHT500_ceff.png}
 %    \includegraphics[width=0.8\textwidth, height=0.33\textheight]{figs/Ana/QCDHT500_leff.png}
-%    \caption{CSVM b-tagging efficiency for b-jets [left], c-jets [center] and light jets [right] as function of \pt~and $\eta$ for QCD\_HT-500To1000.}
+%    \caption{CSVM b-tagging efficiency for b-jets [left], c-jets [center] and light jets [right] as a function of \pt~and $\eta$ for QCD\_HT-500To1000.}
 %    \label{fig:QCDBEff}
 %  \end{center}
 %\end{figure}
@@ -352,7 +352,7 @@ The efficiency of the reconstruction of each particle (Higgs boson, \W~boson, to
   \begin{center}
     \includegraphics[width=0.46\textwidth]{figs/Ana/Exclusive_Efficiency_V8.png}
     \includegraphics[width=0.46\textwidth]{figs/Ana/Inclusive_Efficiency_V8.png}
-    \caption{Reconstruction efficiency by the $\chi^{2}$ algorithm of the Higgs boson, \W~boson, top quark and \Tp, as the ratio of the number of events where the particle was correctly reconstructed to the number of events where jets could be matched to partons [left] and to the total number of events [right]}
+    \caption{Reconstruction efficiency by the $\chi^{2}$ algorithm of the Higgs boson, \W~boson, top quark and \Tp, as the ratio of the number of events where the particle was correctly reconstructed to the number of events where jets could be matched to partons [left] and to the total number of events [right].}
     \label{fig:RecEff}
   \end{center}
 \end{figure}
@@ -403,7 +403,7 @@ The cut value on the $\chi^{2}$ variable has been chosen for various reasons. Fi
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.8\textwidth]{figs/Ana/chi2_SoB.png}
-    \caption{Efficiency of selection criterion $\chi^{2}<x$, with $x$ the cut value, as function of the cut value for \Tp~with $M=700$ \GeVcc, \ttbar~and QCD\_HT-500To1000 MC samples. Ratios between efficiency for signal and each background are also displayed.}
+    \caption{Efficiency of selection criterion $\chi^{2}<x$, with $x$ the cut value, as a function of the cut value for \Tp~with $M=700$ \GeVcc, \ttbar~and QCD\_HT-500To1000 MC samples. Ratios between efficiency for signal and each background are also displayed.}
     \label{fig:chi2cut}
   \end{center}
 \end{figure}
@@ -414,7 +414,7 @@ After cutting in $\chi^{2}$, events were required to have the two b-quarks used 
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/DRbbNm1.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/DRbb_SoB.png}
-    \caption{$\Delta R$ of the 2 b-tagged jets used to reconstruct the Higgs candidate after $\chi^{2}$ cut. The signal which is simply overlaid prefers low $\Delta R$ while backgrounds have larger distribution at higher value. The gray band represents the statistical uncertainties from the sum of the MC background. Normalization was done to luminosity~[right]. Efficiency of selection criterion $\Delta R(bb)<x$, with $x$ the cut value, as function of cut value for $M=700$ \GeVcc~signal sample, \ttbar~and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background~[left].}
+    \caption{$\Delta R$ of the 2 b-tagged jets used to reconstruct the Higgs candidate after $\chi^{2}$ cut. The signal which is simply overlaid prefers low $\Delta R$ while backgrounds have larger distribution at higher value. The gray band represents the statistical uncertainties from the sum of the MC background. Normalization was done to luminosity~[right]. Efficiency of selection criterion $\Delta R(bb)<x$, with $x$ the cut value, as a function of cut value for $M=700$ \GeVcc~signal sample, \ttbar~and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background~[left].}
     \label{fig:DRbb}
   \end{center}
 \end{figure}
@@ -425,7 +425,7 @@ After cutting in $\chi^{2}$, events were required to have the two b-quarks used 
 %  \begin{center}
 %    \includegraphics[width=0.45\textwidth]{figs/Ana/DRWHNm1.png}
 %    \includegraphics[width=0.45\textwidth]{figs/Ana/DRWH_SoB.png}
-%    \caption{Distribution for $\Delta R (W_{cand} H_{cand})$ for data and the sum of Monte Carlo samples [left]. Efficiency of selection criterion $|\Delta R(W_{cand} H_{cand})-2.8|<x$, with $x$ the cut value, as function of cut value for the $M=700$ \GeVcc~signal sample, \ttbar~and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [right]. All others selection criteria are applied up to this one.}
+%    \caption{Distribution for $\Delta R (W_{cand} H_{cand})$ for data and the sum of Monte Carlo samples [left]. Efficiency of selection criterion $|\Delta R(W_{cand} H_{cand})-2.8|<x$, with $x$ the cut value, as a function of cut value for the $M=700$ \GeVcc~signal sample, \ttbar~and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [right]. All others selection criteria are applied up to this one.}
 %    \label{fig:DRWH}
 %  \end{center}
 %\end{figure}
@@ -436,7 +436,7 @@ One important difference between signal and backgrounds is that in signal events
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/HMNm1.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/HM_SoB.png}
-    \caption{Distribution for $M(H_{cand})$ for data and the sum of Monte Carlo samples~[left]. Efficiency of selection criterion $|M(H_{cand})-125|<x$, with $x$ the cut value, as function of cut value for the $M=700$ \GeVcc~signal sample, \ttbar~and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background~[right]. All others selection criteria are applied up to this one.}
+    \caption{Distribution for $M(H_{cand})$ for data and the sum of Monte Carlo samples~[left]. Efficiency of selection criterion $|M(H_{cand})-125|<x$, with $x$ the cut value, as a function of cut value for the $M=700$ \GeVcc~signal sample, \ttbar~and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background~[right]. All others selection criteria are applied up to this one.}
     \label{fig:HiggsMassDMC}
   \end{center}
 \end{figure}
@@ -496,7 +496,7 @@ A variable with the second top quark and second \W~boson to discriminate signal 
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/M2HPNm1.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/M2HP_SoB.png}
-    \caption{Distribution of $(M(top^{2nd})+M(W^{2nd}))/M(H)$ for data and the sum of the Monte Carlo samples. Selection criteria are applied up to Higgs mass cut. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples~[left]. Efficiency of selection criterion $(M(top^{2nd})+M(W^{2nd}))/M(H)>x$, with $x$ the cut value, as function of cut value for $M=700$ \GeVcc~signal sample, \ttbar~and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background~[right].}
+    \caption{Distribution of $(M(top^{2nd})+M(W^{2nd}))/M(H)$ for data and the sum of the Monte Carlo samples. Selection criteria are applied up to Higgs mass cut. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples~[left]. Efficiency of selection criterion $(M(top^{2nd})+M(W^{2nd}))/M(H)>x$, with $x$ the cut value, as a function of cut value for $M=700$ \GeVcc~signal sample, \ttbar~and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background~[right].}
     \label{fig:m2thp}
   \end{center}
 \end{figure}
@@ -507,7 +507,7 @@ The selection continues taking advantage of the angular relation between the \Tp
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/DRTp6JNm1.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/DRTp6thJ_SoB.png}
-    \caption{Distributions for $\Delta R (T' j^{6})$  for data and the sum of Monte Carlo samples. All others criteria are applied up to this one. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples~[left]. Efficiency of selection criterion $\Delta R (T' j^{6})>x$, with $x$ the cut value, as function of cut value for $M=700$ \GeVcc~signal sample, \ttbar~and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background~[right].}
+    \caption{Distributions for $\Delta R (T' j^{6})$  for data and the sum of Monte Carlo samples. All others criteria are applied up to this one. The low statistics in the multijet (QCD) MC sample is visible at this stage. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples~[left]. Efficiency of selection criterion $\Delta R (T' j^{6})>x$, with $x$ the cut value, as a function of cut value for $M=700$ \GeVcc~signal sample, \ttbar~and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background~[right].}
     \label{fig:jet6}
   \end{center}
 \end{figure}
@@ -518,7 +518,7 @@ For the last criterion the Relative $H_{T}$ variable is defined as the sum of th
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/RelHTNm1.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/RelHT_SoB.png}
-    \caption{Distribution of Relative $H_{T}$ for data and the sum of the Monte Carlo samples. All others criteria are applied up to this one. At this stage multijet (QCD) MC sample have very low statistics. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples [left]. Efficiency of selection criterion Relative $H_{T}>x$, with $x$ the cut value, as function of cut value for $M=700$ \GeVcc~signal sample, \ttbar~and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [right]. }
+    \caption{Distribution of Relative $H_{T}$ for data and the sum of the Monte Carlo samples. All others criteria are applied up to this one. At this stage multijet (QCD) MC sample have very low statistics. The gray band represents the statistical uncertainties from the sum of the MC background and it is dominated by QCD samples [left]. Efficiency of selection criterion Relative $H_{T}>x$, with $x$ the cut value, as a function of cut value for $M=700$ \GeVcc~signal sample, \ttbar~and QCD\_HT-500To1000 MC samples and ratios between efficiency for signal and each background [right]. }
     \label{fig:RelHtMass}
   \end{center}
 \end{figure}
@@ -585,18 +585,18 @@ The \pt~of the 6th leading jet has been used to parametrize the trigger efficien
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_hundreds_chi2.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_fifties_chi2.png}
-    \caption{Efficiency in data and the MC signal samples for events passing trigger HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after standard selection up to $\chi^{2}$ cut (included). At this early stage of the selection, discrepancies between 10\% and 6\% at higher $p_{T}$ are observed between data and signal MC samples. Differences between \ttbar~and data are maximum 7\%. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$. Efficiencies for signal MC samples with \Tp~masses equal to 600, 700, 800, 900 and 1000~\GeVcc~are shown with \ttbar~and data [left]. Efficiencies for signal MC samples with \Tp~masses equal to 650, 750, 850 and 950~\GeVcc~are shown with \ttbar~and data [right].}
+    \caption{Efficiency in data and the MC signal samples for events passing trigger HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after standard selection up to $\chi^{2}$ cut (included). At this early stage of the selection, discrepancies between 10\% and 6\% at higher $p_{T}$ are observed between data and signal MC samples. Differences between \ttbar~and data are maximum 7\%. This efficiency is parametrized as a function of the 6$^{th}$ jet $p_{T}$. Efficiencies for signal MC samples with \Tp~masses equal to 600, 700, 800, 900 and 1000~\GeVcc~are shown with \ttbar~and data [left]. Efficiencies for signal MC samples with \Tp~masses equal to 650, 750, 850 and 950~\GeVcc~are shown with \ttbar~and data [right].}
     \label{fig:TrigEff}
   \end{center}
 \end{figure}
 
-The same efficiencies were also computed after full selection. They can be found in figure~\ref{fig:TrigEffPostMH}. From them, an underestimation of the MC signal samples by the trigger is observed for a \pt~of the 6th jet between 30-50 GeV/c and 70-90 GeV/c. However, \ttbar~has a slightly higher efficiency than data. The ratio between \ttbar~and data is taken to estimate a systematic uncertainty on the trigger selection for signal MC samples as function of 6th leading jet \pt. The entire procedure of the estimation of the systematic uncertainty from trigger on signal yields is described in section~\ref{sec:sys}. %This means that MC simulation of HLT applied to MC signal samples is cutting harder than in data. The observed differences vary between 10\% for low \pt~and 5-6\% for high \pt.
+The same efficiencies were also computed after full selection. They can be found in figure~\ref{fig:TrigEffPostMH}. From them, an underestimation of the MC signal samples by the trigger is observed for a \pt~of the 6th jet between 30-50 GeV/c and 70-90 GeV/c. However, \ttbar~has a slightly higher efficiency than data. The ratio between \ttbar~and data is taken to estimate a systematic uncertainty on the trigger selection for signal MC samples as a function of 6th leading jet \pt. The entire procedure of the estimation of the systematic uncertainty from trigger on signal yields is described in section~\ref{sec:sys}. %This means that MC simulation of HLT applied to MC signal samples is cutting harder than in data. The observed differences vary between 10\% for low \pt~and 5-6\% for high \pt.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_hundreds_FullSel.png}
     \includegraphics[width=0.45\textwidth]{figs/Ana/Trigger_Eff_fifties_FullSel.png}
-    \caption{Efficiency in data and the MC signal samples for events passing trigger bit HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after full selection. This efficiency is parametrized as function of the 6$^{th}$ jet $p_{T}$. The dispersion observed is about 10\% between data and signal MC samples, while only about 4\%  for \ttbar. Efficiencies for signal MC samples with \Tp~masses equal to 600, 700, 800, 900 and 1000~\GeVcc~are shown with \ttbar~and data [left]. Efficiencies for signal MC samples with \Tp~masses equal to 650, 750, 850 and 950~\GeVcc~are shown with \ttbar~and data [right].}
+    \caption{Efficiency in data and the MC signal samples for events passing trigger bit HLT\_Dijet80\_Dijet60\_Dijet20 with respect to trigger bit HLT\_HT400 after full selection. This efficiency is parametrized as a function of the 6$^{th}$ jet $p_{T}$. The dispersion observed is about 10\% between data and signal MC samples, while only about 4\%  for \ttbar. Efficiencies for signal MC samples with \Tp~masses equal to 600, 700, 800, 900 and 1000~\GeVcc~are shown with \ttbar~and data [left]. Efficiencies for signal MC samples with \Tp~masses equal to 650, 750, 850 and 950~\GeVcc~are shown with \ttbar~and data [right].}
     \label{fig:TrigEffPostMH}
   \end{center}
 \end{figure}
@@ -1078,14 +1078,14 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 6.80 & 6.51 & 0.55 & 0.54 \\
 \hline
 \end{tabular}
 }
-\caption{B-tagging uncertainties for signal samples\label{tab:SFSys}}
+\caption{B-tagging uncertainties for signal samples.\label{tab:SFSys}}
 \end{center}
 \end{table*}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/SFSys_V8_1sigma_S.png}
-    \caption{Total b-tagging uncertainties for signal samples}
+    \caption{Total b-tagging uncertainties for signal samples.}
     \label{fig:TotalSFSys}
   \end{center}
 \end{figure}
@@ -1113,14 +1113,14 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 2.31 & 1.99 & 0.67 & 6.04 \\
 \hline
 \end{tabular}
 }
-\caption{JEC uncertainties for signal samples\label{tab:JECSys}}
+\caption{JEC uncertainties for signal samples.\label{tab:JECSys}}
 \end{center}
 \end{table*}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/JESSys_V8_1sigma_S.png}
-    \caption{Total JEC uncertainties for signal samples}
+    \caption{Total JEC uncertainties for signal samples.}
     \label{fig:TotalJECSys}
   \end{center}
 \end{figure}
@@ -1167,14 +1167,14 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 3.19 & 2.08 & 3.30 & 2.29 & 3.07 \\
 \hline
 \end{tabular}
 }
-\caption{PDF+$\alpha_{s}$ uncertainties for signal samples\label{tab:PDFsys}}
+\caption{PDF+$\alpha_{s}$ uncertainties for signal samples.\label{tab:PDFsys}}
 \end{center}
 \end{table*}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/PDFSys_V8_1sigma_S.png}
-    \caption{Overall PDF+$\alpha_{s}$ uncertainties for signal samples}
+    \caption{Overall PDF+$\alpha_{s}$ uncertainties for signal samples.}
     \label{fig:TotalPDFSys}
   \end{center}
 \end{figure}
@@ -1200,19 +1200,19 @@ $Tj\rightarrow tHj$ 950 GeV/$c^{2}$ & 2.23 & 2.33 \\
 $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 3.08 & 3.76 \\
 \hline
 \end{tabular}
-\caption{Pileup uncertainties for signal samples\label{tab:PUsys}}
+\caption{Pileup uncertainties for signal samples.\label{tab:PUsys}}
 \end{center}
 \end{table*}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/PUSys_V8_1sigma_S.png}
-    \caption{Total pileup uncertainties for signal samples}
+    \caption{Total pileup uncertainties for signal samples.}
     \label{fig:TotalPUSys}
   \end{center}
 \end{figure}
 
-Finally, the observed differences between \ttbar~MC samples and the data in the trigger efficiency in section~\ref{sec:trigger_ana} are considered as a possible source of systematic uncertainty. The ratio between \ttbar~and data has been used to estimate such uncertainty on the signal yields as function of the 6th jet \pt. After applying this ratio to the signal MC samples, the yields have been recomputed and compared to the nominal yields. The difference between both is quoted in table~\ref{tab:Trisys} as the systematic uncertainty associated to the trigger. As for pileup uncertainties, the trigger systematics are fully contained in the statistical error and then the statistical error will be used as the trigger systematic for limits calculation.
+Finally, the observed differences between \ttbar~MC samples and the data in the trigger efficiency in section~\ref{sec:trigger_ana} are considered as a possible source of systematic uncertainty. The ratio between \ttbar~and data has been used to estimate such uncertainty on the signal yields as a function of the 6th jet \pt. After applying this ratio to the signal MC samples, the yields have been recomputed and compared to the nominal yields. The difference between both is quoted in table~\ref{tab:Trisys} as the systematic uncertainty associated to the trigger. As for pileup uncertainties, the trigger systematics are fully contained in the statistical error and then the statistical error will be used as the trigger systematic for limits calculation.
 
 \begin{table*}[htbH]
 \begin{center}
@@ -1233,7 +1233,7 @@ $Tj\rightarrow tHj$ 950 GeV/$c^{2}$ & 3.40 \\
 $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 3.60 \\
 \hline
 \end{tabular}
-\caption{Trigger uncertainties for signal samples\label{tab:Trisys}}
+\caption{Trigger uncertainties for signal samples.\label{tab:Trisys}}
 \end{center}
 \end{table*}
 
@@ -1331,7 +1331,7 @@ Figure~\ref{fig:FinalPlot} shows two signal MC mass points compared to observed 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.9\textwidth]{figs/Ana/Final_Plot.png}
-    \caption{$M(5j)$ after full selection for data minus estimated background and signal mass points at 650 \GeVcc~and 850 \GeVcc}
+    \caption{$M(5j)$ after full selection for data minus estimated background and signal mass points at 650 \GeVcc~and 850 \GeVcc.}
     \label{fig:FinalPlot}
   \end{center}
 \end{figure}
@@ -1339,12 +1339,12 @@ Figure~\ref{fig:FinalPlot} shows two signal MC mass points compared to observed 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.9\textwidth]{figs/Ana/Final_Plot_NoSubs.png}
-    \caption{$M(5j)$ after full selection for data and the estimated background and signal mass points at 650 \GeVcc~and 850 \GeVcc}
+    \caption{$M(5j)$ after full selection for data and the estimated background and signal mass points at 650 \GeVcc~and 850 \GeVcc.}
     \label{fig:FinalPlot2}
   \end{center}
 \end{figure}
 
-As there is no evidence of an excess, the yields and systematics given in last section were used to compute expected and observed exclusion limits. The limits were calculated using Theta package~\cite{theta_web} using asymptotic $CL_{S}$ limits. A simple counting experiment was considered. For the Theta package a model is build for each mass point given by the relation ${\lambda(\beta,\theta)=\beta S(\theta)+B(\theta)}$, where $\beta$ designs the signal strength (called also $\mu$ in the literature), $S$ the signal events expected from the mass point and $B$ the background events from the estimation performed in the analysis. In this model both signal and background can have associated nuisance parameters $\theta$ linked to the different sources of systematic uncertainties. Corresponding to a counting experiment a likelihood is built $L(\beta,\theta)=\frac{\lambda(\beta,\theta)^{n}}{n!}e^{-\lambda(\beta,\theta)}$, where $n$ is the number of observed events. Two specific likelihoods are then defined, $L_{s+b}=L(1,\theta)$ corresponding to the positive signal hypothesis and $L_{b}=L(0,\theta)$ corresponding to the null signal hypothesis. To determine upper limits, a test statistics is defined $q=-2ln(L_{s+b}/L_{b})$. Then, the probability distribution function can be constructed from simulation for each hypothesis as function of the test statistics $q$. These probability distribution functions are denoted as $f(q|s+b)$ for the positive signal hypothesis, and $f(q|b)$ for the null signal hypothesis. An illustration of the procedure that has been described is shown in figure~\ref{fig:stats1}, described in~\cite{stats1}. 
+As there is no evidence of an excess, the yields and systematics given in last section were used to compute expected and observed exclusion limits. The limits were calculated using Theta package~\cite{theta_web} using asymptotic $CL_{S}$ limits. A simple counting experiment was considered. For the Theta package a model is build for each mass point given by the relation ${\lambda(\beta,\theta)=\beta S(\theta)+B(\theta)}$, where $\beta$ designs the signal strength (called also $\mu$ in the literature), $S$ the signal events expected from the mass point and $B$ the background events from the estimation performed in the analysis. In this model both signal and background can have associated nuisance parameters $\theta$ linked to the different sources of systematic uncertainties. Corresponding to a counting experiment a likelihood is built $L(\beta,\theta)=\frac{\lambda(\beta,\theta)^{n}}{n!}e^{-\lambda(\beta,\theta)}$, where $n$ is the number of observed events. Two specific likelihoods are then defined, $L_{s+b}=L(1,\theta)$ corresponding to the positive signal hypothesis and $L_{b}=L(0,\theta)$ corresponding to the null signal hypothesis. To determine upper limits, a test statistics is defined $q=-2ln(L_{s+b}/L_{b})$. Then, the probability distribution function can be constructed from simulation for each hypothesis as a function of the test statistics $q$. These probability distribution functions are denoted as $f(q|s+b)$ for the positive signal hypothesis, and $f(q|b)$ for the null signal hypothesis. An illustration of the procedure that has been described is shown in figure~\ref{fig:stats1}, described in~\cite{stats1}. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -1358,12 +1358,12 @@ The p-value of a given $q$ is defined as the area to the right of the probabilit
 
 Finally, using the number of observed events in data to obtain a $q_{obs}$, an observed signal strength can be calculated for which $CL_{s}=0.05$. If the observed signal strength is higher than 2-$\sigma$ on top of the expected excluded signal strength, it is said that a signal could not be excluded in data, what requires other studies to determine the significance of the potential signal. On the contrary, if the observed signal strength is contained in the exclusion bands, the associated cross section is said to be excluded. 
 
-In figure~\ref{fig:Lim} the expected and observed exclusion limits in terms of the cross section as function of $M(5j)$ are shown. The theoretical prediction is represented by the red line. The theoretical cross sections have been calculated with MadGraph 5~\cite{Alwall:2014hca, Alwall:2011uj} utilizing the FeynRules~\cite{Alloul:2013bka} model implementation developed in~\cite{Buchkremer:2013bha, Cacciapaglia:2011fx}. Comparing this theoretical prediction to expected limits, there is no expectation of excluding any masses in the studied range. However, from the observed limits the 850~\GeVcc~mass point has been excluded to 95\% CL (confidence level). In addition, following a linear interpolation of the observed limits for the mass points around 850~\GeVcc, masses between 813 and 862 \GeVcc~have been excluded to 95\% CL (confidence level). These observed limits are due to a downward statistical fluctuation of data around 850~\GeVcc. 
+In figure~\ref{fig:Lim} the expected and observed exclusion limits in terms of the cross section as a function of $M(5j)$ are shown. The theoretical prediction is represented by the red line. The theoretical cross sections have been calculated with MadGraph 5~\cite{Alwall:2014hca, Alwall:2011uj} utilizing the FeynRules~\cite{Alloul:2013bka} model implementation developed in~\cite{Buchkremer:2013bha, Cacciapaglia:2011fx}. Comparing this theoretical prediction to expected limits, there is no expectation of excluding any masses in the studied range. However, from the observed limits the 850~\GeVcc~mass point has been excluded to 95\% CL (confidence level). In addition, following a linear interpolation of the observed limits for the mass points around 850~\GeVcc, masses between 813 and 862 \GeVcc~have been excluded to 95\% CL (confidence level). These observed limits are due to a downward statistical fluctuation of data around 850~\GeVcc. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.9\textwidth]{figs/Ana/Limits_from_CLs_V8_LinearFitWidths_1sigma_Revision.png}
-    \caption{Expected and observed limits in terms of \Tp~production cross section as function of $M(5j)$. The red line represents the theoretical prediction of the cross section~\cite{Buchkremer:2013bha, Cacciapaglia:2011fx}. Following a linear interpolation of the observed limits for the mass points around 850~\GeVcc, masses between 813 and 862 \GeVcc~are excluded at 95\% CL.}
+    \caption{Expected and observed limits in terms of \Tp~production cross section as a function of $M(5j)$. The red line represents the theoretical prediction of the cross section~\cite{Buchkremer:2013bha, Cacciapaglia:2011fx}. Following a linear interpolation of the observed limits for the mass points around 850~\GeVcc, masses between 813 and 862 \GeVcc~are excluded at 95\% CL.}
     \label{fig:Lim}
   \end{center}
 \end{figure}
@@ -1405,11 +1405,11 @@ The simplest case is to have both \Tp's going into the same decay channel, for e
 %
 %The simplest case is to have both \Tp's going into the same decay channel, for example where $T',T'\rightarrow bW,bW$. CMS collaboration has performed an analysis looking for this specific signature~\cite{CMS-PAS-B2G-12-017}, where one of the \W's decays into two quarks and the other one decay into a lepton (muon or electron) and a neutrino. This search selects events with one lepton and missing energy, a muon with \ptg{45} and \etal{2.1} and \METg{20} or an electron with \ptg{30} and \etal{2.5} and \METg{30}. This analysis used jet substructure techniques to include in the selection the events were the \W~is boosted, i.e. with a high \pt~enough to give as a result the two quarks from its decay being reconstructed in only one jet. Using this technique the selection requires a Cambridge-Aachen jet with a radius of 0.8 with a mass between 60 and 100 \GeVcc~(the mass window of the \W~boson), a \ptg{200} and two AK5 subjets. It finally requires additional AK5 jets with different minimal \pt's. This search was able to exclude \Tp~masses below 912 \GeVcc.
 
-Two additional analyses have been done in CMS where both \Tp's are considered to decay via the same channel. In both of them ${T',T'\rightarrow tH^{0},tH^{0}}$,~\cite{Khachatryan:2015axa,CMS-PAS-B2G-14-003}. One searches the full hadronic final state using jet substructure techniques, where the top quark and Higgs boson decay products are fully contained in one jet. It has set exclusion limits for \Tp~masses below 747 \GeVcc. The second analysis requires one Higgs boson going into two photons, thus two photons are required with at least two jets. It considers two channels where the \W~boson is decaying leptonically or hadronically. For the lepton channel at least one lepton is required and for the hadronic one at least one b-tagged jet. This last analysis exclude \Tp~masses up to 540 \GeVcc.
+Two additional analyses have been done in CMS where both \Tp's are considered to decay via the same channel. In both of them ${T',T'\rightarrow tH^{0},tH^{0}}$~\cite{Khachatryan:2015axa,CMS-PAS-B2G-14-003}. One searches the full hadronic final state using jet substructure techniques, where the top quark and Higgs boson decay products are fully contained in one jet. It has set exclusion limits for \Tp~masses below 747 \GeVcc. The second analysis requires one Higgs boson going into two photons, thus two photons are required with at least two jets. It considers two channels where the \W~boson is decaying leptonically or hadronically. For the lepton channel at least one lepton is required and for the hadronic one at least one b-tagged jet. This last analysis exclude \Tp~masses up to 540 \GeVcc.
 %
 %Two additional analyses have been done in CMS where both \Tp's are considered to decay via the same channel. In both of them $T',T'\rightarrow tH,tH$,~\cite{Khachatryan:2015axa,CMS-PAS-B2G-14-003}. One searches the full hadronic final state using jet substructure techniques, where the top and Higgs decay products are fully contained in one jet. It requires at least 2 Cambridge-Aachen jets of $R=1.5$ with \ptg{150} and \etal{2.5}. The jet substructure techniques are then used to identify subjets and b-tag them, and with that information try to tag one CA jet as a top and another one as the Higgs. It has set exclusion limits for \Tp~masses below 747 \GeVcc. The second analysis requires one Higgs going into two photons, thus two photons are required with at least two jets. It considers two channels where the \W~is decaying leptonically or hadronically. For the lepton channel at least one lepton is required and for the hadronic one at least one b-tagged jet. This last analysis exclude \Tp~masses up to 540 \GeVcc.
 
-ATLAS collaboration has two searches~\cite{ATLAS-CONF-2015-012} for the cases where ${T^{'},T^{'}\rightarrow tH^{0},X}$ and ${T',T'\rightarrow bW^{+/-},X}$, where the $X$ means any of the three channels. The second case was optimized to $T^{'},T^{'}\rightarrow bW^{+/-},bW^{+/-}$, being then comparable to the CMS analysis previously presented. Both analyses rely on a pre-selection requiring one electron or muon, missing energy, at least 4 jets and at least one b-tagged jet. From this pre-selection, several categories relying basically in the b-tagged jet and jet multiplicities are designed to increase sensitivity to different channels. For the ${bW^{+/-},X}$ case, it proceeds as CMS analysis in the sense that the selection was optimized to select events where the hadronic \W~boson was produced in boosted or in resolved topology. The two analyses have been combined to present exclusion limits not only in terms of the \Tp~mass but also as function of the \Tp~branching ratio to each channel. Assuming 100\% branching ratio of the \Tp~to top-Higgs, these analysis excludes \Tp~masses below 900 \GeVcc. For the case of a \Tp~exclusively decaying to $bW^{+/-}$, masses below 750 \GeVcc~were excluded at 95\% CL.
+ATLAS collaboration has two searches~\cite{ATLAS-CONF-2015-012} for the cases where ${T^{'},T^{'}\rightarrow tH^{0},X}$ and ${T',T'\rightarrow bW^{+/-},X}$, where the $X$ means any of the three channels. The second case was optimized to $T^{'},T^{'}\rightarrow bW^{+/-},bW^{+/-}$, being then comparable to the CMS analysis previously presented. Both analyses rely on a pre-selection requiring one electron or muon, missing energy, at least 4 jets and at least one b-tagged jet. From this pre-selection, several categories relying basically in the b-tagged jet and jet multiplicities are designed to increase sensitivity to different channels. For the ${bW^{+/-},X}$ case, it proceeds as CMS analysis in the sense that the selection was optimized to select events where the hadronic \W~boson was produced in boosted or in resolved topology. The two analyses have been combined to present exclusion limits not only in terms of the \Tp~mass but also as a function of the \Tp~branching ratio to each channel. Assuming 100\% branching ratio of the \Tp~to top-Higgs, these analysis excludes \Tp~masses below 900 \GeVcc. For the case of a \Tp~exclusively decaying to $bW^{+/-}$, masses below 750 \GeVcc~were excluded at 95\% CL.
 
 In addition both ATLAS and CMS have analysis not focused in specific decays but have implemented strategies to be sensitive to the three decay channels~\cite{Aad:2015gdg,Chatrchyan:2013uxa}. Both searches are in leptonic final states, with muons or electrons. ATLAS analysis require at least two same charged leptons with at least 2 jets, at least one b-tagged jet and \METg{40}, while CMS divide the analysis in two channels, one with just one lepton and the other for multi-lepton final states. In the single lepton channel, the lepton is required to be in its acceptance. In addition at least 3 jets are required where one of them should be W-tagged, as described in the ${T',T'\rightarrow bW^{+/-},bW^{+/-}}$ analysis. For the multi-lepton channel, missing energy is required, at least one b-tagged jet, and 4 categories are constructed, to increase sensitivity to each decay channel, from the jet multiplicity requirement. Results from ATLAS and CMS analyses are shown in figure~\ref{fig:ATLASCMSres}.
 %
@@ -1438,7 +1438,7 @@ ATLAS analysis in the single production mode puts an upper limit in the producti
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.7\textwidth]{figs/Ana/fig_15b.png}
-    \caption{Upper limit (at 95\% CL) on the \Tp~single production mode cross section times the branching ratio as function of its mass.}
+    \caption{Upper limit (at 95\% CL) on the \Tp~single production mode cross section times the branching ratio as a function of its mass.}
     \label{fig:SingleATLASres}
   \end{center}
 \end{figure}
@@ -1452,7 +1452,7 @@ Figure~\ref{fig:SummaryRes} shows the summary of results from all analysis looki
   \begin{center}
     \includegraphics[width=0.99\textwidth, height=0.4\textheight]{figs/Ana/ATLAS_VLQ_TT_step4.png}
     \includegraphics[width=1.05\textwidth, height=0.6\textheight]{figs/Ana/b2g_summary_updated.png}
-    \caption{ATLAS expected and observed \Tp~mass excluded at 95\% CL as function of the branching ratio [top]. \Tp~mass excluded at 95\% CL are displayed in light green for each CMS analysis separately [bottom].}
+    \caption{ATLAS expected and observed \Tp~mass excluded at 95\% CL as a function of the branching ratio [top]. \Tp~mass excluded at 95\% CL are displayed in light green for each CMS analysis separately [bottom].}
     \label{fig:SummaryRes}
   \end{center}
 \end{figure}

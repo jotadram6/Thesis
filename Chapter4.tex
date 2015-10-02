@@ -30,7 +30,7 @@ In figure~\ref{fig:MSTW} is shown the Martin-Stirling-Thorne-Watt~\cite{Martin:2
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.9\textwidth]{figs/mstw2008nlo68cl_allpdfs.jpg}
-    \caption{Martin-Stirling-Thorne-Watt proton PDF for $Q^{2}= 10\, \text{GeV}^{2}$ [left] and $Q^{2}= 10^{4}\, \text{GeV}^{2}$ [right]. $x$ is the fraction of momentum carried by the parton and $f(x,Q^{2})$ the PDF function.}
+    \caption{Martin-Stirling-Thorne-Watt proton PDF for $Q^{2}= 10\, \text{GeV}^{2}$ [left] and $Q^{2}= 10^{4}\, \text{GeV}^{2}$ [right]. $x$ is the fraction of momentum carried by the parton and $f(x,Q^{2})$ the PDF function~\cite{Martin:2009iq}.}
     \label{fig:MSTW}
   \end{center}
 \end{figure}
@@ -289,7 +289,7 @@ This overlap can lead to double counting events, which has as consequence an ove
 
 In general, the merging procedure follows a set of common steps:
 \begin{itemize}
-\item A jet algorithm is defined and all relevant cross sections are calculated accordingly to the process under consideration. The calculation is performed for each final jet multiplicity. For example, when generating top pair production up to 4 additional jets, the cross section is calculated for $t\bar{t}$ with 0, 1, 2, 3, and 4 jets. 
+\item A jet algorithm is chosen and all relevant cross sections are calculated accordingly to the process under consideration. The calculation is performed for each final jet multiplicity. For example, when generating top pair production up to 4 additional jets, the cross section is calculated for $t\bar{t}$ with 0, 1, 2, 3, and 4 jets separately. 
 \item ME samples are produced with a probability corresponding to their cross section.
 \item Events or partons are rejected based on specific procedure requirement. For MLM formalism, events are rejected in not all partons are matched to jets. MLM procedure will be described in details. 
 \item Parton shower is invoked, constrained to not produce any extra jet.
@@ -297,29 +297,31 @@ In general, the merging procedure follows a set of common steps:
 
 MadGraph utilize a MLM merging procedure with $k_{T}$ jet algorithm. The MLM prescription proceeds as follows:
 \begin{enumerate}
-\item Generation of parton level events constrained to user requirements:
+\item Generation of parton level events constrained to the requirements defined by the user:
   \begin{equation*}
     p_{T}^{parton}>p_{T}^{min}, \; |\eta^{parton}|<\eta^{max}, \; \Delta R_{partons}>R_{min}
-  \end{equation*} where \textit{min} and \textit{max} states for the minimal and maximal values required in each variable.
-\item Usage of $k_{T}$ jet algorithm to find jet configuration of the event from partons. This first reconstruction uses a cut on the minimal $k_{T}$ distance as defined in equation~\ref{eq:kt}. This first minimal cut is set in MadGraph by the variable xqcut (see~\ref{fig:RunCard}). $Q^{X}_{cut}$ will be used to refer to it. This cut is applied at generator level, what means that MadGraph will only deliver events where every pair of partons satisfy this requirement.
-\item Run parton shower and rerun jet algorithm with a different minimal $k_{T}$ distance. The second minimum, the $Q_{cut}$, is set in Pythia. The two minima are chosen to be $Q_{cut}>Q^{X}_{cut}$. $Q_{cut}$ is also a generator cut at Pythia level. Pythia will give then only events where every pair of hadrons pass this criterion.
+  \end{equation*} where \textit{min} and \textit{max} stand for the minimal and maximal values required by the user for each variable.
+\item The $k_{T}$ jet algorithm is used to find the jets of the event from partonic events. This first reconstruction uses a cut on the minimal $k_{T}$ distance as defined in equation~\ref{eq:kt}. This first minimal cut is set, by the user, in MadGraph with the variable xqcut (see~\ref{fig:RunCard}). $Q^{X}_{cut}$ will be used to refer to it. This cut is applied at generator level, what means that MadGraph will only deliver events where every pair of partons satisfy this requirement.
+\item Run parton shower and hadronization over the partonic events, and rerun the jet algorithm with a different minimal $k_{T}$ distance. The second minimum, the $Q_{cut}$, is set in Pythia and is known as the merging scale. The two minima are chosen to be $Q_{cut}>Q^{X}_{cut}$. $Q_{cut}$ is also a generator cut at Pythia level. Pythia will give then only the events where every pair of hadrons pass this criterion.
 \item Compare the set of jets obtained from step 2 and 3. If a jet from the parton event falls in a radius smaller than $1.5 \times R$ of a jet from the showered event, it is said to be matched to it ($R$ being the radius parameter of the jet algorithm). If a match is found for all partons the event is kept, otherwise is rejected.
-\item All events with more jets, after showering, than partons are finally discarded.   
+\item Finally, if an event after hadronization has more jets than the generated partons, is discarded. %All events with more jets, after showering, than partons are finally discarded.   
 \end{enumerate}
 
 The goodness of the procedure depends of the choice of $Q_{cut}$ and $Q^{X}_{cut}$. The optimal values are highly dependent of several parameters, for example the $p_{T}$ of the partons or the center of mass energy of collision. 
 
-In general, for each process there are an optimal $Q_{cut}$ and $Q^{X}_{cut}$. But in principle there is no way to deduce them without producing the samples and performing the merging procedure. If the procedure was successful, it can be known only from the simulation results. Reason why, multiple generation of samples scanning both $Q_{cut}$ and $Q^{X}_{cut}$, are needed to find an optimal solution. As the main interest is to cover correctly the entire phase space with ME+PS, $Q^{X}_{cut}$ can be fixed and then scan $Q_{cut}$ over it, with $Q_{cut}>Q^{X}_{cut}$. If no $Q_{cut}$ value optimize the merging procedure then another $Q^{X}_{cut}$ is used. 
+In general, for each process there are an optimal $Q_{cut}$ and $Q^{X}_{cut}$. But in principle there is no way to deduce them without producing the samples and performing the merging procedure. If the procedure was successful, it can be known only from the simulation results. Reason why, multiple generation of samples scanning both $Q_{cut}$ and $Q^{X}_{cut}$, are needed to find an optimal solution. As the main interest is to cover correctly the entire phase space with ME+PS, $Q^{X}_{cut}$ can be fixed and then scan $Q_{cut}$, with $Q_{cut}>Q^{X}_{cut}$. If no $Q_{cut}$ value optimize the merging procedure then another $Q^{X}_{cut}$ is used. 
 
-The ideal variable to check the effectiveness of the merging, is the differential jet rate (DJR) as function of the merging scale. The merging scale defines the transition between different jet multiplicities, and the DJR is examined for transition between $n$ and $n-1$ jet multiplicities. The $Q_{cut}$ controls the number of jets found in an event from parton showering. Its optimal value leads to a continuum in the transition phase between ME and PS. A non-optimal value leads to an over or underpopulation of the phase space. In both cases the sample does not represent a meaningful physics sample.
+The effectiveness of the merging procedure is checked through the differential jet rate (DJR) diagrams. Changing the merging scale $Q_{cut}$ might change the jet multiplicity of an event during the parton showering and hadronization by Pythia. In the DJR diagrams the transition between $n$ and $n-1$ jet multiplicities is examined as a function of the merging scale for different values of $n$. The $Q_{cut}$ controls the number of jets found in an event from parton showering. Its optimal value leads to a continuum in the transition phase between ME and PS. The choice of the correct merging scale is reflected in the smoothness of the transition between  $n$ and $n-1$ jet multiplicities. A non-optimal value leads to an under or overpopulation of the phase space. In both cases the sample does not represent a meaningful physics sample.
 
-For MC samples generation for run 2 of LHC, optimal values for $Q_{cut}$ and $Q^{X}_{cut}$ should be found according to the increase of the center of mass energy from 8~TeV to 13~TeV. Figure~\ref{fig:TTJetsMerging} shows the result of the merging study for $t\bar{t}$ production up to 3 additional jets with MadGraph and Pythia 8. For this study $Q^{X}_{cut}=20$ GeV and the optimal $Q_{cut}$ was found to be 100 GeV (top figure). The result using $Q_{cut}=60$ GeV is also shown (bottom figure) where a discontinuity in the DJR can be seen at the ME to PS transition point. In bottom figure, the transition from 3 to 2 jets ($DJR(3\to 2$) shows a discontinuity in the meeting point of blue-dashed and green-dashed curves, respectively 3 and 2 partons curves. In figure~\ref{fig:DYMerging} the same study is shown for Drell-Yan process with up to 3 additional jets at 13 TeV with MadGraph and Pythia 6. 
+The optimal value of the merging scale, $Q_{cut}$, depends on several details of the generated events. For example, the minimal \pt~cuts set in the generation. But it strongly depends of the process and the center of mass energy of the collisions.
+
+For MC samples generation for run 2 of LHC, optimal values for $Q_{cut}$ and $Q^{X}_{cut}$ should be found according to the increase of the center of mass energy from 8~TeV to 13~TeV. Figure~\ref{fig:TTJetsMerging} shows the DJR diagrams for $t\bar{t}$ production up to 3 additional jets with MadGraph and Pythia 8. For this study $Q^{X}_{cut}=20$ GeV and the optimal $Q_{cut}$ was found to be 100 GeV (top figure). The result using $Q_{cut}=60$ GeV is also shown (bottom figure) where a discontinuity in the transition point between different jet multiplicities. In bottom figure, the transition from 3 to 2 jets ($DJR(3\to 2$) shows a discontinuity in the meeting point of blue-dashed and green-dashed curves, respectively 3 and 2 partons curves. In figure~\ref{fig:DYMerging} the same study is shown for Drell-Yan process with up to 3 additional jets at 13 TeV with MadGraph and Pythia 6. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.85\textwidth]{figs/DJR_q100_xq20_TTJets13TeV.png}
     \includegraphics[width=0.85\textwidth]{figs/DJR_q50_xq20_TTJets13TeV.png}
-    \caption{DJR for 13 TeV top pair production with $Q_{cut}=100$ GeV and $Q^{X}_{cut}=20$ GeV [optimal case] (top) and $Q_{cut}=60$ GeV and $Q^{X}_{cut}=20$ [non-optimal] (bottom). Bottom figure shows a discontinuity in the transition from 3 to 2 partons at the point where blue-dashed and green-dashed curves meet.}
+    \caption{DJR diagrams for 13 TeV top pair production with $Q_{cut}=100$ GeV and $Q^{X}_{cut}=20$ GeV [optimal case] (top) and $Q_{cut}=60$ GeV and $Q^{X}_{cut}=20$ [non-optimal] (bottom). Bottom figure shows a discontinuity in the transition from 3 to 2 partons at the point where blue-dashed and green-dashed curves meet.}
     \label{fig:TTJetsMerging}
   \end{center}
 \end{figure}
@@ -328,7 +330,7 @@ For MC samples generation for run 2 of LHC, optimal values for $Q_{cut}$ and $Q^
   \begin{center}
     \includegraphics[width=0.85\textwidth]{figs/DJR_q25_xq10_DYJets13TeV.png}
     \includegraphics[width=0.85\textwidth]{figs/DJR_q32_xq10_DYJets13TeV.png}
-    \caption{DJR for 13 TeV Drell-Yan production with $Q_{cut}=125$ GeV and $Q^{X}_{cut}=10$ GeV [optimal case] (top) and $Q_{cut}=32$ GeV and $Q^{X}_{cut}=10$ [non-optimal] (bottom). Bottom figure shows a discontinuity in the transition from 1 to 0 partons at the point where black-dashed and red-dashed curves meet.}
+    \caption{DJR diagrams for 13 TeV Drell-Yan production with $Q_{cut}=125$ GeV and $Q^{X}_{cut}=10$ GeV [optimal case] (top) and $Q_{cut}=32$ GeV and $Q^{X}_{cut}=10$ [non-optimal] (bottom). Bottom figure shows a discontinuity in the transition from 1 to 0 partons at the point where black-dashed and red-dashed curves meet.}
     \label{fig:DYMerging}
   \end{center}
 \end{figure}
@@ -365,12 +367,12 @@ Figures~\ref{fig:WVal} and~\ref{fig:ZVal} display examples of MC validation usin
   \end{center}
 \end{figure}
 
-In general, present MC generators describe correctly SM physics. However, there are known observables that are not correctly described by MC simulations. The most important issue has been seen when measuring the $p_{T}$ of top quark in top-pair production. Figure~\ref{fig:TopPTReweighting} shows the ratio between data and MC, produced with MadGraph and Pythia 6, for the differential cross section of top pair production,~\cite{Goerner:1754332}. This figure has been produced from the combination of the CMS analyses~\cite{Chatrchyan:2012saa,Chatrchyan:2013boa,Khachatryan:2015oqa}. Data is coming from four different analysis performed by CMS. A clear trend can be seen, showing that top $p_{T}$ in MC tend to be higher than in data. Due to this issue, MadGraph with Pythia 6 simulations of top pair production should be corrected. These corrections are considerable for high $p_{T}$ tops. They have been studied for tops with a $p_{T}$ smaller than 400 GeV/c.
+In general, present MC generators describe correctly SM physics. However, there are known observables that are not correctly described by MC simulations. The most important issue has been seen when measuring the $p_{T}$ of top quark in top-pair production. Figure~\ref{fig:TopPTReweighting} shows the ratio between data and MC, produced with MadGraph and Pythia 6, for the differential cross section of top pair production~\cite{Goerner:1754332}. This figure has been produced from the combination of the CMS analyses~\cite{Chatrchyan:2012saa,Chatrchyan:2013boa,Khachatryan:2015oqa}. Data is coming from four different analysis performed by CMS. A clear trend can be seen, showing that top $p_{T}$ in MC tend to be higher than in data. Due to this issue, MadGraph with Pythia 6 simulations of top pair production should be corrected. These corrections are considerable for high $p_{T}$ tops. They have been studied for tops with a $p_{T}$ smaller than 400 GeV/c.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.6\textwidth]{figs/topPtDataOverMadgraphPythia.png}
-    \caption{Data MC ratio of normalized differential top pair production cross section as function of top $p_{T}$. The \pt~of top quark measured in MC tend to be higher than in data for a \pt~greater than 100 GeV/c.}
+    \caption{Data MC ratio of normalized differential top pair production cross section as s function of top $p_{T}$. The \pt~of top quark measured in MC tend to be higher than in data for a \pt~greater than 100 GeV/c~\cite{Goerner:1754332}.}
     \label{fig:TopPTReweighting}
   \end{center}
 \end{figure}

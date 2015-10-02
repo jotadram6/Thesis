@@ -1,11 +1,11 @@
 Remarks/Corrections/Questions from Sabine: (Following discussion of 21 September)
 
 General form remarks:
-1. Check that between paragraphs there is a blank space in the tex file. (Chapter 1 done, Chapter 2 done, Chapter 3 done)
-2. Add full stop always at the end of caption (Chapter 1 done, Chapter 2 done, Chapter 3 done)
-3. Add reference in figure caption -> Only reference number between brackets without "Taken from" or "From" before the reference (Chapter 1 done, Chapter 2 done, Chapter 3 done)
-4. Remove the commas before giving a reference. (Chapter 1 done, Chapter 2 done, Chapter 3 done)
-5. Replace "as function of" for "as a function of" -> Sabine asked me to check this with a native English speaker (Chapter 1 done, Chapter 2 done, Chapter 3 done)
+1. Check that between paragraphs there is a blank space in the tex file. (Chapter 1 done, Chapter 2 done, Chapter 3 done, Chapter 4 done, Chapter 5 done)
+2. Add full stop always at the end of caption (Chapter 1 done, Chapter 2 done, Chapter 3 done, Chapter 4 done, Chapter 5 done)
+3. Add reference in figure caption -> Only reference number between brackets without "Taken from" or "From" before the reference (Chapter 1 done, Chapter 2 done, Chapter 3 done, Chapter 4 done, Chapter 5 done)
+4. Remove the commas before giving a reference. (Chapter 1 done, Chapter 2 done, Chapter 3 done, Chapter 4 done, Chapter 5 done)
+5. Replace "as function of" for "as a function of" -> Sabine asked me to check this with a native English speaker (Chapter 1 done, Chapter 2 done, Chapter 3 done, Chapter 4 done, Chapter 5 done)
 
 ############
 #Chapter 1:#
@@ -149,6 +149,8 @@ $Q^{X}_{cut}$ will be used to refer to it. This cut is applied at generator leve
 $Q_{cut}$ is also a generator cut at Pythia level. Pythia will give then only events where every pair of hadrons pass this criterion.
 
 	Explain better/Add details about merging procedure and DJR study. (DJR is really a variable?)
+
+Rephrased and added additional clarifications.
 
 Line 1993-1996: Replace "minimal kt" for "minimal kt distance"
 
