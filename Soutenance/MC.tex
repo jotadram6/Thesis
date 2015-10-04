@@ -131,19 +131,122 @@ d\sigma_{ij\rightarrow lm} & = & \left( \int_{0}^{1}\int_{0}^{1}f_{i}(x_{i},Q^{2
 \end{frame}
 
 
-\begin{frame}{Parton simulation}
+\begin{frame}{Interface between partonic and hadronic steps}
 \vspace{-.2cm}
 
 \begin{columns}
 \begin{column}{.50\textwidth}
-  \begin{block}{}
-    \tiny \centering 
+  \vspace{-.2cm}
+  \begin{block}{Merging - MLM procedure}\scriptsize
+    Procedure to grant a correct matching between ME and PS:
+    \begin{itemize}
+    \item ME generation, partons with a minimal $k_{T}$ distance $Q^{X}_{cut}$.
+    \item Jet reconstruction from partons with $k_{T}$ algorithm $\to$ n-jets (n-partons)
+    \item PS from partons, with a minimal $k_{T}$ distance $Q_{cut}$ (Merging scale)
+    \item Jet reconstruction from hadrons with $k_{T}$ algorithm $\to$ N-jets.
+    \item Match jets to partons.
+    \item Discard events if N>n or not all partons were matched to jets. 
+    \end{itemize}
+    The correctness of the matching is determined by the choice of $Q^{X}_{cut}$ and $Q_{cut}$.
   \end{block}
 \end{column}
 
 \begin{column}{.50\textwidth}
-
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.1\textwidth]{../figs/PSMEInterface.png}
+    %\caption{ME and PS contributions to events with several partons in the final state in a leading order MC simulation.}
+    %\label{fig:PSME}
+  \end{center}
+\end{figure}
+  \vspace{-.4cm}
+  \begin{block}{}\scriptsize
+    \begin{itemize}
+    \item Matrix-Element: hard interaction processes (left to right)
+    \item Parton shower: soft radiation processes (up to bottom)
+    \item When adding additional jets to a process, a possible overlap between ME and PS can occur.
+    \end{itemize}
+  \end{block}
 \end{column}
 
 \end{columns}
+\end{frame}
+
+\begin{frame}{Optimizing the merging procedure}
+\vspace{-.2cm}
+\begin{columns}
+\begin{column}{.50\textwidth}
+  \begin{block}{}\tiny
+    The optimal values of $Q^{X}_{cut}$ and $Q_{cut}$ depend of:
+    \begin{itemize}
+    \item The process 
+    \item Kinematic cuts
+    \item Center of mass energy
+    \end{itemize}
+  \end{block}
+\end{column}
+\begin{column}{.50\textwidth}
+  \begin{block}{}\tiny
+    To study the correctness of the choice:
+    \begin{itemize}
+    \item DJR diagrams
+    \item Transition between $n$ and $n-1$ jet multiplicities as a function of the merging scale
+    \end{itemize}
+  \end{block}
+\end{column}
+\end{columns}
+
+\vspace{-.2cm}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{../figs/DJR_q100_xq20_TTJets13TeV.png}
+    \includegraphics[width=0.5\textwidth]{../figs/DJR_q50_xq20_TTJets13TeV.png}
+    %\caption{DJR diagrams for 13 TeV top pair production with $Q_{cut}=100$ GeV and $Q^{X}_{cut}=20$ GeV [optimal case] (top) and $Q_{cut}=60$ GeV and $Q^{X}_{cut}=20$ [non-optimal] (bottom). Bottom figure shows a discontinuity in the transition from 3 to 2 partons at the point where blue-dashed and green-dashed curves meet.}
+    %\label{fig:TTJetsMerging}
+  \end{center}
+\end{figure}
+
+\vspace{-.2cm}
+  \begin{block}{}\tiny
+    \textbf{Figure}: DJR diagrams for 13 TeV top pair production with $Q_{cut}=100$ GeV and $Q^{X}_{cut}=20$ GeV [optimal case] (left) and $Q_{cut}=60$ GeV and $Q^{X}_{cut}=20$ [non-optimal] (right). Right figure shows a discontinuity in the transition from 3 to 2 partons at the point where blue-dashed and green-dashed curves meet.
+  \end{block}
+
+\end{frame}
+
+\begin{frame}{Validation studies on MadGraph}
+\vspace{-.4cm}
+\begin{columns}
+\begin{column}{.50\textwidth}
+  \begin{block}{Release validation}\tiny
+    New releases are validated against old ones, for different processes.\\
+    \textbf{Figure}: Comparison between 1.4.8 (MGOldV) and 1.5.11 (MGLatestV) MadGraph releases for SM \Z+jets production with \Z~decaying into neutrinos. $p_{T}$ of jets [top], $\eta$ of jets [bottom].
+  \end{block}
+\vspace{-.5cm}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    %\includegraphics[width=0.45\textwidth]{../figs/ZjetsRelVal0.png}
+    \includegraphics[width=0.75\textwidth]{../figs/ZjetsRelVal1.png}\\
+    \includegraphics[width=0.75\textwidth]{../figs/ZjetsRelVal2.png}
+    %\includegraphics[width=0.45\textwidth]{../figs/ZjetsRelVal3.png}
+    %\caption{Comparison between 1.4.8 (MGOldV) and 1.5.11 (MGLatestV) MadGraph releases for SM \Z+jets production with \Z~decaying into neutrinos. Number of jets [left-up], $p_{T}$ of jets [right-up], $\eta$ of jets [left-down] and $\phi$ of jets [right-down]. As expected, no deviation is observed.}
+    %\label{fig:ZRelVal1}
+  \end{center}
+\end{figure}
+\end{column}
+
+\begin{column}{.50\textwidth}
+  \begin{block}{RIVET toolkit}\tiny
+    Comparison of different generators with real data \\
+    \textbf{Figure}: \W~boson $p_{T}$ measured by ATLAS experiment in muon final states compared to different MC simulations. py6 stands for Pythia 6, py8 for Pythia 8, MGpy6 MadGraph interfaced with Pythia 6 and PWG for Powheg. MadGraph with Pythia 6 gives the best description of experimental data.
+  \end{block}
+  \begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/Wpt_rivet.png}
+    %\caption{\W~boson $p_{T}$ measured by ATLAS experiment in muon final states compared to different MC simulations. py6 stands for Pythia 6, py8 for Pythia 8, MGpy6 MadGraph interfaced with Pythia 6 and PWG for Powheg. MadGraph with Pythia 6 gives the best description of experimental data.}
+    %\label{fig:WVal}
+  \end{center}
+\end{figure}
+\end{column}
+\end{columns}
+
 \end{frame}
