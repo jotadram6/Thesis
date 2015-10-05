@@ -3,8 +3,222 @@
 \section[CMS]{The CMS experiment at LHC}
 \setcounter{tocdepth}{2}
 
-\begin{frame}
+\begin{frame}{}
+The CMS experiment at LHC
+\end{frame}
+
+\subsection{CMS}
+
+\begin{frame}{LHC}
+\vspace{-.2cm}
+
+\begin{columns}
+\begin{column}{.50\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{lhc_underground.jpg}
+  \end{center}
+\end{figure}
+\vspace{-.2cm}
+\begin{block}{}
+\begin{itemize}\scriptsize
+\item Proton and heavy ion collider
+\item 27 km of circumference, 100 m underground
+\item 1232 superconductor magnets at 1.9\textdegree with a magnetic field of 8.33 T
+\item Run 1: 4 TeV/proton
+\item Run 2: 6.5 TeV/proton, started last June
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{.50\textwidth}
+\begin{block}{}
+\begin{itemize}\scriptsize
+\item In run 1: Around 1000 proton bunches, spaced 50 ns $\to$ 20 millions of collisions / s
+\item Main experiments:
+  \begin{itemize}\tiny
+  \item Generic purpose: ATLAS and CMS
+  \item Beauty physics: LHCb
+  \item Quark-Gluon plasma: ALICE
+  \item Forward physics: LHCf, TOTEM
+  \end{itemize}
+\end{itemize}
+\end{block}
+\vspace{-.2cm}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{lhc_hall_1.jpg}
+  \end{center}
+\end{figure}
+\end{column}
+\end{columns}
 
 \end{frame}
 
 
+\begin{frame}{}
+\vspace{-.2cm}
+
+\begin{columns}
+\begin{column}{.50\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/cms-int-10to12.jpg}
+    %\caption{CMS integrated luminosity for proton-proton collisions delivered by LHC. }
+    %\label{fig:CMSlumi}
+  \end{center}
+\end{figure}
+\vspace{-.5cm}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/pileup.png}
+    %\caption{High pile-up event (78 interactions) seen by CMS detector. Event 35655522, from 198609 run, lumi 56, recorded on 2012.}% Image credit: Andre Holzner }                                        
+    %\label{fig:pileup}
+  \end{center}
+\end{figure}
+\end{column}
+
+\begin{column}{.50\textwidth}
+\begin{block}{}
+\begin{equation*}
+  L=\frac{k_{b}N_{b}^{2}f_{rev}}{4\pi\sigma^{*}_{x}\sigma^{*}_{y}}R                                     
+\end{equation*}
+\begin{equation*}
+  N_{events}=L\times \sigma_{process} \times \epsilon
+\end{equation*}
+\end{block}
+
+\tiny{
+%\begin{table}[htbH]
+\begin{center}
+%\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c c|}
+\hline
+ & 2012 & Nominal \\
+\hline
+Energy [GeV]& 4000 & 7000 \\
+Inst. Lumi. [$\text{cm}^{-2}\text{s}^{-1}$] & 7.54$\times10^{33}$ & $10^{34}$ \\
+$k_{b}$ Number of bunches & 1374 & 2808 \\
+Bunch spacing [ns] & 50 & 25 \\
+\hline
+\end{tabular}
+%}
+\end{center}
+%\end{table}
+}%
+
+\begin{block}{}
+\begin{itemize}\scriptsize
+\item Increasing the recorded luminosity, increases the sensitivity to rare processes.
+\item Run 1: 19.7 fb$^{-1}$ in 2012 \MVAt~8 TeV
+\end{itemize}
+\end{block}
+\begin{block}{}
+\scriptsize PileUp: 20 interactions per crossing during 2012
+\end{block}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{CMS: Compact Muon Solenoid}
+\vspace{-.2cm}
+
+\begin{columns}
+\begin{column}{.30\textwidth}
+\begin{block}{}
+\begin{itemize}\scriptsize
+\item One of two general purpose experiments of LHC
+\item Cylinder of 28.7 m long and 15 m height and 14000 tons
+\end{itemize}
+\tiny{
+\begin{equation*}  
+\eta = -\text{ln}\left( \text{tan}\left(\frac{\theta}{2}\right)\right)
+\end{equation*}
+\begin{equation*}
+\Delta R=\sqrt{(\Delta\eta)^{2}+(\Delta\phi)^{2}}
+\end{equation*}
+}%
+\end{block}
+\end{column}
+
+\begin{column}{.70\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=\textwidth]{../figs/CMS_coordinates.jpg}
+    %\caption{CMS coordinate system. }
+    %\label{fig:cmscoor}
+  \end{center}
+\end{figure}
+\end{column}
+\end{columns}
+
+\vspace{-.2cm}
+\begin{block}{}
+\begin{itemize}\scriptsize
+\item Compact: The calorimeters are inside the magnet
+\item Muon: Very precise measurement of muons
+\item Solenoid: Solenoidal magnet of 3.8 T magnetic field
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}{Sub-detectors}
+\vspace{-.2cm}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.7\textwidth]{../figs/PictureforPoint5_oct04_allp.jpg}
+    %\caption{CMS sub-detectors and particle identification. }
+    %\label{fig:cmsslice}
+  \end{center}
+\end{figure}
+\vspace{-.4cm}
+\begin{block}{}
+\begin{itemize}\tiny
+\item Tracker system: Pixel system (vertex reconstruction) and Silicon strips (Measurement of \pt~of charged particles)
+\item Electromagnetic calorimeter (ECAL): 80000 crystals for the measurement of electrons and photons energy
+\item Hadron calorimeter (HCAL): Absorber and scintillator to measure the energy of hadrons
+\item Muon chambers: RPC, DT and CSC to measure muons \pt
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}{Object reconstruction - Jets}
+\vspace{-.9cm}
+
+\begin{columns}
+\begin{column}{.55\textwidth}
+\begin{block}{}
+\begin{itemize}\tiny
+\item Tracker information is used to reconstruct charged particles $\to$ Charged hadrons, electrons, muons
+\item ECAL + HCAL information used to reconstruct the energy of hadrons (neutral and charged)
+\item Tracker system + ECAL + HCAL information are combined to reconstruct jets $\to$ objects used to recover the information from a quark or gluon produced in the hard scattering
+\item Several algorithms are used to collect all reconstructed particles in a jet: CMS $\to$ anti-kt algorithm with a radius $R=0.5$ (AK5)
+\item Jet energy measurement can suffer of missing tracks, pile-up or other detector effects $\to$ Strategies needed to correct jet energy 
+\item Jet energy information is analyzed by an MVA algorithm to determine if it was produced by a b quark $\to$ Constrained Secondary Vertex (CSV) discriminator for b-jets in three working points:
+\tiny{
+\textbf{CSVL (Loose)}: Discriminator > 0.244, $\epsilon^{CSVL}_{b}=85$\%, $\epsilon^{CSVL}_{c}=45$\%, $\epsilon^{CSVL}_{l}=10$\%\\
+\textbf{CSVM (Medium)}: Discriminator > 0.679, $\epsilon^{CSVM}_{b}=$70\%, $\epsilon^{CSVM}_{c}=$20\%, $\epsilon^{CSVM}_{l}=$1\%\\
+\textbf{CSVT (Tight)}: Discriminator > 0.898, $\epsilon^{CSVT}_{b}=50$\%, $\epsilon^{CSVT}_{c}=7$\%, $\epsilon^{CSVT}_{l}=0.2$\%\\
+}%
+\end{itemize}
+\end{block}
+\end{column}
+
+\begin{column}{.45\textwidth}
+\begin{figure}[!Hhtbp]
+\begin{center}
+\includegraphics[width=0.6\textwidth,height=0.33\textheight]{../figs/Jet_composition_data_7TeV.png}
+\includegraphics[width=0.3\textwidth]{../figs/Legend_jet_composition.png}\\
+\includegraphics[width=0.55\textwidth,height=0.33\textheight]{../figs/JEC_pt.png}\\
+\includegraphics[width=0.6\textwidth,height=0.33\textheight]{../figs/pdf-sub.png}
+\end{center}
+\end{figure}
+\end{column}
+\end{columns}
+
+\end{frame}
