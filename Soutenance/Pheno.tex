@@ -112,13 +112,22 @@ Feasibility study for a search of a \Tp~at LHC at 8 TeV
 \begin{column}{.50\textwidth}
 \begin{block}{}
 \begin{itemize}\scriptsize
-\item \textit{Cut 3}: At least two b-jets with effective CSV algorithm with medium working point.
+\item \textit{Cut 3}: At least two b-jets with effective CSV algorithm with medium working point
+\item \textit{Cut 4}: Events with a Higgs candidate with $p_{T}>200$~GeV/c and a top candidate with $p_{T}>300$~GeV/c\\
+\textbf{Figure}: Reconstructed Higgs candidate $p_{T}$ in the x axis and reconstructed top candidate $p_{T}$ in the y axis for backgrounds (left) and signal (right). Signal events have reconstructed Higgs and top with higher \pt~than backgrounds.
+\item \textit{Cut 6}: Events with $2.2<\Delta R_{HW}<3.5$ were kept\\
+\textbf{Figure}: $\Delta R$ between the reconstructed Higgs and \W~candidates for backgrounds (stacked) and signal (over--imposed) normalized to 20 $fb^{-1}$ luminosity. However signal and backgrounds have a mean value of $\Delta R_{HW}=3$, backgrounds tend to have lower values than signal, as well as larger tails.
 \end{itemize}
 \end{block}
 \end{column}
 
 \begin{column}{.50\textwidth}
-
+\begin{figure}[!Hhtbp]
+\begin{center}
+\includegraphics[width=1.0\textwidth]{../figs/Pheno/HPTTPT.png}\\
+\includegraphics[width=0.75\textwidth]{../figs/Pheno/DRWH.png}
+\end{center}
+\end{figure}
 \end{column}
 \end{columns}
 
@@ -131,128 +140,92 @@ Feasibility study for a search of a \Tp~at LHC at 8 TeV
 \begin{column}{.50\textwidth}
 \begin{block}{}
 \begin{itemize}\scriptsize
-\item 
+\item \textit{Cut 7}: Events with $\Delta \phi_{H(bb)}<2.0$ and $\Delta \phi_{top(bW)}<3.3$ were kept
+\item \textit{Cut 8}: Events were required to have $\Delta \phi_{W(jj)}<2.3$ 
+\item \textit{Cut 9}: Events with a Higgs candidate with a mass between $100$~\GeVcc~and $135$~\GeVcc~were selected\\
+\textbf{Figure}: Mass of the reconstructed Higgs candidate for backgrounds (stacked) and signal (over--imposed). Backgrounds have larger tails than signal for the reconstructed Higgs mass.
+\item \textit{Cut 10}: Events with $\frac{p_{T}^{H}+p_{T}^{t}}{H_{T}}>0.65$ were kept
+\textbf{Figure}: Relative total hadronic energy for backgrounds (stacked) and signal (over--imposed) normalized to 20 $fb^{-1}$ luminosity.
 \end{itemize}
 \end{block}
 \end{column}
 
 \begin{column}{.50\textwidth}
-
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.75\textwidth]{../figs/Pheno/MH.png}\\
+    \includegraphics[width=0.75\textwidth]{../figs/Pheno/RelHT.png}
+  \end{center}
+\end{figure}
 \end{column}
 \end{columns}
 
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}{Results}
 \vspace{-.2cm}
 
 \begin{columns}
 \begin{column}{.50\textwidth}
-\begin{block}{}
-\begin{itemize}\scriptsize
-\item 
-\end{itemize}
+\begin{block}{}\scriptsize
+The number of events falling into a window of $20$~GeV around the \Tp~mass ($M(5j)$) were selected\\
+\textbf{Figure}: Reconstructed \Tp~mass after all cuts for backgrounds and signal (stacked) normalized to 20~$fb^{-1}$ luminosity. Signal peak is visible on top of the sum of backgrounds.
+
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l|c|c|c|c}
+ & \multicolumn{2}{c|}{unweighted events}  & \multirow{2}{*}{weight} & weighted  \\
+ & after Cut 10 & in mass window & & events \\
+ \hline
+ Signal & $8601$ & $3780$ & $0.018$ &$69 \pm 1$ \\
+ \hline
+   $t \bar{t}$ & $409$ & $57$ & $7.7$ & $437 \pm 58$ \\
+ $W$+jets & $24$ & $3$ & $132$ & $395 \pm 228$ \\
+ $QCD$ & $235$ & $34$ & $6.48$ & $220 \pm 38$ \\
+ $tW$ & $18$ & $3$ & $11.3$ & $34 \pm 20$ \\
+ $t$+ jet & $75$ & $7$ & $3.55$ & $25 \pm 9$ \\
+  \hline
+  total background & & & & $1112 \pm 352$ \\
+\end{tabular}
+}
+%\caption{Number of signal and background events from utilized MC samples: in the first column the simulated events that pass all kinematic cuts, in the second column the events that fall in the mass window ${710<M_{jjjjj}<750}$~\GeVcc, finally in the fourth column the number of weighted events in the mass window normalized to the physical cross section (the applied weight is listed in the third column). All the errors are statistical only. For the total background, the linear sum of errors was considered.} \label{tab:events}
+\end{center}
+
+Discriminators:
+\begin{equation*}                                               
+\frac{S}{\sqrt{S+B}}=2.0\pm 0.3\, \mbox{and} \, \frac{S}{B}=0.06\pm 0.02                                               
+\end{equation*}
 \end{block}
 \end{column}
 
 \begin{column}{.50\textwidth}
-
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/Pheno/Final.png}
+    %\caption{Reconstructed \Tp~mass after all cuts for backgrounds and signal (stacked) normalized to 20~$fb^{-1}$ luminosity. Signal peak is visible on top of the sum of backgrounds.}
+    %\label{fig:M5J}
+  \end{center}
+\end{figure}
 \end{column}
 \end{columns}
 
 \end{frame}
 
-\begin{frame}{}
-\vspace{-.2cm}
-
-\begin{columns}
-\begin{column}{.50\textwidth}
-\begin{block}{}
-\begin{itemize}\scriptsize
-\item 
-\end{itemize}
-\end{block}
-\end{column}
-
-\begin{column}{.50\textwidth}
-
-\end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}{}
-\vspace{-.2cm}
-
-\begin{columns}
-\begin{column}{.50\textwidth}
-\begin{block}{}
-\begin{itemize}\scriptsize
-\item 
-\end{itemize}
-\end{block}
-\end{column}
-
-\begin{column}{.50\textwidth}
-
-\end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}{}
-\vspace{-.2cm}
-
-\begin{columns}
-\begin{column}{.50\textwidth}
-\begin{block}{}
-\begin{itemize}\scriptsize
-\item 
-\end{itemize}
-\end{block}
-\end{column}
-
-\begin{column}{.50\textwidth}
-
-\end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}{}
-\vspace{-.2cm}
-
-\begin{columns}
-\begin{column}{.50\textwidth}
-\begin{block}{}
-\begin{itemize}\scriptsize
-\item 
-\end{itemize}
-\end{block}
-\end{column}
-
-\begin{column}{.50\textwidth}
-
-\end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}{}
-\vspace{-.2cm}
-
-\begin{columns}
-\begin{column}{.50\textwidth}
-\begin{block}{}
-\begin{itemize}\scriptsize
-\item 
-\end{itemize}
-\end{block}
-\end{column}
-
-\begin{column}{.50\textwidth}
-
-\end{column}
-\end{columns}
-
-\end{frame}
+%\begin{frame}{}
+%\vspace{-.2cm}
+%
+%\begin{columns}
+%\begin{column}{.50\textwidth}
+%\begin{block}{}
+%\begin{itemize}\scriptsize
+%\item 
+%\end{itemize}
+%\end{block}
+%\end{column}
+%
+%\begin{column}{.50\textwidth}
+%
+%\end{column}
+%\end{columns}
+%
+%\end{frame}
