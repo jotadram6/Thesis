@@ -241,47 +241,47 @@ TprimeJetToTH\_\textbf{M-700}\_TuneZ2star\_8TeV-madgraph\_tauola & 143.7 & 99K \
 
 
 
-\begin{frame}{Corrections to MC for b-tagging}
-\vspace{-.2cm}
-
-\begin{columns}
-\begin{column}{.50\textwidth}
-\begin{block}{}
-\scriptsize Scale factors derived from data/MC comparisons $\to$ $SF^{flavor}_{\eta}(p_{T})$\\
-As mean values: $SF^{b\; or\; c}\sim 0.94$ and $SF^{light}\sim 1.06$
-\end{block}
-\vspace{-.2cm}
-\begin{block}{}
-\scriptsize In order to apply the SF's a weight per event is calculated\\
-$w=\frac{P(\text{DATA})}{P(\text{MC})}$ with \\ \tiny{
-$P(\text{MC}) = \prod_{i=\text{tagged}} \varepsilon_i \prod_{j=\text{not tagged}} (1-\varepsilon_j)$\\
-$P(\text{DATA}) = \prod_{i=\text{tagged}} \text{SF}_i \varepsilon_i \prod_{j=\text{not tagged}} (1-\text{SF}_j \varepsilon_j)$ \\
-}
-\end{block}
-\vspace{-.2cm}
-\begin{block}{}
-\tiny B-tagging efficiencies defined as\\
-$\varepsilon_f(i,j) = \frac{N_f^\text{b-tagged}(i,j)}{N_f^\text{Total}(i,j)}$ where \\
-where $ N_f^\text{Total}(i,j) $ and $ N_f^\text{b-tagged}(i,j) $ are the total number and the number of b-tagged jets, respectively, of flavor $ f $ in the $ (p_\text{T},\eta) $ bin $ (i,j) $ for a given MC sample.
-\end{block}
-\vspace{-.2cm}
-\begin{block}{}
-\scriptsize \textbf{Figure}: Distribution of the weights from b-tagging scale factors for all MC samples.
-\end{block}
-\end{column}
-
-\begin{column}{.50\textwidth}
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=1.0\textwidth]{../figs/Ana/SF_weight.png}
+%\begin{frame}{Corrections to MC for b-tagging}
+%\vspace{-.2cm}
+%
+%\begin{columns}
+%\begin{column}{.50\textwidth}
+%\begin{block}{}
+%\scriptsize Scale factors derived from data/MC comparisons $\to$ $SF^{flavor}_{\eta}(p_{T})$\\
+%As mean values: $SF^{b\; or\; c}\sim 0.94$ and $SF^{light}\sim 1.06$
+%\end{block}
+%\vspace{-.2cm}
+%\begin{block}{}
+%\scriptsize In order to apply the SF's a weight per event is calculated\\
+%$w=\frac{P(\text{DATA})}{P(\text{MC})}$ with \\ \tiny{
+%$P(\text{MC}) = \prod_{i=\text{tagged}} \varepsilon_i \prod_{j=\text{not tagged}} (1-\varepsilon_j)$\\
+%$P(\text{DATA}) = \prod_{i=\text{tagged}} \text{SF}_i \varepsilon_i \prod_{j=\text{not tagged}} (1-\text{SF}_j \varepsilon_j)$ \\
+%}
+%\end{block}
+%\vspace{-.2cm}
+%\begin{block}{}
+%\tiny B-tagging efficiencies defined as\\
+%$\varepsilon_f(i,j) = \frac{N_f^\text{b-tagged}(i,j)}{N_f^\text{Total}(i,j)}$ where \\
+%where $ N_f^\text{Total}(i,j) $ and $ N_f^\text{b-tagged}(i,j) $ are the total number and the number of b-tagged jets, respectively, of flavor $ f $ in the $ (p_\text{T},\eta) $ bin $ (i,j) $ for a given MC sample.
+%\end{block}
+%\vspace{-.2cm}
+%\begin{block}{}
+%\scriptsize \textbf{Figure}: Distribution of the weights from b-tagging scale factors for all MC samples.
+%\end{block}
+%\end{column}
+%
+%\begin{column}{.50\textwidth}
+%\begin{figure}[!Hhtbp]
+%  \begin{center}
+%    \includegraphics[width=1.0\textwidth]{../figs/Ana/SF_weight.png}
     %\caption{Distribution of the weights from b-tagging scale factors for all MC samples.}
     %\label{fig:SFweight}
-  \end{center}
-\end{figure}
-\end{column}
+%  \end{center}
+%\end{figure}
+%\end{column}
 
-\end{columns}
-\end{frame}
+%\end{columns}
+%\end{frame}
 
 \begin{frame}{\Tp~reconstruction with a $\chi^{2}$ sorting algorithm}
 \vspace{-.2cm}
@@ -468,36 +468,36 @@ where $ N_f^\text{Total}(i,j) $ and $ N_f^\text{b-tagged}(i,j) $ are the total n
 
 \end{frame}
 
-\begin{frame}{Selection optimization}
-\vspace{-.2cm}
-
-\begin{table}[htbH]
-\begin{center}
-\resizebox{\textwidth}{!}{
-\begin{tabular}{|c|c|c|}
-\hline 
-Cut & $S/B$ & $S/\sqrt{S+B}$ \\
-\hline
-$\chi^{2}<8$ & $3.4\ex{-2} \pm 2.85\ex{-3}$  & $ 0.96 \pm 0.05$  \\
-$\Delta R(bb)<1.2$ & $4.76\ex{-2} \pm 4.52\ex{-3}$ & $1.10 \pm 0.07$  \\
-%$1.6<\Delta R (W_{cand} H_{cand})<4.0$ & $4.82\ex{-2} \pm 4.59\ex{-3}$  & $1.10 \pm 0.07$  \\
-$105$ \GeVcc~$< M(H_{cand}) < 145$ \GeVcc~& $6.37\ex{-2} \pm 6.74\ex{-3}$  & $1.22 \pm 0.08$  \\
-$(M(top^{2nd})+M(W^{2nd}))/M(H_{cand})>6.8$ & $0.15 \pm 0.03$  & $1.45 \pm 0.16$  \\
-$\Delta R (T j^{6})>4.8$ & $0.42 \pm 0.19$  & $1.67 \pm 0.32$  \\
-Relative $H_{T}>0.67$ & $1.16 \pm 0.17$  & $2.13 \pm 0.17$  \\
-\hline
-\end{tabular}
+%\begin{frame}{Selection optimization}
+%\vspace{-.2cm}
+%
+%\begin{table}[htbH]
+%\begin{center}
+%\resizebox{\textwidth}{!}{
+%\begin{tabular}{|c|c|c|}
+%\hline 
+%Cut & $S/B$ & $S/\sqrt{S+B}$ \\
+%\hline
+%$\chi^{2}<8$ & $3.4\ex{-2} \pm 2.85\ex{-3}$  & $ 0.96 \pm 0.05$  \\
+%$\Delta R(bb)<1.2$ & $4.76\ex{-2} \pm 4.52\ex{-3}$ & $1.10 \pm 0.07$  \\
+%%$1.6<\Delta R (W_{cand} H_{cand})<4.0$ & $4.82\ex{-2} \pm 4.59\ex{-3}$  & $1.10 \pm 0.07$  \\
+%$105$ \GeVcc~$< M(H_{cand}) < 145$ \GeVcc~& $6.37\ex{-2} \pm 6.74\ex{-3}$  & $1.22 \pm 0.08$  \\
+%$(M(top^{2nd})+M(W^{2nd}))/M(H_{cand})>6.8$ & $0.15 \pm 0.03$  & $1.45 \pm 0.16$  \\
+%$\Delta R (T j^{6})>4.8$ & $0.42 \pm 0.19$  & $1.67 \pm 0.32$  \\
+%Relative $H_{T}>0.67$ & $1.16 \pm 0.17$  & $2.13 \pm 0.17$  \\
+%\hline
+%\end{tabular}
 %\caption{$S/B$ and $S/\sqrt{S+B}$ from MC samples for each step of the selection after reconstruction of resonances with the $\chi^{2}$ sorting algorithm. Only $M=700$ \GeVcc~signal, \ttbar~and QCD\_HT-500To1000 MC samples were used. \label{tab:Estimators}}
-}
-\end{center}
-\end{table}
-
-\vspace{-.2cm}
-    \begin{block}{}\scriptsize
-      $S/B$ and $S/\sqrt{S+B}$ from MC samples for each step of the selection after reconstruction of resonances with the $\chi^{2}$ sorting algorithm. Only $M=700$ \GeVcc~signal, \ttbar~and QCD\_HT-500To1000 MC samples were used.
-    \end{block}
-
-\end{frame}
+%}
+%\end{center}
+%\end{table}
+%
+%\vspace{-.2cm}
+%    \begin{block}{}\scriptsize
+%      $S/B$ and $S/\sqrt{S+B}$ from MC samples for each step of the selection after reconstruction of resonances with the $\chi^{2}$ sorting algorithm. Only $M=700$ \GeVcc~signal, \ttbar~and QCD\_HT-500To1000 MC samples were used.
+%    \end{block}
+%
+%\end{frame}
 
 \begin{frame}{Trigger efficiency}
 \vspace{-.2cm}
