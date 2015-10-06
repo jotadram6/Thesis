@@ -33,3 +33,24 @@ Marked "standard model" in the phrase: The analysis looks for this particle in t
 R/. I used "standard model quarks" in the phrase to avoid any confusion with the vector like quarks.
 
 
+##############
+#INTRODUCTION#
+##############
+
+Line 161: 
+
+On the other hand, in the search for the fundamental components of matter the periodic table has been constructed. -> Constructed?
+
+R/. Changing the word constructed: On the other hand, in the search for the fundamental components of matter the periodic table has been formulated.
+
+Line 162-163:
+
+But even deeper in matter structure a set of fundamental particles, without known inner structure, have been also found. -> Up to now
+
+R/. Changing phrase for: But even deeper in matter structure a set of fundamental particles, without known inner structure up to present, have been also found. 
+
+Line 176:
+
+Replace "However" with "Even if"
+
+R/. "However it is a very big and complex machine" changed for "Even if it is a very big and complex machine"
