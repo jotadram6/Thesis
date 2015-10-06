@@ -1,0 +1,35 @@
+##########
+#ABSTRACT#
+##########
+
+Line 24:
+
+Why ATLAS too? and others?
+
+R/. Because ATLAS and CMS are the two main experiments that will cited in the document. ATLAS will be cited many times regarding the analyses looking for a T', and compared to CMS results. 
+
+Line 34-35:
+
+The standard model predicts a cross section of top-Higgs production, then any enhancement of their associated production will be a clear signature of physics beyond the standard model. 
+
+R/. The following phrase is added: In addition, the existence of physics beyond the standard model can also be reflected by resonances that decay into a top-quark and a Higgs boson. 
+
+Line 39:
+
+I also discuss the formulation of an extension model of the standard model.
+
+R/. "extension model" changed for "extension": I also discuss the formulation of an extension of the standard model.
+
+Line 44:
+
+This top partner is a new particle very similar to the standard model top-quark, but much heavier, that decays preferentially into a top quark and a Higgs boson.
+
+R/. Removing the word preferentially: This top partner is a new particle very similar to the standard model top-quark, but much heavier, that can decay into a top quark and a Higgs boson.
+
+Line 47:
+
+Marked "standard model" in the phrase: The analysis looks for this particle in the full hadronic final state, where the Higgs boson decays into two b-quarks and the top quark decays into three standard model quarks, a b and two light quarks.
+
+R/. I used "standard model quarks" in the phrase to avoid any confusion with the vector like quarks.
+
+
