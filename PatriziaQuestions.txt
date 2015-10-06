@@ -54,3 +54,70 @@ Line 176:
 Replace "However" with "Even if"
 
 R/. "However it is a very big and complex machine" changed for "Even if it is a very big and complex machine"
+
+
+###########
+#Chapter 1#
+###########
+
+Line 213: 
+
+Replace "At" with "In"
+
+R/. "At ancient Greece these theories were elaborated from a philosophical point of view." replaced by "In ancient Greece these theories were elaborated from a philosophical point of view."
+
+Line 222:
+
+Replace "This" with "The"
+
+R/. "This SM relies on two of the more elegant constructs of modern physics and mathematics." replaced by "The SM relies on two of the more elegant constructs of modern physics and mathematics."
+
+Line 224:
+
+Replace "has" by "is"
+
+R/. "Quantum field theory~\cite{RevModPhys.13.203} has born from the understanding of processes that take place at very small spatial scales and in a regime where special relativity plays an important role." replaced by "Quantum field theory~\cite{RevModPhys.13.203} is born from the understanding of processes that take place at very small spatial scales and in a regime where special relativity plays an important role."
+
+
+Line 249:
+
+Correct "does" with "do"
+
+R/. "From the very beginning of physics, one of the most fundamental questions has been how does bodies interact" replaced by "From the very beginning of physics, one of the most fundamental questions has been how do bodies interact"
+
+Line 257:
+
+Replace "to describe" with "in describing"
+
+R/. "The very precise and complete description of electromagnetism developed by Gauss, Faraday, Amp\`{e}re and finished by Maxwell succeeded to describe electricity and magnetism under the formalism of only one interaction within the mathematical formalism of classical fields." replaced by "The very precise and complete description of electromagnetism developed by Gauss, Faraday, Amp\`{e}re and finished by Maxwell succeeded in describing electricity and magnetism under the formalism of only one interaction within the mathematical formalism of classical fields."
+
+Line 391:
+
+Replace "SM" with "Standard Model (SM)"
+
+R/. The abbreviation was defined in line 218 at the beginning of the chapter. 
+
+Line 393:
+
+Add "an"
+
+R/. "The electromagnetic interaction has associated electric charge." changed by "The electromagnetic interaction has an associated electric charge."
+
+Line 395:
+
+Replace "the" with "called"
+
+R/. "Finally, the strong force charge is the color." replaced by "Finally, the strong force charge is called color."
+
+Line 396: 
+
+Why 5 and not 6 fundamental bosons?
+
+R/. I didn't count W^{+/-} as two bosons but as one. This also I used to count leptons, electron and positron as one and not two, and so on.
+
+Line 424:
+
+Add "experimental observations"
+
+R/. "it leaves some unsolved puzzles in the heart of the SM." replaced by "it leaves some unsolved puzzles in the heart of the SM from experimental observations."
+
