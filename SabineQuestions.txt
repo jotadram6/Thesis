@@ -27,6 +27,8 @@ This means, in practical terms, that such field will have a non-zero value in va
 
 Section 1.5: More details on the VLQ theory, specifically compare the model used in later chapters with models with exclusive coupling of T' to third quark generation. Add also results from LEP about existence of a fourth family -> Restriction of only 3 neutrinos
 
+LEP restriction  on number of active neutrinos has been added in the following phrase: A fourth family would introduce a fourth neutrino, this possibility that has been discarded by LEP~\cite{ALEPH:2005ab} if the fourth neutrino couples to the \Z~boson.
+
 
 
 Line 681: Rephrase for clarity

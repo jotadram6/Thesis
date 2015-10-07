@@ -121,3 +121,99 @@ Add "experimental observations"
 
 R/. "it leaves some unsolved puzzles in the heart of the SM." replaced by "it leaves some unsolved puzzles in the heart of the SM from experimental observations."
 
+Line 475:
+
+Symmetrical?
+
+R/. "The final state is stable but not symmetrical." replaced by "The final state is stable but it is not symmetric under rotations around the z-axis."
+
+
+Line 476:
+
+Not clear
+
+R/. "This transition also decreased the potential energy of the system, driving the system to its ground state." replaced by "This change of state also decreased the potential energy of the system, driving the system to its ground state."
+
+Line 488-489:
+
+Not clear
+
+R/. "In order to avoid this problem a spin-0 field should be used. In addition, this field should be electrically neutral to avoid having a charged vacuum." replaced by "In addition, this field should be electrically neutral to avoid having a vacuum with a non-zero electrical charge."
+
+Line 522:
+
+Replace "in" with "of"
+
+R/. "However some aspects of the model are not completely understood." replaced by "However some aspects in the model are not completely understood."
+
+Line 533,534,544:
+
+Too simplistic, not introduced before
+
+R/. The following phrase is removed: However the real relevance or significance of this problem at theoretical level has been discussed extensively, the majority of the community agrees there is something to be understood on the subject. 
+
+Line 553:
+
+Not clear
+
+R/. "This represents for some theoreticians a problem itself: fine-tuning or naturalness." replaced by "This represents for some theoreticians a problem by itself, referred as fine-tuning or naturalness. The name fine-tuning refers to the need of choosing extremely tuned values for the parameters to adjust a model to the theoretical requirements Naturalness asks the justification of the specific values given to parameters in a fine-tuned model."
+
+Line 554:
+
+Correct "accordingly"
+
+R/. "accordingly to different models" replaced by "according to different models"
+
+Line 590:
+
+Not "in the SM"
+
+R/. "From last sections it has been shown how there are some parts in the SM that need further understanding." replaced by "From last sections it has been shown how there are phenomena not described by the SM that need further understanding."
+
+Line 591:
+
+Not clear
+
+R/. "From such internal issues some further models/theories have been developed." replaced by "From such problems some further models/theories have been developed."
+
+Line 599:
+
+"issues in a different way"
+
+R/. "But not only SUSY have seen the day light, there is on the market an astonishing amount of BSM theories addressing different issues of the SM." replaced by ""
+
+Line 601:
+
+Set instead of bunch
+
+R/. "In this section a bunch" replaced by "In this section a set"
+
+Line 620:
+
+Why top-like? introduce
+
+R/. After revisiting the phrase I think actually calling all vector-like states "top-like" is not precise. Thus, I've removed the word "top-like" from the phrase.
+
+Page 16:
+
+"I think that they can have also other exotic charges. They can be more than 4?"
+
+R/. Yes, I think in principle we can consider also electric charge as 8/3 or -7/3, but there is no reference to this type of partners in the references I have used for the thesis and the analysis.
+
+Line 650:
+
+Add an "s" after VLQ and change "as the SM top quark" for "as any SM quark"
+
+R/. "VLQ can be produced singly or pairwise, as the SM top quark." replaced by "VLQ's can be produced singly or pairwise, as any SM quark."
+
+Line 663:
+
+Not clear
+
+R/. "In particular the case where couplings to light generations are important has been considered for the present work." replaced by "In the present work, the case where the couplings of the \Tp~ to light generations are comparable to the third generation couplings has been considered."
+
+Figure 1.7:
+
+Correct T for T', and add a table with some numbers for the cross sections.
+
+R/. T' notation has been corrected, and the table has been added.
