@@ -29,10 +29,11 @@ Section 1.5: More details on the VLQ theory, specifically compare the model used
 
 LEP restriction  on number of active neutrinos has been added in the following phrase: A fourth family would introduce a fourth neutrino, this possibility that has been discarded by LEP~\cite{ALEPH:2005ab} if the fourth neutrino couples to the \Z~boson.
 
-
+Additional information has been added to the VLQ section and a new subsection with information of other models.
 
 Line 681: Rephrase for clarity
 
+The phrase has been removed.
 
 ############
 #Chapter 2:#

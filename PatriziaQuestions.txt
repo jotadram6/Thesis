@@ -217,3 +217,21 @@ Figure 1.7:
 Correct T for T', and add a table with some numbers for the cross sections.
 
 R/. T' notation has been corrected, and the table has been added.
+
+Line 672:
+
+Confusion between light quarks and "jets" - Mixing def
+
+R/. "and $j$ for jet" replaced by "understanding $j$ for a jet coming from light quark (following the notation used in~\cite{Buchkremer:2013bha})."
+
+Figure 1.8:
+
+Which model?
+
+R/. The following phrase has been added to the caption: The branching ratios correspond to the non-standard doublet with maximized couplings to light generations.
+
+Line 681:
+
+Not clear - qualitative!
+
+R/. I preferred to remove th phrase.
