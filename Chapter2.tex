@@ -248,7 +248,7 @@ In this section a set of models that introduce additional heavy quarks, heavier 
 \subsection{Theoretical motivation}
 \label{sec:motiv}
 
-Even though the SM has 3 families, the number of families in nature is not restricted by any fundamental principle. However, searches for fourth families have not found any evidence of additional families in nature~\cite{Eberhardt:2012gv}. But a fourth family formulation relies on the existence of a sequential additional family, this is for the quark sector, two additional quarks, heavier than the top with the same quantum number structure as the other 3 families. In particular the 3 SM families are formed by doublets of the left components of quark fields. A fourth family would introduce a fourth neutrino, this possibility that has been discarded by LEP~\cite{ALEPH:2005ab} if the fourth neutrino couples to the \Z~boson.
+Even though the SM has 3 families, the number of families in nature is not restricted by any fundamental principle. However, searches for fourth families have not found any evidence of additional families in nature~\cite{Eberhardt:2012gv}. But a fourth family formulation relies on the existence of a sequential additional family, this is for the quark sector, two additional quarks, heavier than the top with the same quantum number structure as the other 3 families. In particular the 3 SM families are formed by doublets of the left components of quark fields. A fourth family would introduce a fourth neutrino, this possibility that has been discarded by LEP~\cite{ALEPH:2005ab} if the fourth neutrino couples to the \Z~boson. Additionally, in~\cite{Eberhardt:2012gv}, have been shown the consequences of last measurements of Higgs mass on a SM with a sequential fourth family. Such work shows that this fourth family model is excluded at 5.3 sigma. 
 
 Fermionic fields can be divided in terms of two chiral components. The chirality is related to the relative orientation of the momentum and spin of a particle. A particle is said to have right chirality if its momentum and spin are aligned and left chirality if they are anti-aligned.  Accordingly to electroweak theory the only left fermions undergo weak interactions, reason why SM quark families are left. 
 
@@ -340,10 +340,12 @@ In the present work the single production of a \Tp~in association with light qua
 
 \begin{table*}[htbH]
 \begin{center}
-\resizebox{\textwidth}{!}{
+%\resizebox{\textwidth}{!}{
 \begin{tabular}{|c|c|c|}
 \hline 
-\Tp~Mass & Single production $\sigma$ & Pair production $\sigma$ \\
+  &  \multicolumn{2}{c|}{Cross section [fb]} \\
+\hline 
+\Tp~Mass & Single production & Pair production \\
 \hline
 400 & 635.7 & 992.5 \\
 450 & 452.6 & 483.5 \\
@@ -360,7 +362,7 @@ In the present work the single production of a \Tp~in association with light qua
 %1000 & 53.9 &  \\
 \hline
 \end{tabular}
-}
+%}
 \caption{\Tp~production cross sections in single and pair production modes, for proton-proton collisions at 8 TeV center of mass energy. The cross sections have been calculated for the non-standard doublet with maximized couplings to light generations. \label{tab:TheoXS}}
 \end{center}
 \end{table*}
@@ -409,17 +411,36 @@ In figure~\ref{fig:OMXS} are presented the production cross sections for the pai
   \end{center}
 \end{figure}
 
+\subsection{Current experimental limits}
+\label{sec:CELim}
+
+VLQ models can be experimentally constrained from many sides. In~\cite{Cacciapaglia:2011fx} is shown how measurements involving the determination of the parameters of the CKM matrix constrain the introduction of new quarks that mix with SM quarks. Additionally, at the LHC during run 1, many analyses looking directly for top partners have been conducted by the ATLAS and CMS collaborations. This thesis is the product of one of this efforts. 
+
+Current searches have been focused in the pair production channel, existing only one search in the single production mode that was done using the ATLAS experiment. All this searches have set mass exclusion limits depending on the branching ratio of the \Tp~to each decay channel: $bW^{+/-}$, $t$\Z or $tH^{0}$. Figure~\ref{fig:SummaryRes1} shows the summary of results from all analysis looking for a \Tp~by ATLAS and CMS collaborations. From there, the highest limits achieved are 900~\GeVcc~for $bW^{+/-}$ exclusive decay, 850~\GeVcc~for $tH^{0}$ case and 800~\GeVcc~for $tZ^{0}$ channel. 
+
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth, height=0.55\textheight]{figs/Ana/ATLAS_VLQ_TT_step4.png}
+    \includegraphics[width=0.45\textwidth, height=0.35\textheight]{figs/Ana/CMS-B2G-13-005_Figure_010-a.png}
+    \includegraphics[width=0.45\textwidth, height=0.35\textheight]{figs/Ana/CMS-B2G-13-005_Figure_010-b.png}
+    \caption{ATLAS expected and observed \Tp~mass excluded at 95\% CL as a function of the branching ratio [top]~\cite{ATLAS-CONF-2015-012}. CMS expected [left-bottom] and observed [right-bottom] \Tp~mass excluded at 95\% CL as a function of the branching ratio~\cite{Khachatryan:2015oba}.}
+    \label{fig:SummaryRes1}
+  \end{center}
+\end{figure}
+
+A more complete discussion of the ATLAS and CMS analyses is postponed to section~\ref{sec:art} along with a comparison of the results from other public analyses and the search presented in this work.
+
 \section{Top at the LHC}
 \subsection{Top production}
 
-Discovered in 1995,~\cite{Abe:1995hr, Abachi:1995iq}, by D\O~\cite{Abazov:2002su} and CDF~\cite{Blair:1996kx} collaborations at Tevatron~\cite{Group:1984bk}, it is the heaviest known fundamental particle. As heaviest particle, many models beyond the SM predict a coupling of the top quarks with a heavier new physics sector. It forms a $SU(2)_{L}$ weak isospin doublet with the b-quark, discovered in 1977~\cite{Herb:1977ek}. Their mass difference, two orders of magnitude, is a fundamental question in the SM. Precision measurements of the top quark characteristics are fundamental inputs to test the SM and new physics searches.
+Discovered in 1995,~\cite{Abe:1995hr, Abachi:1995iq}, by CDF~\cite{Blair:1996kx} and D\O~\cite{Abazov:2002su} collaborations at Tevatron~\cite{Group:1984bk}, it is the heaviest known fundamental particle. As heaviest particle, many models beyond the SM predict a coupling of the top quarks with a heavier new physics sector. It forms a $SU(2)_{L}$ weak isospin doublet with the b-quark, discovered in 1977~\cite{Herb:1977ek}. Their mass difference, two orders of magnitude, is a fundamental question in the SM. Precision measurements of the top quark characteristics are fundamental inputs to test the SM and new physics searches.
 
 The LHC can be seen as a top-factory, being the accelerator where the most of top-quarks can be produced. The top quark is produced in pairs and single production mode. During run 1, taking into account 7 TeV and 8 TeV data, 5.6 millions of top pairs events and 2.7 millions of single top events were delivered by the LHC to ATLAS and CMS experiments. Taking into account the different cross sections of the production processes, that will be discussed in the following sections, and the instantaneous luminosity, cited in table~\ref{tab:LHCparams}, for 8 TeV center of mass energy, at LHC around 6 tops per second are produced, where 5 of them come from top-pair events and one from single-top events.  
 
 \subsubsection{Pair production}
 \label{subsec:toppair}
 
-Top pair production constitutes the dominant production channel in proton-proton collisions at LHC. Its high cross section makes this process one of the most important background for searches of new physics at LHC. Latest theoretical calculations at Next-to-Next-to-Leading-Order (NNLO)~\cite{Czakon:2013goa}, see section~\ref{sec:parton}, of top pair production from proton-proton collisions at $\sqrt{s}=8$ TeV give a cross section $\sigma_{t\bar{t}}=247.47$ pb with around 5\% total uncertainty. The tree level diagrams that contribute to this production are summarized in figure~\ref{fig:PairProductionFD}, where gluon fusion dominates the pair production. At $\sqrt{s}=13$ TeV, as for LHC Run 2, this cross section will scale about 3.3 times. Comparison between theoretical predictions and experimental measurements of top pair production is shown in figure~\ref{fig:PairProduction}~\cite{TOPLHCWG}.
+Pair top-quark production constitutes the dominant production channel in proton-proton collisions at LHC. Its high cross section makes this process one of the most important background for searches of new physics at LHC, for example for the search shown in this work. Latest theoretical calculations at Next-to-Next-to-Leading-Order (NNLO)~\cite{Czakon:2013goa}, see section~\ref{sec:parton}, of top pair production from proton-proton collisions at $\sqrt{s}=8$ TeV give a cross section $\sigma_{t\bar{t}}=247.47$ pb with around 5\% total uncertainty. The tree level diagrams that contribute to this production are summarized in figure~\ref{fig:PairProductionFD}, where gluon fusion dominates the pair production. At $\sqrt{s}=13$ TeV, as for LHC Run 2, this cross section will scale about 3.3 times. Comparison between theoretical predictions and experimental measurements of top pair production is shown in figure~\ref{fig:PairProduction}~\cite{TOPLHCWG}.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -433,8 +454,10 @@ Top pair production constitutes the dominant production channel in proton-proton
 
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{figs/toplhcwg_ttxsec_sqrts_may2015.png}
-    \caption{$t\bar{t}$ production cross section as a function of the center of mass energy in $p\bar{p}$ and $pp$ collisions compared to theoretical predictions~\cite{TOPLHCWG}.}
+    %\includegraphics[width=0.9\textwidth]{figs/toplhcwg_ttxsec_sqrts_may2015.png}
+    \includegraphics[width=0.9\textwidth]{figs/tt_curve_sqrts_cms_250815.png}
+    \includegraphics[width=0.9\textwidth]{figs/fig_06.png}
+    \caption{$t\bar{t}$ production cross section as a function of the center of mass energy in $p\bar{p}$ and $pp$ collisions compared to theoretical predictions~\cite{TOPLHCWG,CMS-PAS-TOP-15-005,ATLAS-CONF-2015-049}.}
     \label{fig:PairProduction}
   \end{center}
 \end{figure}
@@ -444,7 +467,7 @@ Top pair production constitutes the dominant production channel in proton-proton
 \subsubsection{Single $t$ production}
 \label{subsec:topsing}
 
-A subdominant production process of top quark is the single production channel, where the top quark is produced in association with another quark, mediated by a $W$ boson, or with a $W$ boson. The Feynman diagrams for tree level single top production can be seen in figure~\ref{fig:SingleProductionFD}. NNLO predictions have been also done for these three single production modes, at $\sqrt{s}=8$ TeV. The cross sections are respectively: $\sigma_{t,\; \text{s-channel}}=5.56\pm0.22$ pb, $\sigma_{t,\; \text{t-channel}}=84.34\pm1.69$ pb and $\sigma_{tW}=22.2\pm0.67$ pb. Due to the high cross section of pair production compared to single production channels, the cross section measurement of each production mode has been difficult. The Tevatron was able to confirm the $s$ and $t$-channels~\cite{Abazov:2009ii, Aaltonen:2009jj}, while at LHC the $tW$ channel was confirmed~\cite{Aad:2012xca, Chatrchyan:1642680}. The comparison of theoretical predicted cross section and experimental measurements, by ATLAS and CMS, at different center of mass energies is p[resented in figure~\ref{fig:SingleProduction}~\cite{TOPLHCWG}.
+A subdominant production process of top quark is the single production channel, where the top quark is produced in association with another quark, mediated by a $W$ boson, or with a $W$ boson. The Feynman diagrams for tree level single top production can be seen in figure~\ref{fig:SingleProductionFD}. NNLO predictions have been also done for these three single production modes, at $\sqrt{s}=8$ TeV. The cross sections are respectively: $\sigma_{t,\; \text{s-channel}}=5.56\pm0.22$ pb, $\sigma_{t,\; \text{t-channel}}=84.34\pm1.69$ pb and $\sigma_{tW}=22.2\pm0.67$ pb. Due to the high cross section of pair production compared to single production channels, the cross section measurement of each production mode has been complicated, due to the expected high number of background events and their small cross section values needing high statistics to be observable. The Tevatron was able to confirm the $s$ and $t$-channels~\cite{Abazov:2009ii, Aaltonen:2009jj}, while at LHC the $tW$ channel was confirmed~\cite{Aad:2012xca, Chatrchyan:1642680}. The comparison of theoretical predicted cross section and experimental measurements, by ATLAS and CMS, at different center of mass energies is presented in figure~\ref{fig:SingleProduction}~\cite{TOPLHCWG}.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -468,7 +491,7 @@ A subdominant production process of top quark is the single production channel, 
 
 \subsection{Top decay channels}
 
-The top quark decays extremely fast, a process taking only $3\times 10^{-25}$ second. Hadronization processes occur around $3\times 10^{-24}$ which means that the top quark decays even before hadronization begins. Therefore it is the only quark that can be studied before hadronization, in its free state. \\ According to CKM matrix (Cabibbo–Kobayashi–Maskawa)~\cite{PhysRevLett.10.531, Kobayashi01021973}, that describes how different quarks interact between them, the top quark decays preferentially to a b-quark and a $W$ boson, 99\% of the times~\cite{Agashe:2014kda}. 
+The top quark decays extremely fast, a process taking only $3\times 10^{-25}$ second. Hadronization processes occur around $3\times 10^{-24}$ which means that the top quark decays even before hadronization begins. Therefore it is the only quark that can be studied before hadronization, in its free state. \\ According to CKM matrix (Cabibbo–Kobayashi–Maskawa)~\cite{PhysRevLett.10.531, Kobayashi01021973}, that describes how different quarks interact between them, the top quark decays preferentially to a b-quark and a $W$ boson, almost 100\% of the times~\cite{Agashe:2014kda}. 
 
 Then \W boson can decay into a lepton and a neutrino, or into a pair of quarks. The branching ratio of leptonic decays of \W boson is around 33\% while to quarks is 67\%~\cite{Agashe:2014kda}, being dominant then the hadronic final state. In figure~\ref{fig:BRratiosandDecayChannels} can be seen the two decay modes of top quark with their respective branching ratio. 
 
@@ -517,8 +540,8 @@ Top mass has been measured by ATLAS and CMS collaborations at LHC and by CDF and
 %
 %Discussion on how ttbar system have spin correlation that will be important for precision measurements.
 
-\section{Higgs at the LHC}
-\subsection{Higgs production}
+\section{Higgs boson at the LHC}
+\subsection{Higgs boson production}
 
 The SM Higgs boson is expected to be produced in proton-proton collisions at LHC by four different processes: gluon fusion, via the fusion of two gluons via a top loop, Higgsstrahlung, where a Higgs boson is radiated from a \Z~or \W~boson, vector boson fusion, by the fusion of two vector bosons radiated from quarks, and quark fusion, from the fusion of quarks produced by a gluon splitting. Feynman diagrams for these processes are shown in figure~\ref{fig:HiggsProd}. 
 
@@ -554,9 +577,9 @@ All these processes have different contributions to the Higgs boson production c
 
 %\begin{TOINCLUDE}Plots of cross section of Higgs production as a function of center of mass energy; Feynman diagrams for Higgs production\end{TOINCLUDE}
 
-\subsection{Higgs decay channels}
+\subsection{Higgs boson decay channels}
 
-As the Higgs boson couples to all particles in the SM it can decay of several ways. Figure~\ref{fig:HiggsBrs}, taken from~\cite{Dittmaier:2011ti, Dittmaier:2012vm, Heinemeyer:2013tqa, HIGGSXSWG}, shows the branching ratios of the decay channels of the Higgs boson as a function of the its mass. The highest branching ratio corresponds to its decay to two b-quarks. This channels is difficult to observe due to the high QCD and \ttbar~backgrounds, however it gives the highest expected number of events as more than the half of Higgs bosons produced at LHC decay into \bbbar~final state. The Higgs boson decay to $Z^{0}Z^{0}$ is an important channel because it has a high branching ratio and one of its final states is 4 leptons, a very clean final state (low background rate), called the golden channel. Finally, even if the diphoton channel has specially low branching ratio it is very clean in terms of photon identification and resolution. In the search that is going to be presented in chapter~\ref{chap:search}, the Higgs boson is going to be looked for in the \bbbar~decay. In figure~\ref{fig:HiggsDecays} the Feynman diagrams of the discussed decay channels are presented.
+As the Higgs boson couples to all massive particles in the SM it can decay in several ways. Figure~\ref{fig:HiggsBrs}, taken from~\cite{Dittmaier:2011ti, Dittmaier:2012vm, Heinemeyer:2013tqa, HIGGSXSWG}, shows the branching ratios of the decay channels of the Higgs boson as a function of its mass. The highest branching ratio corresponds to its decay to two b-quarks. This channels is difficult to observe due to the high QCD and \ttbar~backgrounds, however it gives the highest expected number of events as more than the half of Higgs bosons produced at LHC decay into \bbbar~final state. The Higgs boson decay to $Z^{0}Z^{0}$ is an important channel because it has a high branching ratio and one of its final states is 4 leptons, a very clean final state (low background rate), called the golden channel. Finally, even if the diphoton channel has specially low branching ratio it is very clean in terms of mass resolution. In the search that is going to be presented in chapter~\ref{chap:search}, the Higgs boson is going to be looked for in the \bbbar~decay. In figure~\ref{fig:HiggsDecays} the Feynman diagrams of the discussed decay channels are presented.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -577,11 +600,13 @@ As the Higgs boson couples to all particles in the SM it can decay of several wa
 \end{figure}
 %\begin{TOINCLUDE}Plot on possible decay channels and branching ratios to each channel; Feynman diagram for each golden bb and diphoton channels\end{TOINCLUDE}
 
+The measurement of the branching ratios of the Higgs boson sets important constraint on new physics. For example, a sequential fourth family model has been excluded at a 5.3 sigma level using the signal strengths from searches of the Higgs boson in different decay channels and electroweak precision observables in~\cite{Eberhardt:2012gv}.
+
 \subsection{Mass and width of Higgs boson}
 
 The 4th of July of 2012 was announced the discovery of a Higgs boson like particle at LHC by ATLAS and CMS collaborations. It was discovered in several decay modes, but the most significant result was coming from the combination of results in all analyzed channels. Such searches have been refined during last years, consolidating the discovery. 
 
-To measure the mass of the Higgs boson, diphoton and golden channel analyses have been combined between ATLAS and CMS~\cite{Aad:2015zhl}. The found value by the combination is $m_{H}=125.09\pm 0.24$. Combination and separated ATLAS and CMS results are shown in figure~\ref{fig:HiggsMass}~\cite{Aad:2015zhl,CMS:2014ega,ATLAS-CONF-2015-007}. In the same figure are shown the results, in terms of measured cross section, of all analyses done by CMS looking for a Higgs boson in different final states. The results are compatible with SM expectations.
+To measure the mass of the Higgs boson, diphoton and golden channel (\Z\Z) analyses have been combined between ATLAS and CMS~\cite{Aad:2015zhl}. The found value by the combination is $m_{H}=125.09\pm 0.24$. Combination and separated ATLAS and CMS results are shown in figure~\ref{fig:HiggsMass}~\cite{Aad:2015zhl,CMS:2014ega,ATLAS-CONF-2015-007}. In the same figure are shown the results, in terms of measured cross section, of all analyses done by CMS looking for a Higgs boson in different final states. The results are compatible with SM expectations.
 
 \begin{figure}[!Hhtbp]
   \begin{center}

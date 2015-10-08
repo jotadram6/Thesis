@@ -235,3 +235,98 @@ Line 681:
 Not clear - qualitative!
 
 R/. I preferred to remove th phrase.
+
+After figure 1.8:
+
+Recommendations to move the section about other T' searches at this point.
+
+R/. I move the summary results to this point. However, I kept the detailed description of other searches on the analysis chapter to have it closer to the analysis conclusions and make the comparison of the thesis analysis to other public results.
+
+Line 693:
+
+Exchange CDF and D0 references
+
+R/. Done
+
+Line 710:
+
+Change "Top pair" to "Pair top"
+
+R/. "Top pair" replaced by "Pair top-quark"
+
+Line 712:
+
+Vague: too generic, it depends on the search
+
+R/. "Its high cross section makes this process one of the most important background for searches of new physics at LHC" replaced by "Its high cross section makes this process one of the most important background for searches of new physics at LHC, for example for the search shown in this work"
+
+Line 730:
+
+Vague: required more statistics, better techniques, "complicated"?
+
+R/. "the cross section measurement of each production mode has been difficult" replaced by "the cross section measurement of each production mode has been complicated, due to the expected high number of background events and their small cross section values needing high statistics to be observable"
+
+Line 733:
+
+Typo
+
+R/. "p[resented" replaced by "presented"
+
+Figure 1.10:
+
+New figure at 13 TeV?
+
+R/. I have changed the figure for the figures from CMS and ATLAS that include the new results at 13 TeV. Separately, because there is no a combination for the moment.
+
+Line 741:
+
+More???
+
+R/. "99\%" replaced by "almost 100\%"
+
+
+Line 781:
+
+massive?
+
+R/. "As the Higgs boson couples to all particles in the SM" replaced by ""As the Higgs boson couples to all massive particles in the SM
+
+Line 781:
+
+Correct "of" with "in"
+
+R/. "of several ways" replaced by "in several ways"
+
+Line 783:
+
+Remove "the"
+
+R/. Removed
+
+Line 791:
+
+resolution on what? photon id is not very pure.
+
+R/. "Finally, even if the diphoton channel has specially low branching ratio it is very clean in terms of photon identification and resolution." replaced by "Finally, even if the diphoton channel has specially low branching ratio it is very clean in terms of mass resolution."
+
+Line 800
+
+ZZ
+
+R/. "golden channel" replaced by "golden channel (\Z\Z)"
+
+Line 807-813:
+
+Vague and why?
+
+R/. This paragraph is following the top part giving some basic details of the particles that are going to be used in the analysis later on.
+
+At the end of the chapter:
+
+Should add why the Higgs mu or BR are important for new physics effects. arxiv.1209.1101
+
+R/. Adding the information in two parts: 
+
+VLQ motivation: Additionally, in~\cite{Eberhardt:2012gv}, have been shown the consequences of last measurements of Higgs mass on a SM with a sequential fourth family. Such work shows that this fourth family model is excluded at 5.3 sigma. 
+
+Higgs boson decay channels: The measurement of the branching ratios of the Higgs boson sets important constraint on new physics. For example, a sequential fourth family model has been excluded at a 5.3 sigma level using the signal strengths from searches of the Higgs boson in different decay channels and electroweak precision observables in~\cite{Eberhardt:2012gv}.
