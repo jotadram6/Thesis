@@ -3,6 +3,16 @@
 
 In the present chapter the search performed using 2012 data collected by CMS for a \Tp~in the full hadronic final state is described. The theoretical formalism for such object has been described on section~\ref{chap:VLQ}. In addition, a feasibility study for this search has been presented in chapter~\ref{chap:pheno}. As discussed in it, a resonance in the five jets invariant mass is looked for.
 
+In this chapter the following terms will be used:
+\begin{itemize}
+\item \textbf{Signal MC sample}: This term refers to the MC samples used to simulate signal.
+\item \textbf{Background samples}: It refers to MC samples used to simulate backgrounds.
+\item \textbf{Signal sample}: The sample or set of data events passing the analysis selection.
+\item \textbf{Control sample}: The sample or set of data event passing the selection designed for data-driven background estimation.
+%\item \textbf{B-jet}: A jet that has associated a b-quark using MC truth information.
+%\item \textbf{B-tagged jet}: A jet that has been b-tagged with the CSV algorithm. 
+\end{itemize}
+
 \section{Analysis Strategy}
 \label{sec:stra}
 
@@ -1015,12 +1025,23 @@ $\frac{p_{T}(H_{cand})+p_{T}(top_{cand})}{H_{T}} > 0.67 $ & 7.77$\pm$0.37 & 1.01
   \end{center}
 \end{figure}
 
-\section{Systematics}
-\label{sec:sys}
+\chapter[Signal extraction]{Signal extraction}
+\label{chap:sigexct}
 
-In order to compute exclusion limits, the systematic uncertainties in the analysis should be evaluated. Two sets of sources have been identified, related either to signal or backgrounds. As our signal is modeled with the help of MC samples, the following sources of uncertainties for MC simulation have been considered: Jet Energy Scale, b-tagging, PDF+$\alpha_{S}$, pileup reweighting, trigger and luminosity. As backgrounds were derived from data, only systematic uncertainties related to the estimation methods (shape and normalization) were considered. Finally, the luminosity uncertainty of 2.6\% was taken for signal and background. 
+In this chapter are going to be described the techniques to extract the number of expected events for signal and background after applying the selection. Also the calculation of systematic uncertainties is performed. The final statistical interpretation of results is based on a cut-and-count method. The signal and background events after full selection will be extracted for each mass point analyzed. Nine \Tp~mass points were used between 600~\GeVcc~and 1000~\GeVcc in 50~\GeVcc~ steps.
 
-For the calculation of the effect of the systematic errors on the signal yields, the integral over 1-sigma around the mean value of each mass point has been used. In figure~\ref{fig:LinearFitMeanSigma} the results from the gaussian fit applied to each mass point for the mean value and standard deviation are shown. To be less sensitive to statistical fluctuations, linear fits of these distributions have been performed, and the parametric dependence of mean and width as a function of the mass as reference has been used. The values are presented in table~\ref{tab:LinearSignalWidths} and they were used for the computation of systematics and yields. In the same table are shown the statistical uncertainties of signal yields in percentage. In the calculation of systematics for signal a conservative approach will be followed. If a source of systematic uncertainty is found to be smaller than the statistical uncertainties of the yield, the latter will be taken as the value of the systematic uncertainty.
+The following concepts will be used in this chapter:
+\begin{itemize}
+\item \textbf{Signal yield}: Number of events from the integration of 5-jets invariant mass in a window around the mean value from each MC sample mass point ($Y$).
+\item \textbf{Background yield}: Number of events from the integration of 5-jets invariant mass in a window around the mean value defined by each MC sample mass point from the data-driven background estimation.
+\item \textbf{Variation of a yield from a systematic uncertainty}: When applying the 1-sigma variations of a systematic uncertainty a new signal or background yield ($Y'$) is obtained. The variation obtained on the yield, presented in \%, is calculated as $|Y'-Y|/Y$. In the summary tables the absolute value of the variation is presented, while in the figures also the sign is included.
+%\item \textbf{}: 
+\end{itemize}
+
+\section{Definition of integration mean and window values}
+\label{sec:DefSigma}
+
+For the calculation of the signal yields the integral over 1-sigma around the mean value of each mass point has been used. In figure~\ref{fig:LinearFitMeanSigma} the results from the gaussian fit applied to each mass point for the mean value and standard deviation are shown. To be less sensitive to statistical fluctuations, linear fits of these distributions have been performed, and the parametric dependence of mean and width as a function of the mass as reference has been used. The values are presented in table~\ref{tab:LinearSignalWidths} and they were used for the computation of yields and variation on yields from systematic uncertainties. In the same table are shown the statistical uncertainties of signal yields in percentage. In the calculation of systematics for signal a conservative approach will be followed. If a source of systematic uncertainty is found to be smaller than the statistical uncertainties of the yield, the latter will be taken as the value of the systematic uncertainty.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -1054,6 +1075,11 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 971.67 & 54.70 & $2.28\pm0.12$ & 5.37\% \
 \caption{Mean value and standard deviation from linear fit, from gaussian fit of MC mass points after full selection. In the last column the yields for each mass point are presented from the integration around one sigma of the mean value from the linear fit. The error of the yields are presented as a percentage of the nominal value.\label{tab:LinearSignalWidths}}
 \end{center}
 \end{table*}
+
+\section{Systematics}
+\label{sec:sys}
+
+In order to compute exclusion limits, the systematic uncertainties in the analysis should be evaluated. Two sets of sources have been identified, related either to signal or backgrounds. As our signal is modeled with the help of MC samples, the following sources of uncertainties for MC simulation have been considered: Jet Energy Scale, b-tagging, PDF+$\alpha_{S}$, pileup reweighting, trigger and luminosity. As backgrounds were derived from data, only systematic uncertainties related to the estimation methods (shape and normalization) were considered. Finally, the luminosity uncertainty of 2.6\% was taken for signal and background. 
 
 The first source of systematic uncertainty considered is related to the scale factors determination for b-tagging. For each scale factor there is an associated error, depending on the jet flavor. The scale factors for b and c jets were treated fully correlated while these are considered uncorrelated to light jets. In addition, the error for c-jets scale factors is considered to be the double of the one associated to b-jets. The scale factors for b and c-jets were varied simultaneously within their errors and signal yields were re-computed. The procedure was repeated for light jets independently. In table~\ref{tab:SFSys} the variation is displayed, in \%, of the yields from the up ($+1\sigma$) and down ($-1\sigma$) with respect to the nominal value. Variations for b and c-jets give an uncertainty of around 6\% while for light jets only 1\%. The results for b and c-jets and an overall systematic of 1\% for light flavor were considered to derive a total b-tagging systematic uncertainty. In addition figure~\ref{fig:TotalSFSys} shows the full uncertainties from b-tagging. The yields from b-tagging variations are compatible within errors with nominal yields. Therefore, the highest error between the systematic uncertainty and the statistical error (quoted in table~\ref{tab:LinearSignalWidths}) is taken as the b-tagging uncertainty for limits calculation.
 

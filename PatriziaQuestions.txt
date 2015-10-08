@@ -330,3 +330,159 @@ R/. Adding the information in two parts:
 VLQ motivation: Additionally, in~\cite{Eberhardt:2012gv}, have been shown the consequences of last measurements of Higgs mass on a SM with a sequential fourth family. Such work shows that this fourth family model is excluded at 5.3 sigma. 
 
 Higgs boson decay channels: The measurement of the branching ratios of the Higgs boson sets important constraint on new physics. For example, a sequential fourth family model has been excluded at a 5.3 sigma level using the signal strengths from searches of the Higgs boson in different decay channels and electroweak precision observables in~\cite{Eberhardt:2012gv}.
+
+###########
+#Chapter 3#
+###########
+
+Introduction of the chapter:
+
+Change focus, and start saying that it is a challenging and original channel
+
+R/. The following information is added at the beginning of the chapter: In this chapter a strategy is developed to look for a \Tp~in the full hadronic final state. This channel is very challenging. Mainly because the number of expected events for backgrounds in the full hadronic channel is several orders of magnitude higher than the number of expected events for signal in proton-proton collisions at 8 TeV center of mass energy. Additionally, it is a channel poorly explored by current analysis due to its intrinsic difficulties, what makes this an original proposal.
+
+And I removed the phrase at the end of this part: The main challenge in the full hadronic final state is to distinguish signal from the enormous quantity of expected background events. 
+
+Line 1480:
+
+Not clear
+
+R/. "Consequently, if there is a \Tp~in nature there is a better chance to look for it in data coming from single production process" replaced by "Consequently, if there is a \Tp~in nature, it has a higher observability in data coming from single production process"
+
+Line 1486:
+
+Correct conjugation
+
+R/. "decayed" replaced by "decays"
+
+
+Line 1514:
+
+Why MC chapter after?
+
+R/. Because the idea was to speak right before the analysis, about MC in detail to establish the necessity about performing an estimation of backgrounds from data.
+
+Line 1517:
+
+Why not 6?
+
+R/. Because the main jets that we use in the study are the 5 central jets produced from the T'.
+
+Line 1533:
+
+Why? This was not introduced before.
+
+R/. "the coupling to the second generation is negligible" replaced by "however the couplings to light generations were maximized to the experimental constraints, the coupling to the second generation is negligible"
+
+Line 1546:
+
+Not clear "at least 6 jets"
+
+R/. Adding the following phrase: " 5 with an \etal{2.5}~and one with an \etal{5}"
+
+
+Line 1547:
+
+If into acceptance
+
+R/. Adding the following phrase: "mainly produced with an \etal{2.5}"
+
+Table 3.1: 
+
+Details on the extra partons for each sample.
+
+R/. Phrase added to the table caption: "The single top and di-boson samples were produced with up to 3 additional jets."
+
+Line 1558:
+
+Not clear
+
+R/. Adding at the end "$n_{b}\ge 2$"
+
+Line 1562:
+
+Not clear
+
+R/. "The two jets chosen for the Higgs reconstruction are not considered in the reconstruction procedure of the \W~boson and top quark" replaced by "The two jets chosen for the Higgs reconstruction are not longer considered in the jet collection for the reconstruction procedure of the \W~boson and top quark" 
+
+
+Cut optimization:
+
+How the cuts were optimized?
+
+R/. The cuts were not optimized in a discriminator but moreover in keeping 90% efficiency on signal events. However, an overall, multidimensional optimization was not performed because the main idea is to show a possible strategy moreover to set up an ideal selection to be applied in a real data search.
+
+Line 1568:
+
+Which cut? Only first 6 or only jets with pT>30?
+
+R/. I added the following phrase: "with the sum over all jets in the event"
+
+Line 1599:
+
+Reference section
+
+R/. Reference added: "discussed in section~\ref{sec:bid}"
+
+Figure 3.4:
+
+Why log?
+
+R/. Log scale is better to see the signal. Background stack is 3 orders of magnitude bigger than signal.
+
+
+Additional plots:
+
+Plot for cut 4, 7 and 8?
+
+R/. I've chosen to show only the most illustrative plots. However, I've included more plots than in the paper.
+
+Line 1616:
+
+Higgs boosted with ~2m
+
+R/. The estimation pT~2m marks the limit where one begins to enter the boosted regime for AK5 jets. However, I've slightly smaller pT, but is quite close. A deeper study could help to understand the fraction of events with boosted Higgs.
+
+Figure 3.6:
+
+Lower values?
+
+R/. The statement is pointing the shoulder at low values for backgrounds.
+
+Line 1653:
+
+Replace "any" with "no"
+
+R/. It has been corrected.
+
+Line 1663:
+
+Not clear
+
+R/. I used nonetheless as synonym of however
+
+Line 1667:
+
+Clear peak?
+
+R/. "A clear peak" replaced by "An excess of signal events over backgrounds"
+
+Figure 3.10:
+
+How can you cut in a window?
+
+R/. The binning used in the plot is very large in order to have bins with less statistical fluctuation, however the integral and total number of events for samples is presented in a table.
+
+Line 1696-1967:
+
+In the introduction
+
+R/. I put the phrases her in order to prepare the reader for next chapters. However, I added the following phrase in the introduction of the chapter: ""
+
+##########
+#Chapter5#
+##########
+
+Add lists of terms/concepts used in the chapter to facilitate the reading. Also, split the chapter in two, where the sixth chapter is dedicated to the signal extraction and systematics.
+
+R/. 
