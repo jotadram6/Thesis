@@ -485,4 +485,34 @@ R/. I put the phrases her in order to prepare the reader for next chapters. Howe
 
 Add lists of terms/concepts used in the chapter to facilitate the reading. Also, split the chapter in two, where the sixth chapter is dedicated to the signal extraction and systematics.
 
-R/. 
+R/. The following list has been added at the beginning of the chapter:
+
+
+In this chapter the following terms will be used:
+\begin{itemize}
+\item \textbf{Signal MC sample}: This term refers to the MC samples used to simulate signal.
+\item \textbf{Background samples}: It refers to MC samples used to simulate backgrounds.
+\item \textbf{Signal sample}: The sample or set of data events passing the analysis selection.
+\item \textbf{Control sample}: The sample or set of data event passing the selection designed for data-driven background estimation.
+%\item \textbf{B-jet}: A jet that has associated a b-quark using MC truth information.
+%\item \textbf{B-tagged jet}: A jet that has been b-tagged with the CSV algorithm. 
+\end{itemize}
+
+I have split the chapter in two, following your recommendation, where the sixth chapter corresponds to the description of the signal extraction. The beginning of this chapter is:
+
+\chapter[Signal extraction]{Signal extraction}
+\label{chap:sigexct}
+
+In this chapter are going to be described the techniques to extract the number of expected events for signal and background after applying the selection. Also the calculation of systematic uncertainties is performed. The final statistical interpretation of results is based on a cut-and-count method. The signal and background events after full selection will be extracted for each mass point analyzed. Nine \Tp~mass points were used between 600~\GeVcc~and 1000~\GeVcc in 50~\GeVcc~ steps.
+
+The following concepts will be used in this chapter:
+\begin{itemize}
+\item \textbf{Signal yield}: Number of events from the integration of 5-jets invariant mass in a window around the mean value from each MC sample mass point ($Y$).
+\item \textbf{Background yield}: Number of events from the integration of 5-jets invariant mass in a window around the mean value defined by each MC sample mass point from the data-driven background estimation.
+\item \textbf{Variation of a yield from a systematic uncertainty}: When applying the 1-sigma variations of a systematic uncertainty a new signal or background yield ($Y'$) is obtained. The variation obtained on the yield, presented in \%, is calculated as $|Y'-Y|/Y$. In the summary tables the absolute value of the variation is presented, while in the figures also the sign is included.
+\end{itemize}
+
+\section{Definition of integration mean and window values}
+\label{sec:DefSigma}
+
+For the calculation of the signal yields the integral over 1-sigma around the mean value of each mass point has been used. In figure~\ref{fig:LinearFitMeanSigma} the results from the gaussian fit applied to each mass point for the mean value and standard deviation are shown. To be less sensitive to statistical fluctuations, linear fits of these distributions have been performed, and the parametric dependence of mean and width as a function of the mass as reference has been used. The values are presented in table~\ref{tab:LinearSignalWidths} and they were used for the computation of yields and variation on yields from systematic uncertainties. In the same table are shown the statistical uncertainties of signal yields in percentage. In the calculation of systematics for signal a conservative approach will be followed. If a source of systematic uncertainty is found to be smaller than the statistical uncertainties of the yield, the latter will be taken as the value of the systematic uncertainty.
