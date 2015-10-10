@@ -35,7 +35,7 @@ The Standard Model and beyond
 \begin{column}{.50\textwidth}
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=1.0\textwidth]{../figs/Standard_Model_of_Elementary_Particles.jpg}\\
+    \includegraphics[width=1.0\textwidth]{Standard_Model_of_Elementary_Particles.jpg}\\
     \vspace{.6cm}
     \includegraphics[width=0.8\textwidth]{../figs/HierarchyLoop.png}
     %\caption{Particle content of the standard model.}
@@ -51,17 +51,17 @@ The Standard Model and beyond
 \vspace{-.3cm}
 \begin{columns}
 
-\begin{column}{.50\textwidth}
+\begin{column}{.40\textwidth}
 \begin{block}{}
 \begin{itemize}\scriptsize
 \item Motivated by the hierarchy problem $\to$ New states to cancel loop contributions
 \item SM + not chiral quarks
-\item Singlet, doublet or triplet representations.
+\item States:
   \begin{itemize}\scriptsize
-  \item $X$ with 5/3 electric charge
-  \item \textbf{\Tp~with 2/3 electric charge, as the top quark.}
-  \item $B$ with -1/3 electric charge, as the bottom quark.
-  \item $Y$ with -4/3 electric charge.
+  \item $X$ 5/3 e
+  \item \textbf{\Tp~2/3 e (as the top)}
+  \item $B$ -1/3 e (as the b)
+  \item $Y$ -4/3 e
   \end{itemize}
 %\item \textbf{Generically they can be mixed with the three SM-quark generations}
 %\item Produced in pairs or in single production mode with a SM-quark
@@ -70,19 +70,26 @@ The Standard Model and beyond
 \end{block}
 \end{column}
 
-\begin{column}{.50\textwidth}
-\begin{figure}[!Hhtbp]
-  \begin{center}
-    \includegraphics[width=0.5\textwidth]{../figs/Gluon_fusion_T_pair.jpg}
-    \includegraphics[width=0.5\textwidth]{../figs/Tchannel_T_single.jpg}
-  \end{center}
-\end{figure}
+\begin{column}{.60\textwidth}
+%\begin{figure}[!Hhtbp]
+%  \begin{center}
+%    \includegraphics[width=0.5\textwidth]{../figs/Gluon_fusion_T_pair.jpg}
+%    \includegraphics[width=0.5\textwidth]{../figs/Tchannel_T_single.jpg}
+%  \end{center}
+%\end{figure}
+\tiny{
+\begin{eqnarray}
+  \mathcal{L}_{\binom{X}{T'}} & = & \kappa_{T}\left\{ \sqrt{\frac{\zeta_{i}\xi_{Z}^{T}}{\Gamma_{Z}^{0}}}\frac{g}{2c_{W}}\left[ \bar{T'}_{R}Z_{\mu}\gamma^{\mu}u^{i}_{R}\right]\right\} \nonumber\\
+              & - & \kappa_{T}\left\{ \sqrt{\frac{\zeta_{i}\xi_{H}^{T}}{\Gamma_{H}^{0}}}\frac{M}{v}\left[ \bar{T'}_{L}Hu^{i}_{R}\right] + \sqrt{\frac{\zeta_{3}\xi_{H}^{T}}{\Gamma_{H}^{0}}}\frac{m_{t}}{v}\left[ \bar{T'}_{R}Ht_{L}\right]\right\} \nonumber\\            
+              & + & \kappa_{X}\left\{ \sqrt{\frac{\zeta_{i}}{\Gamma_{W}^{0}}}\frac{g}{\sqrt{2}}\left[ \bar{X}_{R}W^{+}_{\mu}\gamma^{\mu}u^{i}_{R}\right]\right\} +h.c. \nonumber
+\end{eqnarray}
+}%
 \vspace{-.2cm}
 \begin{block}{}
 \begin{itemize}\scriptsize
-\item \textbf{Generically they can be mixed with the three SM-quark generations}
-\item Produced in pairs or in single production mode with a SM-quark
-\item $T'\to bW^{+/-}, tZ^{0}, tH^{0}$
+\item $\xi_{Z}^{T},\xi_{H}^{T}$ coupling to \Z~and \Hb, fixed by representation. 
+\item $\zeta_{i}$ coupling to SM quarks.
+\item In general: $T'\to bW^{+/-}, tZ^{0}, tH^{0}$
 \end{itemize}
 \end{block}
 
@@ -90,14 +97,69 @@ The Standard Model and beyond
 \end{columns}
 
 \vspace{-.2cm}
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+ & SM & \multicolumn{2}{c|}{Singlets} & \multicolumn{3}{c|}{Doublets}  & \multicolumn{2}{c|}{Triplets} \\
+ & $\binom{u}{d}$ $\binom{c}{s}$ $\binom{b}{t}$ & \Tp & $B$ & $\binom{X}{T'}$ & $\binom{T'}{B}$ & $\binom{B}{Y}$ & $\left(\begin{array}{c} X \\ T' \\ B \end{array} \right)$ & $\left(\begin{array}{c} T' \\ B \\ Y \end{array} \right)$ \\ 
+\hline
+$SU(2)_{L}$ & 2 & \multicolumn{2}{c|}{1} & \multicolumn{3}{c|}{2} & \multicolumn{2}{c|}{3} \\ \hline
+$U(1)_{Y}$ & $q_{L}=1/6$; $u_{R}=2/3$; $d_{R}=-1/3$ & 2/3 & -1/3 & 7/6 & 1/6 & -5/6 & 2/3 & -1/3 \\
+\hline
+\end{tabular}
+}
+%\caption{Possible VLQ representations and corresponding $SU(2)_{L}\times U(1)$ charges and SM quarks. \label{tab:VLQRepre}}
+\end{center}
+
+%\begin{figure}[!Hhtbp]
+%  \begin{center}
+%    \includegraphics[width=0.4\textwidth]{../figs/pheno_prod_single_tp.png}
+%    \includegraphics[width=0.4\textwidth]{../figs/pheno_prod_pair_tp.png}
+%  \end{center}
+%\end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Non-standard doublet $\binom{X}{T'}$}
+\vspace{-.3cm}
+
+\begin{block}{}
+\begin{itemize}\scriptsize
+\item \Tp~couplings to light quarks maximized
+\item $M(T')\in [600,1000]$ \GeVcc, 8 TeV cosidered
+\item $\sigma_{pp\to T'j} > \sigma_{pp\to T'T'}$
+\item $Br(T' \to tH^{0})=0.5$
+\end{itemize}
+\end{block}
+
+\vspace{.3cm}
 \begin{figure}[!Hhtbp]
   \begin{center}
-    \includegraphics[width=0.4\textwidth]{../figs/pheno_prod_single_tp.png}
-    \includegraphics[width=0.4\textwidth]{../figs/pheno_prod_pair_tp.png}
+    \includegraphics[width=0.5\textwidth]{pheno_prod_single_tp.png}
+    \includegraphics[width=0.5\textwidth]{pheno_prod_pair_tp.png}
   \end{center}
 \end{figure}
 
 \end{frame}
+
+
+\begin{frame}{}
+\vspace{-.2cm}
+\begin{center}
+    \includegraphics[width=1.0\textwidth]{Tprime_scheme.png}
+  \end{center}
+\end{frame}
+
+\iffalse
+\begin{frame}{}
+\vspace{-.2cm}
+\begin{center}
+    \includegraphics[width=0.9\textwidth]{parton_shower.png}
+  \end{center}
+\end{frame}
+
 
 \begin{frame}{SM at the LHC}
 \vspace{-.3cm}
@@ -145,3 +207,4 @@ The Standard Model and beyond
 
 \end{frame}
 
+\fi
