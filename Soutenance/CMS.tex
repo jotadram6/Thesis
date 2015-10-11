@@ -133,6 +133,136 @@ Bunch spacing [ns] & 50 & 25 \\
 \end{frame}
 
 
+\begin{frame}{Sub-detectors}
+\vspace{-.2cm}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.7\textwidth]{../figs/PictureforPoint5_oct04_allp.jpg}
+    %\caption{CMS sub-detectors and particle identification. }
+    %\label{fig:cmsslice}
+  \end{center}
+\end{figure}
+\vspace{-.4cm}
+\begin{block}{}
+\begin{itemize}\tiny
+\item Tracker system: Pixel system (vertex reconstruction) and Silicon strips (Measurement of \pt~of charged particles)
+\item Electromagnetic calorimeter (ECAL): 80000 crystals for the measurement of electrons and photons energy
+\item Hadron calorimeter (HCAL): Absorber and scintillator to measure the energy of hadrons
+\item Muon chambers: RPC, DT and CSC to measure muons \pt
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}{}
+\vspace{-.2cm}
+
+%\begin{center}
+\begin{textblock}{95}(0,6)
+    \includegraphics[width=1.0\textwidth]{parton_shower.png}
+\end{textblock}
+%  \end{center}
+\end{frame}
+
+
+
+\begin{frame}{Monte-Carlo simulation}
+\vspace{-.4cm}
+\begin{columns}
+\begin{column}{.50\textwidth}
+  \begin{block}{MadGraph}\tiny
+    Simulation of hard interaction in collisions \\
+    \textbf{Figure}: \Z+jets production, \Z~$\to$ neutrinos \MVAt~8 TeV
+  \end{block}
+\vspace{-.5cm}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{ZjetsRelVal1.png}\\
+    \includegraphics[width=0.9\textwidth]{ZjetsRelVal2.png}
+  \end{center}
+\end{figure}
+\end{column}
+
+\begin{column}{.50\textwidth}
+  \begin{block}{RIVET toolkit}\tiny
+    \textbf{Pythia}: Simulation of hadronization and showering \\
+    Comparison of different generators with real data %\\
+    %\textbf{Figure}: \W~boson $p_{T}$ measured by ATLAS experiment in muon final states compared to different MC simulations. py6 stands for Pythia 6, py8 for Pythia 8, MGpy6 MadGraph interfaced with Pythia 6 and PWG for Powheg. MadGraph with Pythia 6 gives the best description of experimental data.
+  \end{block}
+  \begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{Wpt_rivet.png}
+  \end{center}
+\end{figure}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+
+\begin{frame}{Interface between partonic and hadronic simulation}
+\vspace{-.2cm}
+\begin{columns}
+\begin{column}{.50\textwidth}
+  \begin{block}{}\tiny
+    Possible overlap between parton shower and matrix element when adding extra jets. MLM merging:
+    \begin{itemize}
+    \item $N^{ME}(j)$ \MVAt~parton level
+    \item $N^{PS}(j)$ after parton shower
+    \item Compare $N^{ME}(j)$ and $N^{PS}(j)$
+    \end{itemize}
+  \end{block}
+\end{column}
+\begin{column}{.50\textwidth}
+  \begin{block}{}\tiny
+    To study the correctness of the choice:
+    \begin{itemize}
+    \item DJR diagrams
+    \item Transition between $n$ and $n-1$ jet multiplicities as a function of the merging scale
+    \end{itemize}
+  \end{block}
+\end{column}
+\end{columns}
+
+\vspace{-.2cm}
+\begin{columns}
+\begin{column}{.30\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.3\textwidth]{ExplainDJR.png}
+  \end{center}
+\end{figure}
+\end{column}
+\begin{column}{.70\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/DJR_q100_xq20_TTJets13TeV.png}
+  \end{center}
+\end{figure}
+\end{column}
+\end{columns}
+
+
+%\begin{figure}[!Hhtbp]
+%  \begin{center}
+%    \includegraphics[width=0.3\textwidth]{ExplainDJR.png}
+%    \includegraphics[width=0.7\textwidth]{../figs/DJR_q100_xq20_TTJets13TeV.png}
+    %\includegraphics[width=0.5\textwidth]{../figs/DJR_q50_xq20_TTJets13TeV.png}
+    %\caption{DJR diagrams for 13 TeV top pair production with $Q_{cut}=100$ GeV and $Q^{X}_{cut}=20$ GeV [optimal case] (top) and $Q_{cut}=60$ GeV and $Q^{X}_{cut}=20$ [non-optimal] (bottom). Bottom figure shows a discontinuity in the transition from 3 to 2 partons at the point where blue-dashed and green-dashed curves meet.}
+    %\label{fig:TTJetsMerging}
+%  \end{center}
+%\end{figure}
+%
+%\vspace{-.2cm}
+%  \begin{block}{}\tiny
+%    \textbf{Figure}: DJR diagrams for 13 TeV top pair production with $Q_{cut}=100$ GeV and $Q^{X}_{cut}=20$ GeV [optimal case] (left) and $Q_{cut}=60$ GeV and $Q^{X}_{cut}=20$ [non-optimal] (right). Right figure shows a discontinuity in the transition from 3 to 2 partons at the point where blue-dashed and green-dashed curves meet.
+%  \end{block}
+
+\end{frame}
+
+
 \iffalse
 \begin{frame}{CMS: Compact Muon Solenoid}
 \vspace{-.2cm}
