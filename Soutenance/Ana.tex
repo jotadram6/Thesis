@@ -11,6 +11,172 @@ Search for a single produced \Tp~decaying into top and Higgs in the full hadroni
 
 
 \subsection{Introduction - Analysis Strategy}
+
+\begin{frame}{Introduction - Analysis Strategy}
+\vspace{-.5cm}
+\begin{columns}
+
+\begin{column}{.40\textwidth}
+\begin{block}{}
+\scriptsize{
+As phenomenology study, but:
+  \begin{itemize}
+  \item Selection optimization $\to$ Better discrimination
+  \item Refinement of \Tp~reconstruction
+  \item $M(T')\in [600,1000]$ \GeVcc
+  \item Real Data: 19.7$^{-1}$
+  \item \textbf{Data-driven background estimation}
+  \end{itemize}
+}
+\end{block}
+\end{column}
+
+\begin{column}{.60\textwidth}
+  \begin{center}
+    \includegraphics[width=0.65\textwidth]{Tprime_scheme.png}\\
+  \end{center}
+\vspace{-.2cm}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|}
+\hline 
+Samples & Cross-Section (pb) & Number of events\\
+\hline
+QCD\_Pt-120to170 & 16\(\times 10^4\) & 5.9M\\
+QCD\_Pt-170to300 & 34\(\times 10^3\) & 5.8M\\
+QCD\_Pt-300to470 & 18\(\times 10^2\) & 5.9M\\ 
+QCD\_Pt-470to600 & 114 & 3.9M\\
+QCD\_Pt-600to800 & 27 & 3.9M\\
+QCD\_Pt-800to1000 & 3.5 & 3.9M\\
+QCD\_HT-500To1000 & 84\(\times 10^2\) & 30M\\ 
+QCD\_HT-1000ToInf & 2\(\times 10^2\) & 14M\\ 
+TTJets\_MSDecays & 247.7 [NNLO] & 62M\\
+TprimeJetToTH\_\textbf{M-700} & 143.7 & 99K \\
+\hline
+\end{tabular}
+}
+\end{column}
+\end{columns}
+
+\vspace{-.1cm}
+\begin{block}{}\scriptsize
+\textbf{MC samples only used for illustration}:
+\begin{itemize}
+\item Low statistics on QCD $\to$ Big weights, big errors 
+\item Final background estimated from data
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Basic selection}
+\vspace{-.2cm}
+
+\begin{columns}
+\begin{column}{.50\textwidth}
+\begin{block}{}\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Selection & $N(j)\ge 6$ & $N(j)\ge 4$ & $N(j)\ge 2$ \\
+\hline
+\textbf{HLT} & \ptg{20} & \ptg{60} & \ptg{80} \\
+\textbf{1st cut} & \ptg{30} & \ptg{70} & \ptg{90} \\
+\hline
+\end{tabular}
+}\\
+\textbf{2nd cut}: $N(j)[|\eta|<2.5]\ge 5$ and \\
+\hspace{1.1cm} $N(extra\; j)[|\eta|<5]\ge 1$\\
+\textbf{3rd cut}: $p_{T}(j_{1})>$150 GeV/c\\
+\textbf{4th cut}: \HTg{550}\\
+\textbf{5th cut}: $N^{CSVM}_{b}\ge 3$
+\end{block}
+%\vspace{-1.0cm}
+%\begin{center}
+%    \includegraphics[width=0.7\textwidth]{../figs/Ana/HT.png}
+%  \end{center}
+\end{column}
+
+\begin{column}{.50\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{NCSVM.png}
+  \end{center}
+\end{figure}
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{\Tp~reconstruction with a $\chi^{2}$ sorting algorithm}
+\vspace{-0.4cm}
+
+\begin{center}
+  \includegraphics[width=0.6\textwidth]{TprimeDecayChi2.png}
+\end{center}
+
+\vspace{-.5cm}
+\tiny{
+\begin{equation*}
+\chi^{2}=\frac{(M_{H}-M_{bb})^{2}}{\sigma_{H}^{2}}+\frac{(M_{W}-M_{jj})^{2}}{\sigma_{W}^{2}}+\frac{(M_{t}-M_{bjj})^{2}}{\sigma_{t}^{2}}\; \text{to be minimized}
+\end{equation*}
+\vspace{-.2cm}
+\begin{center}
+$M_{H}=125$~\GeVcc, $M_{W}=84.06$~\GeVcc, $M_{t}=175.16$~\GeVcc\\
+$\sigma_{H}=12.4$~\GeVcc, $\sigma_{W}=10.12$~\GeVcc, $\sigma_{t}=17.35$~\GeVcc
+\end{center}
+}%
+\vspace{-.3cm}
+\begin{center}
+\includegraphics[width=0.54\textwidth]{Exclusive_Efficiency_V8.png}
+\includegraphics[width=0.43\textwidth]{HundresdsMassChi2Tp.png}
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}{Selection based on reconstructed objects}
+\vspace{-.2cm}
+\scriptsize
+
+\begin{columns}
+\begin{column}{.50\textwidth}
+\vspace{-.2cm}
+\begin{block}{}
+\tiny
+\begin{itemize}
+\item Optimization via a multidimensional scan of variables $\to$ adjusted to keep at least 10 signal events ($M(T')=700$~\GeVcc
+\item \textbf{Data/MC plot for illustration, final background estimation is data-derived}
+\end{itemize}
+\end{block}
+\vspace{-.2cm}
+\begin{block}{}\scriptsize
+\textbf{1st criterion}: $\chi^{2}<8$\\
+\textbf{2nd criterion}: $\Delta R(bb)<1.2$\\
+\textbf{3rd criterion}: 105 $<M(H)<$ 145 \GeVcc\\
+\textbf{4th criterion}: $(M(top^{2nd})+M(W^{2nd}))/M(H)>6.8$\\
+\textbf{5th criterion}: $\Delta R (T' j^{6})>4.8$\\
+\textbf{6th criterion}: Rel $H_{T}>0.67$
+\end{block}
+\end{column}
+
+\begin{column}{.50\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/Ana/chi2Nm1.png}
+  \end{center}
+\end{figure}
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\iffalse
 \begin{frame}{Introduction - Analysis Strategy}
 \vspace{-.2cm}
 \begin{columns}
@@ -817,3 +983,4 @@ Background Normalization & -- & 34\%\\
 \end{columns}
 
 \end{frame}
+\fi
