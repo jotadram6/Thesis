@@ -7,10 +7,168 @@
 \begin{center}
 Feasibility study for a search of a \Tp~at LHC at 8 TeV
 \end{center}
+\begin{textblock}{50}(5,90)
+\textcolor{red}{PHENO}
+\end{textblock}
 \end{frame}
 
 \subsection{PHENO}
 
+
+\begin{frame}{Motivation - Samples - Strategy}
+\vspace{-1.0cm}
+
+\begin{center}
+  \includegraphics[width=1.0\textwidth]{TprimeDecay.png}
+\end{center}
+
+\vspace{-.5cm}
+\begin{columns}
+\begin{column}{.60\textwidth}
+%\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{||l|c|r||}
+  \hline\hline
+  Process & $\sigma_{\rm 8 TeV}$ (pb) & Expected Events (20 fb$^{-1}$) \\ \hline
+ Signal ($T'j$) & 0.2 & 700 \\
+ \hline
+  QCD (bbjjj) & 500 & 10,000,000 \\
+  \W+jets & 37,509 & 750,180,000 \\
+  \Z+jets & 3,503.71 & 70,074,200 \\
+  \ttbar & 234 & 4,680,000 \\
+  single-$t$ & 114.85 & 2,297,000 \\
+  Di-boson & 96.82 & 1,936,400 \\
+  \hline\hline
+\end{tabular}
+}
+%\end{center}
+\end{column}
+\begin{column}{.40\textwidth}
+\begin{block}{}\tiny
+Full hadronic channel $\to$ $M(5j)$:
+  \begin{itemize}\tiny
+  \item Huge backgrounds
+  \item Highest number of expected signal events
+  \end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+
+\begin{textblock}{50}(5,90)
+\textcolor{red}{PHENO}
+\end{textblock}
+
+\end{frame}
+
+\begin{frame}{Selection}
+\vspace{-.2cm}
+
+\begin{textblock}{35}(5,15)
+\begin{block}{}
+\tiny{
+\textbf{Cut 0}: $N(j)[|\eta|<2.5]\ge 6$\\  
+\hspace{.6cm} $N(j)[2<|\eta|<5]\ge 1$\\
+\textbf{Cut 1}: 
+\begin{tabular}{|c|c|}
+  \hline
+  \pt & $>$ [GeV/c] \\ 
+  \hline
+  $j_{1}$ & 150 \\
+  $j_{2}$ & 80 \\
+  $j_{3}$ & 60 \\
+  $j_{4}$ & 60 \\
+  \hline
+\end{tabular}\\
+\textbf{Cut 2}: $H_{T}>630$~GeV/c\\
+\hspace{.6cm} with $H_{T}=\sum |p_{T}(j)|$\\
+\textbf{Cut 3}: $N(b)\ge 2$\\
+\textbf{Cut 4}: $\Delta R(bb)< 1.8$\\
+\textbf{Cut 5}: $p_{T}(H)>200$~GeV/c\\
+\hspace{.6cm} $p_{T}(t)>300$~GeV/c\\
+\textbf{Cut 6}: $2.2<\Delta R_{HW}<3.5$\\
+\textbf{Cut 7}: $\Delta \phi_{H(bb)}<2.0$\\
+\hspace{.6cm} $\Delta \phi_{top(bW)}<3.3$\\
+\textbf{Cut 8}: $\Delta \phi_{W(jj)}<2.3$\\
+\textbf{Cut 9}: $100$~\GeVcc $<M(bb)<135$~\GeVcc\\
+\textbf{Cut 10}: $\frac{p_{T}^{H}+p_{T}^{t}}{H_{T}}>0.65$\\
+%\textbf{Cut 10}: \\
+%\textbf{Cut 5}: 
+}%
+\end{block}
+\end{textblock}
+
+\begin{textblock}{35}(45,17)
+    \includegraphics[width=1.0\textwidth]{SixthJet.png}
+\end{textblock}
+\begin{textblock}{35}(85,15)
+    \includegraphics[width=1.0\textwidth]{HT.png}
+\end{textblock}
+\begin{textblock}{80}(45,50)
+    \includegraphics[width=1.0\textwidth]{HPTTPT.png}
+\end{textblock}
+
+
+\begin{textblock}{50}(5,90)
+\textcolor{red}{PHENO}
+\end{textblock}
+
+\end{frame}
+
+
+
+\begin{frame}{Results}
+\vspace{-2.5cm}
+
+\begin{columns}
+\begin{column}{.50\textwidth}
+\begin{block}{}\scriptsize
+Number of events in a window of $20$~GeV around $M(T')=734$ \GeVcc
+\begin{equation*}                                               
+\frac{S}{B}=0.06\pm 0.02\; \mbox{and} \; \frac{S}{\sqrt{S+B}}=2.0\pm 0.3                                           
+\end{equation*}
+\end{block}
+\end{column}
+
+\begin{column}{.50\textwidth}
+\begin{figure}[!Hhtbp]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{../figs/Pheno/Final.png}
+    %\caption{Reconstructed \Tp~mass after all cuts for backgrounds and signal (stacked) normalized to 20~$fb^{-1}$ luminosity. Signal peak is visible on top of the sum of backgrounds.}
+    %\label{fig:M5J}
+  \end{center}
+\end{figure}
+\end{column}
+\end{columns}
+
+
+\begin{textblock}{80}(45,67)
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l|c|c|c|c}
+ & \multicolumn{2}{c|}{unweighted events}  & \multirow{2}{*}{weight} & weighted  \\
+ & after Cut 10 & in mass window & & events \\
+ \hline
+ Signal & $8601$ & $3780$ & $0.018$ &$69 \pm 1$ \\
+ \hline
+   $t \bar{t}$ & $409$ & $57$ & $7.7$ & $437 \pm 58$ \\
+ $W$+jets & $24$ & $3$ & $132$ & $395 \pm 228$ \\
+ $QCD$ & $235$ & $34$ & $6.48$ & $220 \pm 38$ \\
+ $tW$ & $18$ & $3$ & $11.3$ & $34 \pm 20$ \\
+ $t$+ jet & $75$ & $7$ & $3.55$ & $25 \pm 9$ \\
+  \hline
+  total background & & & & $1112 \pm 352$ \\
+\end{tabular}
+}
+\end{textblock}
+
+\begin{textblock}{50}(5,90)
+\textcolor{red}{PHENO}
+\end{textblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\iffalse
 \begin{frame}{Motivation - Samples - Strategy}
 \vspace{-.5cm}
 
@@ -210,6 +368,8 @@ Discriminators:
 \end{columns}
 
 \end{frame}
+
+\fi
 
 %\begin{frame}{}
 %\vspace{-.2cm}
