@@ -477,7 +477,7 @@ Line 1696-1967:
 
 In the introduction
 
-R/. I put the phrases her in order to prepare the reader for next chapters. However, I added the following phrase in the introduction of the chapter: ""
+R/. I put the phrases here in order to prepare the reader for next chapters. However, I added the following phrase in the introduction of the chapter: ""
 
 ##########
 #Chapter5#
@@ -516,3 +516,152 @@ The following concepts will be used in this chapter:
 \label{sec:DefSigma}
 
 For the calculation of the signal yields the integral over 1-sigma around the mean value of each mass point has been used. In figure~\ref{fig:LinearFitMeanSigma} the results from the gaussian fit applied to each mass point for the mean value and standard deviation are shown. To be less sensitive to statistical fluctuations, linear fits of these distributions have been performed, and the parametric dependence of mean and width as a function of the mass as reference has been used. The values are presented in table~\ref{tab:LinearSignalWidths} and they were used for the computation of yields and variation on yields from systematic uncertainties. In the same table are shown the statistical uncertainties of signal yields in percentage. In the calculation of systematics for signal a conservative approach will be followed. If a source of systematic uncertainty is found to be smaller than the statistical uncertainties of the yield, the latter will be taken as the value of the systematic uncertainty.
+
+################################################
+############Last remarks implemented############
+################################################
+
+##########
+#Chapter5#
+##########
+
+Line 2108: 
+
+Jargon?
+
+R/. "This reconstruction procedure is the most expensive processing of data" replaced by "This reconstruction procedure is the most expensive (in terms of CPU resources) processing of data"
+
+Line 2113: 
+
+Different trigger selection based on a common object. Maybe defined in trigger paragraph?
+
+R/. "A primary dataset is a set of events passing trigger selections without any further selection." replaced by "A primary dataset is a set of events passing trigger selections based on a common object without any further selection."
+
+Line 2115:
++ other cuts? Too vague
+
+R/. The trigger description is described in event processing section
+
+Table 5.1:
+
+Correct: "that" for "this" delete "and" and add "any" before "problems"
+
+R/. "this is all subsystems were taking data and without problems." replaced by "that is all subsystems were taking data without any problems."
+
+Line 2117:
+
+"bins" instead of "hat"
+
+R/. I'm using "hat" as it is the terminology used in CMS-Pythia samples, but I have added the following phrase: in \pt~hat (for initial partons \pt~ranges)
+
+Table 5.2:
+
+how do you mix pT and HT bins?
+
+R/. At this point I'm only showing the datasets that have been used. Explained in lines 2206-2209.
+
+Line 2170-2174:
+
+any one prescaled?
+
+R/. Adding the following phrase: "To obtain a fully unprescaled trigger selection, on top of the loosest trigger requirement that is prescaled, tighter unprescaled trigger requirements were added."
+
+Line 2202:
+
+Plot before cut?
+
+R/. I didn't add a plot before HT cut, because QCD samples considered have already a generator cut at 500 GeV.
+
+Page 119:
+
+-How many times the first 5 jets are those from the signal?
+-How many times the 6th jet is the correct forward parton?
+-How many times the b-jets are the correct ones?
+
+R/. The first one has been studied only at pheno level, but it has not been reevaluated for the analysis. The second efficiency has not been studied, but a high efficiency is expected because after selecting the 5 jets for the T' the 6th jet is the only one coming from the T' production process, the rest of jets are additional jets from radiation and necessarily with less pt. For the third efficiency, the figure 5.12 shows how many times the two b's from the Higgs were correctly chosen, and also the b from the top decay.
+
+Line 2222:
+
+and different pT and Delta R
+
+R/. The following phrase has been added: "In addition, the b-jets from backgrounds have different properties than the b-jets from signal, as $\Delta R$ or \pt."
+
+
+Line 2243:
+
+What do I learn from this plot?
+
+R/. These plots are more generic than table 5.4. From them all possible combinations between working points can be studied for signal, and the relation of b-jets tagged by the three different working points.
+
+Line 2258-2259:
+
+ref to paper?
+
+R/. The method is not referenced in a paper but only in a private twiki.
+
+Line 2267:
+
+What do I learn from it?
+
+R/. I learn the level of correction needed for each MC sample. For example, it can be seen that signal samples is barely not corrected, as the weights are close to one. While QCD is strongly corrected, weights even going up to 3-4, due to the high content of light quarks.
+
+Line 2269:
+
+"total number of jets"
+
+R/. "total number" replaced by "total number of jets". Additionally, the following phrase has been added at the end of the paragraph: "The b-tagging efficiencies are not calculated in an event per event basis but from the whole MC sample being considered."
+
+Line 2298:
+
+b-tag veto? no, why?
+
+R/. 50\% of the times the W decays into a c and s quarks. The fake rate of c-quarks for b-tagging, with CSVM, is 20%. Then if I apply a b-tag veto to reconstruct the W I could loose around 10% of signal events. 
+
+Line 2312-2314:
+
+- How many times is the T' correctly reconstructed?
+- How many times the 5 jets are the first 5?
+- How often a b-tag used for W?
+
+Maybe add a table?
+
+R/. First question: 70% of the times independently of the T' mass, check figure 5.12
+Second and third question: This has not been studied in the analysis
+About the table, I don't think is very useful because the efficiencies are quite stable as a function of the T' mass. 
+
+Line 2351:
+
+??
+
+R/. The phrase makes reference to figure 5.32. Adding the following phrase: "(see section~\ref{sec:bkgmet} and figure~\ref{fig:optchi2})"
+
+Figure 5.15:
+
+Low stat. No stat in signal MC. Explain the weight plot.
+
+R/. The caption was "Distribution of the $\chi^{2}$ variable for data and MC samples. The signal sample used has a \Tp~mass of 700 \GeVcc. Backgrounds present higher values than the signal. The sum of MC is normalized to the integrated luminosity." and it has been changed to "Distribution of the $\chi^{2}$ variable for data and MC samples. The signal sample used has a \Tp~mass of 700 \GeVcc. Backgrounds present high tails. The sum of MC is normalized to the integrated luminosity. Signal has been weighted to the luminosity and its theoretical cross section."
+
+Figure 5.17:
+
+Correct (exchange) "left" and "right"
+
+R/. Done.
+
+Line 2406-2408:
+
+Not clear
+
+R/. "To increase the separation between backgrounds and signal not only the second top mass is taken, but added to the second \W~boson mass and this sum divided by the Higgs candidate mass." replaced by "Taking the sum of the second top quark candidate and second \W~boson candidate mass, divided by the Higgs boson candidate mass, a better discrimination is achieved between signal and backgrounds than with the second top quark candidate mass alone."
+
+Line 2418-2419:
+
+b-veto?
+How often it is the correct one?
+
+R/. No b-veto has been applied mainly because the 6th jet is expected to be forward, with an |eta|>2. As b-tagging can be applied only for jets in the central region (|eta|<2.4) a b-veto can't be applied for this 6th jet. The second question has been answered before.
+
+Line 2455:
+
+Was it computed or not?
+
+R/. Similar studies were taken as reference, but it was not explicitly computed.
