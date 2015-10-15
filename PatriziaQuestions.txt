@@ -813,3 +813,29 @@ Line 2926:
 also selection is modified!
 
 R/. "For the single production mode an additional criterion is added to the selection, at least one forward jet is required." replaced by "For the single production mode at least one forward jet is required instead of requiring a minimum \HT."
+
+#############
+#Conclusions#
+#############
+
+Line 2960:
+
+generator study?
+
+R/. I prefer to keep Monte-Carlo simulations because it has been the term I used in the MC chapter while generator I have used for to refer specifically for the different generators as MadGraph or Pythia.
+
+Line 3002-3003:
+
+No!
+
+R/. "With respect to theoretical predictions of the production cross section of the \Tp~as function of its mass, a \Tp~mass of 850~\GeVcc~was excluded at 95\% CL in observed limits." replaced by "With respect to theoretical predictions of the production cross section of the \Tp~as function of its mass, no expected exclusion limits are achieved but an upper limit on the cross section is set. However, a \Tp~mass of 850~\GeVcc~was excluded at 95\% CL in observed limits."
+
+############
+#Appendix A#
+############
+
+Line 3020-3022:
+
+Not clear.
+
+R/. "However the integration over just one sigma of signal widths could appear restricted, because it is only taking into account 68\% of signal events" replaced by "However the integration over one sigma of signal widths for the calculation of signal yields could seem restricted, because it is only taking into account 68\% of signal events"
