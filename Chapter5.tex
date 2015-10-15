@@ -789,7 +789,7 @@ The main difficulty to estimate the backgrounds comes from the correlation betwe
 
 For the shape estimation of the backgrounds a control sample enriched by backgrounds while depleted in signal events has been built. From the selection, the most stringent criterion against the background is $n_{b}^{CSVM}>=3$ (see table~\ref{tab:cutflow}). This criterion is selecting only 0.4\% of multijet events and 8\% of \ttbar~events. Reason  why the number of b-tagged jets was taken as variable suited to define the control sample. %The second most stringent cut is the $\chi^{2}$ selection criterion, it selects 8\% of multijet events and 32\% of \ttbar~events that passed the b-tagged jets multiplicity selection. This is why the number of b-tagged jets was taken as variable suited to define the control sample. 
 
-The control sample is defined as the region in which  the selection is the same but $n_{b}^{CSVL}>=3$ and vetoing events with $n_{b}^{CSVM}>=3$. With the veto on events with at least 3 CSVM b-tagged jets a high contamination from signal events in the control region is prevented. However, some contamination remains (7\% maximum, see table~\ref{tab:sigcontam}). By opposition, the set of events passing the standard selection will be referred as signal sample.  This contamination will be studied later on this section. The control region then is formed by background events, mainly QCD and \ttbar. In figure~\ref{fig:CSSSSche} a schematic diagram for the construction of control and signal sample is presented.
+The control sample is defined as the region in which  the selection is the same but $n_{b}^{CSVL}>=3$ and vetoing events with $n_{b}^{CSVM}>=3$. With the veto on events with at least 3 CSVM b-tagged jets a high contamination from signal events in the control sample is prevented. However, some contamination remains (7\% maximum, see table~\ref{tab:sigcontam}). By opposition, the set of events passing the standard selection will be referred as signal sample.  This contamination will be studied later on this section. The control sample then is formed by background events, mainly QCD and \ttbar. In figure~\ref{fig:CSSSSche} a schematic diagram for the construction of control and signal sample is presented.
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -900,7 +900,7 @@ Signal M=1000 \GeVcc~& $2.19\pm0.12$ & $46\pm6.78$  & $5\pm1.0$ \\
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.5\textwidth]{figs/Ana/SignalContam_700_ConSample.png}
-    \caption{Signal contamination in the control region comparing 5-jets invariant mass between data and signal (M=700 \GeVcc).}
+    \caption{Signal contamination in the control sample comparing 5-jets invariant mass between data and signal (M=700 \GeVcc).}
     \label{fig:SigContamination}
   \end{center}
 \end{figure}
@@ -1081,9 +1081,9 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 971.67 & 54.70 & $2.28\pm0.12$ & 5.37\% \
 \section{Systematics}
 \label{sec:sys}
 
-In order to compute exclusion limits, the systematic uncertainties in the analysis should be evaluated. Two sets of sources have been identified, related either to signal or backgrounds. As our signal is modeled with the help of MC samples, the following sources of uncertainties for MC simulation have been considered: Jet Energy Scale, b-tagging, PDF+$\alpha_{S}$, pileup reweighting, trigger and luminosity. As backgrounds were derived from data, only systematic uncertainties related to the estimation methods (shape and normalization) were considered. Finally, the luminosity uncertainty of 2.6\% was taken for signal and background. 
+In order to compute exclusion limits, the systematic uncertainties in the analysis should be evaluated. Two sets of sources have been identified, related either to signal or backgrounds. As our signal is modeled with the help of MC samples, the following sources of uncertainties for MC simulation have been considered: Jet Energy Scale, b-tagging, PDF+$\alpha_{S}$, pileup reweighting, trigger and luminosity. As backgrounds were derived from data, no systematic uncertainties from MC corrections are considered. For background estimation only systematic uncertainties related to the data-driven methods (shape and normalization) were considered. Finally, the luminosity uncertainty considered is 2.6\% for signal and background yields. 
 
-The first source of systematic uncertainty considered is related to the scale factors determination for b-tagging. For each scale factor there is an associated error, depending on the jet flavor. The scale factors for b and c jets were treated fully correlated while these are considered uncorrelated to light jets. In addition, the error for c-jets scale factors is considered to be the double of the one associated to b-jets. The scale factors for b and c-jets were varied simultaneously within their errors and signal yields were re-computed. The procedure was repeated for light jets independently. In table~\ref{tab:SFSys} the variation is displayed, in \%, of the yields from the up ($+1\sigma$) and down ($-1\sigma$) with respect to the nominal value. Variations for b and c-jets give an uncertainty of around 6\% while for light jets only 1\%. The results for b and c-jets and an overall systematic of 1\% for light flavor were considered to derive a total b-tagging systematic uncertainty. In addition figure~\ref{fig:TotalSFSys} shows the full uncertainties from b-tagging. The yields from b-tagging variations are compatible within errors with nominal yields. Therefore, the highest error between the systematic uncertainty and the statistical error (quoted in table~\ref{tab:LinearSignalWidths}) is taken as the b-tagging uncertainty for limits calculation.
+The first source of systematic uncertainty considered is related to the scale factors determination for b-tagging. For each scale factor there is an associated error, depending on the jet flavor. The scale factors for b and c jets were treated fully correlated while these are considered uncorrelated to light jets. In addition, the error for c-jets scale factors is considered to be the double of the one associated to b-jets. The scale factors for b and c-jets were varied simultaneously within their errors and signal yields were re-computed. The procedure was repeated for light jets independently. In table~\ref{tab:SFSys} the variation is displayed, in \%, of the yields from the up ($+1\sigma$) and down ($-1\sigma$) with respect to the nominal value. Variations for b and c-jets give an uncertainty of around 6\% while for light jets only 1\%. The results for b and c-jets and an overall systematic of 1\% for light flavor were considered to derive a total b-tagging systematic uncertainty. In addition figure~\ref{fig:TotalSFSys} shows the full uncertainties from b-tagging. The signal yields after applying 1-sigma variations on the uncertainties of b-tagging scale factors are compatible, within errors, with nominal signal yields. Accordingly to the conservative approach proposed, the highest error between the b-tagging systematic uncertainty and the statistical error (quoted in table~\ref{tab:LinearSignalWidths}) is taken as the b-tagging uncertainty for limits calculation.
 
 \begin{table*}[htbH]
 \begin{center}
@@ -1106,14 +1106,14 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 6.80 & 6.51 & 0.55 & 0.54 \\
 \hline
 \end{tabular}
 }
-\caption{B-tagging uncertainties for signal samples.\label{tab:SFSys}}
+\caption{B-tagging uncertainties for signal yields.\label{tab:SFSys}}
 \end{center}
 \end{table*}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/SFSys_V8_1sigma_S.png}
-    \caption{Total b-tagging uncertainties for signal samples.}
+    \caption{Total b-tagging uncertainties for signal yields.}
     \label{fig:TotalSFSys}
   \end{center}
 \end{figure}
@@ -1141,14 +1141,14 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 2.31 & 1.99 & 0.67 & 6.04 \\
 \hline
 \end{tabular}
 }
-\caption{JEC uncertainties for signal samples.\label{tab:JECSys}}
+\caption{JEC uncertainties for signal yields.\label{tab:JECSys}}
 \end{center}
 \end{table*}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/JESSys_V8_1sigma_S.png}
-    \caption{Total JEC uncertainties for signal samples.}
+    \caption{Total JEC uncertainties for signal yields.}
     \label{fig:TotalJECSys}
   \end{center}
 \end{figure}
@@ -1195,14 +1195,14 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 3.19 & 2.08 & 3.30 & 2.29 & 3.07 \\
 \hline
 \end{tabular}
 }
-\caption{PDF+$\alpha_{s}$ uncertainties for signal samples.\label{tab:PDFsys}}
+\caption{PDF+$\alpha_{s}$ uncertainties for signal yields.\label{tab:PDFsys}}
 \end{center}
 \end{table*}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/PDFSys_V8_1sigma_S.png}
-    \caption{Overall PDF+$\alpha_{s}$ uncertainties for signal samples.}
+    \caption{Overall PDF+$\alpha_{s}$ uncertainties for signal yields.}
     \label{fig:TotalPDFSys}
   \end{center}
 \end{figure}
@@ -1228,14 +1228,14 @@ $Tj\rightarrow tHj$ 950 GeV/$c^{2}$ & 2.23 & 2.33 \\
 $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 3.08 & 3.76 \\
 \hline
 \end{tabular}
-\caption{Pileup uncertainties for signal samples.\label{tab:PUsys}}
+\caption{Pileup uncertainties for signal yields.\label{tab:PUsys}}
 \end{center}
 \end{table*}
 
 \begin{figure}[!Hhtbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{figs/Ana/PUSys_V8_1sigma_S.png}
-    \caption{Total pileup uncertainties for signal samples.}
+    \caption{Total pileup uncertainties for signal yields.}
     \label{fig:TotalPUSys}
   \end{center}
 \end{figure}
@@ -1261,7 +1261,7 @@ $Tj\rightarrow tHj$ 950 GeV/$c^{2}$ & 3.40 \\
 $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 3.60 \\
 \hline
 \end{tabular}
-\caption{Trigger uncertainties for signal samples.\label{tab:Trisys}}
+\caption{Trigger uncertainties for signal yields.\label{tab:Trisys}}
 \end{center}
 \end{table*}
 
@@ -1289,10 +1289,10 @@ $Tj\rightarrow tHj$ 1000 GeV/$c^{2}$ & 6.87 & 6.59 & 5.37 & 6.24 & 5.37 & 5.37 &
 \end{tabular}
 }
 \end{center}
-\caption{Summary of uncertainties for signal samples. In addition, all mass points have 2.6\% uncertainty from luminosity measurement.\label{tab:sys}}
+\caption{Summary of uncertainties for signal yields. In addition, all mass points have 2.6\% uncertainty from luminosity measurement.\label{tab:sys}}
 \end{table*}
 
-For background, the systematics are associated to estimation methods for shape and normalization. For the shape, the dispersion of the ratio between signal and control sample are used for determination of uncertainty. After full selection, there is no sufficient statistics to determine a systematic so an early stage in the selection is chosen. The dispersion measurement is done after requiring $\Delta R(bb) <1.2$ in the control sample (see top right plot of figure~\ref{fig:StageWPData}). In figure~\ref{fig:ShapeSys} the dispersion of the ratio plot is shown. This dispersion is fitted with a gaussian function. The total systematic uncertainty is then taken from the standard deviation of the fit. The dispersion correspond to 20\% around the nominal value. In addition, a linear fit of the ratio between the control and signal regions was performed at the same selection stage to check if there was a possible trend. The fit found a positive slope of $(1.27\pm1.18)\ex{-3}$, which is very close to zero. Therefore, no further corrections due to a trend were considered. 
+For background, the systematics are associated to estimation methods for shape and normalization. For the shape, the dispersion of the ratio between signal and control sample on data are used for determination of uncertainty. After full selection, there is no sufficient statistics to determine a systematic so an early stage in the selection is chosen. The dispersion measurement is done after requiring $\Delta R(bb) <1.2$ in the control sample (see top right plot of figure~\ref{fig:StageWPData}). In figure~\ref{fig:ShapeSys} the dispersion of the ratio plot is shown. This dispersion is fitted with a gaussian function. The total systematic uncertainty is then taken from the standard deviation of the fit. The dispersion correspond to 20\% around the nominal value. In addition, a linear fit of the ratio between the control and signal samples was performed at the same selection stage to check if there was a possible trend. The fit found a positive slope of $(1.27\pm1.18)\ex{-3}$, which is very close to zero. Therefore, no further corrections due to a trend were considered. 
 
 \begin{figure}[!Hhtbp]
   \begin{center}
@@ -1323,7 +1323,7 @@ Background Shape determination & -- & 20\%\\
 Background Normalization & -- & 34\%\\
 \hline
 \end{tabular}
-\caption{Summary of uncertainties in the case of signal mass point at 700~GeV/$c^{2}$ and for background.\label{tab:sys700}}
+\caption{Summary of uncertainties in the case of signal yield for the mass point at 700~GeV/$c^{2}$ and for background yields.\label{tab:sys700}}
 \end{center}
 \end{table*}
 %\begin{TOINCLUDE}Tables for PDF, b-tagging and JEC systematics. Table with full systematics.\end{TOINCLUDE}
@@ -1331,7 +1331,7 @@ Background Normalization & -- & 34\%\\
 \section{Results}
 \label{sec:res}
 
-Using the same width and mean value parametrization as described in the previous section, the signal and background yields can be calculated, and compared to number of observed events in data. They can be found in table~\ref{tab:ExpEvts}. 
+Using the definitions introduced in section~\ref{sec:DefSigma}, the background yields and the number of observed events in data are calculated and quoted in table~\ref{tab:ExpEvts}. 
 
 \begin{table*}[htbH]
 \begin{center}
@@ -1459,7 +1459,7 @@ Finally, a search for ${T',T'\rightarrow tZ^{0},X}$ has been performed by ATLAS 
 \subsection{Searches for single produced \Tp}
 \label{sec:singleanal}
 
-The only analysis in the literature exploring the \Tp~single production mode is part of the last discussed analysis~\cite{Aad:2014efa} in the previous subsection. For the single production mode an additional criterion is added to the selection, at least one forward jet is required. This forward jet is used as the single production mode signature. This analysis did not put exclusion limits on \Tp~mass, but did established an upper limit in the single mode production cross section. Figure~\ref{fig:SingleATLASres} shows these results (from ~\cite{Aad:2014efa}). It is important to remark that the production mode studied in this search is different from the one used in this work. ATLAS analysis assumes that in the single production mode the \Tp~is produced with two additional quarks. The model used in this thesis assumes that the \Tp~is produced with only one additional quark.
+The only analysis in the literature exploring the \Tp~single production mode is part of the last discussed analysis~\cite{Aad:2014efa} in the previous subsection. For the single production mode at least one forward jet is required instead of requiring a minimum \HT. This forward jet is used as the single production mode signature. This analysis did not put exclusion limits on \Tp~mass, but did established an upper limit in the single mode production cross section. Figure~\ref{fig:SingleATLASres} shows these results (from ~\cite{Aad:2014efa}). It is important to remark that the production mode studied in this search is different from the one used in this work. ATLAS analysis assumes that in the single production mode the \Tp~is produced with two additional quarks. The model used in this thesis assumes that the \Tp~is produced with only one additional quark.
 
 ATLAS analysis in the single production mode puts an upper limit in the production cross section of the \Tp~multiplied by the $Br(T'\to tZ^{0})$ of around $3\ex{2}$~fb as mean value. The CMS analysis, presented in this work, puts an upper limit on the production cross section of the single production mode of the \Tp~multiplied by the $Br(H^{0}\to b\bar{b})$ of around $1\ex{2}$~fb as mean value. With respect to pair production, CMS analyses have put upper limits between 10 to 100~fb in the production cross section. These limits are more stringent than the ones achieved in the single production mode. ATLAS have put similar limits in the \Tp~pair production mode.
 

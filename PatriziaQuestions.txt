@@ -746,3 +746,70 @@ Page 161:
 Closure test?
 
 R/. I can add a plot to compare the estimation of background from data-driven methods and MC samples, but the statistical uncertainties in QCD samples are high. QCD MC statistics after sull selection are extremely low; QCD HT 500-100 sample only have one event after full selection and QCD HT 1000-Inf only two events. Additionally, after full selection there is no events in all the QCD pt bin samples.
+
+Line 2663-2665:
+
+Not clear
+
+R/. "As backgrounds were derived from data, only systematic uncertainties related to the estimation methods (shape and normalization) were considered. Finally, the luminosity uncertainty of 2.6\% was taken for signal and background. " replaced by "As backgrounds were derived from data, no systematic uncertainties from MC corrections are considered. For background estimation only systematic uncertainties related to the data-driven methods (shape and normalization) were considered. Finally, the luminosity uncertainty considered is 2.6\% for signal and background yields."
+
+Line 2666-2673:
+
+Not clear.
+
+R/. This section has been reformulated/reorganized, and a separate section (Definition of integration mean and window values) has been written.
+
+Line 2687-2689:
+
+Not clear.
+
+R/. "The yields from b-tagging variations are compatible within errors with nominal yields. Therefore, the highest error between the systematic uncertainty and the statistical error (quoted in table~\ref{tab:LinearSignalWidths}) is taken as the b-tagging uncertainty for limits calculation." replaced by "The signal yields after applying 1-sigma variations on the uncertainties of b-tagging scale factors are compatible, within errors, with nominal signal yields. Accordingly to the conservative approach proposed, the highest error between the b-tagging systematic uncertainty and the statistical error (quoted in table~\ref{tab:LinearSignalWidths}) is taken as the b-tagging uncertainty for limits calculation."
+
+Table 5.15
+
+How is it calculated as a function of mass?
+
+R/. Explained in the new section "Definition of integration mean and window values"
+
+
+Table 5.17
+
+From where it comes exactly? Yield'/Yield?
+
+R/. For clearness I have changed the caption of the table, and other systematic uncertainties tables, to say "uncertainties for signal yields". Also in the beginning of the chapter I have added a description on how these uncertainties are quoted: |Yield'-Yield|/Yield in % for tables and without the absolute value for plots.
+
+Line 2737-2743:
+
+Why? The trigger is not used on ttbar MC. Trigger affects only signal. How do you apply it? Need to show the difference with the 6th jet pT and show the pt spectrum of signal vs data?
+
+R/. This proposal of method to calculate a systematic uncertainty from trigger for signal is based in two facts. First, the composition of data is mainly ttbar and QCD, then to see if there is any difference between trigger selection on real data and MC simulation of trigger, the efficiency of the trigger selection for ttbar is studied. Second, as the 6th jet in signal is substantially different from the 6th jet is mainly forward, the trigger selection difference between signal and data can be biased by the fact of the difference on eta of the 6th jet, which is not the case for ttbar. However, further studies could be done to better estimate this uncertainty. 
+
+Line 2751:
+
+Data with final selection?
+
+R/. "For the shape, the dispersion of the ratio between signal and control sample are used for determination of uncertainty." replaced by "For the shape, the dispersion of the ratio between signal and control sample on data are used for determination of uncertainty.". Also the two following phrases answer the question "After full selection, there is no sufficient statistics to determine a systematic so an early stage in the selection is chosen. The dispersion measurement is done after requiring $\Delta R(bb) <1.2$ in the control sample (see top right plot of figure~\ref{fig:StageWPData})."
+
+Line 2762-2765:
+
+but it is the statistic uncertainty!
+
+R/. Yes, it is the statistic uncertainty, but there is no MC statistics to estimate an uncertainty after full selection.
+
+Line 2776-2778:
+
+Not clear.
+
+R/. "Using the same width and mean value parametrization as described in the previous section, the signal and background yields can be calculated, and compared to number of observed events in data. They can be found in table~\ref{tab:ExpEvts}." replaced by "Using the definitions introduced in section~\ref{sec:DefSigma}, the background yields and the number of observed events in data are calculated and quoted in table~\ref{tab:ExpEvts}. " 
+
+Line 2878:
+
+Only interesting one
+
+R/. I prefer to keep the short description of the two analyses for completeness.
+
+Line 2926:
+
+also selection is modified!
+
+R/. "For the single production mode an additional criterion is added to the selection, at least one forward jet is required." replaced by "For the single production mode at least one forward jet is required instead of requiring a minimum \HT."
