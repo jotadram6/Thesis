@@ -1,0 +1,207 @@
+Main phrases and ideas per slide:
+
+1. 
+P: "Good morning. Greetings to the members of the jury and the public." "I'm going to show the work I have done during the three years of my PhD"
+I: My work is going to be presented
+
+2.
+P: "Five parts, the first two about some basic concepts, and the last two about the phenomenoogy study and the data analysis for the search of a vector like T'"
+I: Outline
+
+3. 
+P: "Now, let's talk about the SM of particles physics and beyond it"
+I: PAUSE
+
+4. 
+P: "Theoretical main framework for particle physics" "Fermions are the matter components, and bosons the interactions mediators" "the top quarks and the Higgs boson are the heaviest particles in the model" "The Higgs boson mass can be extremely high, while we know that is around one hundred GeV"
+I: Succesful model but limited. 
+
+5.
+P: "New quarks introduced to the SM to solve the hierarchy problem" "Four different states that can be organized in different representations" "Coupled to SM quarks and weak bosons"
+I: The non-standard doublet model has been used for the analysis
+
+6.
+P: "The production cross section is higher in the single production mode than in the pair production"
+I: Characteristics of the model chosen
+
+7.
+P: "The T' is produced with a SM quark" "In the full hadronic final state the Higgs boson decays into a pair of b-quarks, and the top quark decays into three quarks"
+I: The full hadronic final state has the higest branching ratio
+
+8. 
+P: "From ATLAS searches T' masses have been included up to 850 GeV for top-Higgs decay channel" "From CMS searches T' masses have been included up to 770 GeV for top-Higgs decay channel"
+I: Majority of searches performed looking for pair production channel in the leptonic final states.
+
+9.
+P: "Let's take a look at the experiments where we produce and measure particles"
+I: 
+
+10.
+P: "The LHC machine is a ring of 27 hm of circunference, 100 m underground located in the Swiss-French border, where protons and heavy ions are accelerated and collided"
+I: The LHC accelerates and collides protons
+
+11.
+P: "The figure of merit of an accelerator is the luminosity" "With a higher recorded luminosity we have a better sensitivity to rare processes" "As collisions in the LHC are between bunches of protons more than one interaction is expected for each bunch crossing"
+I: Concept of luminosity as number of events for process, and pileup as challenge
+
+12.
+P: "The CMS experiment is composed of basically 4 parts: tracker, calorimeters, a solenoid and the muon chambers" "Two subsistems to measure muon properties, and a very strong magnet" "All the calorimetry is inside the magnet, making CMS a very compact detector"
+I: The main feature of CMS is that the calorimetry is inside the magnet
+
+13.
+P: "pt of charged particles is measure by the tracker" "hadrons energy is measured by the HCAL"
+I: Reconstruction of particles
+
+14.
+P: "Protons are not fundamental particles, but they are made of quarks, generically understood as partons" "The hard interaction of the collision is the interaction etween partons" "Hadronization and showering are generated from quarks and gluons produced from partons interaction" "2/3 from jet energy is coming from charged hadrons" "JEC are determined up to a level of 2% uncertainty" "Jets can be studied to understand the type of quark that produced it"
+I: Several processes ocurr during pp collisions, and produced quarks are seen as jets by the detector
+
+Connection: "All processes produced during p-p collisions can be simulated using different tools"
+
+15.
+P: "I did an study to understand if the prediction from different releases of MadGraph were compatible" "I also studied several tools, and combinations of them, to understand which one described the best data"
+I: Work has been done to validate simulation tools for CMS usage. Two levels of simulation: partonic and hadronic
+
+16.
+P: "Additional jets can be produce from additional quarks or from parton showering" "With DJR diagrams we check that the the extra jets are coming from extra quarks and not from parto showering" "The transition has to bee smooth"
+I: Interface between partonic and hadronic level has to be carefully set
+
+17.
+P: "Now, I'm going to describe the study I did to understand if a search for a T' produced from the single production mode and in the full hadronic final state was feasible"
+I:
+
+18.
+P: "Huge backgrounds wrt signal events" "I relied in the  M(W) and M(t) to reconstruct these particles, and in Delta R(bb) and Higgs mass to reconstruct the Higgs boson"
+I: The strategy of the selection relies in the presence of a Higgs a top the reconstruction of particles form the T' and in the presence of b-quarks
+
+19.
+P: "The criteria were designed to keep 90% of signal" "The associated jet is produced in the eta forward region" "The pt of Higgs boson and top quark is higher in signal than in backgrounds"
+I: The selection was designed from signal characteristics (Massive T', boosted product decays)
+
+20.
+P: "To estimate the discrimination achieved the integral in a window of 20 GeV around the T' mass has been used" "A significance of 2 has been achieved" 
+I: A good disrimination has been achieved
+
+21.
+P: "For the data anlysis basic ideas from the pheno study were preserved, but refined mainly in the determination of backgrounds"
+I: Continuation from pheno
+
+22.
+P:
+I:
+
+23.
+P:
+I:
+
+24.
+P:
+I:
+
+25.
+P:
+I:
+
+26.
+P:
+I:
+
+27.
+P:
+I:
+
+28.
+P:
+I:
+
+29.
+P:
+I:
+
+30.
+P:
+I:
+
+31.
+P:
+I:
+
+32.
+P:
+I:
+
+33.
+P:
+I:
+
+34.
+P:
+I:
+
+35.
+P:
+I:
+
+36.
+P:
+I:
+
+37.
+P:
+I:
+
+
+P:
+I:
+
+
+P:
+I:
+
+
+P:
+I:
+
+
+P:
+I:
+
+
+P:
+I:
+
+
+P:
+I:
+
+
+P:
+I:
+
+
+P:
+I:
+
+
+P:
+I:
+
+
+P:
+I:
+
+
+P:
+I:
+
+
+P:
+I:
+
+
+P:
+I:
+
+
+P:
+I:
