@@ -665,3 +665,84 @@ Line 2455:
 Was it computed or not?
 
 R/. Similar studies were taken as reference, but it was not explicitly computed.
+
+Line 2472-2479:
+
+Clean up
+
+R/. The paragraph was "The same efficiencies were also computed after full selection. They can be found in figure~\ref{fig:TrigEffPostMH}. From them, an underestimation of the MC signal samples by the trigger is observed for a \pt~of the 6th jet between 30-50 GeV/c and 70-90 GeV/c. However, \ttbar~has a slightly higher efficiency than data. The ratio between \ttbar~and data is taken to estimate a systematic uncertainty on the trigger selection for signal MC samples as a function of 6th leading jet \pt. The entire procedure of the estimation of the systematic uncertainty from trigger on signal yields is described in section~\ref{sec:sys}."
+
+and has been changed for: "Additionally, trigger efficiencies were computed after full selection. They are shown in figure~\ref{fig:TrigEffPostMH}. An underestimation of signal events with respect to data by trigger selection is observed for a 6th jet \pt~between 30-50 GeV/c and 70-90 GeV/c. However, \ttbar~has a slightly higher efficiency than data. As one of the main components of data is \ttbar, and there are not enough statistics in QCD MC samples to measure their trigger efficiency, \ttbar~trigger efficiency has been used to estimate a systematic uncertainty on the trigger selection for signal MC samples as a function of 6th leading jet \pt. The entire procedure of the estimation of the systematic uncertainty from trigger on signal yields is described in section~\ref{sec:sys}."
+
+Line 2505: 
+
+Replace "both" with "the two"
+
+R/. "Another difficulty comes from the need of deriving both dominant backgrounds" replaced by "Another difficulty comes from the need of deriving the two dominant backgrounds"
+
+Line 2515:
+
+Not clear
+
+R/. The phrase was removed.
+
+Line 2522:
+
+Add number
+
+R/. "However, some contamination remains." was replaced with "However, some contamination remains (7\% maximum, see table~\ref{tab:sigcontam})."
+
+Line 2540-2541:
+
+Why used.
+
+R/. The objective of the validation is to check that the M(5j) shape from the control sample can be used to estimate the shape of M(5j) of the signal sample. For this the shape from the two samples are compared at different stages of the selection.
+
+Line 2556-2564:
+
+Not clear:
+
+R/. "As it is unknown if there is a signal in data, the data-data comparison is performed only for stages A, B and C where background dominates and it is shown in figure~\ref{fig:StageWPData}. In addition QCD-QCD (QCD in the signal sample against QCD in the control sample) MC comparison is only performed for A, B and C stages due to low statistics at the end of the selection (shown in figure~\ref{fig:StageWPQCD}). The comparison for \ttbar~and the sum of MC samples is shown in figures~\ref{fig:StageWPttbar} and~\ref{fig:StageWPSum}, respectively. After full selection it is shown that both shapes are in agreement for \ttbar~and the sum of MC samples, thus it can be deduced that the estimation is also valid in data." replaced by "As it is unknown if there is a signal in data, the data-data (control sample and signal sample in data) comparison is performed only for stages A, B and C where background dominates and it is shown in figure~\ref{fig:StageWPData}. In addition QCD-QCD MC samples (control sample and signal sample in QCD MC) comparison is only performed for A, B and C stages due to low statistics at the end of the selection (shown in figure~\ref{fig:StageWPQCD}). The comparison for \ttbar~(control sample and signal sample in \ttbar~MC sample) and the sum of MC samples is shown in figures~\ref{fig:StageWPttbar} and~\ref{fig:StageWPSum}, respectively. After full selection it is shown that both shapes are in agreement for \ttbar~and the sum of MC samples, thus it can be deduced that the estimation is also valid in data."
+
+Figure 5.31:
+
+"Signal sample" is not clear.
+
+R/. A list of terminology has been added at the beginning of the chapter to clear up their usage.
+
+Line 2626-2627:
+
+Not clear.
+
+R/. "If the ratio in both samples is the same for background events, $R^{CS}$ can be used to predict the number of background events in the signal sample." replaced by "The hypothesis is that if both ratios are compatible in the signal and control sample, at selection stages where backgrounds are dominant, the ratio from the control sample $R^{CS}$ can be used to predict the number of background events inside the Higgs candidate mass in the signal sample."
+
+Line 2630:
+
+Directly in the various MC that the ratio is the same!
+
+R/. I didn't use the MC samples to do this validation because the statistical errors are huge. As I'm not trying to understand if the ratio is the same for ttbar or QCD alone, but the sum, the statistical uncertainty will not let to establish an accurate conclusion. However a conclusion on the validation can be assessed from a validation using data.
+
+Line 2636-2638:
+
+Same concepts!!
+
+R/. "In addition, other way to validate the method is to check that $R^{CS}=R^{SS}$ at earlier stages of the selection." replaced by "This is, to validate the method it has to be proven that $R^{CS}=R^{SS}$ and $N^{SS_{BKG}}_{in}=N^{SS}_{in}$ at earlier stages of the selection."
+
+
+Line 2641:
+
+Why?
+
+R/. The statement has been added in the line "This test can not be done after full selection, when a significant signal component in the cut window could be present. However, as the method is used to predict the background content, it can be validated at earlier stages of the selection, where backgrounds are dominant and signal is negligible. This is, to validate the method it has to be proven that $R^{CS}=R^{SS}$ and $N^{SS_{BKG}}_{in}=N^{SS}_{in}$ at earlier stages of the selection."
+
+Table 5.13:
+
+The caption is not clear.
+
+R/. "The last line correspond to full selection, reason why $R^{SS}$ and $N^{SS}_{in}$ are blinded for the validation procedure." replaced by "The $R^{SS}$ and $N^{SS}_{in}$ have been blinded in the last two lines for the validation procedure, because the amount of signal events in the signal sample is not negligible with respect to background events."
+
+Page 161:
+
+Closure test?
+
+R/. I can add a plot to compare the estimation of background from data-driven methods and MC samples, but the statistical uncertainties in QCD samples are high. QCD MC statistics after sull selection are extremely low; QCD HT 500-100 sample only have one event after full selection and QCD HT 1000-Inf only two events. Additionally, after full selection there is no events in all the QCD pt bin samples.
