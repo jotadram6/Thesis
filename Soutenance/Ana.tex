@@ -5,7 +5,7 @@
 
 \begin{frame}
 \begin{center}
-Search for a single produced \Tp~decaying into top and Higgs in the full hadronic final state
+Search for a single produced \Tp~decaying into top and Higgs in the full hadronic final state at 8 TeV with 19.7 fb$^{-1}$
 \end{center}
 \end{frame}
 
@@ -27,6 +27,9 @@ As phenomenology study, but:
   \item Real Data: 19.7 fb$^{-1}$
   \item \textbf{Data-driven background estimation}
   \end{itemize}
+}
+\tiny{
+\textit{Signal simulated with MadGraph and Pythia 6}
 }
 \end{block}
 \end{column}
@@ -50,7 +53,7 @@ QCD\_Pt-800to1000 & 3.5 & 3.9M\\
 QCD\_HT-500To1000 & 84\(\times 10^2\) & 30M\\ 
 QCD\_HT-1000ToInf & 2\(\times 10^2\) & 14M\\ 
 TTJets\_MSDecays & 247.7 [NNLO] & 62M\\
-TprimeJetToTH\_\textbf{M-700} & 143.7 & 99K \\
+TprimeJetToTH\_\textbf{M-700} & 0.144 & 99K \\
 \hline
 \end{tabular}
 }
@@ -61,7 +64,7 @@ TprimeJetToTH\_\textbf{M-700} & 143.7 & 99K \\
 \begin{block}{}\scriptsize
 \textbf{MC samples only used for illustration}:
 \begin{itemize}
-\item Low statistics on QCD $\to$ Big weights, big errors 
+\item Low statistics on QCD $\to$ Large statistical uncertainties 
 \item Final background estimated from data
 \end{itemize}
 \end{block}
@@ -74,6 +77,8 @@ TprimeJetToTH\_\textbf{M-700} & 143.7 & 99K \\
 \begin{columns}
 \begin{column}{.50\textwidth}
 \begin{block}{}\scriptsize
+\tiny{HLT: DiJet80\_DiJet60\_DiJet20 (\etal{3.0})}%
+\\\scriptsize{
 \resizebox{\textwidth}{!}{
 \begin{tabular}{|c|c|c|c|}
 \hline 
@@ -88,7 +93,7 @@ Selection & $N(j)\ge 6$ & $N(j)\ge 4$ & $N(j)\ge 2$ \\
 \hspace{1.1cm} $N(extra\; j)[|\eta|<5]\ge 1$\\
 \textbf{3rd cut}: $p_{T}(j_{1})>$150 GeV/c\\
 \textbf{4th cut}: \HTg{550}\\
-\textbf{5th cut}: $N^{CSVM}_{b}\ge 3$
+\textbf{5th cut}: $N^{CSVM}_{b}\ge 3$}%
 \end{block}
 %\vspace{-1.0cm}
 %\begin{center}
@@ -145,7 +150,7 @@ $\sigma_{H}=12.4$~\GeVcc, $\sigma_{W}=10.12$~\GeVcc, $\sigma_{t}=17.35$~\GeVcc
 \begin{block}{}
 \tiny
 \begin{itemize}
-\item Optimization via a multidimensional scan of variables $\to$ adjusted to keep at least 10 signal events ($M(T')=700$~\GeVcc
+\item Optimization via a multidimensional scan of variables $\to$ adjusted to keep at least 10 signal events ($M(T')=700$~\GeVcc)
 \item \textbf{Data/MC plot for illustration, final background estimation is data-derived}
 \end{itemize}
 \end{block}

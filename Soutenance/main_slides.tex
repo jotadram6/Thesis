@@ -102,6 +102,9 @@
 \newcommand{\Tj}{$T'j$}
 \newcommand{\Tjj}{$T'jj$}
 
+
+%\usepackage[font=Times,timeinterval=10, timeduration=2.0, timedeath=0, fillcolorwarningsecond=white!60!yellow, timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+
 %% Title and such
 \title{\texorpdfstring{Search for a vector-like quark \Tp~decaying \\into top+Higgs in single production mode \\in full hadronic final state using \\CMS data collected at 8 TeV\\}}
 %\title{\texorpdfstring{Recherche d'un quark vectoriel \Tp~\\qui se désintègre en top+Higgs dans \\le mode de production célibataire \\dans le état final hadronique avec \\les données recueillies par l'éxperience CMS à 8 TeV\\}}
@@ -169,6 +172,15 @@
 %       (0.5\paperwidth,-0.5\paperheight) [inner sep=0pt,opacity=.4]
       {\begin{overpic}[height=.9\paperheight]{a-1_16_1_RhoPhi.png}\end{overpic}};
   \titlepage
+
+%\initclock  % This must be used one time to initialize the clock
+%
+%We are putting here a clock with the macro  \quad
+%\structure{\texttt{$\backslash$tdclock}}:
+%
+%\bigskip
+%
+%\tdclock
 \end{frame}
 
 \setcounter{tocdepth}{1}
