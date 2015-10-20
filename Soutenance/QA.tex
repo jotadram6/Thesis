@@ -1,0 +1,135 @@
+\subsection{Questions and answers}
+
+\begin{frame}{Errors sum on stack MC samples}
+\vspace{-.2cm}
+
+\begin{block}{}
+  \scriptsize \centering 
+  \begin{itemize}
+  \item Default Poisson error has been used $\to$ $Err=W\times \sqrt{N}$ per bin
+  \item If $N=0$ $\to$ $Err=0$: low statistics limit
+  \item Error on a bin from the sum of two histograms: $ErrT=(W_{1}\times \sqrt{N_{1}})+(W_{2}\times \sqrt{N_{2}})$
+  \item If $N_{2}=0$ $\to$ $ErrT=(W_{1}\times \sqrt{N_{1}})$, as if the second histogram was not considered.
+  \item CMS statistics committee: ``Correct coverage'' Garwood 1936 $\to$ Asymmetric error bars at low statistics, if $N=0$ $\to$ $Err=1.8*W$ per bin
+  \item If $N_{2}=0$ $\to$ $ErrT=(W_{1}\times \sqrt{N_{1}})+(1.8W_{2})$
+  \item If $N_{1}$ is low, and $W_{2}\gg W_{1}$ $\to$ $ErrT\sim 1.8W_{2}$
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Other \Hb~SM processes}
+\vspace{-.2cm}
+
+\begin{block}{}
+  \scriptsize \centering
+  \begin{itemize}
+  \item ttH: 0.129 pb (0.129*0.57*0.66=\textcolor{red}{0.049 pb} one top and Higgs in full hadronic)
+  \item bbH: 0.204 pb (0.204*0.57=\textcolor{red}{0.116 pb} Higgs in full hadronic)
+  \item tHq: 0.240 pb (0.240*0.57*0.66=\textcolor{red}{0.090 pb} one top and Higgs in full hadronic)
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Background estimation uncertainty}
+\vspace{-.2cm}
+
+\begin{block}{}
+  \scriptsize \centering Possible re-definition of control sample, to enrich statistics:
+  \begin{itemize}
+  \item Working point for smaller value than CSVL
+  \item Take third b-tag with fake rates
+  \item Random b-tag and fake rates for all b-jets
+  \item Change sorting algorithm to consider all jets for Higgs and top, and apply fake rates
+  \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Selection optimization}
+\vspace{-.2cm}
+
+\begin{block}{}
+  \scriptsize \centering 
+  \begin{itemize}
+  \item $\Delta R(bb)$ and $<M(H)<$ $\sim$90\% efficient on signal
+  \item $(M(top^{2nd})+M(W^{2nd}))/M(H)$ $\to [6.2,8.2]$ 11 points
+  \item $\Delta R (T' j^{6})$ $\to [4.0,6.0]$ 9 points 
+  \item Rel $H_{T}$ $\to [0.57,0.73]$ 9 points
+  \item $\chi^{2}$ $\to [2,30]$ 15 points (Redone to cross check optimization of CS SS agreement with optimization of selection)
+  \end{itemize}
+\end{block}
+
+\end{frame}
+{
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={6,7,8,9,10,11,12,13,14,15,18}]{/home/jruizalv/Dropbox/Doctorado/TOPLHCFrance/HQS/HeavyTpSearchesLHC_JDRA_18052015.pdf}
+}
+
+
+\begin{frame}{Deeper study on \Tp~reconstruction}
+\vspace{-.2cm}
+\begin{columns}
+
+\begin{column}{.50\textwidth}
+Correct \Tp for 700 \GeVcc (2011 from 2768)
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|}
+\hline 
+Combination & N & \% \\
+\hline 
+H t W & 1762 & 88 \\
+H no(t) no(W) & 126 & 6 \\
+no(H) no(t) W & 2 & 0.1 \\
+no(H) t no(W) & 9 & 0.4 \\
+no(H) no(t) no(W) & 112 & 6 \\
+no(H) & 123 & 6 \\
+no(t) & 240 & 12 \\
+no(W) & 247 & 12 \\
+\hline
+\end{tabular}
+}
+\end{column}
+
+\begin{column}{.50\textwidth}
+Not correct \Tp for 700 \GeVcc (757 from 2768)
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|c|c|c|}
+\hline 
+Combination & N & \% \\
+\hline 
+H t W & 0 & 0 \\
+H no(t) no(W) & 80 & 11 \\
+no(H) no(t) W & 27 & 4 \\
+no(H) t no(W) & 32 & 4 \\
+no(H) no(t) no(W) & 204 & 27 \\
+no(H) t W & 47 & 6 \\
+H no(t) W & 21 & 3 \\
+H t no(W) & 346 & 46 \\
+H & 447 & 59 \\
+t & 425 & 56 \\
+W & 95 & 13 \\
+no(H) & 310 & 41 \\
+no(t) & 332 & 44 \\
+no(W) & 662 & 87 \\
+\hline
+\end{tabular}
+}
+\end{column}
+\end{columns}
+
+%\begin{block}{}
+%  \scriptsize \centering 
+%\end{block}
+
+\end{frame}
+
+%\begin{frame}{}
+%\vspace{-.2cm}
+%
+%\begin{block}{}
+%  \scriptsize \centering 
+%\end{block}
+%
+%\end{frame}

@@ -104,6 +104,7 @@
 
 
 %\usepackage[font=Times,timeinterval=10, timeduration=2.0, timedeath=0, fillcolorwarningsecond=white!60!yellow, timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usepackage{pdfpages}
 
 %% Title and such
 \title{\texorpdfstring{Search for a vector-like quark \Tp~decaying \\into top+Higgs in single production mode \\in full hadronic final state using \\CMS data collected at 8 TeV\\}}
@@ -233,9 +234,10 @@
           \item Inclusion of \textcolor{red}{MadSpin} for the gridpack generation of \ttbar~in CMS central production
     %    \end{itemize}
     \end{itemize}
+  \item \textcolor{red}{Analysis} performed from \textcolor{red}{phenomenology} feasibility study up to \textcolor{red}{exclusion limits} with data.
   \item Search for a single produced \Tp~decaying into top and Higgs in the full hadronic final state
     \begin{itemize}\scriptsize
-    \item \textcolor{red}{Difficult and original channel} $\to$ A selection to extract signal and a reconstruction procedure to find the \Tp~decay products
+    \item \textcolor{red}{Challenging and original final state} $\to$ A selection to extract signal and a reconstruction procedure to find the \Tp~decay products
     \item \textcolor{red}{Original method to estimate backgrounds from data} $\to$ All processes in one method for the shape and one for the normalization
     \item \textcolor{red}{Upper limits} in the production \textcolor{red}{cross section} compatible with other searches
     \end{itemize}
@@ -279,6 +281,8 @@
 \end{frame}
 
 \begin{frame}
+\tikz[remember picture,overlay]{\node (b) at (0.42\paperwidth,-0.1\paperheight) [inner sep=0pt,opacity=0.4]{
+\includegraphics[width=1.0\paperwidth]{bg-home-big.jpg}};}
 \begin{center}
 Merci de votre attention !
 \end{center}
@@ -299,6 +303,8 @@ BACKUP
 \begin{frame}
 \tableofcontents
 \end{frame}
+
+\include{QA}
 
 \include{SMBU}
 
