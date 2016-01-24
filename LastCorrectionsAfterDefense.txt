@@ -1,0 +1,24 @@
+Chapter 2:
+
+- Line 1017: counts -> Replaced by "has"
+- Line 1026: Should be first? -> I prefer to keep the actual order.
+- Line 1029: defined on -> Replaced by "for"
+- Line 1077: Adding "that bends the muons in opposite way for better resolution"
+- Line 1095: Comment from Patrizia "if you put a figure you should explain - "Why the hit efficiency degrades with integrated lumi" -> Adding "This efficiency degrades with integrated luminosity due to radiation damage from collisions."
+- Line 1102: Dimension of active area? -> Adding "It has an approximate active surface of 300 $\text{m}^{2}$"
+- Line 1104: Comment from Patrizia "Really?" -> This phrase has been verified with the tracker TDR
+- Line 1110: Comment from Patrizia "Below!" -> Replacing 1 GeV by 0.1 GeV, from public tracker results plots
+- Line 1113: Comment from Patrizia "no! replacement of pixels" -> confusion between tracker system (including pixels) and tracker subsytem. Changing phrase to say "full tracker system"
+- Line 1170: Comment from Patrizia "by whom? incomplete" -> Chaging "The most important challenge for the HF is the high resistance to radiation, while in the central rapidity region 100 GeV are deposited in average in the forward region is 760 GeV." by "The most important challenge for the HF is the high resistance to radiation from collisions, while in the central rapidity region 100 GeV are deposited in average, in the forward region is 760 GeV."
+- Line 1181: Add "charged and neutral" -> Added
+- Page 53: Why no plot of HCAL performance? -> No pucli results from HCAL performance!!!
+                 Why no energy resolution numbers -> Already added in precedent version.
+- Line 1188: Replace "escape" by "not stopped" -> I prefer my redaction, because not stopped has been already used in the same phrase.
+- Line 1188: "inner" detector -> Not really, muons escape the whole detector
+- Line 1227: I'm removing the phrase "From the searches conducted at CMS"
+- Line 1245: "not define" -> Removing the word "regional"
+- Line 1264: "How many several paths?" -> Changing phrase to: HLT is divided in several paths (128), where each path corresponds to a specific filtering algorithm.
+- Line 1267: "Speed of writing to disk?" -> The following phrase has been added: From the HLT, events are written to disks with a speed of 100 MBytes$/$s. 
+- Line 1276: "not clear - approximate" -> Changing phrase from: "Also, for some particles, the information between different subsystems should be connected to achieve a successful identification." to "Also, for some particles, the information between different subsystems might be used to achieve a successful identification."
+- Line 1279: "Why "some"?" -> The word "some" has been removed.
+- Paragraph between lines 1278 and 1286: "This is not an explanation of the algorithm" -> The following phrase has been added: "It is based in an iterative process that searches for the optimal combination of the information of an event in order to reconstruct different objects."
