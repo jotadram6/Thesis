@@ -22,3 +22,7 @@ Chapter 2:
 - Line 1276: "not clear - approximate" -> Changing phrase from: "Also, for some particles, the information between different subsystems should be connected to achieve a successful identification." to "Also, for some particles, the information between different subsystems might be used to achieve a successful identification."
 - Line 1279: "Why "some"?" -> The word "some" has been removed.
 - Paragraph between lines 1278 and 1286: "This is not an explanation of the algorithm" -> The following phrase has been added: "It is based in an iterative process that searches for the optimal combination of the information of an event in order to reconstruct different objects."
+- Lines 1290-1295: "Track reconstruction should be described first, then vertex..." -> Lines have been moved after line 1318.
+- Line 1305: "Iterative tracking missing!!!" -> Adding after line 1301: "Such propagation is done through an iterative procedure where all the different combinations between tracks are considered."
+- Line 1309: "Definition of efficiency and fake rate vs pt & eta" -> The following line has been added at line 1308: "This efficiency is obtained using Monte-Carlo simulations and it is defined as the fraction of charged particles that can be associated with their corresponding reconstructed tracks.". i do not add a definition of fake rate because I'm not discussing it in the paragraph.
+- Line 1319: "Why is this paragraph?" -> Because is the next important step in order to reconstruct jets. 
