@@ -1,5 +1,8 @@
 Chapter 2:
 
+- Line 835: "in" replaced by "at"
+- Line 925: "Very vague" -> "run settings" has been replaced with "number of protons per bunch and the geometric characteristics of the bunches at their crossing"
+- Line 1007: "Vague and imprecise" -> Replacing "Concentrically located from the beam line" with "concentrically organized from the beam line"
 - Line 1017: counts -> Replaced by "has"
 - Line 1026: Should be first? -> I prefer to keep the actual order.
 - Line 1029: defined on -> Replaced by "for"
@@ -26,3 +29,7 @@ Chapter 2:
 - Line 1305: "Iterative tracking missing!!!" -> Adding after line 1301: "Such propagation is done through an iterative procedure where all the different combinations between tracks are considered."
 - Line 1309: "Definition of efficiency and fake rate vs pt & eta" -> The following line has been added at line 1308: "This efficiency is obtained using Monte-Carlo simulations and it is defined as the fraction of charged particles that can be associated with their corresponding reconstructed tracks.". i do not add a definition of fake rate because I'm not discussing it in the paragraph.
 - Line 1319: "Why is this paragraph?" -> Because is the next important step in order to reconstruct jets. 
+- Line 1328: "outside the tracker acceptance" -> Replacing the phrase "Calorimeter clusters are used to identify, for example, neutral hadrons and reconstruct the energy of charged hadrons not correctly reconstructed in the tracker." with "Calorimeter clusters are used to identify, for example, neutral hadrons and reconstruct the energy of charged hadrons outside the tracker acceptance."
+- Line 1330: "Too cryptic" -> Replacing subtitle to: "Link between subdetectors"
+- Line 1453: "definition of impact parameter" -> Adding the following info to the phrase "defined as the distance between the secondary and primary vertex"
+- Line 1465: "fake has not been defined" -> The following info has been added at the end of the phrase at line 1464: "these two last efficiencies are known as the fake rates from c and light quarks respectively"
