@@ -1,3 +1,6 @@
-1. Minor changes on the abstract:
+1. Abstract:
    Two additional "the", lines 24 and 26, and additional comma, line 39, rmoeving "model" line 39, removing "-" line 44.
-   On the french version: Corrections of "des" by "de", line 55, "ainsi" by ". Ainsi". 7 additions/replacements: "de recherche" line 57, "le modele standard", line 69, "ce dernier" ;ine 70, "SM" par "modele standard", line 74, "Comme" par "Le" et "obetnu est decrit sous forme", line 79, "obtenues" par "deduites" 
+   On the french version: Corrections of "des" by "de", line 55, "ainsi" by ". Ainsi". 7 additions/replacements: "de recherche" line 57, "le modele standard", line 69, "ce dernier" ;ine 70, "SM" par "modele standard", line 74, "Comme" par "Le" et "obetnu est decrit sous forme", line 79, "obtenues" par "deduites"
+
+2. Introduction: 
+   Additional comma on line 162, additional "a" line 180, "the standard model" replaced by "this model" line 189, "and" replaced by "as well as" 194, additional "a" line 200, "after" replaced by "afterward" 201
