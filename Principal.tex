@@ -73,7 +73,7 @@
 \date{Compiled on {\ddmmyyyydate\today} at \currenttime}
 
 \begin{document}
-\linenumbers 
+%\linenumbers 
 \markboth{VersionX}{\today}
 \markright{\today}
 %\maketitle
@@ -85,10 +85,14 @@
 % Title
 \include{Prelude/titlepage}
 \cleardoublepage
+
+\include{Prelude/Quotes}
+\cleardoublepage
+
 %Resume
 \include{Resume}
 
-%\include{Remerciements}
+\include{Remerciements}
 
 \tableofcontents
 \cleardoublepage
